@@ -1,4 +1,4 @@
-baseURL = "https://zouyonghao.github.io/infrastructure-heroes/"
+baseURL = "https://infrastructure-heroes.org/"
 languageCode = "en-us"
 title = "Infrastructure Heroes"
 theme = "ananke"
