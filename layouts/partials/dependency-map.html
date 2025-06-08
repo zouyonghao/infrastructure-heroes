@@ -1,0 +1,15 @@
+<div class="dependency-map">
+  <h3>Global Impact</h3>
+  <div class="map-container">
+    <!-- 使用 Mermaid 生成简单依赖图 -->
+    <div class="mermaid">
+      graph TD
+        {{ .Title }} -->|used by| Linux_Distro
+        Linux_Distro -->|runs| Millions_of_Devices
+        {{ range .Params.dependencies }}
+        {{ . }} --> {{ $.Title }}
+        {{ end }}
+    </div>
+  </div>
+  <p class="note">This diagram shows simplified dependency relationships</p>
+</div>

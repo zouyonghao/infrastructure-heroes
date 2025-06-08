@@ -1,0 +1,30 @@
+/* 项目卡片 */
+.project-card {
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 重要性标签 */
+.tag.importance-critical {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.tag.importance-high {
+  background-color: #ffd166;
+}
+
+/* 依赖图谱 */
+.dependency-map {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+}

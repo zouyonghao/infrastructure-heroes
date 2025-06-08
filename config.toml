@@ -1,0 +1,35 @@
+baseURL = "https://zouyonghao.github.io/infrastructure-heroes/"
+languageCode = "en-us"
+title = "Infrastructure Heroes"
+theme = "ananke"
+
+[params]
+  favicon = "favicon.ico"
+  description = "The unsung heroes of software infrastructure"
+  github = "zouyonghao"
+  custom_css = ["css/custom.css"]
+
+[menu]
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 1
+    
+  [[menu.main]]
+    identifier = "maintainers"
+    name = "Maintainers"
+    url = "/maintainers/"
+    weight = 2
+    
+  [[menu.main]]
+    identifier = "thanks"
+    name = "Thank Wall"
+    url = "/thanks/"
+    weight = 3
+    
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
