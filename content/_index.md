@@ -2,41 +2,38 @@
 title: "Infrastructure Heroes"
 ---
 
-<section class="hero-minimal">
+<section class="hero-section">
 <div class="hero-content">
 <span class="hero-badge">Open Source Sustainability</span>
 <h1 class="hero-title">
-Celebrating the
-<span class="text-gradient">Unsung Heroes</span>
-of Software Infrastructure
+Supporting the <span class="text-gradient">Critical Infrastructure</span> Behind Our Digital World
 </h1>
 <p class="hero-description">
-Discover and support the critical open source projects that power our digital world.
-Track project health, identify at-risk infrastructure, and join the movement for sustainable open source.
+Discover and support the open source projects that power billions of devices. Track project health, identify at-risk infrastructure, and help build a sustainable future for open source.
 </p>
 <div class="hero-actions">
-<a href="#projects" class="btn btn-primary">Explore Projects</a>
-<a href="/about/" class="btn btn-secondary">Learn More</a>
+<a href="#projects" class="btn btn-primary btn-large">Explore Projects</a>
+<a href="/about/" class="btn btn-secondary btn-large">Learn More</a>
 </div>
 </div>
 
-<div class="hero-stats-bar">
-<div class="stat">
+<div class="hero-stats">
+<div class="stat-card">
 <span class="stat-value">7</span>
 <span class="stat-label">Projects Tracked</span>
 </div>
-<div class="stat">
+<div class="stat-card">
 <span class="stat-value" id="at-risk-count">--</span>
 <span class="stat-label">Need Support</span>
 </div>
-<div class="stat">
+<div class="stat-card">
 <span class="stat-value">2B+</span>
 <span class="stat-label">Devices Impacted</span>
 </div>
 </div>
 </section>
 
-<section class="section-sm" id="projects">
+<section class="section" id="projects">
 <div class="container-wide">
 <div class="section-header">
 <h2 class="section-title">Project Health Monitor</h2>
@@ -51,7 +48,7 @@ Each project is scored on funding, maintenance, community health, and bus factor
 <div class="alert-critical">
 <div class="alert-icon">⚠️</div>
 <div class="alert-content">
-<strong>Critical Alert:</strong> 
+<strong>Critical Alert:</strong>
 <span class="critical-count">2</span> projects are at risk and need immediate community support.
 <a href="/projects/?filter=critical" class="alert-link">See urgent needs →</a>
 </div>
@@ -59,12 +56,12 @@ Each project is scored on funding, maintenance, community health, and bus factor
 </div>
 </section>
 
-<section class="section" style="background: #f9fafb;">
+<section class="section bg-subtle">
 <div class="container-narrow">
 <div class="cta-block">
 <h2 class="cta-title">How You Can Help</h2>
 <p class="cta-description">
-Infrastructure projects need diverse forms of support. 
+Infrastructure projects need diverse forms of support.
 Whether you're a developer, company, or individual, there's a way to contribute.
 </p>
 

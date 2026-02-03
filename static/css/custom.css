@@ -299,6 +299,67 @@ header > div.pb6-l {
   display: none;
 }
 
+/* Homepage article fix - remove theme flex constraints */
+.homepage,
+article.homepage {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Homepage specific styles */
+.homepage-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Override theme article styles */
+main[role="main"] > article,
+main > article,
+main[role="main"] > div,
+main > div {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Remove padding from main on homepage */
+main[role="main"],
+main.pb7 {
+  padding-bottom: 0;
+}
+
+/* Ensure hero section is full width and centered */
+.hero-section,
+section.hero-section {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Fix nested-links and measure-wide classes */
+.nested-links,
+.measure-wide,
+.lh-copy {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Fix any measure-wide or nested-links classes from theme */
+.cf.ph3.ph5-l.pv3.pv4-l.f4.tc-l.center.measure-wide,
+article.cf.ph3.ph5-l.pv3.pv4-l {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
 /* Override theme constraints - Force full width */
 main.pb7 .w-70-ns,
 main.pb7 .measure-wide,
@@ -342,6 +403,36 @@ article.measure-wide section {
 
 main.pb7 {
   max-width: 100%;
+}
+
+/* Reset Tachyons flex classes on our sections */
+.hero-section.flex,
+.hero-section .flex,
+section .flex-column,
+.homepage-content .flex {
+  display: block;
+}
+
+/* Override Tachyons tc-l (text-center large) to be always centered for hero */
+.hero-section *:not(.btn):not(.nav-link) {
+  text-align: inherit;
+}
+
+/* Make sure sections stack vertically */
+.homepage-content > section,
+main > div > section {
+  display: block;
+  width: 100%;
+  float: none;
+  clear: both;
+}
+
+/* Force hero section centering */
+.hero-section .hero-content,
+.hero-section .hero-stats {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========================================
@@ -519,48 +610,80 @@ a.btn-ghost:hover {
 }
 
 /* ---- Hero Section ---- */
-.hero-minimal {
-  text-align: center;
-  padding: var(--space-20) var(--space-4);
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-  border-bottom: 1px solid var(--border-light);
-  width: 100vw !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-  box-sizing: border-box;
+.hero-section {
+  display: block !important;
+  text-align: center !important;
+  padding: var(--space-16) var(--space-6) var(--space-12) !important;
+  background: linear-gradient(180deg, var(--color-primary-50) 0%, var(--bg-primary) 100%) !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  margin: 0 !important;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero-content {
-  max-width: 680px;
-  margin: 0 auto;
+  display: block !important;
+  max-width: 720px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1;
+  float: none !important;
+  text-align: center !important;
 }
 
 .hero-badge {
   display: inline-block;
   padding: var(--space-2) var(--space-4);
-  background: var(--color-primary-100);
+  background: var(--bg-primary);
   color: var(--color-primary);
-  font-size: var(--text-sm);
-  font-weight: 600;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
   border-radius: var(--radius-full);
   margin-bottom: var(--space-6);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--color-primary-200);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-title {
-  font-size: var(--text-5xl);
+  font-size: var(--text-4xl);
   margin-bottom: var(--space-6);
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  color: var(--color-gray-900);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: var(--text-5xl);
+  }
 }
 
 .hero-description {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-actions {
@@ -568,6 +691,58 @@ a.btn-ghost:hover {
   gap: var(--space-4);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: var(--space-8) !important;
+  margin-top: var(--space-12) !important;
+  padding-top: var(--space-8) !important;
+  border-top: 1px solid var(--border-light) !important;
+  max-width: 500px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: relative !important;
+  z-index: 1;
+  float: none !important;
+}
+
+.stat-card {
+  text-align: center !important;
+  flex: 1 !important;
+  min-width: 80px !important;
+}
+
+.stat-card .stat-value,
+.stat-value {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.stat-card .stat-label,
+.stat-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--font-medium);
+}
+
+/* Legacy hero classes */
+.hero-minimal {
+  text-align: center;
+  padding: var(--space-20) var(--space-4);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .hero-stats-bar {
@@ -583,21 +758,9 @@ a.btn-ghost:hover {
   text-align: center;
 }
 
-.stat-value {
-  display: block;
-  font-size: var(--text-4xl);
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1;
-}
-
-.stat-label {
-  display: block;
-  font-size: var(--text-sm);
-  color: var(--text-tertiary);
-  margin-top: var(--space-2);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+/* Background utility */
+.bg-subtle {
+  background: var(--bg-secondary);
 }
 
 /* ---- Section Styles ---- */
@@ -1113,8 +1276,31 @@ a.btn-ghost:hover {
 
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: var(--space-12) var(--space-4) var(--space-10);
+  }
+
   .hero-title {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
+  }
+
+  .hero-description {
+    font-size: var(--text-base);
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    min-width: 80px;
+  }
+
+  .stat-card .stat-value,
+  .stat-value {
+    font-size: var(--text-2xl);
   }
 
   .hero-stats-bar {
