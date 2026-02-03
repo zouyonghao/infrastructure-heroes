@@ -1,0 +1,35 @@
++++
+date = '2025-06-08T15:30:11+08:00'
+title = 'Apache Tomcat'
+logo = ''
+description = 'Java Servlet container'
+
+[health]
+  funding = "at-risk"
+  maintenance = "active"
+  contributors = "at-risk"
+  bus_factor = "high"
+  score = 58
++++
+
+### Overview
+
+Apache Tomcat is an open-source implementation of Java Servlet, JavaServer Pages, and WebSocket technologies.
+
+### Importance
+
+- Powers Java web applications
+- Foundation for enterprise applications
+- Critical for Java ecosystem
+- Used by organizations worldwide
+
+### Key Features
+
+- Servlet container
+- JSP support
+- WebSocket implementation
+- Clustering support
+
+### Sustainability
+
+Tomcat is an Apache Foundation project with volunteer maintainers. Despite widespread enterprise use, direct funding is limited.
