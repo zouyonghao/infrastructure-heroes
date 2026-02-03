@@ -1,0 +1,72 @@
+<div class="projects-filter">
+    <div class="filter-row">
+        <div class="filter-search">
+            <input type="text" id="project-search" placeholder="Search projects by name..." class="filter-input">
+        </div>
+        
+        <select id="health-filter" class="filter-select">
+            <option value="">All Status</option>
+            <option value="critical">🚨 Critical</option>
+            <option value="warning">⚠️ Warning</option>
+            <option value="healthy">✅ Healthy</option>
+        </select>
+        
+        <button id="reset-filters" class="filter-reset">Reset filters</button>
+    </div>
+    
+    <div class="filter-stats">
+        Showing <span id="visible-count">{{ len (where .Site.RegularPages "Section" "projects") }}</span> projects
+    </div>
+</div>
+
+<script>
+(function() {
+    const searchInput = document.getElementById('project-search');
+    const healthFilter = document.getElementById('health-filter');
+    const resetBtn = document.getElementById('reset-filters');
+    const visibleCount = document.getElementById('visible-count');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    function getHealthFromCard(card) {
+        const scoreEl = card.querySelector('.health-score-value');
+        if (!scoreEl) return '';
+        const score = parseInt(scoreEl.textContent);
+        if (score < 60) return 'critical';
+        if (score < 80) return 'warning';
+        return 'healthy';
+    }
+    
+    function filterProjects() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const healthValue = healthFilter.value;
+        let visible = 0;
+        
+        projectCards.forEach(card => {
+            const title = card.querySelector('.project-title')?.textContent?.toLowerCase() || '';
+            const description = card.querySelector('.project-description')?.textContent?.toLowerCase() || '';
+            const cardHealth = getHealthFromCard(card);
+            
+            const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesHealth = !healthValue || cardHealth === healthValue;
+            
+            if (matchesSearch && matchesHealth) {
+                card.style.display = '';
+                visible++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        visibleCount.textContent = visible;
+    }
+    
+    searchInput?.addEventListener('input', filterProjects);
+    healthFilter?.addEventListener('change', filterProjects);
+    
+    resetBtn?.addEventListener('click', function() {
+        searchInput.value = '';
+        healthFilter.value = '';
+        filterProjects();
+    });
+})();
+</script>

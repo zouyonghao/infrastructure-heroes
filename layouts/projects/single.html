@@ -1,101 +1,84 @@
 {{ define "main" }}
 <article class="project-detail">
-    <div class="container">
-        <header class="project-header">
+    <div class="container-narrow">
+        <header class="project-detail-header">
             {{ if .Params.logo }}
-            <div class="project-logo-large">
+            <div class="project-detail-logo">
                 <img src="{{ .Params.logo }}" alt="{{ .Title }} logo">
             </div>
             {{ end }}
             <h1>{{ .Title }}</h1>
+            {{ if .Params.description }}
+            <p class="section-subtitle">{{ .Params.description }}</p>
+            {{ end }}
         </header>
 
         {{ if .Params.health }}
-        <div class="health-details">
-            <h3>📊 Project Health Dashboard</h3>
-            
-            <div class="health-score-large">
-                <span class="score-number {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+        <div class="health-dashboard">
+            <div class="health-score-display">
+                <div class="health-score-number {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
                     {{ .Params.health.score }}
-                </span>
-                <span class="score-total">/ 100</span>
-                <span class="score-status">
-                    {{ if ge .Params.health.score 80 }}✅ Healthy{{ else if ge .Params.health.score 60 }}⚠️ Needs Attention{{ else }}🚨 Critical{{ end }}
-                </span>
+                </div>
+                <div class="health-score-label">
+                    {{ if ge .Params.health.score 80 }}✅ Project is healthy{{ else if ge .Params.health.score 60 }}⚠️ Needs attention{{ else }}🚨 Critical - needs support{{ end }}
+                </div>
             </div>
 
-            <div class="health-grid">
-                <div class="health-item funding">
-                    <div class="health-item-label">💰 Funding</div>
-                    <div class="health-item-value {{ .Params.health.funding }}">
+            <div class="health-dimensions">
+                <div class="health-dimension {{ if eq .Params.health.funding "stable" }}good{{ else if eq .Params.health.funding "at-risk" }}warning{{ else }}critical{{ end }}">
+                    <div class="dimension-icon">💰</div>
+                    <div class="dimension-name">Funding</div>
+                    <div class="dimension-value {{ if eq .Params.health.funding "stable" }}healthy{{ else if eq .Params.health.funding "at-risk" }}warning{{ else }}critical{{ end }}">
                         {{ .Params.health.funding | humanize }}
                     </div>
-                    <p class="health-item-desc">
-                        {{ if eq .Params.health.funding "stable" }}Project has sustainable funding sources{{ end }}
-                        {{ if eq .Params.health.funding "at-risk" }}Funding sources are uncertain{{ end }}
-                        {{ if eq .Params.health.funding "critical" }}Urgent need for funding support{{ end }}
-                    </p>
                 </div>
 
-                <div class="health-item maintenance">
-                    <div class="health-item-label">🔧 Maintenance</div>
-                    <div class="health-item-value {{ .Params.health.maintenance }}">
+                <div class="health-dimension {{ if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
+                    <div class="dimension-icon">🔧</div>
+                    <div class="dimension-name">Maintenance</div>
+                    <div class="dimension-value {{ if eq .Params.health.maintenance "active" }}healthy{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
                         {{ .Params.health.maintenance | humanize }}
                     </div>
-                    <p class="health-item-desc">
-                        {{ if eq .Params.health.maintenance "active" }}Regular updates and bug fixes{{ end }}
-                        {{ if eq .Params.health.maintenance "moderate" }}Sporadic maintenance activity{{ end }}
-                        {{ if eq .Params.health.maintenance "inactive" }}Little to no recent activity{{ end }}
-                    </p>
                 </div>
 
-                <div class="health-item contributors">
-                    <div class="health-item-label">👥 Contributors</div>
-                    <div class="health-item-value {{ .Params.health.contributors }}">
+                <div class="health-dimension {{ if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
+                    <div class="dimension-icon">👥</div>
+                    <div class="dimension-name">Contributors</div>
+                    <div class="dimension-value {{ if eq .Params.health.contributors "healthy" }}healthy{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
                         {{ .Params.health.contributors | humanize }}
                     </div>
-                    <p class="health-item-desc">
-                        {{ if eq .Params.health.contributors "healthy" }}Active and diverse contributor base{{ end }}
-                        {{ if eq .Params.health.contributors "declining" }}Contributor numbers decreasing{{ end }}
-                        {{ if eq .Params.health.contributors "critical" }}Very few active contributors{{ end }}
-                    </p>
                 </div>
 
-                <div class="health-item bus_factor">
-                    <div class="health-item-label">🚌 Bus Factor</div>
-                    <div class="health-item-value {{ .Params.health.bus_factor }}">
+                <div class="health-dimension {{ if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
+                    <div class="dimension-icon">🚌</div>
+                    <div class="dimension-name">Bus Factor</div>
+                    <div class="dimension-value {{ if eq .Params.health.bus_factor "low" }}healthy{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
                         {{ .Params.health.bus_factor | humanize }} risk
                     </div>
-                    <p class="health-item-desc">
-                        {{ if eq .Params.health.bus_factor "low" }}Knowledge well distributed{{ end }}
-                        {{ if eq .Params.health.bus_factor "medium" }}Some key person dependencies{{ end }}
-                        {{ if eq .Params.health.bus_factor "high" }}Heavy reliance on 1-2 people{{ end }}
-                    </p>
                 </div>
-            </div>
-
-            <div class="health-legend">
-                <strong>Legend:</strong>
-                <code>💰 Funding</code> - Financial sustainability
-                <code>🔧 Maintenance</code> - Code maintenance activity
-                <code>👥 Contributors</code> - Community health
-                <code>🚌 Bus Factor</code> - Key person risk
             </div>
 
             {{ if lt .Params.health.score 60 }}
-            <div class="health-alert">
-                <strong>⚠️ This project needs support!</strong>
-                <p>Consider contributing code, documentation, testing, or funding to help keep this critical infrastructure healthy.</p>
+            <div class="alert-critical" style="margin-top: 24px;">
+                <div class="alert-icon">🆘</div>
+                <div class="alert-content">
+                    <strong>This project needs your help!</strong>
+                    Consider contributing code, documentation, or funding to help maintain this critical infrastructure.
+                </div>
             </div>
             {{ end }}
         </div>
         {{ end }}
 
-        <div class="project-content-detail">
+        <div class="content-wrapper">
             {{ .Content }}
         </div>
 
         {{ partial "dependency-map.html" . }}
+        
+        <div style="text-align: center; margin-top: 48px;">
+            <a href="/projects/" class="btn btn-secondary">← Back to all projects</a>
+        </div>
     </div>
 </article>
 {{ end }}

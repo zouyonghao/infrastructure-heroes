@@ -1,0 +1,27 @@
+{{ $maintainers := where .Site.RegularPages "Section" "maintainers" | first 4 }}
+<div class="maintainers-preview">
+    {{ range $maintainers }}
+    <div class="maintainer-card">
+        <div class="maintainer-avatar">
+            {{ if .Params.avatar }}
+            <img src="{{ .Params.avatar }}" alt="{{ .Title }}">
+            {{ else }}
+            <div class="avatar-placeholder">{{ substr .Title 0 1 }}</div>
+            {{ end }}
+        </div>
+        <div class="maintainer-info">
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            {{ if .Params.project }}
+            <span class="maintainer-project">{{ .Params.project }}</span>
+            {{ end }}
+            {{ if .Params.bio }}
+            <p class="maintainer-bio">{{ .Params.bio }}</p>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<div class="cta-section">
+    <a href="/maintainers/" class="cta-link">View all maintainers →</a>
+</div>

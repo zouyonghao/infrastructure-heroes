@@ -32,4 +32,4 @@ OpenSSL is a robust, commercial-grade, full-featured open-source toolkit that im
 
 ### Security History
 
-Following the Heartbleed vulnerability in 2014, the project received more attention and funding, but long-term sustainability remains a concern.
+Following the Heartbleed vulnerability in 2014, the project received more attention and funding, but long-term sustainability remains a concern. The core team is very small.

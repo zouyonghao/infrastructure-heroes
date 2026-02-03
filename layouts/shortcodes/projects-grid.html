@@ -1,53 +1,48 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
 <div class="projects-grid">
     {{ range $projects }}
-    <div class="project-card">
-        {{ if .Params.logo }}
-        <div class="project-logo">
-            <img src="{{ .Params.logo }}" alt="{{ .Title }} logo">
+    <div class="project-card" data-health="{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+        <div class="project-header">
+            {{ if .Params.logo }}
+            <div class="project-logo">
+                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" loading="lazy">
+            </div>
+            {{ end }}
+            <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        </div>
+        
+        {{ if .Params.description }}
+        <p class="project-description">{{ .Params.description }}</p>
+        {{ end }}
+        
+        {{ if .Params.health }}
+        <div class="health-indicator">
+            <div class="health-score-header">
+                <span class="health-score-label">Health Score</span>
+                <span class="health-score-value {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+                    {{ .Params.health.score }}/100
+                </span>
+            </div>
+            <div class="health-bars">
+                <div class="health-bar-item" title="Funding: {{ .Params.health.funding }}">
+                    <span class="health-bar-icon">💰</span>
+                    <span class="health-bar {{ if eq .Params.health.funding "stable" }}good{{ else if eq .Params.health.funding "at-risk" }}medium{{ else }}bad{{ end }}"></span>
+                </div>
+                <div class="health-bar-item" title="Maintenance: {{ .Params.health.maintenance }}">
+                    <span class="health-bar-icon">🔧</span>
+                    <span class="health-bar {{ if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}medium{{ else }}bad{{ end }}"></span>
+                </div>
+                <div class="health-bar-item" title="Contributors: {{ .Params.health.contributors }}">
+                    <span class="health-bar-icon">👥</span>
+                    <span class="health-bar {{ if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}medium{{ else }}bad{{ end }}"></span>
+                </div>
+                <div class="health-bar-item" title="Bus Factor: {{ .Params.health.bus_factor }}">
+                    <span class="health-bar-icon">🚌</span>
+                    <span class="health-bar {{ if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}medium{{ else }}bad{{ end }}"></span>
+                </div>
+            </div>
         </div>
         {{ end }}
-        <div class="project-content">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{ if .Description }}
-            <p>{{ .Description }}</p>
-            {{ end }}
-            
-            {{ if .Params.health }}
-            <div class="health-indicator">
-                <div class="health-score">
-                    <span class="score-label">Health Score</span>
-                    <span class="score-value {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
-                        {{ .Params.health.score }}/100
-                    </span>
-                </div>
-                <div class="health-bars">
-                    <div class="health-bar-item" title="Funding: {{ .Params.health.funding }}">
-                        <span class="bar-label">💰</span>
-                        <span class="bar {{ .Params.health.funding }}"></span>
-                    </div>
-                    <div class="health-bar-item" title="Maintenance: {{ .Params.health.maintenance }}">
-                        <span class="bar-label">🔧</span>
-                        <span class="bar {{ .Params.health.maintenance }}"></span>
-                    </div>
-                    <div class="health-bar-item" title="Contributors: {{ .Params.health.contributors }}">
-                        <span class="bar-label">👥</span>
-                        <span class="bar {{ .Params.health.contributors }}"></span>
-                    </div>
-                    <div class="health-bar-item" title="Bus Factor: {{ .Params.health.bus_factor }}">
-                        <span class="bar-label">🚌</span>
-                        <span class="bar {{ .Params.health.bus_factor }}"></span>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-            
-            <div class="project-meta">
-                {{ if .Params.date }}
-                <span class="project-date">Last updated: {{ .Date.Format "January 2006" }}</span>
-                {{ end }}
-            </div>
-        </div>
     </div>
     {{ end }}
-</div> 
+</div>

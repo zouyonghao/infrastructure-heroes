@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Infrastructure Heroes"
 theme = "ananke"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   favicon = "favicon.ico"
   description = "The unsung heroes of software infrastructure"
