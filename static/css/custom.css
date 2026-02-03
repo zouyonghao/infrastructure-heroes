@@ -1679,6 +1679,123 @@ a.btn-ghost:hover {
   background: var(--color-gray-700);
 }
 
+/* ---- Projects Page ---- */
+.projects-page {
+  padding: var(--space-12) 0;
+}
+
+.projects-page .section-header {
+  margin-bottom: var(--space-8);
+}
+
+.projects-page .section-title {
+  margin-bottom: var(--space-4);
+}
+
+.projects-page .projects-grid {
+  margin-bottom: var(--space-8);
+}
+
+/* ---- Health Explanation ---- */
+.health-explanation {
+  margin-top: var(--space-12);
+}
+
+.health-explanation-title {
+  font-size: var(--text-2xl);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.health-dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .health-dimensions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.health-dimension-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.health-dimension-card .dimension-icon-svg {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-3);
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.health-dimension-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+}
+
+.health-dimension-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+.score-legend {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.score-legend h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+.score-ranges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.score-range {
+  text-align: center;
+}
+
+.score-range .score-value {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.score-range .score-label {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.score-range.healthy .score-value {
+  color: var(--color-success);
+}
+
+.score-range.warning .score-value {
+  color: var(--color-warning);
+}
+
+.score-range.critical .score-value {
+  color: var(--color-danger);
+}
+
 /* ---- Print ---- */
 @media print {
   .hero-actions,
