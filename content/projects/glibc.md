@@ -2,6 +2,13 @@
 date = '2025-06-08T15:30:11+08:00'
 title = 'Glibc'
 logo = 'https://www.gnu.org/graphics/heckert_gnu.transp.small.png'
+
+[health]
+  funding = "stable"
+  maintenance = "active"
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 85
 +++
 
 ### Overview

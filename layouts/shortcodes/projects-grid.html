@@ -12,6 +12,36 @@
             {{ if .Description }}
             <p>{{ .Description }}</p>
             {{ end }}
+            
+            {{ if .Params.health }}
+            <div class="health-indicator">
+                <div class="health-score">
+                    <span class="score-label">Health Score</span>
+                    <span class="score-value {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+                        {{ .Params.health.score }}/100
+                    </span>
+                </div>
+                <div class="health-bars">
+                    <div class="health-bar-item" title="Funding: {{ .Params.health.funding }}">
+                        <span class="bar-label">💰</span>
+                        <span class="bar {{ .Params.health.funding }}"></span>
+                    </div>
+                    <div class="health-bar-item" title="Maintenance: {{ .Params.health.maintenance }}">
+                        <span class="bar-label">🔧</span>
+                        <span class="bar {{ .Params.health.maintenance }}"></span>
+                    </div>
+                    <div class="health-bar-item" title="Contributors: {{ .Params.health.contributors }}">
+                        <span class="bar-label">👥</span>
+                        <span class="bar {{ .Params.health.contributors }}"></span>
+                    </div>
+                    <div class="health-bar-item" title="Bus Factor: {{ .Params.health.bus_factor }}">
+                        <span class="bar-label">🚌</span>
+                        <span class="bar {{ .Params.health.bus_factor }}"></span>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            
             <div class="project-meta">
                 {{ if .Params.date }}
                 <span class="project-date">Last updated: {{ .Date.Format "January 2006" }}</span>
