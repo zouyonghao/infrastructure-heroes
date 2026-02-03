@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ if eq .Layout "thanks" }}
+    {{ partial "pages/thanks.html" . }}
+{{ else if eq .Layout "about" }}
+    {{ partial "pages/about.html" . }}
+{{ else }}
+    <article class="single-page">
+        <div class="container-narrow">
+            <header class="page-header">
+                <h1>{{ .Title }}</h1>
+            </header>
+            <div class="page-content">
+                {{ .Content }}
+            </div>
+        </div>
+    </article>
+{{ end }}
+{{ end }}
