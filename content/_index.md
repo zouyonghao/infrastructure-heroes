@@ -17,20 +17,7 @@ Discover and support the open source projects that power billions of devices. Tr
 </div>
 </div>
 
-<div class="hero-stats">
-<div class="stat-card">
-<span class="stat-value">7</span>
-<span class="stat-label">Projects Tracked</span>
-</div>
-<div class="stat-card">
-<span class="stat-value" id="at-risk-count">--</span>
-<span class="stat-label">Need Support</span>
-</div>
-<div class="stat-card">
-<span class="stat-value">2B+</span>
-<span class="stat-label">Devices Impacted</span>
-</div>
-</div>
+{{< hero-stats >}}
 </section>
 
 <section class="section" id="projects">
@@ -45,14 +32,7 @@ Each project is scored on funding, maintenance, community health, and bus factor
 
 {{< projects-grid >}}
 
-<div class="alert-critical">
-<div class="alert-icon">⚠️</div>
-<div class="alert-content">
-<strong>Critical Alert:</strong>
-<span class="critical-count">2</span> projects are at risk and need immediate community support.
-<a href="/projects/?filter=critical" class="alert-link">See urgent needs →</a>
-</div>
-</div>
+{{< critical-alert >}}
 </div>
 </section>
 
@@ -65,23 +45,7 @@ Infrastructure projects need diverse forms of support.
 Whether you're a developer, company, or individual, there's a way to contribute.
 </p>
 
-<div class="help-options">
-<div class="help-option">
-<div class="help-icon">💰</div>
-<h3>Fund</h3>
-<p>Direct sponsorship through GitHub Sponsors, Open Collective, or foundation grants.</p>
-</div>
-<div class="help-option">
-<div class="help-icon">📝</div>
-<h3>Contribute</h3>
-<p>Code, documentation, testing, bug reports—every contribution matters.</p>
-</div>
-<div class="help-option">
-<div class="help-icon">📢</div>
-<h3>Amplify</h3>
-<p>Share project stories, write about their importance, help recruit contributors.</p>
-</div>
-</div>
+{{< help-options >}}
 
 <a href="/thanks/" class="btn btn-primary btn-large">Join the Thank Wall</a>
 </div>

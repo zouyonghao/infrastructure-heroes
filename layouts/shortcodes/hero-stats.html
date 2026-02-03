@@ -1,0 +1,23 @@
+{{ $projects := where .Site.RegularPages "Section" "projects" }}
+{{ $totalProjects := len $projects }}
+{{ $atRiskCount := 0 }}
+{{ range $projects }}
+    {{ if lt .Params.health.score 60 }}
+        {{ $atRiskCount = add $atRiskCount 1 }}
+    {{ end }}
+{{ end }}
+
+<div class="hero-stats">
+    <div class="stat-card">
+        <span class="stat-value">{{ $totalProjects }}</span>
+        <span class="stat-label">Projects Tracked</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-value">{{ $atRiskCount }}</span>
+        <span class="stat-label">Need Support</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-value">2B+</span>
+        <span class="stat-label">Devices Impacted</span>
+    </div>
+</div>

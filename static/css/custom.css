@@ -1068,8 +1068,13 @@ a.btn-ghost:hover {
 }
 
 .alert-icon {
-  font-size: var(--text-2xl);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-danger);
 }
 
 .alert-content {
@@ -1124,9 +1129,27 @@ a.btn-ghost:hover {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-light);
   text-align: center;
+  transition: all var(--transition-normal);
 }
 
-.help-icon,
+.help-option:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.help-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-4);
+  background: var(--color-primary-50);
+  border-radius: var(--radius-lg);
+  color: var(--color-primary);
+}
+
 .dimension-icon {
   font-size: var(--text-3xl);
   margin-bottom: var(--space-3);
@@ -1322,6 +1345,97 @@ a.btn-ghost:hover {
 
 .dimension-value.critical {
   color: var(--color-danger);
+}
+
+/* Project Detail Page Enhanced Styles */
+.health-score-display-large {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.health-score-status {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  margin-top: var(--space-2);
+}
+
+.health-score-status.healthy {
+  color: var(--color-success);
+}
+
+.health-score-status.warning {
+  color: var(--color-warning);
+}
+
+.health-score-status.critical {
+  color: var(--color-danger);
+}
+
+.dimension-icon-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto var(--space-3);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+}
+
+.health-dimension.good .dimension-icon-svg,
+.health-dimension.healthy .dimension-icon-svg {
+  background: var(--color-success-50);
+  color: var(--color-success);
+}
+
+.health-dimension.warning .dimension-icon-svg {
+  background: var(--color-warning-50);
+  color: var(--color-warning);
+}
+
+.health-dimension.critical .dimension-icon-svg {
+  background: var(--color-danger-50);
+  color: var(--color-danger);
+}
+
+.project-content {
+  margin-top: var(--space-10);
+}
+
+.project-content h3 {
+  font-size: var(--text-xl);
+  margin: var(--space-8) 0 var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.project-content ul {
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.project-content li {
+  margin-bottom: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.project-back-link {
+  text-align: center;
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-light);
+}
+
+.project-back-link .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* ---- CTA Container (shortcode) ---- */
