@@ -7,9 +7,10 @@ theme = "ananke"
   unsafe = true
 
 [params]
-  favicon = "favicon.ico"
+  favicon = "favicon.svg"
   description = "The unsung heroes of software infrastructure"
   github = "zouyonghao"
+  github_repo = "zouyonghao/infrastructure-heroes"
   custom_css = ["css/custom.css"]
 
 [menu]
