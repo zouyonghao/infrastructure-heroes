@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Prettier'
-logo = ''
+logo = 'https://prettier.io/icon.png'
 description = 'Opinionated code formatter'
 
 [health]

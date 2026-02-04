@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Ansible'
-logo = 'https://www.ansible.com/hubfs/Ansible-Logo.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg'
 description = 'IT automation and configuration management'
 
 [health]

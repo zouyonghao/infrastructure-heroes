@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Python'
-logo = 'https://www.python.org/static/img/python-logo.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg'
 description = 'Popular programming language'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'ScyllaDB'
-logo = ''
+logo = 'https://www.scylladb.com/wp-content/uploads/scylla-logo.png'
 description = 'High-performance NoSQL database'
 
 [health]

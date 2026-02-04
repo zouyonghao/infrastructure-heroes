@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'BIND'
-logo = ''
+logo = 'https://www.isc.org/images/isc-logo.png'
 description = 'Most widely used DNS server software'
 
 [health]

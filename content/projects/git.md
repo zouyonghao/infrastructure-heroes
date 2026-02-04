@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Git'
-logo = 'https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg'
 description = 'Distributed version control system'
 
 [health]

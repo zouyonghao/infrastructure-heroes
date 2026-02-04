@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'InfluxDB'
-logo = ''
+logo = 'https://raw.githubusercontent.com/influxdata/branding/master/logos/influxdb/influxdb-logo--symbol--pool.svg'
 description = 'Time series database'
 
 [health]

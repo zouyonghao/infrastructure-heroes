@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'PHP'
-logo = 'https://www.php.net/images/logos/php-logo.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
 description = 'Server-side scripting language'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Moby (Docker Engine)'
-logo = 'https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg'
 description = 'Container runtime and toolkit'
 
 [health]

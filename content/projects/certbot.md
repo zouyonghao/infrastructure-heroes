@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Certbot'
-logo = ''
+logo = 'https://certbot.eff.org/images/certbot-logo-1A.svg'
 description = "ACME client for Let's Encrypt"
 
 [health]

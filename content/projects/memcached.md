@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Memcached'
-logo = ''
+logo = 'https://memcached.org/images/memcached_logo.png'
 description = 'Distributed memory caching system'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'MinIO'
-logo = ''
+logo = 'https://min.io/resources/img/logo.svg'
 description = 'High-performance object storage'
 
 [health]

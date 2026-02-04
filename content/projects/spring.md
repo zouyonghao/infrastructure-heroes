@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Spring Framework'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg'
 description = 'Java application framework'
 
 [health]

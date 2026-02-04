@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Terraform'
-logo = 'https://www.terraform.io/assets/images/og-image-8b3e4f7d.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg'
 description = 'Infrastructure as code software tool'
 
 [health]

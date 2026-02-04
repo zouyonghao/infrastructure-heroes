@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Jenkins'
-logo = 'https://www.jenkins.io/images/logos/jenkins/jenkins.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg'
 description = 'Open source automation server'
 
 [health]

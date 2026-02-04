@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Express.js'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg'
 description = 'Node.js web application framework'
 
 [health]

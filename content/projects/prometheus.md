@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Prometheus'
-logo = 'https://prometheus.io/assets/prometheus_logo_grey.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg'
 description = 'Monitoring and alerting toolkit'
 
 [health]

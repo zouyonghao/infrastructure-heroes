@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Rook'
-logo = ''
+logo = 'https://rook.io/images/rook-logo.svg'
 description = 'Cloud-native storage orchestrator'
 
 [health]

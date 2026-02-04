@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Grafana'
-logo = 'https://grafana.com/static/img/menu/grafana2.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg'
 description = 'Analytics and monitoring visualization'
 
 [health]

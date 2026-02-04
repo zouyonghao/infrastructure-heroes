@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Rust'
-logo = 'https://www.rust-lang.org/logos/rust-logo-512x512.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg'
 description = 'Systems programming language'
 
 [health]

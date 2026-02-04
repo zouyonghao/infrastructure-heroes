@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Flux'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flux/flux-original.svg'
 description = 'GitOps tool for Kubernetes'
 
 [health]

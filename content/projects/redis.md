@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Redis'
-logo = 'https://redis.io/images/redis-white.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg'
 description = 'In-memory data structure store'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'SQLite'
-logo = 'https://www.sqlite.org/images/sqlite370_banner.gif'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg'
 description = 'Most widely deployed database engine in the world'
 
 [health]

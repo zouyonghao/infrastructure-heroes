@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Cargo'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg'
 description = 'Rust package manager and build tool'
 
 [health]

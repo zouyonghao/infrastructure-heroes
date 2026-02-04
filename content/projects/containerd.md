@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'containerd'
-logo = ''
+logo = 'https://containerd.io/img/logos/icon/black/containerd-icon-black.svg'
 description = 'Industry-standard container runtime'
 
 [health]

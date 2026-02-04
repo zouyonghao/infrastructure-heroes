@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Flask'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg'
 description = 'Lightweight Python web framework'
 
 [health]

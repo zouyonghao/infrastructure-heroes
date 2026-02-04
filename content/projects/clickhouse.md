@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'ClickHouse'
-logo = ''
+logo = 'https://clickhouse.com/images/ch_gh_logo.svg'
 description = 'Column-oriented OLAP database'
 
 [health]

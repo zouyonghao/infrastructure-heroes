@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Cassandra'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cassandra/cassandra-original.svg'
 description = 'Distributed NoSQL database'
 
 [health]

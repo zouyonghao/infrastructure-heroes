@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'npm'
-logo = 'https://www.npmjs.com/static/images/npm-logo.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg'
 description = 'JavaScript package manager'
 
 [health]

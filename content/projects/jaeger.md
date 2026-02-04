@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Jaeger'
-logo = ''
+logo = 'https://www.jaegertracing.io/img/jaeger-icon-color.svg'
 description = 'Distributed tracing system'
 
 [health]

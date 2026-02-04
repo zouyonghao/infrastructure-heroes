@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'ImageMagick'
-logo = ''
+logo = 'https://imagemagick.org/image/wizard.png'
 description = 'Image manipulation toolkit'
 
 [health]

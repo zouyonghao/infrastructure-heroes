@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Bun'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bun/bun-original.svg'
 description = 'Fast JavaScript runtime and toolkit'
 
 [health]

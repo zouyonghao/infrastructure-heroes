@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Kubernetes'
-logo = 'https://kubernetes.io/images/kubernetes-horizontal-color.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg'
 description = 'Container orchestration platform'
 
 [health]

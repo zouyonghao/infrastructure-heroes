@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'OpenSSL'
-logo = 'https://upload.wikimedia.org/wikipedia/commons/6/6a/OpenSSL_logo.svg'
+logo = 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openssl.svg'
 description = 'Cryptography and SSL/TLS Toolkit'
 
 [health]

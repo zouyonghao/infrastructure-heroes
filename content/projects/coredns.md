@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'CoreDNS'
-logo = ''
+logo = 'https://coredns.io/images/CoreDNS_Colour_Horizontal.png'
 description = 'Cloud-native DNS server'
 
 [health]

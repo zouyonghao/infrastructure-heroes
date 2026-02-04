@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'PostgreSQL'
-logo = 'https://www.postgresql.org/media/img/about/press/elephant.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg'
 description = "The world's most advanced open source relational database"
 
 [health]

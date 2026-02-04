@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Envoy'
-logo = ''
+logo = 'https://www.envoyproxy.io/img/envoy-logo.svg'
 description = 'Cloud-native edge/service proxy'
 
 [health]

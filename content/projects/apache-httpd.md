@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache HTTP Server'
-logo = 'https://httpd.apache.org/images/httpd_logo_wide_new.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg'
 description = 'Most widely used web server software'
 
 [health]

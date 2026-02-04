@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Spark'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apachespark/apachespark-original.svg'
 description = 'Unified analytics engine'
 
 [health]

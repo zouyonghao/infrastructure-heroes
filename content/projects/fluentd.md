@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Fluentd'
-logo = ''
+logo = 'https://www.fluentd.org/assets/img/miscellany/fluentd-logo.png'
 description = 'Data collector for unified logging'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Go'
-logo = 'https://go.dev/images/go-logo-blue.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg'
 description = 'Programming language by Google'
 
 [health]

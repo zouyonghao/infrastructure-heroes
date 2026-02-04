@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'MySQL'
-logo = 'https://www.mysql.com/common/logos/logo-mysql-170x115.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
 description = 'Popular relational database'
 
 [health]

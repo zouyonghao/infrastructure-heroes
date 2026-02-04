@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'RabbitMQ'
-logo = 'https://www.rabbitmq.com/img/logo-rabbitmq.svg'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rabbitmq/rabbitmq-original.svg'
 description = 'Message broker software'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Kafka'
-logo = 'https://kafka.apache.org/logos/kafka_logo--simple.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg'
 description = 'Distributed event streaming platform'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Angular'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg'
 description = 'TypeScript-based web framework'
 
 [health]

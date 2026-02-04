@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Airflow'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apacheairflow/apacheairflow-original.svg'
 description = 'Workflow orchestration platform'
 
 [health]

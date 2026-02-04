@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Loki'
-logo = ''
+logo = 'https://grafana.com/static/img/logos/logo-loki.svg'
 description = 'Log aggregation system by Grafana'
 
 [health]

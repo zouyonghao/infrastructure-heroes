@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'MongoDB'
-logo = 'https://webimages.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg'
 description = 'Document-oriented NoSQL database'
 
 [health]

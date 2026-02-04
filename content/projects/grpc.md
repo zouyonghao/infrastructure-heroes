@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'gRPC'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grpc/grpc-original.svg'
 description = 'High-performance RPC framework'
 
 [health]

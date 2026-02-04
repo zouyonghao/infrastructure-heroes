@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache ZooKeeper'
-logo = ''
+logo = 'https://zookeeper.apache.org/images/zookeeper_small.gif'
 description = 'Distributed coordination service'
 
 [health]

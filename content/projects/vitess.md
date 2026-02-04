@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Vitess'
-logo = ''
+logo = 'https://vitess.io/img/logos/vitess.png'
 description = 'Database clustering for MySQL'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Nginx'
-logo = 'https://nginx.org/nginx.png'
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg'
 description = 'High-performance web server and reverse proxy'
 
 [health]

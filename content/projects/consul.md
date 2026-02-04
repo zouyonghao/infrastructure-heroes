@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Consul'
-logo = ''
+logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/consul/consul-original.svg'
 description = 'Service mesh and discovery'
 
 [health]
