@@ -1,6 +1,12 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
+{{ $limit := .Get "limit" | default 0 }}
+{{ $sortedProjects := $projects.ByParam "health.score" }}
+{{ $sortedProjects = $sortedProjects.Reverse }}
+{{ if gt $limit 0 }}
+    {{ $sortedProjects = first $limit $sortedProjects }}
+{{ end }}
 <div class="projects-grid">
-    {{ range $projects }}
+    {{ range $sortedProjects }}
     <div class="project-card" data-health="{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
         <div class="project-header">
             {{ if .Params.logo }}

@@ -30,7 +30,7 @@ Each project is scored on funding, maintenance, community health, and bus factor
 </p>
 </div>
 
-{{< projects-grid >}}
+{{< projects-grid limit="12" >}}
 
 {{< critical-alert >}}
 </div>
