@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Squid'
-logo = ''
+logo = 'https://www.squid-cache.org/Images/squid-logo.png'
 description = 'Caching proxy for the web'
 
 [health]

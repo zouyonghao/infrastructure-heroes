@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'GlusterFS'
-logo = ''
+logo = 'https://www.gluster.org/wp-content/uploads/2016/03/gluster-logo.png'
 description = 'Scalable network filesystem'
 
 [health]

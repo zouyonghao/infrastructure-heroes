@@ -1,35 +1,33 @@
 #!/usr/bin/env python3
 """
-Script to update project logos with accessible URLs.
-Uses well-known CDN sources and official brand resources.
+Script to check if logo URLs are accessible.
 """
 
-import os
-import re
+import requests
 
-# Logo mappings - using reliable sources like GitHub, official sites, or CDNs
+# Copy the LOGO_URLS from update_logos.py
 LOGO_URLS = {
     # Core Infrastructure
     'linux-kernel': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg',
     'glibc': 'https://www.gnu.org/graphics/heckert_gnu.transp.small.png',
     'busybox': 'https://busybox.net/images/busybox1.png',
     'openssl': 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openssl.svg',
-    'zlib': 'https://zlib.net/zlib_logo.png',
+    'zlib': 'https://zlib.net/images/zlib3d-b1.png',
     'curl': 'https://curl.se/logo/curl-logo.svg',
-    'openssh': 'https://www.openssh.com/images/openssh_l.png',
+    'openssh': 'https://www.openssh.org/images/openssh.gif',
     'gnupg': 'https://gnupg.org/share/logo-gnupg-light-purple-bg.png',
 
     # Web Servers
     'nginx': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg',
     'apache-httpd': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg',
-    'caddy': 'https://caddyserver.com/resources/images/logo-dark.svg',
+    'caddy': 'https://caddyserver.com/resources/images/caddy-logo.svg',
     'traefik': 'https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png',
     'haproxy': 'https://www.haproxy.com/img/HAProxyLogo.png',
 
     # Databases
     'postgresql': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
     'mysql': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
-    'mariadb': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mariadb/mariadb-original.svg',
+    'mariadb': 'https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo_blue-transparent.png',
     'sqlite': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg',
     'mongodb': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
     'redis': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg',
@@ -92,7 +90,7 @@ LOGO_URLS = {
     'npm': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg',
     'pip': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
     'homebrew': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/homebrew/homebrew-original.svg',
-    'apt': '',  # No standard logo
+    'apt': '',
     'webpack': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg',
     'babel': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/babel/babel-original.svg',
     'eslint': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg',
@@ -142,53 +140,20 @@ LOGO_URLS = {
     'squid': 'https://www.squid-cache.org/Images/squid-logo.png',
 }
 
-def update_project_logo(filepath, logo_url):
-    """Update the logo field in a project markdown file."""
-    with open(filepath, 'r') as f:
-        content = f.read()
+def check_url(url):
+    if not url:
+        return False
+    try:
+        response = requests.get(url, timeout=10, stream=True)
+        response.close()
+        return response.status_code == 200
+    except:
+        return False
 
-    # Check if logo is already set (not empty)
-    if re.search(r"^logo = '[^']+'", content, flags=re.MULTILINE):
-        return False  # Already has a logo
+for project, url in LOGO_URLS.items():
+    if url and not check_url(url):
+        print(f"Broken: {project} -> {url}")
+    elif not url:
+        print(f"Empty: {project}")
 
-    # Replace the logo line only if it's empty
-    new_content = re.sub(
-        r"^logo = ''",
-        f"logo = '{logo_url}'",
-        content,
-        flags=re.MULTILINE
-    )
-
-    if new_content != content:
-        with open(filepath, 'w') as f:
-            f.write(new_content)
-        return True
-    return False
-
-def main():
-    projects_dir = '/home/zyh/infrastructure-heroes/content/projects'
-
-    updated = 0
-    skipped = 0
-
-    for filename in os.listdir(projects_dir):
-        if not filename.endswith('.md') or filename == '_index.md':
-            continue
-
-        project_name = filename.replace('.md', '')
-        filepath = os.path.join(projects_dir, filename)
-
-        if project_name in LOGO_URLS:
-            logo_url = LOGO_URLS[project_name]
-            if update_project_logo(filepath, logo_url):
-                print(f"Updated: {project_name} -> {logo_url[:60]}..." if logo_url else f"Cleared: {project_name}")
-                updated += 1
-            else:
-                skipped += 1
-        else:
-            print(f"No mapping for: {project_name}")
-
-    print(f"\nDone! Updated: {updated}, Skipped: {skipped}")
-
-if __name__ == '__main__':
-    main()
+print("Done checking.")
