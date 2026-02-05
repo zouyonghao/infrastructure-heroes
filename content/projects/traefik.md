@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Traefik'
-logo = 'https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png'
+logo = 'https://www.vectorlogo.zone/logos/traefikio/traefikio-icon.svg'
 description = 'Cloud-native application proxy'
 
 [health]

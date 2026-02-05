@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'OpenSSH'
-logo = 'https://www.openssh.com/images/openssh_l.png'
+logo = 'https://avatars.githubusercontent.com/u/2387206?s=200&v=4'
 description = 'Secure Shell connectivity tools'
 
 [health]

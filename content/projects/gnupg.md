@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'GnuPG'
-logo = 'https://gnupg.org/share/logo-gnupg-light-purple-bg.png'
+logo = 'https://raw.githubusercontent.com/shgysk8zer0/logos/master/gnupg.svg'
 description = 'Free implementation of OpenPGP'
 
 [health]

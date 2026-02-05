@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'MariaDB'
-logo = 'https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo_blue-transparent.png'
+logo = 'https://raw.githubusercontent.com/loganmarchione/homelab-svg-assets/main/assets/mariadb.svg'
 description = 'Community-developed MySQL fork'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'libsodium'
-logo = ''
+logo = 'https://libsodium.gitbook.io/doc/~gitbook/image?url=https%3A%2F%2F825987491-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-LL5ibwSKuT1aNkrATMC%252Favatar.png%3Fgeneration%3D1535564186986547%26alt%3Dmedia&width=32&dpr=2&quality=100&sign=d88b1b9c&sv=2'
 description = 'Modern cryptography library'
 
 [health]

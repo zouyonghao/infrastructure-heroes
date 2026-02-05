@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'NATS'
-logo = 'https://nats.io/img/logos/nats-icon-color.svg'
+logo = 'https://avatars.githubusercontent.com/u/10203055?s=200&v=4'
 description = 'Cloud-native messaging system'
 
 [health]

@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'TiDB'
-logo = 'https://raw.githubusercontent.com/pingcap/tidb/master/docs/logo_with_text.png'
+logo = 'https://www.vectorlogo.zone/logos/tikv/tikv-icon.svg'
 description = 'Distributed NewSQL database'
 
 [health]

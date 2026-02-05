@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'CockroachDB'
-logo = 'https://www.cockroachlabs.com/img/CockroachLabs_Logo_Mark-lightbackground.svg'
+logo = 'https://raw.githubusercontent.com/detain/svg-logos/master/svg/c/cockroachdb.svg'
 description = 'Distributed SQL database'
 
 [health]

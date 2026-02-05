@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Protocol Buffers'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/protobuf/protobuf-original.svg'
+logo = 'https://plugins.jetbrains.com/files/14004/949122/icon/default.svg'
 description = 'Language-neutral data serialization'
 
 [health]

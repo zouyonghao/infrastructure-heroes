@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'TimescaleDB'
-logo = 'https://www.timescale.com/blog/content/images/2019/09/Timescale-Logo-Dark-1.png'
+logo = 'https://assets.easydmarc.com/a7196ad14f/bimi-timescale-com-652a126d.svg'
 description = 'PostgreSQL for time-series data'
 
 [health]

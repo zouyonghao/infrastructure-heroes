@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'LLVM'
-logo = 'https://llvm.org/img/LLVM-Logo-Derivative-1.png'
+logo = 'https://raw.githubusercontent.com/cncf/landscape/master/hosted_logos/llvm.svg'
 description = 'Compiler infrastructure and toolchain'
 
 [health]

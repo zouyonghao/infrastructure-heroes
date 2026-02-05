@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'etcd'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/etcd/etcd-original.svg'
+logo = 'https://avatars.githubusercontent.com/u/41972792?s=48&v=4'
 description = 'Distributed key-value store'
 
 [health]

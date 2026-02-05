@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'zlib'
-logo = 'https://zlib.net/zlib_logo.png'
+logo = 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Zlib_3D_green.png'
 description = 'Massively used compression library'
 
 [health]

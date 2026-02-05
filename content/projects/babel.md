@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Babel'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/babel/babel-original.svg'
+logo = 'https://raw.githubusercontent.com/dochne/wappalyzer/main/src/images/icons/Babel.svg'
 description = 'JavaScript compiler'
 
 [health]

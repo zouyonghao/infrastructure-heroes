@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'curl'
-logo = 'https://curl.se/logo/curl-logo.svg'
+logo = 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/curl.svg'
 description = 'Command line tool and library for transferring data with URLs'
 
 [health]

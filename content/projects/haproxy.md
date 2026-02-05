@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'HAProxy'
-logo = 'https://www.haproxy.com/img/HAProxyLogo.png'
+logo = 'https://www.vectorlogo.zone/logos/haproxy/haproxy-icon.svg'
 description = 'High-performance load balancer'
 
 [health]

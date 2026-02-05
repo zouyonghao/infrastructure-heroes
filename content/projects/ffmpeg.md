@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'FFmpeg'
-logo = 'https://ffmpeg.org/img/ffmpeg-logo.png'
+logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/ffmpeg-icon.svg'
 description = 'Complete multimedia framework'
 
 [health]

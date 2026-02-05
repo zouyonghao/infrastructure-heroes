@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Varnish'
-logo = 'https://varnish-cache.org/static/varnish-bunny.png'
+logo = 'https://avatars.githubusercontent.com/u/14977495?s=200&v=4'
 description = 'HTTP accelerator and reverse proxy'
 
 [health]
