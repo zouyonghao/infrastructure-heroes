@@ -1,0 +1,58 @@
+{{/*
+  Project Maintainers Partial
+  Displays maintainers associated with the current project
+  Usage: {{ partial "project-maintainers.html" . }}
+*/}}
+
+{{ $projectTitle := .Title }}
+{{ $maintainers := where .Site.RegularPages "Section" "maintainers" }}
+{{ $projectMaintainers := slice }}
+
+{{/* Find maintainers who have this project in their projects list */}}
+{{ range $maintainer := $maintainers }}
+  {{ if $maintainer.Params.projects }}
+    {{ range $projectName := $maintainer.Params.projects }}
+      {{ if eq $projectName $projectTitle }}
+        {{ $projectMaintainers = $projectMaintainers | append $maintainer }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $projectMaintainers) 0 }}
+<div class="project-maintainers-section">
+  <h3 class="project-maintainers-title">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+    Maintainers
+  </h3>
+  <div class="project-maintainers-list">
+    {{ range $projectMaintainers }}
+    <a href="{{ .RelPermalink }}" class="project-maintainer-card">
+      <div class="project-maintainer-avatar">
+        {{ if .Params.avatar }}
+        <img src="{{ .Params.avatar }}" alt="{{ .Title }}">
+        {{ else }}
+        <div class="avatar-placeholder-small">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        {{ end }}
+      </div>
+      <div class="project-maintainer-info">
+        <div class="project-maintainer-name">{{ .Title }}</div>
+        {{ if .Params.role }}
+        <div class="project-maintainer-role">{{ .Params.role }}</div>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

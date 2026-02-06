@@ -2385,3 +2385,429 @@ a.btn-ghost:hover {
     display: none;
   }
 }
+
+/* ========================================
+   Project-Maintainer Relationships
+   ======================================== */
+
+/* ---- Project Tag Links ---- */
+.project-tag-link {
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.project-tag-link:hover {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  transform: translateY(-1px);
+}
+
+/* ---- Project Maintainers Section ---- */
+.project-maintainers-section {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--border-light);
+}
+
+.project-maintainers-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--space-4);
+  color: var(--text-primary);
+}
+
+.project-maintainers-title svg {
+  color: var(--color-primary);
+}
+
+.project-maintainers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.project-maintainer-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  min-width: 200px;
+}
+
+.project-maintainer-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.project-maintainer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+}
+
+.project-maintainer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-maintainer-avatar .avatar-placeholder-small {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+}
+
+.project-maintainer-info {
+  min-width: 0;
+}
+
+.project-maintainer-name {
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-maintainer-role {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Projects at Risk ---- */
+.projects-at-risk {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin: var(--space-8) 0;
+}
+
+.projects-at-risk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.projects-at-risk-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.projects-at-risk-title svg {
+  color: var(--color-danger);
+}
+
+.projects-at-risk-count {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  font-weight: var(--font-medium);
+  background: var(--bg-primary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+}
+
+.projects-at-risk-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.project-at-risk-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  transition: all var(--transition-fast);
+  border-left: 4px solid var(--border-light);
+}
+
+.project-at-risk-card.critical {
+  border-left-color: var(--color-danger);
+}
+
+.project-at-risk-card.warning {
+  border-left-color: var(--color-warning);
+}
+
+.project-at-risk-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.project-at-risk-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.project-at-risk-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 0;
+}
+
+.project-at-risk-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: var(--space-2);
+}
+
+.project-at-risk-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-at-risk-details {
+  min-width: 0;
+}
+
+.project-at-risk-name {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--space-1);
+}
+
+.project-at-risk-name a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.project-at-risk-name a:hover {
+  color: var(--color-primary);
+}
+
+.project-at-risk-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-at-risk-score {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.project-at-risk-score-number {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-extrabold);
+  line-height: 1;
+}
+
+.project-at-risk-score-number.critical {
+  color: var(--color-danger);
+}
+
+.project-at-risk-score-number.warning {
+  color: var(--color-warning);
+}
+
+.project-at-risk-score-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-1);
+}
+
+.project-at-risk-maintainers {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.project-at-risk-maintainers-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.project-at-risk-maintainers-list {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.project-at-risk-maintainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2) var(--space-1) var(--space-1);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.project-at-risk-maintainer:hover {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.project-at-risk-maintainer img,
+.project-at-risk-maintainer-initial {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.project-at-risk-maintainer-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-xs);
+}
+
+.project-at-risk-factors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.risk-factor {
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-danger-50);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger-light);
+}
+
+.risk-factor.bus-factor {
+  background: var(--color-warning-50);
+  color: var(--color-warning);
+  border-color: var(--color-warning-light);
+}
+
+.risk-factor.contributors {
+  background: var(--color-danger-50);
+  color: var(--color-danger);
+  border-color: var(--color-danger-light);
+}
+
+.risk-factor.funding {
+  background: var(--color-danger-50);
+  color: var(--color-danger);
+  border-color: var(--color-danger-light);
+}
+
+.risk-factor.maintenance {
+  background: var(--color-warning-50);
+  color: var(--color-warning);
+  border-color: var(--color-warning-light);
+}
+
+.project-at-risk-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.project-at-risk-actions .btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+}
+
+.projects-at-risk-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.projects-at-risk-empty {
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--color-success-50);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-success-light);
+  color: var(--color-success);
+  font-weight: var(--font-medium);
+}
+
+/* ---- Responsive for Projects at Risk ---- */
+@media (max-width: 640px) {
+  .project-at-risk-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-at-risk-score {
+    align-self: flex-end;
+  }
+
+  .project-at-risk-maintainers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-at-risk {
+    padding: var(--space-5);
+  }
+
+  .projects-at-risk-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

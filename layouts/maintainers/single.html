@@ -21,7 +21,13 @@
             {{ if .Params.projects }}
             <div class="maintainer-projects-large">
                 {{ range .Params.projects }}
-                <span class="project-tag">{{ . }}</span>
+                {{ $projectName := . }}
+                {{ $projectPage := $.Site.GetPage (printf "/projects/%s" (urlize .)) }}
+                {{ if $projectPage }}
+                <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link">{{ $projectName }}</a>
+                {{ else }}
+                <span class="project-tag">{{ $projectName }}</span>
+                {{ end }}
                 {{ end }}
             </div>
             {{ end }}
