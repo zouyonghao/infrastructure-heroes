@@ -1,0 +1,49 @@
+{{/*
+  Maintainer Avatar Partial
+  Displays maintainer avatar with automatic GitHub fallback
+  Usage: {{ partial "maintainer-avatar.html" (dict "maintainer" . "size" "64") }}
+  
+  Parameters:
+  - maintainer: The maintainer page object
+  - size: Avatar size in pixels (default: 64)
+  - class: Additional CSS class (optional)
+*/}}
+
+{{ $size := .size | default 64 }}
+{{ $maintainer := .maintainer }}
+{{ $class := .class | default "" }}
+{{ $githubUsername := "" }}
+
+{{ if $maintainer.Params.links }}
+  {{ $githubUsername = $maintainer.Params.links.github }}
+{{ end }}
+
+{{/* Determine avatar source priority:
+   1. Explicit avatar URL
+   2. GitHub avatar (if github username available)
+   3. Initials placeholder
+*/}}
+
+{{ $avatarUrl := "" }}
+{{ if $maintainer.Params.avatar }}
+  {{ $avatarUrl = $maintainer.Params.avatar }}
+{{ else if $githubUsername }}
+  {{ $avatarUrl = printf "https://avatars.githubusercontent.com/%s" $githubUsername }}
+{{ end }}
+
+{{ if $avatarUrl }}
+<img src="{{ $avatarUrl }}" 
+     alt="{{ $maintainer.Title }}" 
+     class="maintainer-avatar-img {{ $class }}"
+     width="{{ $size }}" 
+     height="{{ $size }}"
+     loading="lazy"
+     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="avatar-fallback {{ $class }}" style="display: none;">
+  <span class="avatar-initial">{{ substr $maintainer.Title 0 1 }}</span>
+</div>
+{{ else }}
+<div class="avatar-fallback {{ $class }}">
+  <span class="avatar-initial">{{ substr $maintainer.Title 0 1 }}</span>
+</div>
+{{ end }}
