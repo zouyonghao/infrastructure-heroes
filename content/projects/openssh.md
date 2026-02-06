@@ -5,11 +5,21 @@ logo = 'https://avatars.githubusercontent.com/u/2387206?s=200&v=4'
 description = 'Secure Shell connectivity tools'
 
 [health]
-  funding = "at-risk"
-  maintenance = "active"
-  contributors = "at-risk"
+  funding = "stable"
+  maintenance = "moderate"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 65
+  score = 68
+[links]
+  github = "openssh/openssh-portable"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 3665
+  forks = 2016
+  contributors = 100
+  commits_30d = 11
+  commits_90d = 89
+  bus_factor_people = 1
 +++
 
 ### Overview

@@ -5,11 +5,21 @@ logo = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/ImageMagick_logo.svg
 description = 'Image manipulation toolkit'
 
 [health]
-  funding = "critical"
-  maintenance = "at-risk"
-  contributors = "at-risk"
-  bus_factor = "critical"
-  score = 35
+  funding = "stable"
+  maintenance = "active"
+  contributors = "critical"
+  bus_factor = "high"
+  score = 58
+[links]
+  github = "ImageMagick/ImageMagick"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 15648
+  forks = 1539
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

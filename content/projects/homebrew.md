@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/homebrew
 description = 'Package manager for macOS and Linux'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 68
+  bus_factor = "low"
+  score = 90
+[links]
+  github = "Homebrew/brew"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 46512
+  forks = 10939
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 3
 +++
 
 ### Overview

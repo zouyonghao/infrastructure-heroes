@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elastics
 description = 'Distributed search and analytics engine'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "low"
+  score = 96
+[links]
+  github = "elastic/elasticsearch"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 76021
+  forks = 25797
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 14
+
 +++
 
 ### Overview

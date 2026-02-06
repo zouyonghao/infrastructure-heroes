@@ -5,11 +5,22 @@ logo = 'https://www.vectorlogo.zone/logos/ceph/ceph-icon.svg'
 description = 'Distributed storage system'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 80
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "ceph/ceph"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 16178
+  forks = 6282
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 6
+
 +++
 
 ### Overview

@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rabbitmq
 description = 'Message broker software'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "medium"
+  score = 84
+[links]
+  github = "rabbitmq/rabbitmq-server"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 13443
+  forks = 3989
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

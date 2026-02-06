@@ -5,11 +5,21 @@ logo = 'https://www.vectorlogo.zone/logos/scylladb/scylladb-icon.svg'
 description = 'High-performance NoSQL database'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "scylladb/scylladb"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 15316
+  forks = 1467
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 5
 +++
 
 ### Overview

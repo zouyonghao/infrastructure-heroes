@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rus
 description = 'Rust package manager and build tool'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 88
+  bus_factor = "medium"
+  score = 76
+[links]
+  github = "rust-lang/cargo"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 14557
+  forks = 2802
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
+
 +++
 
 ### Overview

@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/detain/svg-logos/master/svg/c/cockroac
 description = 'Distributed SQL database'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "medium"
+  score = 76
+[links]
+  github = "cockroachdb/cockroach"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 31819
+  forks = 4075
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
+
 +++
 
 ### Overview

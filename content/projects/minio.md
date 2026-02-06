@@ -5,11 +5,21 @@ logo = 'https://www.vectorlogo.zone/logos/minioio/minioio-icon.svg'
 description = 'High-performance object storage'
 
 [health]
-  funding = "healthy"
-  maintenance = "active"
-  contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  funding = "stable"
+  maintenance = "moderate"
+  contributors = "critical"
+  bus_factor = "low"
+  score = 55
+[links]
+  github = "minio/minio"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 60123
+  forks = 6956
+  contributors = 100
+  commits_30d = 0
+  commits_90d = 2
+  bus_factor_people = 6
 +++
 
 ### Overview

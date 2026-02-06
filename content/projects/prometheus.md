@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/promethe
 description = 'Monitoring and alerting toolkit'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 88
+  bus_factor = "low"
+  score = 90
+[links]
+  github = "prometheus/prometheus"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 62573
+  forks = 10158
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 4
 +++
 
 ### Overview

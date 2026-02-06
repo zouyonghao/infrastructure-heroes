@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-
 description = 'Server-side scripting language'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 58
+  contributors = "healthy"
+  bus_factor = "low"
+  score = 90
+[links]
+  github = "php/php-src"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 39841
+  forks = 8002
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 3
 +++
 
 ### Overview

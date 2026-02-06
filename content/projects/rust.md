@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rus
 description = 'Systems programming language'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 90
+  bus_factor = "high"
+  score = 79
+[links]
+  github = "rust-lang/rust"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 110085
+  forks = 14441
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

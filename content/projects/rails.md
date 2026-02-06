@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/ra
 description = 'Full-stack Ruby web framework'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 68
+  bus_factor = "low"
+  score = 96
+[links]
+  github = "rails/rails"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 58166
+  forks = 22178
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 6
 +++
 
 ### Overview

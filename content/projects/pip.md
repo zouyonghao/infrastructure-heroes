@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/p
 description = 'Python package installer'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 62
+  score = 71
+[links]
+  github = "pypa/pip"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 10083
+  forks = 3229
+  contributors = 100
+  commits_30d = 93
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

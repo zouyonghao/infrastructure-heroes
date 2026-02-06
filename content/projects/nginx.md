@@ -8,8 +8,18 @@ description = 'High-performance web server and reverse proxy'
   funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 88
+  bus_factor = "high"
+  score = 76
+[links]
+  github = "nginx/nginx"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 29275
+  forks = 7754
+  contributors = 89
+  commits_30d = 13
+  commits_90d = 36
+  bus_factor_people = 1
 +++
 
 ### Overview

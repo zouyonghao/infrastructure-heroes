@@ -5,11 +5,21 @@ logo = 'https://avatars.githubusercontent.com/u/10203055?s=200&v=4'
 description = 'Cloud-native messaging system'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  contributors = "declining"
+  bus_factor = "high"
+  score = 66
+[links]
+  github = "nats-io/nats-server"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 19103
+  forks = 1730
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

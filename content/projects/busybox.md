@@ -5,11 +5,22 @@ logo = 'https://busybox.net/images/busybox1.png'
 description = 'The Swiss Army Knife of Embedded Linux'
 
 [health]
-  funding = "critical"
+  funding = "stable"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 35
+  score = 27
+[links]
+  github = "mirror/busybox"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 2013
+  forks = 702
+  contributors = 100
+  commits_30d = 0
+  commits_90d = 0
+  bus_factor_people = 1
+
 +++
 
 ### Overview

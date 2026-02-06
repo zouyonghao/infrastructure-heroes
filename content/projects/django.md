@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/django/d
 description = 'Python web framework'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 72
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "django/django"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 86695
+  forks = 33629
+  contributors = 100
+  commits_30d = 83
+  commits_90d = 100
+  bus_factor_people = 5
+
 +++
 
 ### Overview

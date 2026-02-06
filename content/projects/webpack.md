@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/
 description = 'JavaScript module bundler'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 55
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 84
+[links]
+  github = "webpack/webpack"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 65946
+  forks = 9232
+  contributors = 100
+  commits_30d = 82
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

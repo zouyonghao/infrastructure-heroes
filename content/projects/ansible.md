@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/
 description = 'IT automation and configuration management'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 84
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "ansible/ansible"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 67915
+  forks = 24215
+  contributors = 100
+  commits_30d = 35
+  commits_90d = 86
+  bus_factor_people = 4
+
 +++
 
 ### Overview

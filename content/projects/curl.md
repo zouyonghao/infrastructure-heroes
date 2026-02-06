@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons
 description = 'Command line tool and library for transferring data with URLs'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 68
+  score = 77
+[links]
+  github = "curl/curl"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 40610
+  forks = 7052
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
+
 +++
 
 ### Overview

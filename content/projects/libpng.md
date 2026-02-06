@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/detain/svg-logos/master/svg/p/png-1.sv
 description = 'Official PNG reference library'
 
 [health]
-  funding = "critical"
-  maintenance = "at-risk"
-  contributors = "critical"
-  bus_factor = "critical"
-  score = 28
+  funding = "at-risk"
+  maintenance = "moderate"
+  contributors = "declining"
+  bus_factor = "high"
+  score = 44
+[links]
+  github = "glennrp/libpng"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 1540
+  forks = 756
+  contributors = 89
+  commits_30d = 0
+  commits_90d = 38
+  bus_factor_people = 1
 +++
 
 ### Overview

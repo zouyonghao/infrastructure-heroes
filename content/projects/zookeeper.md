@@ -5,11 +5,21 @@ logo = 'https://www.vectorlogo.zone/logos/apache_zookeeper/apache_zookeeper-icon
 description = 'Distributed coordination service'
 
 [health]
-  funding = "at-risk"
-  maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 58
+  funding = "stable"
+  maintenance = "moderate"
+  contributors = "declining"
+  bus_factor = "low"
+  score = 67
+[links]
+  github = "apache/zookeeper"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 12718
+  forks = 7334
+  contributors = 100
+  commits_30d = 6
+  commits_90d = 19
+  bus_factor_people = 3
 +++
 
 ### Overview

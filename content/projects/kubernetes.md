@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernet
 description = 'Container orchestration platform'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 92
+  bus_factor = "medium"
+  score = 82
+[links]
+  github = "kubernetes/kubernetes"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 120313
+  forks = 42393
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/fl
 description = 'Lightweight Python web framework'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
+  contributors = "critical"
   bus_factor = "high"
-  score = 58
+  score = 56
+[links]
+  github = "pallets/flask"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 71140
+  forks = 16696
+  contributors = 100
+  commits_30d = 23
+  commits_90d = 32
+  bus_factor_people = 1
+
 +++
 
 ### Overview

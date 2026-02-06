@@ -5,11 +5,21 @@ logo = 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Zlib_3D_green.png'
 description = 'Massively used compression library'
 
 [health]
-  funding = "critical"
-  maintenance = "at-risk"
-  contributors = "at-risk"
-  bus_factor = "critical"
-  score = 35
+  funding = "at-risk"
+  maintenance = "active"
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 71
+[links]
+  github = "madler/zlib"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 6660
+  forks = 2696
+  contributors = 62
+  commits_30d = 90
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

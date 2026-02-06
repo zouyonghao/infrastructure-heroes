@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescri
 description = 'Typed superset of JavaScript'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 92
+  bus_factor = "low"
+  score = 84
+[links]
+  github = "microsoft/TypeScript"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 107706
+  forks = 13220
+  contributors = 100
+  commits_30d = 39
+  commits_90d = 78
+  bus_factor_people = 3
 +++
 
 ### Overview

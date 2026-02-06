@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/s
 description = 'Java application framework'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 88
+  bus_factor = "medium"
+  score = 84
+[links]
+  github = "spring-projects/spring-framework"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 59584
+  forks = 38918
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

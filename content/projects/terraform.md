@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/terrafor
 description = 'Infrastructure as code software tool'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  bus_factor = "high"
+  score = 79
+[links]
+  github = "hashicorp/terraform"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 47613
+  forks = 10200
+  contributors = 100
+  commits_30d = 86
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

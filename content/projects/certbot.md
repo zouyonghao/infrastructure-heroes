@@ -5,11 +5,22 @@ logo = 'https://certbot.eff.org/assets/Certbot-solid-c4e500f9953fc8ee1d38cb0b227
 description = "ACME client for Let's Encrypt"
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 65
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 82
+[links]
+  github = "certbot/certbot"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 32807
+  forks = 3487
+  contributors = 100
+  commits_30d = 25
+  commits_90d = 55
+  bus_factor_people = 2
+
 +++
 
 ### Overview

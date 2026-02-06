@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/dochne/wappalyzer/main/src/images/icon
 description = 'JavaScript compiler'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 52
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 84
+[links]
+  github = "babel/babel"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 43877
+  forks = 5796
+  contributors = 100
+  commits_30d = 64
+  commits_90d = 100
+  bus_factor_people = 2
+
 +++
 
 ### Overview

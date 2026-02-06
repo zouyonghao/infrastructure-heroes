@@ -21,3 +21,4 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo 
+scripts/__pycache__/

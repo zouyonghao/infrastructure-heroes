@@ -10,6 +10,8 @@ description = 'Free implementation of OpenPGP'
   contributors = "at-risk"
   bus_factor = "critical"
   score = 45
+[links]
+  github = "gnupg/gnupg"
 +++
 
 ### Overview

@@ -5,11 +5,21 @@ logo = 'https://upload.wikimedia.org/wikipedia/commons/c/c3/JPEG_format_logo.svg
 description = 'JPEG image codec with SIMD acceleration'
 
 [health]
-  funding = "critical"
-  maintenance = "at-risk"
-  contributors = "at-risk"
-  bus_factor = "critical"
-  score = 32
+  funding = "at-risk"
+  maintenance = "active"
+  contributors = "critical"
+  bus_factor = "high"
+  score = 50
+[links]
+  github = "libjpeg-turbo/libjpeg-turbo"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 4210
+  forks = 1121
+  contributors = 43
+  commits_30d = 31
+  commits_90d = 41
+  bus_factor_people = 1
 +++
 
 ### Overview

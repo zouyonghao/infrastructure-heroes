@@ -5,11 +5,21 @@ logo = 'https://www.vectorlogo.zone/logos/traefikio/traefikio-icon.svg'
 description = 'Cloud-native application proxy'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "low"
+  score = 96
+[links]
+  github = "traefik/traefik"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 61480
+  forks = 5802
+  contributors = 100
+  commits_30d = 73
+  commits_90d = 100
+  bus_factor_people = 5
 +++
 
 ### Overview

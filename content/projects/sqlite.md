@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/s
 description = 'Most widely deployed database engine in the world'
 
 [health]
-  funding = "healthy"
+  funding = "at-risk"
   maintenance = "active"
-  contributors = "at-risk"
+  contributors = "critical"
   bus_factor = "high"
-  score = 72
+  score = 47
+[links]
+  github = "sqlite/sqlite"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 8991
+  forks = 1405
+  contributors = 0
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

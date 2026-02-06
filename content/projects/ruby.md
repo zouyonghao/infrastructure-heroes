@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/rub
 description = 'Dynamic programming language'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 65
+  contributors = "healthy"
+  bus_factor = "low"
+  score = 90
+[links]
+  github = "ruby/ruby"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 23301
+  forks = 5562
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 3
 +++
 
 ### Overview

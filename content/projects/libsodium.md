@@ -5,11 +5,21 @@ logo = 'https://libsodium.gitbook.io/doc/~gitbook/image?url=https%3A%2F%2F825987
 description = 'Modern cryptography library'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
+  contributors = "critical"
   bus_factor = "high"
-  score = 58
+  score = 53
+[links]
+  github = "jedisct1/libsodium"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 13434
+  forks = 1851
+  contributors = 100
+  commits_30d = 30
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

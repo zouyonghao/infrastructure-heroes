@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cassandr
 description = 'Distributed NoSQL database'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 78
+  bus_factor = "low"
+  score = 87
+[links]
+  github = "apache/cassandra"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 9611
+  forks = 3832
+  contributors = 100
+  commits_30d = 40
+  commits_90d = 100
+  bus_factor_people = 6
+
 +++
 
 ### Overview

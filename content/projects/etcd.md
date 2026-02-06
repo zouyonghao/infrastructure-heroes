@@ -5,11 +5,22 @@ logo = 'https://avatars.githubusercontent.com/u/41972792?s=48&v=4'
 description = 'Distributed key-value store'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  bus_factor = "medium"
+  score = 82
+[links]
+  github = "etcd-io/etcd"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 51463
+  forks = 10314
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
+
 +++
 
 ### Overview

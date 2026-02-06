@@ -5,11 +5,21 @@ logo = 'https://avatars.githubusercontent.com/u/859518?s=200&v=4'
 description = 'Data collector for unified logging'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  contributors = "critical"
+  bus_factor = "high"
+  score = 55
+[links]
+  github = "fluent/fluentd"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 13488
+  forks = 1384
+  contributors = 100
+  commits_30d = 14
+  commits_90d = 45
+  bus_factor_people = 1
 +++
 
 ### Overview

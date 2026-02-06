@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tomcat/t
 description = 'Java Servlet container'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
+  contributors = "declining"
   bus_factor = "high"
-  score = 58
+  score = 62
+[links]
+  github = "apache/tomcat"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 8092
+  forks = 5341
+  contributors = 100
+  commits_30d = 71
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

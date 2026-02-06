@@ -9,7 +9,17 @@ description = 'The foundation of modern computing infrastructure'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 88
+[links]
+  github = "torvalds/linux"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 216469
+  forks = 60342
+  contributors = 0
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 7
 +++
 
 ### Overview

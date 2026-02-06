@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons
 description = 'Web server with automatic HTTPS'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "high"
-  score = 62
+  contributors = "healthy"
+  bus_factor = "low"
+  score = 91
+[links]
+  github = "caddyserver/caddy"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 69663
+  forks = 4619
+  contributors = 100
+  commits_30d = 15
+  commits_90d = 47
+  bus_factor_people = 5
+
 +++
 
 ### Overview

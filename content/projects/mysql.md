@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/my
 description = 'Popular relational database'
 
 [health]
-  funding = "healthy"
-  maintenance = "active"
+  funding = "stable"
+  maintenance = "moderate"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 82
+  bus_factor = "low"
+  score = 78
+[links]
+  github = "mysql/mysql-server"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 12055
+  forks = 4225
+  contributors = 100
+  commits_30d = 0
+  commits_90d = 100
+  bus_factor_people = 6
 +++
 
 ### Overview

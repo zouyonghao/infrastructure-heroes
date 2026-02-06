@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads
 description = 'Cloud-native DNS server'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  bus_factor = "high"
+  score = 77
+[links]
+  github = "coredns/coredns"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 13793
+  forks = 2400
+  contributors = 100
+  commits_30d = 31
+  commits_90d = 100
+  bus_factor_people = 1
+
 +++
 
 ### Overview

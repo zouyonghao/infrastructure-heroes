@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vault/va
 description = 'Secrets management tool'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
-  bus_factor = "healthy"
-  score = 85
+  contributors = "critical"
+  bus_factor = "high"
+  score = 54
+[links]
+  github = "hashicorp/vault"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 34976
+  forks = 4588
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 1
 +++
 
 ### Overview

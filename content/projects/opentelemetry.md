@@ -5,11 +5,21 @@ logo = 'https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png'
 description = 'Observability framework'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
+  bus_factor = "low"
   score = 90
+[links]
+  github = "open-telemetry/opentelemetry-collector"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 6581
+  forks = 1859
+  contributors = 100
+  commits_30d = 75
+  commits_90d = 100
+  bus_factor_people = 4
 +++
 
 ### Overview

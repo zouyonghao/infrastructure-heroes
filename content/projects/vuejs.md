@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vu
 description = 'Progressive JavaScript framework'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 72
+  bus_factor = "medium"
+  score = 82
+[links]
+  github = "vuejs/core"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 52916
+  forks = 9045
+  contributors = 100
+  commits_30d = 28
+  commits_90d = 70
+  bus_factor_people = 2
 +++
 
 ### Overview

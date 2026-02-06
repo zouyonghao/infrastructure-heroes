@@ -5,11 +5,21 @@ logo = 'https://avatars.githubusercontent.com/u/5713248?s=200&v=4'
 description = 'Time series database'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 78
+  bus_factor = "low"
+  score = 87
+[links]
+  github = "influxdata/influxdb"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 31196
+  forks = 3695
+  contributors = 100
+  commits_30d = 21
+  commits_90d = 49
+  bus_factor_people = 3
 +++
 
 ### Overview

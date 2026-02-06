@@ -6,10 +6,20 @@ description = 'The GNU C Library - foundation of Linux systems'
 
 [health]
   funding = "stable"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 85
+  score = 73
+[links]
+  github = "bminor/glibc"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 1833
+  forks = 456
+  contributors = 100
+  commits_30d = 33
+  commits_90d = 100
+  bus_factor_people = 2
 +++
 
 ### Overview

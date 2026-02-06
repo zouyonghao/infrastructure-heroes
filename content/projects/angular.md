@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/
 description = 'TypeScript-based web framework'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 88
+  bus_factor = "low"
+  score = 90
+[links]
+  github = "angular/angular"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 99809
+  forks = 27051
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 4
+
 +++
 
 ### Overview

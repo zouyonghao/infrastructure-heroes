@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/
 description = 'Document-oriented NoSQL database'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 78
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "mongodb/mongo"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 28042
+  forks = 5755
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 20
 +++
 
 ### Overview

@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/n
 description = 'JavaScript runtime built on V8'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 88
+  bus_factor = "low"
+  score = 96
+[links]
+  github = "nodejs/node"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 115583
+  forks = 34640
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 7
 +++
 
 ### Overview

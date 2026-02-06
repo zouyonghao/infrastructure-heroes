@@ -5,11 +5,21 @@ logo = 'https://letsencrypt.org/images/le-logo-lockonly.svg'
 description = 'Free SSL/TLS certificate authority'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 90
+  bus_factor = "medium"
+  score = 82
+[links]
+  github = "letsencrypt/letsencrypt"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 32807
+  forks = 3487
+  contributors = 100
+  commits_30d = 25
+  commits_90d = 55
+  bus_factor_people = 2
 +++
 
 ### Overview

@@ -5,11 +5,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/p
 description = 'Popular programming language'
 
 [health]
-  funding = "healthy"
+  funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "healthy"
-  score = 92
+  bus_factor = "low"
+  score = 88
+[links]
+  github = "python/cpython"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 71387
+  forks = 34030
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 10
 +++
 
 ### Overview

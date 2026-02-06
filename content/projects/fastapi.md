@@ -5,11 +5,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/
 description = 'Modern Python web framework'
 
 [health]
-  funding = "at-risk"
+  funding = "stable"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "critical"
-  score = 55
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 84
+[links]
+  github = "fastapi/fastapi"
+[metrics]
+  updated_at = "2026-02-07"
+  stars = 94853
+  forks = 8638
+  contributors = 100
+  commits_30d = 100
+  commits_90d = 100
+  bus_factor_people = 2
+
 +++
 
 ### Overview
