@@ -3121,3 +3121,24 @@ a.btn-ghost:hover {
     gap: var(--space-1);
   }
 }
+
+/* ========================================
+   Methodology Link in Health Explanation
+   ======================================== */
+
+.methodology-link {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.methodology-link a {
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+}
+
+.methodology-link a:hover {
+  text-decoration: underline;
+}

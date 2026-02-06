@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
 """
 Infrastructure Heroes - GitHub Metrics Fetcher
-自动从 GitHub API 获取项目指标，辅助评估项目健康度
+自动从 GitHub API 获取项目指标，计算健康度评分
 
 Usage:
     python fetch-github-metrics.py --repo owner/repo [--output metrics.json]
-    python fetch-github-metrics.py --config projects.yaml [--output-dir data/]
+    python fetch-github-metrics.py --repo owner/repo --frontmatter content/projects/project.md
+    
+Health Score Formula (Methodology v1.0):
+    Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
+    
+Each dimension scored 0-100, weighted and combined for final 0-100 score.
 """
 
 import argparse
 import json
 import os
 import sys
+import re
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 import urllib.request
 import urllib.error
 
 
 class GitHubMetricsFetcher:
-    """GitHub 项目指标获取器"""
+    """GitHub 项目指标获取器 - Infrastructure Heroes Methodology v1.0"""
     
     def __init__(self, token: Optional[str] = None):
         self.token = token or os.environ.get('GITHUB_TOKEN')
@@ -53,7 +59,7 @@ class GitHubMetricsFetcher:
             return {}
     
     def fetch_repo_metrics(self, owner: str, repo: str) -> dict:
-        """获取仓库基本指标"""
+        """获取仓库基本指标和扩展指标"""
         print(f"📊 Fetching metrics for {owner}/{repo}...")
         
         # 基本信息
@@ -78,31 +84,64 @@ class GitHubMetricsFetcher:
             "disabled": repo_data.get("disabled", False),
         }
         
-        # 获取最近提交活动
+        # 获取最近100次提交（用于计算贡献者和巴士因子）
         commits = self._api_request(f"/repos/{owner}/{repo}/commits?per_page=100")
-        metrics["recent_commits"] = len(commits)
+        metrics["commits_data"] = commits if commits else []
         
-        # 计算最近30天的提交数
-        thirty_days_ago = datetime.now() - timedelta(days=30)
-        recent_commits = 0
-        unique_authors = set()
+        # 计算时间维度指标
+        today = datetime.now()
         
-        for commit in commits:
+        # 最近30天提交和作者
+        thirty_days_ago = today - timedelta(days=30)
+        # 最近90天提交和作者
+        ninety_days_ago = today - timedelta(days=90)
+        
+        recent_30d_commits = 0
+        recent_90d_commits = 0
+        authors_30d = set()
+        authors_90d = set()
+        all_commit_authors = []  # 用于计算巴士因子
+        
+        for commit in metrics["commits_data"]:
             if isinstance(commit, dict):
-                commit_date = commit.get("commit", {}).get("committer", {}).get("date", "")
-                if commit_date:
+                commit_date_str = commit.get("commit", {}).get("committer", {}).get("date", "")
+                if commit_date_str:
                     try:
-                        commit_time = datetime.fromisoformat(commit_date.replace("Z", "+00:00"))
+                        commit_time = datetime.fromisoformat(commit_date_str.replace("Z", "+00:00"))
+                        commit_time = commit_time.replace(tzinfo=None)
+                        
+                        author = commit.get("author", {}).get("login") if commit.get("author") else None
+                        if not author:
+                            # 使用 commit 中的作者名称
+                            author = commit.get("commit", {}).get("author", {}).get("name", "unknown")
+                        
+                        all_commit_authors.append(author)
+                        
                         if commit_time > thirty_days_ago:
-                            recent_commits += 1
-                            author = commit.get("author", {}).get("login") if commit.get("author") else None
-                            if author:
-                                unique_authors.add(author)
-                    except:
+                            recent_30d_commits += 1
+                            authors_30d.add(author)
+                        
+                        if commit_time > ninety_days_ago:
+                            recent_90d_commits += 1
+                            authors_90d.add(author)
+                    except Exception as e:
                         pass
         
-        metrics["commits_last_30_days"] = recent_commits
-        metrics["unique_contributors_last_30_days"] = len(unique_authors)
+        metrics["commits_last_30_days"] = recent_30d_commits
+        metrics["commits_last_90_days"] = recent_90d_commits
+        metrics["unique_contributors_last_30_days"] = len(authors_30d)
+        metrics["unique_contributors_last_90_days"] = len(authors_90d)
+        metrics["all_commit_authors"] = all_commit_authors
+        
+        # 获取最近更新时间（pushed_at）
+        if metrics.get("pushed_at"):
+            try:
+                pushed_time = datetime.fromisoformat(metrics["pushed_at"].replace("Z", "+00:00"))
+                metrics["days_since_last_push"] = (today - pushed_time.replace(tzinfo=None)).days
+            except:
+                metrics["days_since_last_push"] = 365
+        else:
+            metrics["days_since_last_push"] = 365
         
         # 获取贡献者统计 (需要 token 才能访问)
         contributors = self._api_request(f"/repos/{owner}/{repo}/contributors?per_page=100")
@@ -119,124 +158,239 @@ class GitHubMetricsFetcher:
             for r in (releases if releases else [])
         ]
         
-        # 计算维护活跃度分数
-        metrics["maintenance_score"] = self._calculate_maintenance_score(metrics)
-        metrics["community_score"] = self._calculate_community_score(metrics)
+        # 计算最近一次发布时间
+        if metrics["recent_releases"]:
+            try:
+                last_release = datetime.fromisoformat(
+                    metrics["recent_releases"][0]["published_at"].replace("Z", "+00:00")
+                )
+                metrics["days_since_last_release"] = (today - last_release.replace(tzinfo=None)).days
+            except:
+                metrics["days_since_last_release"] = 365
+        else:
+            metrics["days_since_last_release"] = 365
         
         return metrics
     
-    def _calculate_maintenance_score(self, metrics: dict) -> int:
-        """计算维护活跃度分数 (0-100)"""
+    def calculate_maintenance_score(self, metrics: dict) -> int:
+        """
+        计算维护活跃度分数 (0-100) - Methodology v1.0
+        
+        Criteria:
+        - Last commit recency (40%)
+        - Release frequency (30%)  
+        - Issue management (30%)
+        """
         score = 0
         
-        # 最近30天提交数 (0-40分)
-        commits = metrics.get("commits_last_30_days", 0)
-        score += min(commits * 2, 40)
-        
-        # 最近发布时间 (0-30分)
-        releases = metrics.get("recent_releases", [])
-        if releases:
-            try:
-                last_release = datetime.fromisoformat(releases[0]["published_at"].replace("Z", "+00:00"))
-                days_since_release = (datetime.now() - last_release.replace(tzinfo=None)).days
-                if days_since_release < 30:
-                    score += 30
-                elif days_since_release < 90:
-                    score += 20
-                elif days_since_release < 180:
-                    score += 10
-            except:
-                pass
-        
-        # Issues 处理情况 (0-30分)
-        open_issues = metrics.get("open_issues", 0)
-        if open_issues < 50:
-            score += 30
-        elif open_issues < 200:
-            score += 20
-        elif open_issues < 500:
+        # 1. 最近提交时间 (40分)
+        days_since_push = metrics.get("days_since_last_push", 365)
+        if days_since_push < 7:
+            score += 40
+        elif days_since_push < 30:
+            score += 35
+        elif days_since_push < 60:
+            score += 25
+        elif days_since_push < 90:
+            score += 15
+        elif days_since_push < 180:
             score += 10
+        else:
+            score += 5
+        
+        # 2. 发布频率 (30分)
+        days_since_release = metrics.get("days_since_last_release", 365)
+        if days_since_release < 30:
+            score += 30
+        elif days_since_release < 90:
+            score += 25
+        elif days_since_release < 180:
+            score += 15
+        elif days_since_release < 365:
+            score += 10
+        else:
+            score += 5
+        
+        # 3. 活跃程度 (30分) - 基于最近30天提交数
+        commits_30d = metrics.get("commits_last_30_days", 0)
+        if commits_30d >= 50:
+            score += 30
+        elif commits_30d >= 20:
+            score += 25
+        elif commits_30d >= 10:
+            score += 20
+        elif commits_30d >= 5:
+            score += 15
+        elif commits_30d >= 1:
+            score += 10
+        else:
+            score += 0
         
         return min(score, 100)
     
-    def _calculate_community_score(self, metrics: dict) -> int:
-        """计算社区健康度分数 (0-100)"""
-        score = 0
+    def calculate_contributors_score(self, metrics: dict) -> int:
+        """
+        计算贡献者健康度分数 (0-100) - Methodology v1.0
         
-        # 总贡献者数 (0-40分)
-        contributors = metrics.get("total_contributors", 0)
-        score += min(contributors, 40)
+        Criteria:
+        - Active contributors in last 90 days (80%)
+        - Contributor trend bonus (20%)
+        """
+        # 基于最近90天活跃贡献者
+        contributors_90d = metrics.get("unique_contributors_last_90_days", 0)
         
-        # 最近30天活跃贡献者 (0-40分)
-        recent = metrics.get("unique_contributors_last_30_days", 0)
-        score += min(recent * 8, 40)
+        # 基础分数：每个贡献者8分，最高80分
+        base_score = min(contributors_90d * 8, 80)
         
-        # Stars 受欢迎程度 (0-20分)
+        # 趋势奖励：如果有10+贡献者，加20分
+        trend_bonus = 20 if contributors_90d >= 10 else 0
+        
+        return min(base_score + trend_bonus, 100)
+    
+    def calculate_bus_factor_score(self, metrics: dict) -> int:
+        """
+        计算巴士因子风险分数 (0-100) - Methodology v1.0
+        
+        Higher score = lower risk
+        
+        Criteria:
+        - Number of people accounting for 50% of recent commits
+        - 5+ people = low risk (100)
+        - 3-4 people = medium risk (70)
+        - 2 people = high risk (40)
+        - 1 person = critical risk (15)
+        """
+        authors = metrics.get("all_commit_authors", [])
+        if not authors:
+            return 50  # Unknown
+        
+        # 统计每个作者的提交数
+        from collections import Counter
+        author_counts = Counter(authors)
+        total_commits = len(authors)
+        
+        if total_commits == 0:
+            return 50
+        
+        # 计算需要多少人覆盖50%的提交
+        sorted_authors = author_counts.most_common()
+        cumulative = 0
+        people_for_50_percent = 0
+        
+        for author, count in sorted_authors:
+            cumulative += count
+            people_for_50_percent += 1
+            if cumulative >= total_commits * 0.5:
+                break
+        
+        metrics["bus_factor_people"] = people_for_50_percent
+        
+        # 根据巴士因子人数评分
+        if people_for_50_percent >= 5:
+            return 100  # Low risk
+        elif people_for_50_percent >= 3:
+            return 70   # Medium risk
+        elif people_for_50_percent >= 2:
+            return 40   # High risk
+        else:
+            return 15   # Critical risk
+    
+    def calculate_funding_score(self, metrics: dict) -> Tuple[int, str]:
+        """
+        估算资金状况分数 (0-100) - Methodology v1.0
+        
+        Note: This is a heuristic estimate based on project popularity.
+        Manual verification is always recommended.
+        
+        Returns: (score, status)
+        """
         stars = metrics.get("stars", 0)
-        score += min(stars // 1000, 20)
+        contributors = metrics.get("total_contributors", 0)
         
-        return min(score, 100)
+        # 启发式规则：星标数和贡献者数与获得资助的可能性相关
+        if stars >= 10000 or contributors >= 100:
+            return 85, "stable"  # 大型项目通常有资助
+        elif stars >= 1000 or contributors >= 20:
+            return 65, "at-risk"  # 中型项目可能资助不稳定
+        else:
+            return 30, "critical"  # 小型项目很可能缺乏资助
     
     def assess_health(self, metrics: dict) -> dict:
-        """基于指标评估项目健康度"""
+        """
+        基于方法论 v1.0 评估项目健康度
+        
+        Formula: (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
+        """
         if not metrics:
             return {}
         
+        # 计算各维度分数
+        maintenance_score = self.calculate_maintenance_score(metrics)
+        contributors_score = self.calculate_contributors_score(metrics)
+        bus_factor_score = self.calculate_bus_factor_score(metrics)
+        funding_score, funding_status = self.calculate_funding_score(metrics)
+        
+        # 计算总体分数（加权平均）
+        overall_score = int(
+            funding_score * 0.25 +
+            maintenance_score * 0.30 +
+            contributors_score * 0.25 +
+            bus_factor_score * 0.20
+        )
+        
+        # 确定各维度状态
+        def get_maintenance_status(score):
+            if score >= 70: return "active"
+            elif score >= 40: return "moderate"
+            else: return "inactive"
+        
+        def get_contributors_status(score):
+            if score >= 70: return "healthy"
+            elif score >= 40: return "declining"
+            else: return "critical"
+        
+        def get_bus_factor_status(score):
+            if score >= 70: return "low"
+            elif score >= 40: return "medium"
+            else: return "high"
+        
         assessment = {
-            "overall_score": 0,
-            "funding": "unknown",
-            "maintenance": "unknown",
-            "contributors": "unknown",
-            "bus_factor": "unknown",
+            "overall_score": overall_score,
+            "funding": funding_status,
+            "funding_score": funding_score,
+            "maintenance": get_maintenance_status(maintenance_score),
+            "maintenance_score": maintenance_score,
+            "contributors": get_contributors_status(contributors_score),
+            "contributors_score": contributors_score,
+            "bus_factor": get_bus_factor_status(bus_factor_score),
+            "bus_factor_score": bus_factor_score,
+            "calculated_at": datetime.now().isoformat(),
+            "methodology_version": "1.0",
             "recommendations": []
         }
         
-        # 维护活跃度评估
-        maint_score = metrics.get("maintenance_score", 0)
-        if maint_score >= 70:
-            assessment["maintenance"] = "active"
-        elif maint_score >= 40:
-            assessment["maintenance"] = "moderate"
-        else:
-            assessment["maintenance"] = "inactive"
-            assessment["recommendations"].append("⚠️ Maintenance activity is low")
+        # 生成建议
+        if maintenance_score < 40:
+            assessment["recommendations"].append("⚠️ Low maintenance activity - consider contributing code or documentation")
         
-        # 贡献者评估
-        comm_score = metrics.get("community_score", 0)
-        total_contrib = metrics.get("total_contributors", 0)
-        recent_contrib = metrics.get("unique_contributors_last_30_days", 0)
+        if contributors_score < 40:
+            assessment["recommendations"].append("🚨 Few active contributors - high community risk")
         
-        if comm_score >= 70 and total_contrib > 50:
-            assessment["contributors"] = "healthy"
-        elif comm_score >= 40 or total_contrib > 20:
-            assessment["contributors"] = "declining" if recent_contrib < 3 else "healthy"
-        else:
-            assessment["contributors"] = "critical"
-            assessment["recommendations"].append("🚨 Very few contributors - high risk")
+        if bus_factor_score < 40:
+            assessment["recommendations"].append(f"🚌 High bus factor risk - only {metrics.get('bus_factor_people', 1)} person(s) handle 50% of work")
         
-        # 巴士因子评估 (简化版)
-        if recent_contrib >= 5:
-            assessment["bus_factor"] = "low"
-        elif recent_contrib >= 2:
-            assessment["bus_factor"] = "medium"
-        else:
-            assessment["bus_factor"] = "high"
-            assessment["recommendations"].append("🚌 Bus factor is high - knowledge concentrated in few people")
-        
-        # 资金状况 (无法自动判断，需要人工输入)
-        assessment["funding"] = "unknown"  # 需要人工调研
-        
-        # 总体分数
-        assessment["overall_score"] = (maint_score + comm_score) // 2
+        if funding_status == "critical":
+            assessment["recommendations"].append("💰 Project likely lacks funding - consider sponsorship")
         
         return assessment
 
 
 def print_report(metrics: dict, assessment: dict):
     """打印评估报告"""
-    print("\n" + "="*60)
+    print("\n" + "="*70)
     print(f"📋 Health Report: {metrics.get('full_name')}")
-    print("="*60)
+    print(f"   Methodology: v{assessment.get('methodology_version', '1.0')}")
+    print("="*70)
     
     print(f"\n📊 Basic Metrics:")
     print(f"  ⭐ Stars: {metrics.get('stars', 0):,}")
@@ -244,68 +398,119 @@ def print_report(metrics: dict, assessment: dict):
     print(f"  🐛 Open Issues: {metrics.get('open_issues', 0):,}")
     print(f"  👥 Total Contributors: {metrics.get('total_contributors', 0)}")
     
-    print(f"\n📈 Activity (Last 30 Days):")
-    print(f"  📝 Commits: {metrics.get('commits_last_30_days', 0)}")
-    print(f"  👤 Active Contributors: {metrics.get('unique_contributors_last_30_days', 0)}")
+    print(f"\n📈 Activity:")
+    print(f"  📝 Commits (30d): {metrics.get('commits_last_30_days', 0)}")
+    print(f"  📝 Commits (90d): {metrics.get('commits_last_90_days', 0)}")
+    print(f"  👤 Active Contributors (90d): {metrics.get('unique_contributors_last_90_days', 0)}")
+    print(f"  📅 Days Since Last Push: {metrics.get('days_since_last_push', 'N/A')}")
+    print(f"  📅 Days Since Last Release: {metrics.get('days_since_last_release', 'N/A')}")
     
     print(f"\n🏥 Health Assessment:")
-    print(f"  Overall Score: {assessment.get('overall_score', 0)}/100")
-    print(f"  Funding: {assessment.get('funding', 'unknown')}")
-    print(f"  Maintenance: {assessment.get('maintenance', 'unknown')}")
-    print(f"  Contributors: {assessment.get('contributors', 'unknown')}")
-    print(f"  Bus Factor: {assessment.get('bus_factor', 'unknown')}")
+    print(f"  ┌──────────────────┬────────┬──────────────┐")
+    print(f"  │ Dimension        │ Score  │ Status       │")
+    print(f"  ├──────────────────┼────────┼──────────────┤")
+    print(f"  │ 💰 Funding       │ {assessment.get('funding_score', 0):>3}/100 │ {assessment.get('funding', 'unknown'):>12} │")
+    print(f"  │ 🔧 Maintenance   │ {assessment.get('maintenance_score', 0):>3}/100 │ {assessment.get('maintenance', 'unknown'):>12} │")
+    print(f"  │ 👥 Contributors  │ {assessment.get('contributors_score', 0):>3}/100 │ {assessment.get('contributors', 'unknown'):>12} │")
+    print(f"  │ 🚌 Bus Factor    │ {assessment.get('bus_factor_score', 0):>3}/100 │ {assessment.get('bus_factor', 'unknown'):>12} │")
+    print(f"  ├──────────────────┼────────┼──────────────┤")
+    print(f"  │ 📊 OVERALL       │ {assessment.get('overall_score', 0):>3}/100 │ {'🟢' if assessment.get('overall_score', 0) >= 80 else '🟡' if assessment.get('overall_score', 0) >= 60 else '🔴'} {assessment.get('overall_score', 0):>8} │")
+    print(f"  └──────────────────┴────────┴──────────────┘")
     
     if assessment.get('recommendations'):
         print(f"\n⚠️  Recommendations:")
         for rec in assessment['recommendations']:
             print(f"  • {rec}")
     
-    print("\n" + "="*60)
+    print("\n" + "="*70)
+    print("💡 Note: Funding status is estimated. Please verify manually.")
+    print("="*70)
 
 
-def generate_hugo_frontmatter(project_name: str, metrics: dict, assessment: dict) -> str:
-    """生成 Hugo front matter"""
-    return f"""+++
-date = '{datetime.now().isoformat()}'
-title = '{project_name}'
-logo = ''
-description = "{metrics.get('description', '')}"
-
-[health]
+def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> bool:
+    """更新 Hugo 项目文件的 front matter"""
+    if not os.path.exists(filepath):
+        print(f"❌ File not found: {filepath}")
+        return False
+    
+    try:
+        with open(filepath, 'r') as f:
+            content = f.read()
+        
+        # 解析 front matter (TOML format between +++)
+        frontmatter_match = re.search(r'\+\+\+(.*?)\+\+\+', content, re.DOTALL)
+        if not frontmatter_match:
+            print("❌ Could not find front matter in file")
+            return False
+        
+        frontmatter = frontmatter_match.group(1)
+        
+        # 更新 health section
+        health_section = f"""[health]
   funding = "{assessment.get('funding', 'unknown')}"
   maintenance = "{assessment.get('maintenance', 'unknown')}"
   contributors = "{assessment.get('contributors', 'unknown')}"
   bus_factor = "{assessment.get('bus_factor', 'unknown')}"
-  score = {assessment.get('overall_score', 0)}
-
-[github]
+  score = {assessment.get('overall_score', 0)}"""
+        
+        # 检查是否已有 [health] section
+        if '[health]' in frontmatter:
+            # 替换现有 section
+            new_frontmatter = re.sub(
+                r'\[health\].*?(?=\[|$)',
+                health_section + "\n",
+                frontmatter,
+                flags=re.DOTALL
+            )
+        else:
+            # 添加新 section
+            new_frontmatter = frontmatter.rstrip() + "\n\n" + health_section + "\n"
+        
+        # 添加 metrics section
+        metrics_section = f"""\n[metrics]
+  updated_at = "{datetime.now().strftime('%Y-%m-%d')}"
   stars = {metrics.get('stars', 0)}
   forks = {metrics.get('forks', 0)}
   contributors = {metrics.get('total_contributors', 0)}
-  url = "{metrics.get('url', '')}"
-+++
-
-### Overview
-
-{metrics.get('description', 'No description available.')}
-
-### GitHub Stats
-
-- ⭐ **Stars**: {metrics.get('stars', 0):,}
-- 🍴 **Forks**: {metrics.get('forks', 0):,}
-- 👥 **Contributors**: {metrics.get('total_contributors', 0)}
-- 📝 **Commits (30d)**: {metrics.get('commits_last_30_days', 0)}
-
-### Auto-generated Assessment
-
-This project's health metrics were automatically generated on {datetime.now().strftime('%Y-%m-%d')}.
-Please review and adjust the funding status manually as it cannot be determined from public data.
+  commits_30d = {metrics.get('commits_last_30_days', 0)}
+  commits_90d = {metrics.get('commits_last_90_days', 0)}
+  bus_factor_people = {metrics.get('bus_factor_people', 0)}
 """
+        
+        if '[metrics]' in new_frontmatter:
+            new_frontmatter = re.sub(
+                r'\[metrics\].*?(?=\[|$)',
+                metrics_section.strip() + "\n",
+                new_frontmatter,
+                flags=re.DOTALL
+            )
+        else:
+            new_frontmatter = new_frontmatter.rstrip() + metrics_section
+        
+        # 重新组装文件
+        new_content = content.replace(frontmatter_match.group(0), f"+++{new_frontmatter}+++")
+        
+        with open(filepath, 'w') as f:
+            f.write(new_content)
+        
+        print(f"✅ Updated front matter in: {filepath}")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error updating front matter: {e}")
+        return False
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch GitHub metrics for Infrastructure Heroes"
+        description="Fetch GitHub metrics and calculate health scores for Infrastructure Heroes",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+    python fetch-github-metrics.py --repo openssl/openssl
+    python fetch-github-metrics.py --repo torvalds/linux --output linux-metrics.json
+    python fetch-github-metrics.py --repo python/cpython --frontmatter content/projects/python.md
+        """
     )
     parser.add_argument(
         "--repo",
@@ -319,12 +524,17 @@ def main():
     parser.add_argument(
         "--frontmatter",
         "-f",
-        help="Generate Hugo front matter and save to file"
+        help="Update Hugo front matter in specified file"
     )
     parser.add_argument(
         "--token",
         "-t",
         help="GitHub personal access token (or set GITHUB_TOKEN env var)"
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Calculate scores but don't write to file"
     )
     
     args = parser.parse_args()
@@ -363,15 +573,17 @@ def main():
             "generated_at": datetime.now().isoformat()
         }
         with open(args.output, 'w') as f:
-            json.dump(output_data, f, indent=2)
+            json.dump(output_data, f, indent=2, default=str)
         print(f"\n💾 Metrics saved to: {args.output}")
     
-    # 生成 Hugo front matter
+    # 更新 Hugo front matter
     if args.frontmatter:
-        frontmatter = generate_hugo_frontmatter(repo, metrics, assessment)
-        with open(args.frontmatter, 'w') as f:
-            f.write(frontmatter)
-        print(f"💾 Hugo front matter saved to: {args.frontmatter}")
+        if args.dry_run:
+            print(f"\n🔍 Dry run - would update: {args.frontmatter}")
+        else:
+            success = update_hugo_frontmatter(args.frontmatter, assessment, metrics)
+            if not success:
+                sys.exit(1)
     
     print("\n✅ Done!")
 
