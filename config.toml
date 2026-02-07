@@ -33,13 +33,19 @@ theme = "ananke"
     weight = 3
     
   [[menu.main]]
+    identifier = "dependencies"
+    name = "Dependencies"
+    url = "/dependencies/"
+    weight = 4
+    
+  [[menu.main]]
     identifier = "methodology"
     name = "Methodology"
     url = "/methodology/"
-    weight = 4
+    weight = 5
     
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 5
+    weight = 6

@@ -2,18 +2,21 @@
 {{ $summaryFile := printf "%s/summary.json" $dataDir }}
 
 {{ if fileExists $summaryFile }}
-    {{ $summary := getJSON $summaryFile }}
+    {{ $summaryContent := readFile $summaryFile }}
+    {{ $summary := $summaryContent | transform.Unmarshal }}
     
     <div class="health-trends-section">
         <h3>📈 Historical Trends</h3>
         
         <div class="trends-summary">
             <div class="trend-stat">
-                <span class="trend-value">{{ $summary.total_snapshots }}</span>
+                <span class="trend-value">{{ $summary.total_snapshots | default 0 }}</span>
                 <span class="trend-label">Data Points</span>
             </div>
             <div class="trend-stat">
-                <span class="trend-value">{{ $summary.date_range.from }} to {{ $summary.date_range.to }}</span>
+                {{ $fromDate := $summary.date_range.from | default "N/A" }}
+                {{ $toDate := $summary.date_range.to | default "N/A" }}
+                <span class="trend-value">{{ $fromDate }} to {{ $toDate }}</span>
                 <span class="trend-label">Date Range</span>
             </div>
         </div>
@@ -21,21 +24,27 @@
         {{ if $summary.trends }}
         <div class="trends-charts">
             {{ if $summary.trends.avg_score_over_time }}
+            {{ $avgScores := $summary.trends.avg_score_over_time }}
             <div class="trend-chart">
                 <h4>Average Health Score Over Time</h4>
-                <div class="sparkline" data-values="{{ range $summary.trends.avg_score_over_time }}{{ .value }},{{ end }}"></div>
+                <div class="sparkline" data-values="{{ range $avgScores }}{{ .value }},{{ end }}"></div>
                 <div class="trend-current">
-                    Current: <strong>{{ (index $summary.trends.avg_score_over_time (sub (len $summary.trends.avg_score_over_time) 1)).value | math.Round }} / 100</strong>
+                    {{ $lastIndex := sub (len $avgScores) 1 }}
+                    {{ $currentValue := (index $avgScores $lastIndex).value | default 0 }}
+                    Current: <strong>{{ $currentValue | math.Round }} / 100</strong>
                 </div>
             </div>
             {{ end }}
             
             {{ if $summary.trends.critical_count_over_time }}
+            {{ $criticalCounts := $summary.trends.critical_count_over_time }}
             <div class="trend-chart">
                 <h4>Critical Projects Over Time</h4>
-                <div class="sparkline critical" data-values="{{ range $summary.trends.critical_count_over_time }}{{ .value }},{{ end }}"></div>
+                <div class="sparkline critical" data-values="{{ range $criticalCounts }}{{ .value }},{{ end }}"></div>
                 <div class="trend-current">
-                    Current: <strong class="text-danger">{{ (index $summary.trends.critical_count_over_time (sub (len $summary.trends.critical_count_over_time) 1)).value }}</strong> projects
+                    {{ $lastIndex := sub (len $criticalCounts) 1 }}
+                    {{ $currentCount := (index $criticalCounts $lastIndex).value | default 0 }}
+                    Current: <strong class="text-danger">{{ $currentCount }}</strong> projects
                 </div>
             </div>
             {{ end }}

@@ -49,13 +49,18 @@ infrastructure-heroes/
 │   ├── _index.md            # Homepage
 │   ├── about.md             # About page
 │   ├── thanks.md            # Thank wall
+│   ├── dependencies.md      # Dependency chains visualization
 │   ├── projects/            # Project profiles
 │   └── maintainers/         # Maintainer profiles
+├── data/
+│   ├── dependencies.json    # Dependency graph data
+│   └── historical/          # Historical health snapshots
 ├── layouts/
 │   ├── projects/            # Project templates
 │   ├── partials/            # Reusable components
 │   └── shortcodes/          # Custom shortcodes
 ├── static/css/              # Stylesheets
+├── static/js/               # JavaScript
 ├── scripts/                 # Automation utilities
 └── themes/ananke/           # Base theme (submodule)
 ```
@@ -220,6 +225,16 @@ The updated metrics fetcher now detects real funding sources:
 - Liberapay
 
 This provides more accurate funding scores beyond popularity heuristics.
+
+## Dependency Chain Visualization
+
+Inspired by [xkcd #2347](https://xkcd.com/2347/), the site includes a **Dependencies** page that visualizes how modern software stacks depend on critical infrastructure:
+
+- **Dependency Chains**: See how a simple React app depends on OpenSSL (maintained by 5 people) and zlib (single maintainer)
+- **Foundation Projects**: Identify load-bearing infrastructure with no dependencies but depended on by everything
+- **At-Risk Pathways**: Highlight chains where high bus factor projects sit at the bottom
+
+Edit `data/dependencies.json` to add new dependency relationships.
 
 ## License
 

@@ -1,0 +1,164 @@
+{{ $projects := .Site.RegularPages }}
+{{ $projectSection := where $projects "Section" "projects" }}
+
+<div class="dependency-stack-page">
+
+<div class="stack-header">
+  <h1>Infrastructure Dependencies</h1>
+  <p class="stack-subtitle">{{ len $projectSection }} critical projects colored by their health score</p>
+</div>
+
+<!-- Tier 1: Applications & Frameworks -->
+<div class="stack-tier">
+  <div class="tier-label">Applications & Frameworks</div>
+  <div class="tier-blocks">
+    {{ range slice "react" "vuejs" "angular" "django" "rails" "spring" "nextjs" "kubernetes" "docker-moby" "terraform" "ansible" "git" "npm" "webpack" "babel" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 2: Runtimes & Languages -->
+<div class="stack-tier">
+  <div class="tier-label">Runtimes & Languages</div>
+  <div class="tier-blocks">
+    {{ range slice "nodejs" "python" "go" "rust" "java" "php" "ruby" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 3: Databases & Storage -->
+<div class="stack-tier">
+  <div class="tier-label">Databases & Storage</div>
+  <div class="tier-blocks">
+    {{ range slice "postgresql" "mysql" "redis" "mongodb" "elasticsearch" "kafka" "cassandra" "sqlite" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 4: Web Servers & Proxies -->
+<div class="stack-tier">
+  <div class="tier-label">Web Servers & Proxies</div>
+  <div class="tier-blocks">
+    {{ range slice "nginx" "apache-httpd" "caddy" "haproxy" "traefik" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 5: Networking & Security -->
+<div class="stack-tier">
+  <div class="tier-label">Networking & Security</div>
+  <div class="tier-blocks">
+    {{ range slice "curl" "openssh" "openssl" "certbot" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 6: Operating System -->
+<div class="stack-tier">
+  <div class="tier-label">Operating System</div>
+  <div class="tier-blocks">
+    {{ range slice "linux-kernel" "glibc" "busybox" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<div class="stack-arrow">↓</div>
+
+<!-- Tier 7: The Foundation -->
+<div class="stack-tier critical-tier">
+  <div class="tier-label">The Foundation</div>
+  <div class="tier-blocks">
+    {{ range slice "zlib" "libpng" "libjpeg-turbo" }}
+      {{ with $.Site.GetPage (printf "/projects/%s" .) }}
+        {{ $healthClass := "healthy" }}
+        {{ if .Params.health }}
+          {{ if lt .Params.health.score 60 }}{{ $healthClass = "critical" }}{{ else if lt .Params.health.score 80 }}{{ $healthClass = "warning" }}{{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="stack-block-small {{ $healthClass }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<!-- Quote -->
+<div class="xkcd-quote">
+  <p>"Every project eventually depends on a module maintained by someone in Nebraska who hasn't updated their website since 2003."</p>
+  <cite>— <a href="https://xkcd.com/2347/">xkcd #2347</a></cite>
+</div>
+
+<!-- Stats -->
+<div class="stack-stats">
+  <div class="stat-item">
+    <span class="stat-number">{{ len $projectSection }}</span>
+    <span class="stat-label">Projects</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item highlight">
+    <span class="stat-number">3</span>
+    <span class="stat-label">Foundation Maintainers</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-number">50B+</span>
+    <span class="stat-label">Devices</span>
+  </div>
+</div>
+
+<!-- Explore -->
+<div class="stack-explore">
+  <a href="/projects/" class="btn btn-primary">View All Projects</a>
+</div>
+
+</div>
