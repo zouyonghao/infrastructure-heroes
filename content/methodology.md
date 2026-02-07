@@ -272,6 +272,10 @@ Help improve our methodology:
 
 ---
 
+{{< health-trends >}}
+
+---
+
 ## Questions?
 
 If you have questions about our methodology or want to discuss a specific project's assessment:

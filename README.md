@@ -141,6 +141,32 @@ python scripts/fetch-github-metrics.py --repo curl/curl --frontmatter content/pr
 
 Set `GITHUB_TOKEN` environment variable for higher API rate limits.
 
+### Batch Update
+
+Update all projects at once:
+
+```bash
+# Update all projects
+python scripts/batch-update-health.py
+
+# Dry run to preview changes
+python scripts/batch-update-health.py --dry-run
+
+# Limit to specific projects (for testing)
+python scripts/batch-update-health.py --limit 5
+```
+
+### Historical Data Tracking
+
+Record health trends over time:
+
+```bash
+# Create snapshot and update trends
+python scripts/update-historical-data.py
+```
+
+Snapshots are stored in `data/historical/` for trend analysis.
+
 ## Contributing
 
 Contributions are welcome! Here's how you can help:
@@ -164,6 +190,36 @@ Contributions are welcome! Here's how you can help:
 ## Deployment
 
 The site is automatically deployed to GitHub Pages on push to the `master` branch via GitHub Actions.
+
+## Automated Updates
+
+Project metrics are automatically refreshed weekly via GitHub Actions:
+
+- **Schedule**: Every Sunday at 00:00 UTC
+- **Workflow**: `.github/workflows/update-metrics.yml`
+- **Features**:
+  - Fetches latest GitHub metrics for all projects
+  - Recalculates health scores using Methodology v1.0
+  - Records historical snapshots for trend analysis
+  - Commits changes automatically
+
+### Manual Trigger
+
+You can manually trigger an update from the Actions tab, with options for:
+- **Dry run**: Preview changes without committing
+- **Limit**: Update only first N projects
+
+### Funding Detection
+
+The updated metrics fetcher now detects real funding sources:
+- GitHub Sponsors (via FUNDING.yml)
+- Open Collective
+- Patreon
+- Tidelift
+- Ko-fi
+- Liberapay
+
+This provides more accurate funding scores beyond popularity heuristics.
 
 ## License
 

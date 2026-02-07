@@ -1,0 +1,49 @@
+{{ $dataDir := "data/historical" }}
+{{ $summaryFile := printf "%s/summary.json" $dataDir }}
+
+{{ if fileExists $summaryFile }}
+    {{ $summary := getJSON $summaryFile }}
+    
+    <div class="health-trends-section">
+        <h3>📈 Historical Trends</h3>
+        
+        <div class="trends-summary">
+            <div class="trend-stat">
+                <span class="trend-value">{{ $summary.total_snapshots }}</span>
+                <span class="trend-label">Data Points</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-value">{{ $summary.date_range.from }} to {{ $summary.date_range.to }}</span>
+                <span class="trend-label">Date Range</span>
+            </div>
+        </div>
+        
+        {{ if $summary.trends }}
+        <div class="trends-charts">
+            {{ if $summary.trends.avg_score_over_time }}
+            <div class="trend-chart">
+                <h4>Average Health Score Over Time</h4>
+                <div class="sparkline" data-values="{{ range $summary.trends.avg_score_over_time }}{{ .value }},{{ end }}"></div>
+                <div class="trend-current">
+                    Current: <strong>{{ (index $summary.trends.avg_score_over_time (sub (len $summary.trends.avg_score_over_time) 1)).value | math.Round }} / 100</strong>
+                </div>
+            </div>
+            {{ end }}
+            
+            {{ if $summary.trends.critical_count_over_time }}
+            <div class="trend-chart">
+                <h4>Critical Projects Over Time</h4>
+                <div class="sparkline critical" data-values="{{ range $summary.trends.critical_count_over_time }}{{ .value }},{{ end }}"></div>
+                <div class="trend-current">
+                    Current: <strong class="text-danger">{{ (index $summary.trends.critical_count_over_time (sub (len $summary.trends.critical_count_over_time) 1)).value }}</strong> projects
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+{{ else }}
+    <div class="health-trends-empty">
+        <p><em>Trend data will be available after the first automated metrics collection.</em></p>
+    </div>
+{{ end }}

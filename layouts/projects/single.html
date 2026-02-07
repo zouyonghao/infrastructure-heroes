@@ -4,7 +4,10 @@
         <header class="project-detail-header">
             {{ if .Params.logo }}
             <div class="project-detail-logo">
-                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo">
+                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none; width: 100%; height: 100%;">
+                    <span style="font-size: 3rem; font-weight: 800; color: white;">{{ substr .Title 0 1 }}</span>
+                </div>
             </div>
             {{ end }}
             <h1>{{ .Title }}</h1>
@@ -94,6 +97,32 @@
                     <strong>This project needs your help!</strong>
                     Consider contributing code, documentation, or funding to help maintain this critical infrastructure.
                 </div>
+            </div>
+            {{ end }}
+            
+            {{ if .Params.metrics.updated_at }}
+            <div class="last-updated-section">
+                <span class="metrics-timestamp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    {{ $updatedDate := time .Params.metrics.updated_at }}
+                    {{ $daysAgo := div (sub now.Unix $updatedDate.Unix) 86400 }}
+                    Metrics last updated: 
+                    {{ if eq $daysAgo 0 }}
+                        today
+                    {{ else if eq $daysAgo 1 }}
+                        yesterday
+                    {{ else if lt $daysAgo 30 }}
+                        {{ $daysAgo }} days ago
+                    {{ else if lt $daysAgo 60 }}
+                        1 month ago
+                    {{ else }}
+                        {{ div $daysAgo 30 }} months ago
+                    {{ end }}
+                    ({{ .Params.metrics.updated_at }})
+                </span>
             </div>
             {{ end }}
         </div>

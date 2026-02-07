@@ -170,6 +170,10 @@ class GitHubMetricsFetcher:
         else:
             metrics["days_since_last_release"] = 365
         
+        # Fetch funding information
+        funding_info = self.fetch_funding_info(owner, repo)
+        metrics["funding_info"] = funding_info
+        
         return metrics
     
     def calculate_maintenance_score(self, metrics: dict) -> int:
@@ -295,11 +299,60 @@ class GitHubMetricsFetcher:
         else:
             return 15   # Critical risk
     
-    def calculate_funding_score(self, metrics: dict) -> Tuple[int, str]:
+    def fetch_funding_info(self, owner: str, repo: str) -> dict:
         """
-        估算资金状况分数 (0-100) - Methodology v1.0
+        Fetch funding information from GitHub API
         
-        Note: This is a heuristic estimate based on project popularity.
+        Returns dict with funding sources found
+        """
+        funding_info = {
+            "has_funding_file": False,
+            "funding_sources": [],
+            "has_sponsors": False,
+            "sponsor_count": 0
+        }
+        
+        # Check for FUNDING.yml file
+        funding_content = self._api_request(f"/repos/{owner}/{repo}/contents/.github/FUNDING.yml")
+        if funding_content and funding_content.get("content"):
+            import base64
+            try:
+                content = base64.b64decode(funding_content["content"]).decode('utf-8')
+                funding_info["has_funding_file"] = True
+                
+                # Parse funding sources
+                if 'github:' in content:
+                    funding_info["funding_sources"].append("github_sponsors")
+                if 'open_collective:' in content or 'opencollective:' in content:
+                    funding_info["funding_sources"].append("open_collective")
+                if 'patreon:' in content:
+                    funding_info["funding_sources"].append("patreon")
+                if 'tidelift:' in content:
+                    funding_info["funding_sources"].append("tidelift")
+                if 'ko_fi:' in content or 'ko-fi:' in content:
+                    funding_info["funding_sources"].append("ko-fi")
+                if 'liberapay:' in content:
+                    funding_info["funding_sources"].append("liberapay")
+                if 'custom:' in content:
+                    funding_info["funding_sources"].append("custom")
+            except Exception:
+                pass
+        
+        # Check repository topics for funding-related tags
+        topics_data = self._api_request(f"/repos/{owner}/{repo}/topics")
+        if topics_data and "names" in topics_data:
+            funding_topics = [t for t in topics_data["names"] if t in 
+                            ['funding', 'sponsors', 'donate', 'sustainability', 'open-collective']]
+            if funding_topics:
+                funding_info["funding_sources"].extend(funding_topics)
+        
+        return funding_info
+    
+    def calculate_funding_score(self, metrics: dict, funding_info: dict = None) -> Tuple[int, str]:
+        """
+        估算资金状况分数 (0-100) - Methodology v1.0 Enhanced
+        
+        Uses both popularity metrics and actual funding sources detected.
         Manual verification is always recommended.
         
         Returns: (score, status)
@@ -307,13 +360,51 @@ class GitHubMetricsFetcher:
         stars = metrics.get("stars", 0)
         contributors = metrics.get("total_contributors", 0)
         
-        # 启发式规则：星标数和贡献者数与获得资助的可能性相关
+        # Base score from popularity (as before)
         if stars >= 10000 or contributors >= 100:
-            return 85, "stable"  # 大型项目通常有资助
+            base_score = 70  # 大型项目通常有资助基础
         elif stars >= 1000 or contributors >= 20:
-            return 65, "at-risk"  # 中型项目可能资助不稳定
+            base_score = 50  # 中型项目可能资助不稳定
         else:
-            return 30, "critical"  # 小型项目很可能缺乏资助
+            base_score = 25  # 小型项目很可能缺乏资助
+        
+        # Boost score based on detected funding sources
+        funding_boost = 0
+        if funding_info:
+            sources = funding_info.get("funding_sources", [])
+            
+            # Having a FUNDING.yml shows intent
+            if funding_info.get("has_funding_file"):
+                funding_boost += 10
+            
+            # Multiple funding sources is good
+            unique_sources = len(set(sources))
+            funding_boost += min(unique_sources * 5, 15)  # Max 15 points for diversity
+            
+            # Specific platforms indicate active fundraising
+            platform_scores = {
+                "github_sponsors": 10,  # GitHub sponsors is reliable
+                "open_collective": 8,   # Open Collective is transparent
+                "tidelift": 8,          # Tidelift is professional
+                "patreon": 5,           # Patreon is common
+                "ko-fi": 3,
+                "liberapay": 3,
+                "custom": 2
+            }
+            
+            for source in sources:
+                if source in platform_scores:
+                    funding_boost += platform_scores[source]
+        
+        final_score = min(100, base_score + funding_boost)
+        
+        # Determine status
+        if final_score >= 80:
+            return final_score, "stable"
+        elif final_score >= 50:
+            return final_score, "at-risk"
+        else:
+            return final_score, "critical"
     
     def assess_health(self, metrics: dict) -> dict:
         """
@@ -328,7 +419,8 @@ class GitHubMetricsFetcher:
         maintenance_score = self.calculate_maintenance_score(metrics)
         contributors_score = self.calculate_contributors_score(metrics)
         bus_factor_score = self.calculate_bus_factor_score(metrics)
-        funding_score, funding_status = self.calculate_funding_score(metrics)
+        funding_info = metrics.get("funding_info")
+        funding_score, funding_status = self.calculate_funding_score(metrics, funding_info)
         
         # 计算总体分数（加权平均）
         overall_score = int(
@@ -417,13 +509,26 @@ def print_report(metrics: dict, assessment: dict):
     print(f"  │ 📊 OVERALL       │ {assessment.get('overall_score', 0):>3}/100 │ {'🟢' if assessment.get('overall_score', 0) >= 80 else '🟡' if assessment.get('overall_score', 0) >= 60 else '🔴'} {assessment.get('overall_score', 0):>8} │")
     print(f"  └──────────────────┴────────┴──────────────┘")
     
+    # Show funding sources if detected
+    funding_info = metrics.get('funding_info', {})
+    if funding_info and funding_info.get('funding_sources'):
+        print(f"\n💰 Funding Sources Detected:")
+        if funding_info.get('has_funding_file'):
+            print(f"  ✅ FUNDING.yml file present")
+        sources = funding_info.get('funding_sources', [])
+        for source in set(sources):
+            print(f"  • {source.replace('_', ' ').title()}")
+    
     if assessment.get('recommendations'):
         print(f"\n⚠️  Recommendations:")
         for rec in assessment['recommendations']:
             print(f"  • {rec}")
     
     print("\n" + "="*70)
-    print("💡 Note: Funding status is estimated. Please verify manually.")
+    if funding_info and funding_info.get('funding_sources'):
+        print("💡 Funding sources detected automatically. Score may still need manual verification.")
+    else:
+        print("💡 Note: Funding status is estimated. Please verify manually.")
     print("="*70)
 
 

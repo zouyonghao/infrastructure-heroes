@@ -3142,3 +3142,204 @@ a.btn-ghost:hover {
 .methodology-link a:hover {
   text-decoration: underline;
 }
+
+
+/* ========================================
+   Logo Fallback & Last Updated Styles
+   ======================================== */
+
+/* Logo fallback for broken images */
+.project-logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: var(--radius-md);
+}
+
+.logo-fallback span {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-inverse);
+  text-transform: uppercase;
+}
+
+/* Project meta section with last updated */
+.project-meta {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-weight: var(--font-medium);
+}
+
+.last-updated svg {
+  flex-shrink: 0;
+}
+
+/* Stale data warning (for data older than 30 days) */
+.last-updated.stale {
+  color: var(--color-warning);
+}
+
+.last-updated.stale svg {
+  color: var(--color-warning);
+}
+
+/* Critical stale data (older than 90 days) */
+.last-updated.critical {
+  color: var(--color-danger);
+}
+
+.last-updated.critical svg {
+  color: var(--color-danger);
+}
+
+/* Project detail page last updated */
+.project-detail .last-updated-section {
+  text-align: center;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+.metrics-timestamp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.metrics-timestamp svg {
+  color: var(--text-tertiary);
+}
+
+
+/* ========================================
+   Health Trends Section
+   ======================================== */
+
+.health-trends-section {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin: var(--space-8) 0;
+}
+
+.health-trends-section h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.trends-summary {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.trend-stat {
+  text-align: center;
+}
+
+.trend-value {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
+
+.trend-label {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.trends-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.trend-chart {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+.trend-chart h4 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+}
+
+.sparkline {
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: var(--space-3);
+}
+
+.sparkline-bar {
+  flex: 1;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  min-height: 4px;
+  transition: opacity var(--transition-fast);
+}
+
+.sparkline-bar:hover {
+  opacity: 0.8;
+}
+
+.sparkline.critical .sparkline-bar {
+  background: var(--color-danger);
+}
+
+.trend-current {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.trend-current strong {
+  color: var(--text-primary);
+}
+
+.trend-current .text-danger {
+  color: var(--color-danger);
+}
+
+.health-trends-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--text-tertiary);
+  font-style: italic;
+}

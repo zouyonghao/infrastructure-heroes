@@ -1,0 +1,88 @@
+name: Update Project Metrics
+
+on:
+  # Run weekly on Sundays at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * 0'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (do not commit changes)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+      limit:
+        description: 'Limit number of projects (0 = all)'
+        required: false
+        default: '0'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Update metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            python scripts/batch-update-health.py --dry-run --limit ${{ github.event.inputs.limit || 0 }}
+          else
+            python scripts/batch-update-health.py --limit ${{ github.event.inputs.limit || 0 }}
+          fi
+      
+      - name: Update historical data
+        if: github.event.inputs.dry_run != 'true'
+        run: python scripts/update-historical-data.py
+      
+      - name: Commit and push changes
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Check if there are changes
+          if git diff --quiet content/projects/ data/historical/; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          # Add and commit changes
+          git add content/projects/
+          git add data/historical/
+          
+          # Get current date
+          DATE=$(date +%Y-%m-%d)
+          
+          git commit -m "📊 Update project metrics - $DATE
+
+          Automated health score refresh:
+          - Updated GitHub metrics for all projects
+          - Recalculated health scores using Methodology v1.0
+          - Recorded historical snapshot
+          
+          Workflow: ${{ github.workflow }}
+          Run: ${{ github.run_number }}"
+          
+          git push
