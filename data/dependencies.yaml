@@ -1,0 +1,549 @@
+# Dependency relationships between projects
+# Format: project_name: [list_of_dependencies]
+
+# ============================================
+# FOUNDATION LAYER
+# ============================================
+
+Linux Kernel:
+  depends_on: []
+  tier: foundation
+  
+glibc:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+musl libc:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+OpenSSL:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+zlib:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+libpng:
+  depends_on: ["zlib", "Linux Kernel"]
+  tier: foundation
+  
+libjpeg-turbo:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+libsodium:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+libffi:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+libxml2:
+  depends_on: ["zlib", "Linux Kernel"]
+  tier: foundation
+  
+readline:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+pcre:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+APR:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+  
+Protocol Buffers:
+  depends_on: ["Linux Kernel"]
+  tier: foundation
+
+# ============================================
+# SYSTEM LAYER
+# ============================================
+
+systemd:
+  depends_on: ["Linux Kernel", "glibc"]
+  tier: system
+  
+OpenSSH:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: system
+  
+Git:
+  depends_on: ["OpenSSL", "zlib", "curl", "Linux Kernel"]
+  tier: system
+  
+GnuPG:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: system
+  
+BusyBox:
+  depends_on: ["Linux Kernel"]
+  tier: system
+  
+APT:
+  depends_on: ["Linux Kernel", "glibc"]
+  tier: system
+  
+BIND:
+  depends_on: ["OpenSSL", "Linux Kernel"]
+  tier: system
+  
+Squid:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: system
+  
+Varnish:
+  depends_on: ["Linux Kernel"]
+  tier: system
+  
+curl:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: system
+  
+FFmpeg:
+  depends_on: ["zlib", "Linux Kernel"]
+  tier: system
+  
+ImageMagick:
+  depends_on: ["zlib", "libpng", "libjpeg-turbo", "Linux Kernel"]
+  tier: system
+  
+CoreDNS:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: system
+  
+Certbot:
+  depends_on: ["OpenSSL", "Python", "Linux Kernel"]
+  tier: system
+
+# ============================================
+# RUNTIME & LANGUAGES LAYER
+# ============================================
+
+Python:
+  depends_on: ["OpenSSL", "zlib", "libffi", "Linux Kernel"]
+  tier: runtime
+  
+Node.js:
+  depends_on: ["OpenSSL", "zlib", "libuv", "V8", "Linux Kernel"]
+  tier: runtime
+  
+Go:
+  depends_on: ["Linux Kernel"]
+  tier: runtime
+  
+Rust:
+  depends_on: ["LLVM", "Linux Kernel"]
+  tier: runtime
+  
+Java:
+  depends_on: ["Linux Kernel", "zlib"]
+  tier: runtime
+  
+PHP:
+  depends_on: ["OpenSSL", "zlib", "libxml2", "Linux Kernel"]
+  tier: runtime
+  
+Ruby:
+  depends_on: ["OpenSSL", "zlib", "readline", "Linux Kernel"]
+  tier: runtime
+  
+Deno:
+  depends_on: ["Rust", "Linux Kernel", "V8"]
+  tier: runtime
+  
+Bun:
+  depends_on: ["Linux Kernel", "JavaScriptCore"]
+  tier: runtime
+  
+TypeScript:
+  depends_on: ["Node.js"]
+  tier: runtime
+  
+LLVM:
+  depends_on: ["Linux Kernel", "zlib"]
+  tier: runtime
+
+# ============================================
+# PACKAGE MANAGERS
+# ============================================
+
+npm:
+  depends_on: ["Node.js"]
+  tier: tools
+  
+pip:
+  depends_on: ["Python"]
+  tier: tools
+  
+Cargo:
+  depends_on: ["Rust"]
+  tier: tools
+  
+Homebrew:
+  depends_on: ["Ruby", "Git", "curl"]
+  tier: tools
+  
+APT:
+  depends_on: ["Linux Kernel", "glibc"]
+  tier: tools
+
+# ============================================
+# WEB SERVERS LAYER
+# ============================================
+
+Nginx:
+  depends_on: ["OpenSSL", "zlib", "pcre", "Linux Kernel"]
+  tier: web
+  
+Apache HTTP Server:
+  depends_on: ["OpenSSL", "zlib", "pcre", "Linux Kernel", "APR"]
+  tier: web
+  
+Caddy:
+  depends_on: ["OpenSSL", "Linux Kernel", "Go"]
+  tier: web
+  
+HAProxy:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: web
+  
+Traefik:
+  depends_on: ["OpenSSL", "Linux Kernel", "Go"]
+  tier: web
+  
+Apache Tomcat:
+  depends_on: ["Java", "Linux Kernel"]
+  tier: web
+
+# ============================================
+# DATA & STORAGE LAYER
+# ============================================
+
+PostgreSQL:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: data
+  
+MySQL:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: data
+  
+Redis:
+  depends_on: ["Linux Kernel"]
+  tier: data
+  
+MongoDB:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: data
+  
+Elasticsearch:
+  depends_on: ["OpenSSL", "Java", "Linux Kernel"]
+  tier: data
+  
+Apache Kafka:
+  depends_on: ["OpenSSL", "zlib", "Java", "Linux Kernel", "Apache ZooKeeper"]
+  tier: data
+  
+etcd:
+  depends_on: ["OpenSSL", "Go", "Linux Kernel"]
+  tier: data
+  
+SQLite:
+  depends_on: ["Linux Kernel"]
+  tier: data
+  
+MariaDB:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: data
+  
+ClickHouse:
+  depends_on: ["Linux Kernel"]
+  tier: data
+  
+CockroachDB:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: data
+  
+TiDB:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: data
+  
+ScyllaDB:
+  depends_on: ["Linux Kernel"]
+  tier: data
+  
+Neo4j:
+  depends_on: ["Java", "Linux Kernel"]
+  tier: data
+  
+Memcached:
+  depends_on: ["Linux Kernel"]
+  tier: data
+  
+MinIO:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: data
+  
+Apache ZooKeeper:
+  depends_on: ["OpenSSL", "Java", "Linux Kernel"]
+  tier: data
+  
+NATS:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: data
+  
+RabbitMQ:
+  depends_on: ["OpenSSL", "Erlang", "Linux Kernel"]
+  tier: data
+  
+InfluxDB:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: data
+  
+TimescaleDB:
+  depends_on: ["PostgreSQL", "Linux Kernel"]
+  tier: data
+  
+Vitess:
+  depends_on: ["Go", "MySQL", "Linux Kernel", "etcd"]
+  tier: data
+
+# ============================================
+# CONTAINER & PLATFORM LAYER
+# ============================================
+
+containerd:
+  depends_on: ["Linux Kernel", "runc"]
+  tier: containers
+  
+Moby (Docker Engine):
+  depends_on: ["containerd", "runc", "Linux Kernel", "Go"]
+  tier: containers
+  
+Kubernetes:
+  depends_on: ["containerd", "etcd", "CoreDNS", "Linux Kernel"]
+  tier: containers
+  
+Helm:
+  depends_on: ["Kubernetes", "Go"]
+  tier: containers
+  
+Istio:
+  depends_on: ["Kubernetes", "Envoy"]
+  tier: containers
+  
+Envoy:
+  depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: containers
+  
+Prometheus:
+  depends_on: ["OpenSSL", "Go", "Linux Kernel"]
+  tier: containers
+  
+Grafana:
+  depends_on: ["Node.js", "OpenSSL", "Linux Kernel", "Go"]
+  tier: containers
+  
+Jaeger:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: containers
+  
+OpenTelemetry:
+  depends_on: ["Linux Kernel"]
+  tier: containers
+  
+Loki:
+  depends_on: ["Prometheus", "Grafana", "Go", "Linux Kernel"]
+  tier: containers
+  
+Logstash:
+  depends_on: ["Java", "OpenSSL", "Linux Kernel"]
+  tier: containers
+  
+Fluentd:
+  depends_on: ["Ruby", "Linux Kernel"]
+  tier: containers
+  
+Argo CD:
+  depends_on: ["Kubernetes", "Go"]
+  tier: containers
+  
+Flux:
+  depends_on: ["Kubernetes", "Go"]
+  tier: containers
+  
+Vault:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: containers
+  
+Consul:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: containers
+  
+Terraform:
+  depends_on: ["Go", "Linux Kernel"]
+  tier: containers
+  
+Rook:
+  depends_on: ["Kubernetes", "Ceph", "Go", "Linux Kernel"]
+  tier: containers
+  
+Ceph:
+  depends_on: ["Linux Kernel"]
+  tier: containers
+  
+GlusterFS:
+  depends_on: ["Linux Kernel"]
+  tier: containers
+
+# ============================================
+# CI/CD & DEVOPS LAYER
+# ============================================
+
+Jenkins:
+  depends_on: ["Java", "Linux Kernel"]
+  tier: cicd
+  
+GitHub Actions Runner:
+  depends_on: [".NET", "Linux Kernel"]
+  tier: cicd
+  
+Apache Airflow:
+  depends_on: ["Python", "PostgreSQL", "Redis", "Linux Kernel"]
+  tier: cicd
+  
+Ansible:
+  depends_on: ["Python", "OpenSSH", "Linux Kernel"]
+  tier: cicd
+
+# ============================================
+# APPLICATION FRAMEWORKS LAYER
+# ============================================
+
+React:
+  depends_on: ["Node.js"]
+  tier: apps
+  
+Angular:
+  depends_on: ["Node.js", "TypeScript"]
+  tier: apps
+  
+Vue.js:
+  depends_on: ["Node.js"]
+  tier: apps
+  
+Svelte:
+  depends_on: ["Node.js"]
+  tier: apps
+  
+Next.js:
+  depends_on: ["Node.js", "React"]
+  tier: apps
+  
+Express.js:
+  depends_on: ["Node.js"]
+  tier: apps
+  
+Django:
+  depends_on: ["Python"]
+  tier: apps
+  
+Flask:
+  depends_on: ["Python"]
+  tier: apps
+  
+FastAPI:
+  depends_on: ["Python"]
+  tier: apps
+  
+Ruby on Rails:
+  depends_on: ["Ruby", "SQLite", "PostgreSQL", "MySQL"]
+  tier: apps
+  
+Spring Framework:
+  depends_on: ["Java"]
+  tier: apps
+  
+Laravel:
+  depends_on: ["PHP"]
+  tier: apps
+
+# ============================================
+# BUILD TOOLS LAYER
+# ============================================
+
+Babel:
+  depends_on: ["Node.js"]
+  tier: tools
+  
+webpack:
+  depends_on: ["Node.js"]
+  tier: tools
+  
+ESLint:
+  depends_on: ["Node.js"]
+  tier: tools
+  
+Prettier:
+  depends_on: ["Node.js"]
+  tier: tools
+
+# ============================================
+# STREAMING & BIG DATA
+# ============================================
+
+Apache Flink:
+  depends_on: ["Java", "Apache Kafka", "Linux Kernel"]
+  tier: data
+  
+Apache Spark:
+  depends_on: ["Java", "Scala", "Linux Kernel", "Apache Hadoop"]
+  tier: data
+
+# ============================================
+# V8 / JavaScript Engine (External)
+# ============================================
+V8:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+libuv:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+runc:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+JavaScriptCore:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+Erlang:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+.NET:
+  depends_on: ["Linux Kernel"]
+  tier: external
+  external: true
+  
+Apache Hadoop:
+  depends_on: ["Java", "Linux Kernel"]
+  tier: external
+  external: true
+  
+Scala:
+  depends_on: ["Java", "Linux Kernel"]
+  tier: external
+  external: true

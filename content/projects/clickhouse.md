@@ -1,4 +1,5 @@
 +++
+dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'ClickHouse'
 logo = 'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/clickhouse.svg'

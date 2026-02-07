@@ -1,4 +1,5 @@
 +++
+dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'TiDB'
 logo = 'https://www.vectorlogo.zone/logos/tikv/tikv-icon.svg'

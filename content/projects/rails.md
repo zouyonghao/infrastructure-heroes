@@ -1,4 +1,5 @@
 +++
+dependencies = ["Ruby", "SQLite", "PostgreSQL", "MySQL"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Ruby on Rails'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-plain.svg'

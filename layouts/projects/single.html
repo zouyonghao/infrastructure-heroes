@@ -4,9 +4,9 @@
         <header class="project-detail-header">
             {{ if .Params.logo }}
             <div class="project-detail-logo">
-                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="logo-fallback" style="display: none; width: 100%; height: 100%;">
-                    <span style="font-size: 3rem; font-weight: 800; color: white;">{{ substr .Title 0 1 }}</span>
+                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none;">
+                    <span class="fallback-initial">{{ substr .Title 0 1 }}</span>
                 </div>
             </div>
             {{ end }}

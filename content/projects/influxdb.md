@@ -1,4 +1,5 @@
 +++
+dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'InfluxDB'
 logo = 'https://avatars.githubusercontent.com/u/5713248?s=200&v=4'

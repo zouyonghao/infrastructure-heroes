@@ -1,4 +1,5 @@
 +++
+dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'React'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg'

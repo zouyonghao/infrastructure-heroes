@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Squid'
 logo = 'https://avatars.githubusercontent.com/u/363029?s=200&v=4'

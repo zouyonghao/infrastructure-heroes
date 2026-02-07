@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache ZooKeeper'
 logo = 'https://www.vectorlogo.zone/logos/apache_zookeeper/apache_zookeeper-icon.svg'

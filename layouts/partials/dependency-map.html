@@ -1,15 +1,227 @@
-<div class="dependency-map">
-  <h3>Global Impact</h3>
-  <div class="map-container">
-    <!-- 使用 Mermaid 生成简单依赖图 -->
-    <div class="mermaid">
-      graph TD
-        {{ .Title }} -->|used by| Linux_Distro
-        Linux_Distro -->|runs| Millions_of_Devices
-        {{ range .Params.dependencies }}
-        {{ . }} --> {{ $.Title }}
+{{ $title := .Title }}
+{{ $allProjects := where .Site.RegularPages "Section" "projects" }}
+
+{{/* Get this project's dependencies - use index for safety */}}
+{{ $dependencies := slice }}
+{{ with .Params.dependencies }}
+  {{ range . }}
+    {{ $dependencies = $dependencies | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Find projects that depend on this one (reverse dependencies) */}}
+{{ $usedBy := slice }}
+{{ range $allProjects }}
+  {{ $otherTitle := .Title }}
+  {{ $otherDeps := slice }}
+  {{ with .Params.dependencies }}
+    {{ range . }}
+      {{ $otherDeps = $otherDeps | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if in $otherDeps $title }}
+    {{ $usedBy = $usedBy | append . }}
+  {{ end }}
+{{ end }}
+
+<div class="project-dependencies-section">
+  <h3>Dependencies</h3>
+  
+  {{/* Dependency Graph Visualization */}}
+  <div class="dependency-graph">
+    
+    {{/* Upstream: What this project depends on */}}
+    {{ if gt (len $dependencies) 0 }}
+    <div class="dep-column upstream">
+      <div class="dep-column-header">
+        <span class="dep-icon">⬆️</span>
+        <span class="dep-title">Depends On</span>
+        <span class="dep-count">({{ len $dependencies }})</span>
+      </div>
+      <div class="dep-list">
+        {{ range $dependencies }}
+          {{ $depName := . }}
+          {{ $depProject := where $allProjects ".Title" $depName }}
+          {{ if $depProject }}
+            {{ with index $depProject 0 }}
+            <a href="{{ .RelPermalink }}" class="dep-item {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+              <div class="dep-item-logo">
+                {{ if .Params.logo }}
+                <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">
+                {{ else }}
+                <span class="dep-initial">{{ substr .Title 0 1 }}</span>
+                {{ end }}
+              </div>
+              <div class="dep-item-info">
+                <span class="dep-item-name">{{ .Title }}</span>
+                {{ if .Params.health }}
+                <span class="dep-item-health health-{{ .Params.health.score }}">{{ .Params.health.score }}</span>
+                {{ end }}
+              </div>
+            </a>
+            {{ end }}
+          {{ else }}
+            <div class="dep-item external">
+              <div class="dep-item-logo external-logo">
+                <span class="dep-initial">{{ substr $depName 0 1 }}</span>
+              </div>
+              <div class="dep-item-info">
+                <span class="dep-item-name">{{ $depName }}</span>
+                <span class="dep-item-note">External</span>
+              </div>
+            </div>
+          {{ end }}
         {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    {{/* Current Project */}}
+    <div class="dep-column current">
+      <div class="dep-current-card {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+        <div class="dep-current-logo">
+          {{ if .Params.logo }}
+          <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">
+          {{ else }}
+          <span class="dep-current-initial">{{ substr .Title 0 1 }}</span>
+          {{ end }}
+        </div>
+        <div class="dep-current-name">{{ .Title }}</div>
+        <div class="dep-current-tier">
+          {{ $tier := "unknown" }}
+          {{ $foundation := slice "OpenSSL" "zlib" "libpng" "libjpeg-turbo" "libsodium" "glibc" "Linux Kernel" }}
+          {{ $system := slice "systemd" "OpenSSH" "Git" "GnuPG" "BusyBox" "curl" "Nginx" "Apache HTTP Server" }}
+          {{ $runtime := slice "Python" "Node.js" "Go" "Rust" "Java" "PHP" "Ruby" }}
+          {{ $data := slice "PostgreSQL" "MySQL" "Redis" "MongoDB" "Elasticsearch" "Kafka" "SQLite" }}
+          {{ $containers := slice "Kubernetes" "Moby (Docker Engine)" "containerd" "Helm" "Istio" "Envoy" "Prometheus" "Grafana" }}
+          {{ $apps := slice "React" "Angular" "Vue.js" "Next.js" "Express.js" "Django" "Flask" "FastAPI" }}
+          {{ if in $foundation $title }}{{ $tier = "foundation" }}
+          {{ else if in $system $title }}{{ $tier = "system" }}
+          {{ else if in $runtime $title }}{{ $tier = "runtime" }}
+          {{ else if in $data $title }}{{ $tier = "data" }}
+          {{ else if in $containers $title }}{{ $tier = "containers" }}
+          {{ else if in $apps $title }}{{ $tier = "apps" }}
+          {{ end }}
+          {{ $tier }}
+        </div>
+      </div>
+    </div>
+    
+    {{/* Downstream: Projects that depend on this */}}
+    {{ if gt (len $usedBy) 0 }}
+    <div class="dep-column downstream">
+      <div class="dep-column-header">
+        <span class="dep-icon">⬇️</span>
+        <span class="dep-title">Used By</span>
+        <span class="dep-count">({{ len $usedBy }})</span>
+      </div>
+      <div class="dep-list">
+        {{ range $usedBy }}
+        <a href="{{ .RelPermalink }}" class="dep-item {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+          <div class="dep-item-logo">
+            {{ if .Params.logo }}
+            <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">
+            {{ else }}
+            <span class="dep-initial">{{ substr .Title 0 1 }}</span>
+            {{ end }}
+          </div>
+          <div class="dep-item-info">
+            <span class="dep-item-name">{{ .Title }}</span>
+            {{ if .Params.health }}
+            <span class="dep-item-health health-{{ .Params.health.score }}">{{ .Params.health.score }}</span>
+            {{ end }}
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+  </div>
+  
+  {{/* Dependency Chain Visualization */}}
+  {{ if or (gt (len $dependencies) 0) (gt (len $usedBy) 0) }}
+  <div class="dependency-chain">
+    <h4>Dependency Chain</h4>
+    <div class="chain-visual">
+      {{ if gt (len $dependencies) 0 }}
+      <div class="chain-section upstream-chain">
+        <span class="chain-label">Upstream</span>
+        <div class="chain-flow">
+          {{ range $i, $dep := $dependencies }}
+            {{ if lt $i 3 }}
+            <span class="chain-node">{{ $dep }}</span>
+            {{ if lt $i (sub (len $dependencies) 1) }}<span class="chain-arrow">→</span>{{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if gt (len $dependencies) 3 }}<span class="chain-more">+{{ sub (len $dependencies) 3 }} more</span>{{ end }}
+          <span class="chain-arrow">→</span>
+        </div>
+      </div>
+      {{ end }}
+      
+      <div class="chain-node current-node">{{ .Title }}</div>
+      
+      {{ if gt (len $usedBy) 0 }}
+      <div class="chain-section downstream-chain">
+        <div class="chain-flow">
+          <span class="chain-arrow">→</span>
+          {{ range $i, $user := $usedBy }}
+            {{ if lt $i 3 }}
+            <span class="chain-node">{{ .Title }}</span>
+            {{ if lt $i (sub (len $usedBy) 1) }}<span class="chain-arrow">→</span>{{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if gt (len $usedBy) 3 }}<span class="chain-more">+{{ sub (len $usedBy) 3 }} more</span>{{ end }}
+        </div>
+        <span class="chain-label">Downstream</span>
+      </div>
+      {{ end }}
     </div>
   </div>
-  <p class="note">This diagram shows simplified dependency relationships</p>
+  {{ end }}
+  
+  {{/* Impact Analysis */}}
+  <div class="dependency-impact">
+    <h4>Impact Analysis</h4>
+    <div class="impact-stats">
+      <div class="impact-stat">
+        <span class="impact-number">{{ len $dependencies }}</span>
+        <span class="impact-label">Direct Dependencies</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-number">{{ len $usedBy }}</span>
+        <span class="impact-label">Dependent Projects</span>
+      </div>
+      {{ if and (gt (len $dependencies) 0) (eq (len $usedBy) 0) }}
+      <div class="impact-stat highlight">
+        <span class="impact-icon">🔝</span>
+        <span class="impact-label">Top-level project</span>
+      </div>
+      {{ else if and (eq (len $dependencies) 0) (gt (len $usedBy) 0) }}
+      <div class="impact-stat highlight">
+        <span class="impact-icon">🏛️</span>
+        <span class="impact-label">Foundation project</span>
+      </div>
+      {{ else if and (gt (len $dependencies) 0) (gt (len $usedBy) 0) }}
+      <div class="impact-stat highlight">
+        <span class="impact-icon">🔗</span>
+        <span class="impact-label">Middleware project</span>
+      </div>
+      {{ end }}
+    </div>
+    
+    {{ if gt (len $usedBy) 0 }}
+    <div class="impact-warning">
+      <p>
+        <strong>⚠️ Impact Risk:</strong> 
+        Changes to {{ .Title }} could affect {{ len $usedBy }} downstream project{{ if gt (len $usedBy) 1 }}s{{ end }}.
+        {{ if gt (len $usedBy) 10 }}
+        This is a critical dependency node in the infrastructure graph.
+        {{ end }}
+      </p>
+    </div>
+    {{ end }}
+  </div>
+  
 </div>

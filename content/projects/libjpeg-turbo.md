@@ -1,4 +1,5 @@
 +++
+dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'libjpeg-turbo'
 logo = 'https://upload.wikimedia.org/wikipedia/commons/c/c3/JPEG_format_logo.svg'

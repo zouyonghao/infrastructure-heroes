@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'MariaDB'
 logo = 'https://raw.githubusercontent.com/loganmarchione/homelab-svg-assets/main/assets/mariadb.svg'

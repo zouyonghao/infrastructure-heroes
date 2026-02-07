@@ -1,4 +1,5 @@
 +++
+dependencies = ["PostgreSQL", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'TimescaleDB'
 logo = 'https://assets.easydmarc.com/a7196ad14f/bimi-timescale-com-652a126d.svg'

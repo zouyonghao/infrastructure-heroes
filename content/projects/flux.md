@@ -1,4 +1,5 @@
 +++
+dependencies = ["Kubernetes", "Go"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Flux'
 logo = 'https://fluxcd.io/img/flux-icon@2x.png'

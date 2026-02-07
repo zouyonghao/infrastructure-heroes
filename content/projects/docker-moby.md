@@ -1,4 +1,5 @@
 +++
+dependencies = ["containerd", "Linux Kernel", "Go"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Moby (Docker Engine)'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg'

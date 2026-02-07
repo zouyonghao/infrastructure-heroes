@@ -1,4 +1,5 @@
 +++
+dependencies = ["Kubernetes", "Ceph", "Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Rook'
 logo = 'https://raw.githubusercontent.com/cncf/landscape/refs/heads/master/hosted_logos/rook.svg'

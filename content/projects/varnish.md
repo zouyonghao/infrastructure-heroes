@@ -1,4 +1,5 @@
 +++
+dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Varnish'
 logo = 'https://avatars.githubusercontent.com/u/14977495?s=200&v=4'

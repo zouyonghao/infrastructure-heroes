@@ -1,0 +1,225 @@
+{{/* 
+  Unified Dependency Pyramid
+  Uses Hugo project pages as source of truth
+  Categorizes projects by tier based on their position in the stack
+*/}}
+
+{{ $allProjects := where .Site.RegularPages "Section" "projects" }}
+{{ $projects := where $allProjects ".File.BaseFileName" "!=" "_index" }}
+
+{{/* Define tiers by project type/role */}}
+{{ $foundation := slice "zlib" "openssl" "libpng" "libjpeg-turbo" "glibc" "busybox" "gnupg" "libsodium" }}
+{{ $system := slice "curl" "git" "openssh" "systemd" "nginx" "apache-httpd" "haproxy" "caddy" "traefik" "envoy" "varnish" "squid" "bind" "coredns" "certbot" "letsencrypt" "openssl" "gnupg" }}
+{{ $runtime := slice "python" "nodejs" "go" "rust" "php" "ruby" "java" "deno" "bun" "typescript" "cargo" "pip" "npm" "gradle" "maven" }}
+{{ $data := slice "postgresql" "mysql" "redis" "mongodb" "elasticsearch" "kafka" "cassandra" "sqlite" "mariadb" "cockroachdb" "clickhouse" "timescaledb" "neo4j" "influxdb" "prometheus" "grafana" "loki" "logstash" "etcd" "consul" "vault" "zookeeper" "minio" "ceph" "glusterfs" "vitess" "tidb" "scylladb" }}
+{{ $container := slice "docker-moby" "kubernetes" "containerd" "runc" "cri-o" "helm" "argocd" "flux" "istio" "linkerd" "consul" "vault" "coredns" }}
+{{ $app := slice "react" "vuejs" "angular" "svelte" "django" "rails" "flask" "fastapi" "expressjs" "nextjs" "nuxt" "gatsby" "spring" "laravel" "symfony" "tensorflow" "pytorch" "jupyter" "airflow" "spark" "flink" "kafka" "storm" "terraform" "ansible" "puppet" "chef" "salt" "vagrant" "packer" "nomad" "vault" "consul" }}
+{{ $webserver := slice "nginx" "apache-httpd" "caddy" "haproxy" "traefik" "envoy" "varnish" "squid" "tomcat" "jetty" "undertow" }}
+
+<div class="dep-pyramid">
+  <div class="pyramid-header">
+    <h2>Infrastructure Dependency Pyramid</h2>
+    <p>{{ len $projects }} projects organized by their position in the stack</p>
+  </div>
+  
+  <div class="pyramid-visual">
+    {{/* Count projects in each tier for stats */}}
+    {{ $foundationCount := 0 }}
+    {{ $systemCount := 0 }}
+    {{ $runtimeCount := 0 }}
+    {{ $dataCount := 0 }}
+    {{ $webserverCount := 0 }}
+    {{ $containerCount := 0 }}
+    {{ $appCount := 0 }}
+    
+    {{ range $projects }}
+      {{ $slug := .File.BaseFileName }}
+      {{ if in $foundation $slug }}{{ $foundationCount = add $foundationCount 1 }}{{ end }}
+      {{ if in $system $slug }}{{ $systemCount = add $systemCount 1 }}{{ end }}
+      {{ if in $runtime $slug }}{{ $runtimeCount = add $runtimeCount 1 }}{{ end }}
+      {{ if in $data $slug }}{{ $dataCount = add $dataCount 1 }}{{ end }}
+      {{ if in $webserver $slug }}{{ $webserverCount = add $webserverCount 1 }}{{ end }}
+      {{ if in $container $slug }}{{ $containerCount = add $containerCount 1 }}{{ end }}
+      {{ if in $app $slug }}{{ $appCount = add $appCount 1 }}{{ end }}
+    {{ end }}
+    
+    {{/* Tier 6: Applications (Top) - Widest */}}
+    {{ if gt $appCount 0 }}
+    <div class="pyramid-tier tier-apps" style="width: 100%">
+      <div class="tier-header">
+        <span class="tier-name">Applications & Frameworks</span>
+        <span class="tier-count">{{ $appCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $app .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 5: Container Platforms */}}
+    {{ if gt $containerCount 0 }}
+    <div class="pyramid-tier tier-containers" style="width: 92%">
+      <div class="tier-header">
+        <span class="tier-name">Container & Orchestration</span>
+        <span class="tier-count">{{ $containerCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $container .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 4: Databases & Storage */}}
+    {{ if gt $dataCount 0 }}
+    <div class="pyramid-tier tier-data" style="width: 84%">
+      <div class="tier-header">
+        <span class="tier-name">Databases & Storage</span>
+        <span class="tier-count">{{ $dataCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $data .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 3: Web Servers */}}
+    {{ if gt $webserverCount 0 }}
+    <div class="pyramid-tier tier-web" style="width: 76%">
+      <div class="tier-header">
+        <span class="tier-name">Web Servers & Proxies</span>
+        <span class="tier-count">{{ $webserverCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $webserver .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 2: System & Runtime */}}
+    {{ if gt $runtimeCount 0 }}
+    <div class="pyramid-tier tier-runtime" style="width: 68%">
+      <div class="tier-header">
+        <span class="tier-name">Languages & Runtimes</span>
+        <span class="tier-count">{{ $runtimeCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $runtime .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 1.5: System Tools */}}
+    {{ if gt $systemCount 0 }}
+    <div class="pyramid-tier tier-system" style="width: 60%">
+      <div class="tier-header">
+        <span class="tier-name">System & Networking</span>
+        <span class="tier-count">{{ $systemCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $system .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    
+    <div class="pyramid-arrow">▼</div>
+    
+    {{/* Tier 1: Foundation (Bottom) - Narrowest */}}
+    {{ if gt $foundationCount 0 }}
+    <div class="pyramid-tier tier-foundation" style="width: 52%">
+      <div class="tier-header">
+        <span class="tier-name">Foundation Libraries</span>
+        <span class="tier-count">{{ $foundationCount }} projects</span>
+      </div>
+      <div class="tier-content">
+        {{ range $projects }}
+          {{ if in $foundation .File.BaseFileName }}
+            {{ $healthScore := .Params.health.score | default 50 }}
+            {{ $healthClass := "healthy" }}
+            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
+            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
+            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  
+  <div class="pyramid-legend">
+    <span class="legend-item"><span class="legend-dot healthy"></span> Healthy (80-100)</span>
+    <span class="legend-item"><span class="legend-dot warning"></span> Warning (60-79)</span>
+    <span class="legend-item"><span class="legend-dot critical"></span> Critical (&lt;60)</span>
+  </div>
+</div>

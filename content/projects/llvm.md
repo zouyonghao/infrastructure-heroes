@@ -1,4 +1,5 @@
 +++
+dependencies = ["Linux Kernel", "zlib"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'LLVM'
 logo = 'https://raw.githubusercontent.com/cncf/landscape/master/hosted_logos/llvm.svg'

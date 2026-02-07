@@ -1,0 +1,131 @@
+{{ $allProjects := where .Site.RegularPages "Section" "projects" }}
+{{ $projects := where $allProjects ".File.BaseFileName" "!=" "_index" }}
+
+{{/* Categorize projects by tier */}}
+{{ $foundation := slice "zlib" "openssl" "libpng" "libjpeg-turbo" "glibc" "busybox" }}
+{{ $system := slice "curl" "git" "openssh" "systemd" "nginx" "apache-httpd" "haproxy" "caddy" }}
+{{ $runtime := slice "python" "nodejs" "go" "rust" "php" "ruby" "java" "deno" "bun" }}
+{{ $data := slice "postgresql" "mysql" "redis" "mongodb" "elasticsearch" "kafka" "cassandra" "sqlite" "mariadb" }}
+{{ $container := slice "docker-moby" "kubernetes" "containerd" "runc" "cri-o" "helm" }}
+{{ $app := slice "react" "vuejs" "angular" "django" "rails" "flask" "expressjs" "nextjs" "terraform" "ansible" }}
+
+<div class="dep-pyramid">
+  <div class="pyramid-header">
+    <h2>The Infrastructure Pyramid</h2>
+    <p>{{ len $projects }} projects organized by their position in the dependency stack</p>
+  </div>
+  
+  <div class="pyramid-container">
+    <!-- Tier 6: Applications (Top) -->
+    <div class="pyramid-tier tier-apps">
+      <div class="tier-label">Applications & Frameworks</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $app .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="pyramid-connector"></div>
+    
+    <!-- Tier 5: Container Platforms -->
+    <div class="pyramid-tier tier-containers">
+      <div class="tier-label">Container & Orchestration</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $container .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="pyramid-connector"></div>
+    
+    <!-- Tier 4: Databases -->
+    <div class="pyramid-tier tier-databases">
+      <div class="tier-label">Databases & Storage</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $data .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="pyramid-connector"></div>
+    
+    <!-- Tier 3: Web Servers -->
+    <div class="pyramid-tier tier-servers">
+      <div class="tier-label">Web Servers & Proxies</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $system .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="pyramid-connector"></div>
+    
+    <!-- Tier 2: Runtimes -->
+    <div class="pyramid-tier tier-runtimes">
+      <div class="tier-label">Languages & Runtimes</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $runtime .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    
+    <div class="pyramid-connector"></div>
+    
+    <!-- Tier 1: Foundation (Bottom) -->
+    <div class="pyramid-tier tier-foundation">
+      <div class="tier-label">Foundation</div>
+      <div class="tier-blocks">
+        {{ range $projects }}
+          {{ if in $foundation .File.BaseFileName }}
+            <a href="{{ .RelPermalink }}" class="pyramid-block {{ if .Params.health }}{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}{{ else }}healthy{{ end }}" data-score="{{ .Params.health.score }}">
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="pyramid-legend">
+    <span class="legend-item"><span class="legend-dot healthy"></span> Healthy (80-100)</span>
+    <span class="legend-item"><span class="legend-dot warning"></span> Warning (60-79)</span>
+    <span class="legend-item"><span class="legend-dot critical"></span> Critical (&lt;60)</span>
+  </div>
+</div>
+
+<script>
+// Simple interaction - highlight on hover
+document.querySelectorAll('.pyramid-block').forEach(block => {
+  block.addEventListener('mouseenter', function() {
+    const score = this.dataset.score;
+    if (score) {
+      this.setAttribute('title', `Health Score: ${score}`);
+    }
+  });
+});
+</script>

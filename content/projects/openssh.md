@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'OpenSSH'
 logo = 'https://avatars.githubusercontent.com/u/2387206?s=200&v=4'

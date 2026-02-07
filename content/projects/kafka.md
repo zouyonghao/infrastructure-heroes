@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "zlib", "Linux Kernel", "Apache ZooKeeper"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Kafka'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg'

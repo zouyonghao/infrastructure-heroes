@@ -1,4 +1,5 @@
 +++
+dependencies = ["Kubernetes", "Envoy"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Istio'
 logo = 'https://www.vectorlogo.zone/logos/istioio/istioio-icon.svg'

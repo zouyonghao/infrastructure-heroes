@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "Python", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Certbot'
 logo = 'https://certbot.eff.org/assets/Certbot-solid-c4e500f9953fc8ee1d38cb0b22778163602a82cb2b39a5bc89211315c5c877c9.svg'

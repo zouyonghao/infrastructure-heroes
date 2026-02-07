@@ -1,4 +1,5 @@
 +++
+dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Envoy'
 logo = 'https://raw.githubusercontent.com/benc-uk/icon-collection/refs/heads/master/logos/envoy-icon-color.svg'

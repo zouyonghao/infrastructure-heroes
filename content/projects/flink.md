@@ -1,4 +1,5 @@
 +++
+dependencies = ["Apache Kafka", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Flink'
 logo = 'https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png'

@@ -1,4 +1,5 @@
 +++
+dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'BusyBox'
 logo = 'https://busybox.net/images/busybox1.png'
