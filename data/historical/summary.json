@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-02-08T18:34:35.879430",
+  "total_snapshots": 1,
+  "date_range": {
+    "from": "2026-02-08",
+    "to": "2026-02-08"
+  },
+  "current_status": {
+    "critical": 17,
+    "warning": 24,
+    "healthy": 67,
+    "avg_score": 78.52777777777777
+  },
+  "trends": {
+    "avg_score_over_time": [
+      {
+        "date": "2026-02-08",
+        "value": 78.52777777777777
+      }
+    ],
+    "critical_count_over_time": [
+      {
+        "date": "2026-02-08",
+        "value": 17
+      }
+    ]
+  }
+}

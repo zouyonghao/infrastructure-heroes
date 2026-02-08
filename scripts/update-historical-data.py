@@ -237,7 +237,7 @@ def main():
     
     # Print summary
     print("\n📋 Current Status:")
-    print(f"  Total Projects: {snapshot['summary']['total_projects']}")
+    print(f"  Total Projects: {snapshot['total_projects']}")
     print(f"  🟢 Healthy: {snapshot['summary']['healthy']}")
     print(f"  🟡 Warning: {snapshot['summary']['warning']}")
     print(f"  🔴 Critical: {snapshot['summary']['critical']}")
