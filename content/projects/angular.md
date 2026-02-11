@@ -22,6 +22,7 @@ description = 'TypeScript-based web framework'
   commits_90d = 100
   bus_factor_people = 4
 
+maintainers = ["Misko Hevery", "John Papa"]
 +++
 
 ### Overview

@@ -22,6 +22,10 @@ description = 'Most widely used DNS server software'
   commits_90d = 0
   bus_factor_people = 2
 
+[successor]
+  project = "CoreDNS"
+  relation = "alternative"
+  reason = "CoreDNS is a modern, cloud-native DNS server written in Go. It is the default DNS for Kubernetes and may be preferred for containerized environments."
 +++
 
 ### Overview

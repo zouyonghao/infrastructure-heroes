@@ -1,0 +1,35 @@
+{{/* Find maintainers with succession plans for this project */}}
+{{ $projectTitle := .Title }}
+{{ $plans := slice }}
+
+{{ range $m := where .Site.RegularPages "Section" "maintainers" }}
+  {{ if $m.Params.projects }}
+    {{ range $p := $m.Params.projects }}
+      {{ if eq $p $projectTitle }}
+        {{ $status := $m.Params.status | default "active" }}
+        {{ if and (eq $status "active") $m.Params.successor }}
+          {{ $plans = $plans | append (dict "maintainer" $m "successor" $m.Params.successor) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $plans }}
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:20px 0;">
+  <h3 style="margin:0 0 12px 0;font-size:1rem;color:#0f172a;">🛡️ Potential Successors</h3>
+  
+  {{ range $plans }}
+    {{ $s := .successor }}
+    <div style="display:flex;align-items:center;gap:12px;padding:12px;background:#fff;border-radius:8px;border:1px solid #e2e8f0;">
+      <a href="{{ .maintainer.RelPermalink }}" style="font-weight:500;color:#0f172a;text-decoration:none;">{{ .maintainer.Title }}</a>
+      <span style="color:#94a3b8;">→</span>
+      <span style="font-weight:500;color:#059669;">{{ $s.name }}</span>
+      <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:12px;font-size:0.75rem;margin-left:auto;">{{ $s.relation | default "potential" }}</span>
+    </div>
+    {{ if $s.reason }}
+    <p style="margin:8px 0 0 0;font-size:0.85rem;color:#64748b;">{{ $s.reason }}</p>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

@@ -22,6 +22,7 @@ description = 'Rust package manager and build tool'
   commits_90d = 100
   bus_factor_people = 2
 
+maintainers = ["Yehuda Katz"]
 +++
 
 ### Overview

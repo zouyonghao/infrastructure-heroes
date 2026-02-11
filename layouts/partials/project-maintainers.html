@@ -5,15 +5,33 @@
 */}}
 
 {{ $projectTitle := .Title }}
-{{ $maintainers := where .Site.RegularPages "Section" "maintainers" }}
 {{ $projectMaintainers := slice }}
 
-{{/* Find maintainers who have this project in their projects list */}}
-{{ range $maintainer := $maintainers }}
-  {{ if $maintainer.Params.projects }}
-    {{ range $projectName := $maintainer.Params.projects }}
-      {{ if eq $projectName $projectTitle }}
-        {{ $projectMaintainers = $projectMaintainers | append $maintainer }}
+{{/* Method 1: Use maintainers field from project if available */}}
+{{ if .Params.maintainers }}
+  {{ range $maintainerName := .Params.maintainers }}
+    {{ $maintainerPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $maintainerName)) }}
+    {{ if not $maintainerPage }}
+      {{/* Try to find by title match */}}
+      {{ range where $.Site.RegularPages "Section" "maintainers" }}
+        {{ if eq .Title $maintainerName }}
+          {{ $maintainerPage = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if $maintainerPage }}
+      {{ $projectMaintainers = $projectMaintainers | append $maintainerPage }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{/* Method 2: Fallback to reverse lookup from maintainer projects */}}
+  {{ $allMaintainers := where .Site.RegularPages "Section" "maintainers" }}
+  {{ range $maintainer := $allMaintainers }}
+    {{ if $maintainer.Params.projects }}
+      {{ range $projectName := $maintainer.Params.projects }}
+        {{ if eq $projectName $projectTitle }}
+          {{ $projectMaintainers = $projectMaintainers | append $maintainer }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}

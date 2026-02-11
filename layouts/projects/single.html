@@ -128,7 +128,13 @@
         </div>
         {{ end }}
 
+        {{ partial "project-successor.html" . }}
+
         {{ partial "project-maintainers.html" . }}
+
+        {{ partial "project-maintainer-successors.html" . }}
+
+        {{ partial "project-succession-planning.html" . }}
 
         <div class="project-content">
             {{ .Content }}

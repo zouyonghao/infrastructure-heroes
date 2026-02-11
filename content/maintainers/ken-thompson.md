@@ -4,8 +4,15 @@ draft = false
 title = "Ken Thompson"
 role = "Unix and Go Co-Creator"
 projects = ["Unix", "Go", "UTF-8"]
+status = 'retired'
 [links]
   github = "ken"
+
+[successor]
+  name = "Rob Pike"
+  relation = "co-maintainer"
+  date = "2012-01-01"
+  reason = "Ken retired from Google in 2012. Go is now maintained by the Go team at Google, led by Russ Cox."
 +++
 
 ## Biography

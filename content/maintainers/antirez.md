@@ -4,9 +4,16 @@ draft = false
 title = "Antirez"
 role = "Redis Creator"
 projects = ["Redis"]
+status = 'stepped-back'
 [links]
   github = "antirez"
   twitter = "antirez"
+
+[successor]
+  name = "Redis Team"
+  relation = "succeeded"
+  date = "2020-06-30"
+  reason = "Antirez stepped back from Redis maintenance in June 2020. Redis is now maintained by a team at Redis Labs with community contributors."
 +++
 
 ## Biography

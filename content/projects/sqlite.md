@@ -21,6 +21,7 @@ description = 'Most widely deployed database engine in the world'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
+maintainers = ["D. Richard Hipp"]
 +++
 
 ### Overview

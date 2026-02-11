@@ -22,6 +22,7 @@ description = 'Service mesh and discovery'
   commits_90d = 32
   bus_factor_people = 6
 
+maintainers = ["Mitchell Hashimoto"]
 +++
 
 ### Overview

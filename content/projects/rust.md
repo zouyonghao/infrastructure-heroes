@@ -21,6 +21,7 @@ description = 'Systems programming language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
+maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 +++
 
 ### Overview

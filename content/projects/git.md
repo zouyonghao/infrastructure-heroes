@@ -21,6 +21,7 @@ description = 'Distributed version control system'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
+maintainers = ["Linus Torvalds", "Junio C Hamano"]
 +++
 
 ### Overview

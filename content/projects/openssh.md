@@ -21,6 +21,7 @@ description = 'Secure Shell connectivity tools'
   commits_30d = 11
   commits_90d = 89
   bus_factor_people = 1
+maintainers = ["Theo de Raadt"]
 +++
 
 ### Overview

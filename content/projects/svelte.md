@@ -21,6 +21,7 @@ description = 'Cybernetically enhanced web apps'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
+maintainers = ["Rich Harris"]
 +++
 
 ### Overview

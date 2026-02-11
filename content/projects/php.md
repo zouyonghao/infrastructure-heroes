@@ -21,6 +21,7 @@ description = 'Server-side scripting language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
+maintainers = ["Rasmus Lerdorf"]
 +++
 
 ### Overview

@@ -22,6 +22,7 @@ description = 'IT automation and configuration management'
   commits_90d = 86
   bus_factor_people = 4
 
+maintainers = ["Jeff Geerling"]
 +++
 
 ### Overview

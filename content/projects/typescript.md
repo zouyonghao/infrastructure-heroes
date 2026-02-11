@@ -21,6 +21,7 @@ description = 'Typed superset of JavaScript'
   commits_30d = 39
   commits_90d = 78
   bus_factor_people = 3
+maintainers = ["Anders Hejlsberg"]
 +++
 
 ### Overview

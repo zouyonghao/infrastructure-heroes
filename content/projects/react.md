@@ -21,6 +21,7 @@ description = 'JavaScript library for building UIs'
   commits_30d = 93
   commits_90d = 100
   bus_factor_people = 3
+maintainers = ["Jordan Walke", "Dan Abramov"]
 +++
 
 ### Overview

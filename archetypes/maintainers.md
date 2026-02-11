@@ -3,11 +3,19 @@ date = '{{ .Date }}'
 draft = true
 title = '{{ replace .Name "-" " " | title }}'
 role = ''
-project = ''
-avatar = ''
-github = ''
-twitter = ''
-website = ''
+projects = []
+status = 'active'  # active | stepped-back | retired | deceased
+[links]
+  github = ''
+  twitter = ''
+  website = ''
+
+# Optional: Track maintainer succession
+# [successor]
+#   name = "New Maintainer Name"
+#   relation = "succeeded"  # succeeded | co-maintainer | interim
+#   date = "2024-01-01"
+#   reason = "Stepped back to focus on other projects"
 +++
 
 ### About

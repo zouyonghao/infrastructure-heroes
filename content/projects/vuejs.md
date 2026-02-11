@@ -21,6 +21,7 @@ description = 'Progressive JavaScript framework'
   commits_30d = 28
   commits_90d = 70
   bus_factor_people = 2
+maintainers = ["Evan You"]
 +++
 
 ### Overview

@@ -21,6 +21,11 @@ description = 'Popular relational database'
   commits_30d = 0
   commits_90d = 100
   bus_factor_people = 6
+
+[successor]
+  project = "MariaDB"
+  relation = "alternative"
+  reason = "MariaDB is a community-developed fork with more open governance and additional features. Many Linux distributions now default to MariaDB."
 +++
 
 ### Overview

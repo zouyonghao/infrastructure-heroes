@@ -22,6 +22,7 @@ description = 'Fast JavaScript runtime and toolkit'
   commits_90d = 100
   bus_factor_people = 2
 
+maintainers = ["Jarred Sumner"]
 +++
 
 ### Overview

@@ -21,6 +21,7 @@ description = 'In-memory data structure store'
   commits_30d = 58
   commits_90d = 100
   bus_factor_people = 6
+maintainers = ["Salvatore Sanfilippo", "Antirez"]
 +++
 
 ### Overview

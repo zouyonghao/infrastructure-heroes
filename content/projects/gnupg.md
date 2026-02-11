@@ -13,6 +13,7 @@ description = 'Free implementation of OpenPGP'
   score = 45
 [links]
   github = "gnupg/gnupg"
+maintainers = ["Werner Koch"]
 +++
 
 ### Overview

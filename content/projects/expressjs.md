@@ -22,6 +22,7 @@ description = 'Node.js web application framework'
   commits_90d = 33
   bus_factor_people = 3
 
+maintainers = ["TJ Holowaychuk"]
 +++
 
 ### Overview

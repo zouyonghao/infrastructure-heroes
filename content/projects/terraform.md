@@ -21,6 +21,7 @@ description = 'Infrastructure as code software tool'
   commits_30d = 86
   commits_90d = 100
   bus_factor_people = 1
+maintainers = ["Mitchell Hashimoto"]
 +++
 
 ### Overview

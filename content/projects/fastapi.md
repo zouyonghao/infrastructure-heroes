@@ -22,6 +22,7 @@ description = 'Modern Python web framework'
   commits_90d = 100
   bus_factor_people = 2
 
+maintainers = ["Sebastian Ramirez"]
 +++
 
 ### Overview

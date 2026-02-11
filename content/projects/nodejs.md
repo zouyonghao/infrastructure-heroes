@@ -21,6 +21,7 @@ description = 'JavaScript runtime built on V8'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 7
+maintainers = ["Ryan Dahl", "Matteo Collina"]
 +++
 
 ### Overview

@@ -21,6 +21,7 @@ description = 'Full-stack Ruby web framework'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 6
+maintainers = ["David Heinemeier Hansson"]
 +++
 
 ### Overview

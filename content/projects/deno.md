@@ -22,6 +22,7 @@ description = 'Secure runtime for JavaScript/TypeScript'
   commits_90d = 100
   bus_factor_people = 5
 
+maintainers = ["Ryan Dahl"]
 +++
 
 ### Overview

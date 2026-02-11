@@ -21,6 +21,7 @@ description = 'Programming language by Google'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 8
+maintainers = ["Rob Pike", "Ken Thompson"]
 +++
 
 ### Overview

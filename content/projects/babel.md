@@ -22,6 +22,7 @@ description = 'JavaScript compiler'
   commits_90d = 100
   bus_factor_people = 2
 
+maintainers = ["Sebastian McKenzie"]
 +++
 
 ### Overview

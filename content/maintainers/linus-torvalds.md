@@ -4,8 +4,14 @@ draft = false
 title = "Linus Torvalds"
 role = "Linux Kernel Creator and Lead Maintainer"
 projects = ["Linux Kernel", "Git"]
+status = 'active'
 [links]
   github = "torvalds"
+
+[successor]
+  name = "Greg Kroah-Hartman"
+  relation = "potential"
+  reason = "Greg maintains the stable Linux kernel branch and is often mentioned as a potential successor. However, Linux has a distributed lieutenant system, and succession would likely involve multiple subsystem maintainers."
 +++
 
 ## Biography

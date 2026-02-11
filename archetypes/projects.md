@@ -4,6 +4,7 @@ draft = true
 title = '{{ replace .Name "-" " " | title }}'
 logo = ''
 description = ''
+maintainers = []
 
 [health]
   funding = "unknown"      # stable | at-risk | critical | unknown
@@ -11,6 +12,12 @@ description = ''
   contributors = "unknown" # healthy | declining | critical | unknown
   bus_factor = "unknown"   # low | medium | high | unknown
   score = 0               # 0-100 health score
+
+# Optional: Track project succession for continuity
+# [successor]
+#   project = "New Project Name"  # Name of successor project
+#   relation = "superseded"       # superseded | forked | merged | alternative
+#   reason = "Project archived, use X instead"
 +++
 
 ### Overview

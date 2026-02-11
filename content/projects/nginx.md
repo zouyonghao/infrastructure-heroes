@@ -21,6 +21,7 @@ description = 'High-performance web server and reverse proxy'
   commits_30d = 13
   commits_90d = 36
   bus_factor_people = 1
+maintainers = ["Igor Sysoev"]
 +++
 
 ### Overview

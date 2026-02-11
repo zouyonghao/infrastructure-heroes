@@ -22,6 +22,7 @@ description = 'Lightweight Python web framework'
   commits_90d = 32
   bus_factor_people = 1
 
+maintainers = ["Armin Ronacher"]
 +++
 
 ### Overview

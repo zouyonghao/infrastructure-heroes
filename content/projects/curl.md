@@ -22,6 +22,7 @@ description = 'Command line tool and library for transferring data with URLs'
   commits_90d = 100
   bus_factor_people = 1
 
+maintainers = ["Daniel Stenberg"]
 +++
 
 ### Overview

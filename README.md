@@ -108,8 +108,20 @@ infrastructure-heroes/
    +++
    title = "Maintainer Name"
    role = "Project Lead"
-   project = "Project Name"
-   avatar = "https://example.com/avatar.jpg"
+   projects = ["Project Name"]
+   status = "active"  # active | stepped-back | retired
+   
+   [links]
+     github = "username"
+     twitter = "username"
+     website = "https://example.com"
+   
+   # Optional: Track maintainer succession
+   # [successor]
+   #   name = "New Maintainer"
+   #   relation = "succeeded"
+   #   date = "2024-01-01"
+   #   reason = "Stepped back to focus on..."
    +++
 
    Bio and details about the maintainer...
@@ -126,6 +138,49 @@ Projects are rated on a 0-100 scale based on four dimensions:
 | 0-39 | Critical | Red |
 
 See [HEALTH_METRICS.md](HEALTH_METRICS.md) for detailed methodology.
+
+### Project Succession
+
+When a project is deprecated, archived, or superseded, we track its successor to help users migrate:
+
+```toml
+[successor]
+  project = "MariaDB"           # Name of successor project
+  relation = "alternative"      # superseded | forked | merged | alternative
+  reason = "More open governance"
+```
+
+Relation types:
+- **superseded** - Original project archived, use successor instead
+- **forked** - Community fork that became more active
+- **merged** - Project incorporated into another
+- **alternative** - Different approach, may be preferred for new deployments
+
+This helps ensure infrastructure continuity by guiding users to actively maintained alternatives.
+
+### Maintainer Succession
+
+When a maintainer steps back, retires, or transfers responsibility, we track their successor:
+
+```toml
+[successor]
+  name = "New Maintainer Name"
+  relation = "succeeded"     # succeeded | co-maintainer | interim
+  date = "2024-01-01"
+  reason = "Stepped back to focus on other projects"
+```
+
+Relation types:
+- **succeeded** - New maintainer took over primary responsibility
+- **co-maintainer** - Responsibility shared with existing team member
+- **interim** - Temporary maintenance while searching for permanent maintainer
+
+Additionally, maintainers can have a `status` field:
+- **active** - Currently maintaining projects
+- **stepped-back** - Reduced involvement, advisory role
+- **retired** - No longer involved in maintenance
+
+This helps track the human continuity behind critical infrastructure.
 
 ## Scripts
 

@@ -21,6 +21,7 @@ description = 'Massively used compression library'
   commits_30d = 90
   commits_90d = 100
   bus_factor_people = 2
+maintainers = ["Mark Adler"]
 +++
 
 ### Overview

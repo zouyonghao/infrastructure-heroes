@@ -21,6 +21,7 @@ description = 'React framework for production'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 5
+maintainers = ["Guillermo Rauch"]
 +++
 
 ### Overview

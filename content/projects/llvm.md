@@ -21,6 +21,7 @@ description = 'Compiler infrastructure and toolchain'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 21
+maintainers = ["Chris Lattner"]
 +++
 
 ### Overview

@@ -21,6 +21,7 @@ description = 'Container orchestration platform'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
+maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 +++
 
 ### Overview

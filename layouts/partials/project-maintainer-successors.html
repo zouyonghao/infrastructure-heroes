@@ -1,0 +1,129 @@
+{{/*
+  Project Maintainer Successors Partial
+  Shows potential successors for project maintainers (succession planning)
+  Usage: {{ partial "project-maintainer-successors.html" . }}
+*/}}
+
+{{ $project := . }}
+{{ $hasSuccessors := false }}
+{{ $successorInfo := slice }}
+
+{{/* Check each maintainer for successor info */}}
+{{ if .Params.maintainers }}
+  {{ range $maintainerName := .Params.maintainers }}
+    {{ $maintainerPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $maintainerName)) }}
+    {{ if not $maintainerPage }}
+      {{/* Try to find by title match */}}
+      {{ range where $.Site.RegularPages "Section" "maintainers" }}
+        {{ if eq .Title $maintainerName }}
+          {{ $maintainerPage = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{ if $maintainerPage }}
+      {{ $status := $maintainerPage.Params.status | default "active" }}
+      {{ $successor := $maintainerPage.Params.successor }}
+      
+      {{/* Show if maintainer has stepped back, retired, or has a designated successor */}}
+      {{ if or (ne $status "active") ($successor) }}
+        {{ $hasSuccessors = true }}
+        {{ $successorInfo = $successorInfo | append (dict 
+          "maintainer" $maintainerName
+          "status" $status
+          "successor" $successor
+          "page" $maintainerPage
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $hasSuccessors }}
+<div class="maintainer-successors-section">
+  <h3 class="maintainer-successors-title">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </svg>
+    Maintainer Continuity
+  </h3>
+  
+  <div class="maintainer-successors-list">
+    {{ range $info := $successorInfo }}
+    <div class="maintainer-successor-item {{ $info.status }}">
+      <div class="current-maintainer">
+        <span class="maintainer-name">{{ $info.maintainer }}</span>
+        {{ if eq $info.status "retired" }}
+          <span class="status-badge retired">Retired</span>
+        {{ else if eq $info.status "stepped-back" }}
+          <span class="status-badge stepped-back">Stepped Back</span>
+        {{ end }}
+      </div>
+      
+      {{ if $info.successor }}
+        <div class="successor-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+        
+        <div class="successor-maintainer">
+          {{ $successorName := $info.successor.name }}
+          {{ $successorPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $successorName)) }}
+          {{ if not $successorPage }}
+            {{ range where $.Site.RegularPages "Section" "maintainers" }}
+              {{ if eq .Title $successorName }}
+                {{ $successorPage = . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if $successorPage }}
+            <a href="{{ $successorPage.RelPermalink }}" class="successor-name-link">
+              {{ $successorName }}
+            </a>
+          {{ else }}
+            <span class="successor-name">{{ $successorName }}</span>
+          {{ end }}
+          
+          {{ $relation := $info.successor.relation | default "succeeded" }}
+          <span class="relation-badge {{ $relation }}">{{ $relation | humanize }}</span>
+          
+          {{ if $info.successor.date }}
+            <span class="succession-date">since {{ $info.successor.date }}</span>
+          {{ end }}
+          
+          {{ if $info.successor.reason }}
+            <p class="succession-reason">{{ $info.successor.reason }}</p>
+          {{ end }}
+        </div>
+      {{ else if ne $info.status "active" }}
+        <div class="no-successor-warning">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          No designated successor
+        </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  
+  <div class="continuity-note">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="16" x2="12" y2="12"></line>
+      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+    </svg>
+    This section tracks succession planning for project maintainers.
+  </div>
+</div>
+{{ end }}

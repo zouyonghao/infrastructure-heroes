@@ -22,6 +22,7 @@ description = 'JavaScript linting utility'
   commits_90d = 100
   bus_factor_people = 5
 
+maintainers = ["Filipe Fortes"]
 +++
 
 ### Overview

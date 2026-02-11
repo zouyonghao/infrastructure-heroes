@@ -14,6 +14,14 @@
                 {{ range .Params.projects }}
                 {{ $projectName := . }}
                 {{ $projectPage := $.Site.GetPage (printf "/projects/%s" (urlize .)) }}
+                {{ if not $projectPage }}
+                    {{/* Try to find by title match */}}
+                    {{ range where $.Site.RegularPages "Section" "projects" }}
+                        {{ if eq .Title $projectName }}
+                            {{ $projectPage = . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
                 {{ if $projectPage }}
                 <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link">{{ $projectName }}</a>
                 {{ else }}
@@ -50,6 +58,8 @@
             </div>
             {{ end }}
         </header>
+
+        {{ partial "maintainer-successor.html" . }}
 
         <div class="maintainer-content">
             {{ .Content }}

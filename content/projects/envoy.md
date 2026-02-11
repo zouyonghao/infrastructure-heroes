@@ -22,6 +22,7 @@ description = 'Cloud-native edge/service proxy'
   commits_90d = 100
   bus_factor_people = 3
 
+maintainers = ["Matt Klein"]
 +++
 
 ### Overview

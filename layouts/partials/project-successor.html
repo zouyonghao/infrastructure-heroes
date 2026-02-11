@@ -1,0 +1,83 @@
+{{/*
+  Project Successor Partial
+  Displays successor information for deprecated/superseded projects
+  Usage: {{ partial "project-successor.html" . }}
+*/}}
+
+{{ if .Params.successor }}
+{{ $successor := .Params.successor }}
+{{ $projectName := $successor.project }}
+{{ $relation := $successor.relation | default "superseded" }}
+{{ $reason := $successor.reason | default "" }}
+
+{{/* Try to find the successor project page */}}
+{{ $successorPage := $.Site.GetPage (printf "/projects/%s" (urlize $projectName)) }}
+{{ if not $successorPage }}
+  {{/* Try by title match */}}
+  {{ range where $.Site.RegularPages "Section" "projects" }}
+    {{ if eq .Title $projectName }}
+      {{ $successorPage = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="successor-banner {{ $relation }}">
+  <div class="successor-icon">
+    {{ if eq $relation "superseded" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2v20M2 12h20"></path>
+    </svg>
+    {{ else if eq $relation "forked" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="18" r="3"></circle>
+      <circle cx="6" cy="6" r="3"></circle>
+      <circle cx="18" cy="6" r="3"></circle>
+      <path d="M6 9v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9"></path>
+    </svg>
+    {{ else if eq $relation "merged" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="18" r="3"></circle>
+      <circle cx="6" cy="6" r="3"></circle>
+      <path d="M6 9v3a6 6 0 0 0 6 6h3"></path>
+    </svg>
+    {{ else }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+    </svg>
+    {{ end }}
+  </div>
+  
+  <div class="successor-content">
+    <div class="successor-title">
+      {{ if eq $relation "superseded" }}
+        Project Superseded
+      {{ else if eq $relation "forked" }}
+        Active Fork Available
+      {{ else if eq $relation "merged" }}
+        Merged Into
+      {{ else }}
+        Alternative Project
+      {{ end }}
+    </div>
+    
+    <div class="successor-message">
+      {{ if $successorPage }}
+        This project is {{ $relation }} by 
+        <a href="{{ $successorPage.RelPermalink }}" class="successor-link">
+          {{ $projectName }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      {{ else }}
+        This project is {{ $relation }} by <strong>{{ $projectName }}</strong>
+      {{ end }}
+      
+      {{ if $reason }}
+        <span class="successor-reason">{{ $reason }}</span>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -20,6 +20,7 @@ description = 'The GNU C Library - foundation of Linux systems'
   commits_30d = 33
   commits_90d = 100
   bus_factor_people = 2
+maintainers = ["Carlos O"]
 +++
 
 ### Overview

@@ -1,0 +1,125 @@
+{{/*
+  Maintainer Successor Partial
+  Displays successor information for maintainers who have stepped down
+  Usage: {{ partial "maintainer-successor.html" . }}
+*/}}
+
+{{ if .Params.successor }}
+{{ $successor := .Params.successor }}
+{{ $successorName := $successor.name }}
+{{ $relation := $successor.relation | default "succeeded" }}
+{{ $date := $successor.date | default "" }}
+{{ $reason := $successor.reason | default "" }}
+
+{{/* Try to find the successor maintainer page */}}
+{{ $successorPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $successorName)) }}
+{{ if not $successorPage }}
+  {{/* Try by title match */}}
+  {{ range where $.Site.RegularPages "Section" "maintainers" }}
+    {{ if eq .Title $successorName }}
+      {{ $successorPage = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="maintainer-successor-banner {{ $relation }}">
+  <div class="maintainer-successor-icon">
+    {{ if eq $relation "succeeded" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      <path d="M12 11l2 2 4-4"></path>
+    </svg>
+    {{ else if eq $relation "co-maintainer" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+    {{ else if eq $relation "interim" }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </svg>
+    {{ else }}
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+    {{ end }}
+  </div>
+  
+  <div class="maintainer-successor-content">
+    <div class="maintainer-successor-title">
+      {{ if eq $relation "succeeded" }}
+        Successor Appointed
+      {{ else if eq $relation "co-maintainer" }}
+        Co-Maintainer
+      {{ else if eq $relation "interim" }}
+        Interim Maintainer
+      {{ else }}
+        Maintenance Transferred
+      {{ end }}
+    </div>
+    
+    <div class="maintainer-successor-message">
+      {{ if $successorPage }}
+        {{ $relation | humanize }} by 
+        <a href="{{ $successorPage.RelPermalink }}" class="maintainer-successor-link">
+          {{ $successorName }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      {{ else }}
+        {{ $relation | humanize }} by <strong>{{ $successorName }}</strong>
+      {{ end }}
+      
+      {{ if $date }}
+        <span class="maintainer-successor-date">since {{ $date }}</span>
+      {{ end }}
+      
+      {{ if $reason }}
+        <span class="maintainer-successor-reason">{{ $reason }}</span>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{/* Show status banner for retired/stepped-back maintainers */}}
+{{ if eq (.Params.status | default "active") "retired" }}
+<div class="maintainer-status-banner retired">
+  <div class="maintainer-status-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+  </div>
+  <div class="maintainer-status-content">
+    <div class="maintainer-status-title">Retired</div>
+    <div class="maintainer-status-message">This maintainer has retired from active development.</div>
+  </div>
+</div>
+{{ else if eq (.Params.status | default "active") "stepped-back" }}
+<div class="maintainer-status-banner stepped-back">
+  <div class="maintainer-status-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+    </svg>
+  </div>
+  <div class="maintainer-status-content">
+    <div class="maintainer-status-title">Stepped Back</div>
+    <div class="maintainer-status-message">This maintainer has reduced their involvement in day-to-day maintenance.</div>
+  </div>
+</div>
+{{ end }}

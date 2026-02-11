@@ -21,6 +21,7 @@ description = 'JavaScript module bundler'
   commits_30d = 82
   commits_90d = 100
   bus_factor_people = 2
+maintainers = ["Tobias Koppers"]
 +++
 
 ### Overview
