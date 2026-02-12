@@ -3,6 +3,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Linux Kernel'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg'
 description = 'The foundation of modern computing infrastructure'
+maintainers = ["Linus Torvalds"]
 
 [health]
   funding = "stable"
@@ -20,7 +21,6 @@ description = 'The foundation of modern computing infrastructure'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 7
-maintainers = ["Linus Torvalds", "Greg Kroah-Hartman"]
 +++
 
 ### Overview

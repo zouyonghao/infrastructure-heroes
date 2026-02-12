@@ -8,10 +8,25 @@ status = 'active'
 [links]
   github = "torvalds"
 
-[successor]
+[[successors]]
   name = "Greg Kroah-Hartman"
   relation = "potential"
-  reason = "Greg maintains the stable Linux kernel branch and is often mentioned as a potential successor. However, Linux has a distributed lieutenant system, and succession would likely involve multiple subsystem maintainers."
+  reason = "Greg maintains the stable Linux kernel branch and is often mentioned as the most likely successor."
+
+[[successors]]
+  name = "Thomas Gleixner"
+  relation = "potential"
+  reason = "Thomas (tglx) is one of the most senior kernel maintainers, responsible for timers, IRQs, and core x86 code."
+
+[[successors]]
+  name = "Andrew Morton"
+  relation = "potential"
+  reason = "Andrew maintains the -mm tree and has been a key figure in kernel development for decades."
+
+[[successors]]
+  name = "Theodore Ts'o"
+  relation = "potential"
+  reason = "Ted is a founding member of the Linux Foundation and maintains the ext4 filesystem."
 +++
 
 ## Biography

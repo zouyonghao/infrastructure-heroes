@@ -1,35 +1,76 @@
 {{/* Find maintainers with succession plans for this project */}}
 {{ $projectTitle := .Title }}
+{{ $projectMaintainers := .Params.maintainers }}
 {{ $plans := slice }}
 
-{{ range $m := where .Site.RegularPages "Section" "maintainers" }}
-  {{ if $m.Params.projects }}
-    {{ range $p := $m.Params.projects }}
-      {{ if eq $p $projectTitle }}
-        {{ $status := $m.Params.status | default "active" }}
-        {{ if and (eq $status "active") $m.Params.successor }}
-          {{ $plans = $plans | append (dict "maintainer" $m "successor" $m.Params.successor) }}
+{{/* Use project's maintainers list if available, otherwise fallback to reverse lookup */}}
+{{ $maintainersToCheck := slice }}
+{{ if $projectMaintainers }}
+  {{ range $maintainerName := $projectMaintainers }}
+    {{ $maintainerPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $maintainerName)) }}
+    {{ if not $maintainerPage }}
+      {{ range where $.Site.RegularPages "Section" "maintainers" }}
+        {{ if eq .Title $maintainerName }}
+          {{ $maintainerPage = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if $maintainerPage }}
+      {{ $maintainersToCheck = $maintainersToCheck | append $maintainerPage }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{/* Fallback: reverse lookup from maintainer projects */}}
+  {{ range $m := where .Site.RegularPages "Section" "maintainers" }}
+    {{ if $m.Params.projects }}
+      {{ range $p := $m.Params.projects }}
+        {{ if eq $p $projectTitle }}
+          {{ $maintainersToCheck = $maintainersToCheck | append $m }}
         {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ if $plans }}
-<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:20px 0;">
-  <h3 style="margin:0 0 12px 0;font-size:1rem;color:#0f172a;">🛡️ Potential Successors</h3>
-  
-  {{ range $plans }}
-    {{ $s := .successor }}
-    <div style="display:flex;align-items:center;gap:12px;padding:12px;background:#fff;border-radius:8px;border:1px solid #e2e8f0;">
-      <a href="{{ .maintainer.RelPermalink }}" style="font-weight:500;color:#0f172a;text-decoration:none;">{{ .maintainer.Title }}</a>
-      <span style="color:#94a3b8;">→</span>
-      <span style="font-weight:500;color:#059669;">{{ $s.name }}</span>
-      <span style="background:#f1f5f9;color:#64748b;padding:2px 8px;border-radius:12px;font-size:0.75rem;margin-left:auto;">{{ $s.relation | default "potential" }}</span>
-    </div>
-    {{ if $s.reason }}
-    <p style="margin:8px 0 0 0;font-size:0.85rem;color:#64748b;">{{ $s.reason }}</p>
+{{ range $m := $maintainersToCheck }}
+  {{ $status := $m.Params.status | default "active" }}
+  {{/* Support both single successor and multiple successors array */}}
+  {{ if eq $status "active" }}
+    {{/* Handle single successor (legacy format) */}}
+    {{ if $m.Params.successor }}
+      {{ $plans = $plans | append (dict "maintainer" $m "successor" $m.Params.successor) }}
+    {{ end }}
+    {{/* Handle multiple successors array */}}
+    {{ if $m.Params.successors }}
+      {{ range $s := $m.Params.successors }}
+        {{ $plans = $plans | append (dict "maintainer" $m "successor" $s) }}
+      {{ end }}
     {{ end }}
   {{ end }}
+{{ end }}
+
+{{ if $plans }}
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin:20px 0;">
+  <h3 style="margin:0 0 12px 0;font-size:1rem;color:#0f172a;">🛡️ Potential Successors</h3>
+  <p style="margin:0 0 12px 0;font-size:0.85rem;color:#64748b;">If {{ (index $plans 0).maintainer.Title }} steps down:</p>
+  
+  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+  {{ range $plans }}
+    {{ $s := .successor }}
+    {{ $successorPage := $.Site.GetPage (printf "/maintainers/%s" (urlize $s.name)) }}
+    {{ if $successorPage }}
+      <a href="{{ $successorPage.RelPermalink }}" style="display:flex;align-items:center;gap:8px;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:20px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#fff'">
+        {{ $avatar := $successorPage.Params.avatar | default (printf "https://github.com/%s.png" ($successorPage.Params.links.github | default "")) }}
+        <img src="{{ $avatar }}" alt="" style="width:24px;height:24px;border-radius:50%;object-fit:cover;" onerror="this.src='https://github.com/ghost.png'">
+        <span style="font-size:0.875rem;color:#0f172a;font-weight:500;">{{ $s.name }}</span>
+      </a>
+    {{ else }}
+      <span style="display:flex;align-items:center;gap:8px;padding:6px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:20px;">
+        <img src="https://github.com/ghost.png" alt="" style="width:24px;height:24px;border-radius:50%;object-fit:cover;">
+        <span style="font-size:0.875rem;color:#0f172a;font-weight:500;">{{ $s.name }}</span>
+      </span>
+    {{ end }}
+  {{ end }}
+  </div>
 </div>
 {{ end }}
