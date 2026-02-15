@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-or
 description = 'Programming language by Google'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 85
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 132317
-  forks = 18800
+  updated_at = "2026-02-15"
+  stars = 132474
+  forks = 18820
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 8
-maintainers = ["Rob Pike", "Ken Thompson"]
+  bus_factor_people = 10
+["Rob Pike", "Ken Thompson"]
 +++
 
 ### Overview

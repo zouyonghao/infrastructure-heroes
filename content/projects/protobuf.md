@@ -6,21 +6,22 @@ logo = 'https://plugins.jetbrains.com/files/14004/949122/icon/default.svg'
 description = 'Language-neutral data serialization'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 79
+  score = 75
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 70643
-  forks = 16031
+  updated_at = "2026-02-15"
+  stars = 70685
+  forks = 16025
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
+
 +++
 
 ### Overview

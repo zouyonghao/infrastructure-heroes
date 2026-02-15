@@ -5,22 +5,22 @@ logo = 'https://www.gnu.org/graphics/heckert_gnu.transp.small.png'
 description = 'The GNU C Library - foundation of Linux systems'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 73
+  score = 68
 [links]
   github = "bminor/glibc"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 1833
-  forks = 456
+  updated_at = "2026-02-15"
+  stars = 1835
+  forks = 460
   contributors = 100
-  commits_30d = 33
+  commits_30d = 10
   commits_90d = 100
   bus_factor_people = 2
-maintainers = ["Carlos O"]
+["Carlos O"]
 +++
 
 ### Overview

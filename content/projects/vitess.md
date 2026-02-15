@@ -6,21 +6,22 @@ logo = 'https://vitess.io/img/logos/vitess.png'
 description = 'Database clustering for MySQL'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 86
 [links]
   github = "vitessio/vitess"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 20677
-  forks = 2298
+  updated_at = "2026-02-15"
+  stars = 20695
+  forks = 2299
   contributors = 100
-  commits_30d = 81
+  commits_30d = 78
   commits_90d = 100
   bus_factor_people = 3
+
 +++
 
 ### Overview

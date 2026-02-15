@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/
 description = 'Node.js web application framework'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 82
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 68671
-  forks = 22401
+  updated_at = "2026-02-15"
+  stars = 68696
+  forks = 22527
   contributors = 100
-  commits_30d = 10
-  commits_90d = 33
+  commits_30d = 13
+  commits_90d = 37
   bus_factor_people = 3
-
-maintainers = ["TJ Holowaychuk"]
+["TJ Holowaychuk"]
 +++
 
 ### Overview

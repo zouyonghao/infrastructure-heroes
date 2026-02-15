@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bun/bun-
 description = 'Fast JavaScript runtime and toolkit'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 80
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 87135
-  forks = 4024
+  updated_at = "2026-02-15"
+  stars = 87324
+  forks = 4057
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-
-maintainers = ["Jarred Sumner"]
+["Jarred Sumner"]
 +++
 
 ### Overview

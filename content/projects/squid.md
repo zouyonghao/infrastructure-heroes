@@ -6,21 +6,22 @@ logo = 'https://avatars.githubusercontent.com/u/363029?s=200&v=4'
 description = 'Caching proxy for the web'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 72
+  score = 76
 [links]
   github = "squid-cache/squid"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 2841
-  forks = 609
+  updated_at = "2026-02-15"
+  stars = 2853
+  forks = 610
   contributors = 100
-  commits_30d = 7
-  commits_90d = 38
+  commits_30d = 8
+  commits_90d = 39
   bus_factor_people = 2
+
 +++
 
 ### Overview

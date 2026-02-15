@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/dochne/wappalyzer/main/src/images/icon
 description = 'JavaScript compiler'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 80
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 43877
-  forks = 5796
+  updated_at = "2026-02-15"
+  stars = 43874
+  forks = 5801
   contributors = 100
-  commits_30d = 64
+  commits_30d = 61
   commits_90d = 100
   bus_factor_people = 2
-
-maintainers = ["Sebastian McKenzie"]
+["Sebastian McKenzie"]
 +++
 
 ### Overview

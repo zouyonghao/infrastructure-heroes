@@ -6,21 +6,22 @@ logo = 'https://www.vectorlogo.zone/logos/jaegertracingio/jaegertracingio-icon.s
 description = 'Distributed tracing system'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 86
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 22426
-  forks = 2774
+  updated_at = "2026-02-15"
+  stars = 22462
+  forks = 2786
   contributors = 100
-  commits_30d = 68
+  commits_30d = 86
   commits_90d = 100
   bus_factor_people = 3
+
 +++
 
 ### Overview

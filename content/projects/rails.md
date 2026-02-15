@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/ra
 description = 'Full-stack Ruby web framework'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 85
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 58166
-  forks = 22178
+  updated_at = "2026-02-15"
+  stars = 58197
+  forks = 22177
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
-maintainers = ["David Heinemeier Hansson"]
+  bus_factor_people = 4
+["David Heinemeier Hansson"]
 +++
 
 ### Overview

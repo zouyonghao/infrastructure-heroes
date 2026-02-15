@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescri
 description = 'Typed superset of JavaScript'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 84
+  score = 80
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 107706
-  forks = 13220
+  updated_at = "2026-02-15"
+  stars = 107820
+  forks = 13223
   contributors = 100
-  commits_30d = 39
-  commits_90d = 78
+  commits_30d = 45
+  commits_90d = 88
   bus_factor_people = 3
-maintainers = ["Anders Hejlsberg"]
+["Anders Hejlsberg"]
 +++
 
 ### Overview

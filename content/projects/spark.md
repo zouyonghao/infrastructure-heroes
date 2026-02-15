@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apachesp
 description = 'Unified analytics engine'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 82
+  score = 79
 [links]
   github = "apache/spark"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 42759
-  forks = 29054
+  updated_at = "2026-02-15"
+  stars = 42814
+  forks = 29063
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
+
 +++
 
 ### Overview

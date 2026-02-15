@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/memcached.
 description = 'Distributed memory caching system'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 37
+  score = 30
 [links]
   github = "memcached/memcached"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 14122
-  forks = 3323
+  updated_at = "2026-02-15"
+  stars = 14129
+  forks = 3322
   contributors = 100
   commits_30d = 0
   commits_90d = 2
   bus_factor_people = 1
+
 +++
 
 ### Overview

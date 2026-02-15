@@ -6,21 +6,22 @@ logo = 'https://assets.easydmarc.com/a7196ad14f/bimi-timescale-com-652a126d.svg'
 description = 'PostgreSQL for time-series data'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 80
 [links]
   github = "timescale/timescaledb"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 21682
-  forks = 1040
+  updated_at = "2026-02-15"
+  stars = 21817
+  forks = 1042
   contributors = 100
-  commits_30d = 97
+  commits_30d = 85
   commits_90d = 100
   bus_factor_people = 2
+
 +++
 
 ### Overview

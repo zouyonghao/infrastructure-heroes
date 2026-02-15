@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/cncf/landscape/refs/heads/master/hoste
 description = 'Cloud-native storage orchestrator'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 80
 [links]
   github = "rook/rook"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 13365
+  updated_at = "2026-02-15"
+  stars = 13373
   forks = 2812
   contributors = 100
-  commits_30d = 100
+  commits_30d = 99
   commits_90d = 100
   bus_factor_people = 2
+
 +++
 
 ### Overview

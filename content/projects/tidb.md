@@ -6,21 +6,22 @@ logo = 'https://www.vectorlogo.zone/logos/tikv/tikv-icon.svg'
 description = 'Distributed NewSQL database'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 91
 [links]
   github = "pingcap/tidb"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 39701
-  forks = 6110
+  updated_at = "2026-02-15"
+  stars = 39740
+  forks = 6117
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 8
+
 +++
 
 ### Overview

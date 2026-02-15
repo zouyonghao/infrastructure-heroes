@@ -6,20 +6,20 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/d
 description = 'Debian/Ubuntu package management'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 32
+  score = 25
 [links]
   github = "Debian/apt"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 627
+  updated_at = "2026-02-15"
+  stars = 628
   forks = 212
   contributors = 100
   commits_30d = 0
-  commits_90d = 6
+  commits_90d = 0
   bus_factor_people = 1
 
 +++

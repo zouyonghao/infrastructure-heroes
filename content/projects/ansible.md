@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/
 description = 'IT automation and configuration management'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 85
 [links]
   github = "ansible/ansible"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 67915
-  forks = 24215
+  updated_at = "2026-02-15"
+  stars = 67988
+  forks = 24210
   contributors = 100
-  commits_30d = 35
-  commits_90d = 86
+  commits_30d = 24
+  commits_90d = 80
   bus_factor_people = 4
-
-maintainers = ["Jeff Geerling"]
+["Jeff Geerling"]
 +++
 
 ### Overview

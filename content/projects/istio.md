@@ -6,21 +6,22 @@ logo = 'https://www.vectorlogo.zone/logos/istioio/istioio-icon.svg'
 description = 'Service mesh for Kubernetes'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 86
 [links]
   github = "istio/istio"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 37906
-  forks = 8235
+  updated_at = "2026-02-15"
+  stars = 37926
+  forks = 8241
   contributors = 100
-  commits_30d = 92
+  commits_30d = 73
   commits_90d = 100
   bus_factor_people = 3
+
 +++
 
 ### Overview

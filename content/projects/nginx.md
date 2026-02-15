@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/nginx.svg'
 description = 'High-performance web server and reverse proxy'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 76
+  score = 72
 [links]
   github = "nginx/nginx"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 29275
-  forks = 7754
-  contributors = 89
+  updated_at = "2026-02-15"
+  stars = 29346
+  forks = 7761
+  contributors = 90
   commits_30d = 13
-  commits_90d = 36
+  commits_90d = 37
   bus_factor_people = 1
-maintainers = ["Igor Sysoev"]
+["Igor Sysoev"]
 +++
 
 ### Overview

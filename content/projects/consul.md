@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/consul/c
 description = 'Service mesh and discovery'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 93
+  score = 89
 [links]
   github = "hashicorp/consul"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 29723
+  updated_at = "2026-02-15"
+  stars = 29738
   forks = 4560
   contributors = 100
   commits_30d = 11
-  commits_90d = 32
+  commits_90d = 30
   bus_factor_people = 6
-
-maintainers = ["Mitchell Hashimoto"]
+["Mitchell Hashimoto"]
 +++
 
 ### Overview

@@ -6,17 +6,17 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apacheai
 description = 'Workflow orchestration platform'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "apache/airflow"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 44163
-  forks = 16432
+  updated_at = "2026-02-15"
+  stars = 44278
+  forks = 16474
   contributors = 100
   commits_30d = 100
   commits_90d = 100

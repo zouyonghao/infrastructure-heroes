@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/fl
 description = 'Lightweight Python web framework'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 56
+  score = 52
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 71140
-  forks = 16696
+  updated_at = "2026-02-15"
+  stars = 71157
+  forks = 16710
   contributors = 100
-  commits_30d = 23
-  commits_90d = 32
+  commits_30d = 29
+  commits_90d = 38
   bus_factor_people = 1
-
-maintainers = ["Armin Ronacher"]
+["Armin Ronacher"]
 +++
 
 ### Overview

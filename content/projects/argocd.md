@@ -6,21 +6,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/argocd/a
 description = 'Declarative GitOps CD for Kubernetes'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 90
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "argoproj/argo-cd"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 21903
-  forks = 6797
+  updated_at = "2026-02-15"
+  stars = 21972
+  forks = 6814
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 2
 
 +++
 

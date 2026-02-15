@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/
 description = 'JavaScript module bundler'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 80
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 65946
-  forks = 9232
+  updated_at = "2026-02-15"
+  stars = 65942
+  forks = 9242
   contributors = 100
-  commits_30d = 82
+  commits_30d = 87
   commits_90d = 100
   bus_factor_people = 2
-maintainers = ["Tobias Koppers"]
+["Tobias Koppers"]
 +++
 
 ### Overview

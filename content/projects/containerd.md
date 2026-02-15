@@ -6,19 +6,19 @@ logo = 'https://containerd.io/img/logos/icon/black/containerd-icon-black.svg'
 description = 'Industry-standard container runtime'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 85
 [links]
   github = "containerd/containerd"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 20208
-  forks = 3787
+  updated_at = "2026-02-15"
+  stars = 20253
+  forks = 3801
   contributors = 100
-  commits_30d = 100
+  commits_30d = 73
   commits_90d = 100
   bus_factor_people = 3
 

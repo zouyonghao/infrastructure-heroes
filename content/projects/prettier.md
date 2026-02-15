@@ -6,21 +6,22 @@ logo = 'https://prettier.io/icon.png'
 description = 'Opinionated code formatter'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 68
+  score = 64
 [links]
   github = "prettier/prettier"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 51520
-  forks = 4647
+  updated_at = "2026-02-15"
+  stars = 51553
+  forks = 4656
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
+
 +++
 
 ### Overview

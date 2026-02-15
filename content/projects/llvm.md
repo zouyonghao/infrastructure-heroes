@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/cncf/landscape/master/hosted_logos/llv
 description = 'Compiler infrastructure and toolchain'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "llvm/llvm-project"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 36812
-  forks = 16046
+  updated_at = "2026-02-15"
+  stars = 36934
+  forks = 16145
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 21
-maintainers = ["Chris Lattner"]
+  bus_factor_people = 14
+["Chris Lattner"]
 +++
 
 ### Overview

@@ -6,21 +6,22 @@ logo = 'https://www.vectorlogo.zone/logos/haproxy/haproxy-icon.svg'
 description = 'High-performance load balancer'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 82
+  score = 79
 [links]
   github = "haproxy/haproxy"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 6310
-  forks = 901
+  updated_at = "2026-02-15"
+  stars = 6332
+  forks = 903
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
+
 +++
 
 ### Overview

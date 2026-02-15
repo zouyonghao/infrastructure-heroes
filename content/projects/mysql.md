@@ -6,22 +6,21 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/my
 description = 'Popular relational database'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "low"
-  score = 78
+  score = 74
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 12055
-  forks = 4225
+  updated_at = "2026-02-15"
+  stars = 12072
+  forks = 4228
   contributors = 100
   commits_30d = 0
   commits_90d = 100
   bus_factor_people = 6
-
 [successor]
   project = "MariaDB"
   relation = "alternative"

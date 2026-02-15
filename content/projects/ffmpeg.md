@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/ffmpeg-ico
 description = 'Complete multimedia framework'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 82
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 56950
-  forks = 13459
+  updated_at = "2026-02-15"
+  stars = 57170
+  forks = 13480
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
-
-maintainers = ["Fabrice Bellard"]
+  bus_factor_people = 2
+["Fabrice Bellard"]
 +++
 
 ### Overview

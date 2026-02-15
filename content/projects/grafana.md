@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/
 description = 'Analytics and monitoring visualization'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "grafana/grafana"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 72030
-  forks = 13426
+  updated_at = "2026-02-15"
+  stars = 72131
+  forks = 13446
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 18
+  bus_factor_people = 19
+
 +++
 
 ### Overview

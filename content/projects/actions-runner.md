@@ -6,20 +6,20 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/g
 description = 'Self-hosted runner for GitHub Actions'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "low"
-  score = 80
+  score = 73
 [links]
   github = "actions/runner"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 5846
-  forks = 1213
+  updated_at = "2026-02-15"
+  stars = 5853
+  forks = 1224
   contributors = 100
-  commits_30d = 10
-  commits_90d = 40
+  commits_30d = 15
+  commits_90d = 39
   bus_factor_people = 3
 
 +++

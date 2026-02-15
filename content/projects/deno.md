@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/d
 description = 'Secure runtime for JavaScript/TypeScript'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 86
 [links]
   github = "denoland/deno"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 106069
-  forks = 5886
+  updated_at = "2026-02-15"
+  stars = 106149
+  forks = 5898
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
-
-maintainers = ["Ryan Dahl"]
+  bus_factor_people = 3
+["Ryan Dahl"]
 +++
 
 ### Overview

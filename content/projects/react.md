@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/re
 description = 'JavaScript library for building UIs'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 90
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 242835
-  forks = 50534
+  updated_at = "2026-02-15"
+  stars = 242995
+  forks = 50575
   contributors = 100
-  commits_30d = 93
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
-maintainers = ["Jordan Walke", "Dan Abramov"]
+  bus_factor_people = 2
+["Jordan Walke", "Dan Abramov"]
 +++
 
 ### Overview

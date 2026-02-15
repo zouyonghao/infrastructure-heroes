@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/n
 description = 'JavaScript runtime built on V8'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 115583
-  forks = 34640
+  updated_at = "2026-02-15"
+  stars = 115712
+  forks = 34746
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 7
-maintainers = ["Ryan Dahl", "Matteo Collina"]
+["Ryan Dahl", "Matteo Collina"]
 +++
 
 ### Overview

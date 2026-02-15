@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/helm/hel
 description = 'Kubernetes package manager'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 86
 [links]
   github = "helm/helm"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 29386
-  forks = 7475
+  updated_at = "2026-02-15"
+  stars = 29426
+  forks = 7477
   contributors = 100
-  commits_30d = 53
+  commits_30d = 72
   commits_90d = 100
   bus_factor_people = 4
+
 +++
 
 ### Overview

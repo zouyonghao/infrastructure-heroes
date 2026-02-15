@@ -6,21 +6,22 @@ logo = 'https://fluxcd.io/img/flux-icon@2x.png'
 description = 'GitOps tool for Kubernetes'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 71
+  score = 67
 [links]
   github = "fluxcd/flux2"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 7848
-  forks = 712
+  updated_at = "2026-02-15"
+  stars = 7866
+  forks = 714
   contributors = 100
   commits_30d = 8
   commits_90d = 29
   bus_factor_people = 2
+
 +++
 
 ### Overview

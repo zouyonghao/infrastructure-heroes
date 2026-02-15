@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-
 description = 'Distributed version control system'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 71
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 58943
-  forks = 27439
+  updated_at = "2026-02-15"
+  stars = 59096
+  forks = 27501
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
-maintainers = ["Linus Torvalds", "Junio C Hamano"]
+  bus_factor_people = 2
+["Linus Torvalds", "Junio C Hamano"]
 +++
 
 ### Overview

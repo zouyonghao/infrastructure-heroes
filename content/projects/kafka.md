@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apacheka
 description = 'Distributed event streaming platform'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 85
 [links]
   github = "apache/kafka"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 31844
-  forks = 14941
+  updated_at = "2026-02-15"
+  stars = 31898
+  forks = 14959
   contributors = 100
-  commits_30d = 88
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 11
+  bus_factor_people = 10
+
 +++
 
 ### Overview

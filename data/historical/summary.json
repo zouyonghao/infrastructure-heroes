@@ -1,27 +1,35 @@
 {
-  "generated_at": "2026-02-08T18:34:35.879430",
-  "total_snapshots": 1,
+  "generated_at": "2026-02-15T02:53:42.961245",
+  "total_snapshots": 2,
   "date_range": {
     "from": "2026-02-08",
-    "to": "2026-02-08"
+    "to": "2026-02-15"
   },
   "current_status": {
-    "critical": 17,
-    "warning": 24,
-    "healthy": 67,
-    "avg_score": 78.52777777777777
+    "critical": 18,
+    "warning": 31,
+    "healthy": 59,
+    "avg_score": 75.4074074074074
   },
   "trends": {
     "avg_score_over_time": [
       {
         "date": "2026-02-08",
         "value": 78.52777777777777
+      },
+      {
+        "date": "2026-02-15",
+        "value": 75.4074074074074
       }
     ],
     "critical_count_over_time": [
       {
         "date": "2026-02-08",
         "value": 17
+      },
+      {
+        "date": "2026-02-15",
+        "value": 18
       }
     ]
   }

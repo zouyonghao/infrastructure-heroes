@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/ne
 description = 'Graph database platform'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 54
+  score = 51
 [links]
   github = "neo4j/neo4j"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 15854
+  updated_at = "2026-02-15"
+  stars = 15906
   forks = 2560
   contributors = 100
   commits_30d = 0
   commits_90d = 0
   bus_factor_people = 7
+
 +++
 
 ### Overview

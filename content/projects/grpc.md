@@ -5,21 +5,22 @@ logo = 'https://raw.githubusercontent.com/cncf/artwork/main/projects/grpc/pancak
 description = 'High-performance RPC framework'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "grpc/grpc"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 44315
-  forks = 11043
+  updated_at = "2026-02-15"
+  stars = 44354
+  forks = 11053
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 5
+
 +++
 
 ### Overview

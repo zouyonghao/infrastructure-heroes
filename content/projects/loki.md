@@ -6,21 +6,22 @@ logo = 'https://grafana.com/static/img/logos/logo-loki.svg'
 description = 'Log aggregation system by Grafana'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 86
 [links]
   github = "grafana/loki"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 27553
-  forks = 3921
+  updated_at = "2026-02-15"
+  stars = 27616
+  forks = 3920
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
+
 +++
 
 ### Overview

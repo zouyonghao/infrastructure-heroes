@@ -10,18 +10,18 @@ description = 'Progressive JavaScript framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 82
+  score = 88
 [links]
   github = "vuejs/core"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 52916
-  forks = 9045
+  updated_at = "2026-02-15"
+  stars = 52986
+  forks = 9054
   contributors = 100
-  commits_30d = 28
-  commits_90d = 70
+  commits_30d = 53
+  commits_90d = 94
   bus_factor_people = 2
-maintainers = ["Evan You"]
+["Evan You"]
 +++
 
 ### Overview

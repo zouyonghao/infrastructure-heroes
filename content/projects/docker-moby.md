@@ -6,17 +6,17 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/d
 description = 'Container runtime and toolkit'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 79
+  score = 68
 [links]
   github = "moby/moby"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 71453
-  forks = 18895
+  updated_at = "2026-02-15"
+  stars = 71469
+  forks = 18905
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-
 description = 'Server-side scripting language'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 86
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 39841
-  forks = 8002
+  updated_at = "2026-02-15"
+  stars = 39848
+  forks = 8003
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
-maintainers = ["Rasmus Lerdorf"]
+["Rasmus Lerdorf"]
 +++
 
 ### Overview

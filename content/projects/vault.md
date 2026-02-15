@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vault/va
 description = 'Secrets management tool'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 54
+  score = 53
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 34976
-  forks = 4588
+  updated_at = "2026-02-15"
+  stars = 35033
+  forks = 4595
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
-maintainers = ["Mitchell Hashimoto"]
+["Mitchell Hashimoto"]
 +++
 
 ### Overview

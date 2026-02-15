@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/re
 description = 'In-memory data structure store'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 72792
-  forks = 24470
+  updated_at = "2026-02-15"
+  stars = 72929
+  forks = 24487
   contributors = 100
-  commits_30d = 58
+  commits_30d = 57
   commits_90d = 100
   bus_factor_people = 6
-maintainers = ["Salvatore Sanfilippo", "Antirez"]
+["Salvatore Sanfilippo", "Antirez"]
 +++
 
 ### Overview

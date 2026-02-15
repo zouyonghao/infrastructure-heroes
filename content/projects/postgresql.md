@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgres
 description = "The world's most advanced open source relational database"
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 82
+  score = 79
 [links]
   github = "postgres/postgres"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 19850
-  forks = 5405
+  updated_at = "2026-02-15"
+  stars = 19939
+  forks = 5421
   contributors = 42
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 4
+
 +++
 
 ### Overview

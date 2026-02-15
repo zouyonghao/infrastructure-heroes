@@ -6,21 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logstash
 description = 'Server-side data processing pipeline'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 88
+  score = 85
 [links]
   github = "elastic/logstash"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 14779
-  forks = 3520
+  updated_at = "2026-02-15"
+  stars = 14786
+  forks = 3515
   contributors = 100
   commits_30d = 45
-  commits_90d = 80
+  commits_90d = 83
   bus_factor_people = 4
+
 +++
 
 ### Overview

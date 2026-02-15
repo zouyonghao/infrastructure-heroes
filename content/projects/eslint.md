@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/e
 description = 'JavaScript linting utility'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 94
+  score = 85
 [links]
   github = "eslint/eslint"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 26863
+  updated_at = "2026-02-15"
+  stars = 26895
   forks = 4903
   contributors = 100
-  commits_30d = 39
+  commits_30d = 44
   commits_90d = 100
-  bus_factor_people = 5
-
-maintainers = ["Filipe Fortes"]
+  bus_factor_people = 4
+["Filipe Fortes"]
 +++
 
 ### Overview

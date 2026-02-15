@@ -6,17 +6,17 @@ logo = 'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads
 description = 'Column-oriented OLAP database'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 79
+  score = 64
 [links]
   github = "ClickHouse/ClickHouse"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 45696
-  forks = 8044
+  updated_at = "2026-02-15"
+  stars = 45868
+  forks = 8076
   contributors = 100
   commits_30d = 100
   commits_90d = 100

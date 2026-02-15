@@ -6,17 +6,17 @@ logo = 'https://avatars.githubusercontent.com/u/41972792?s=48&v=4'
 description = 'Distributed key-value store'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 82
+  score = 80
 [links]
   github = "etcd-io/etcd"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 51463
-  forks = 10314
+  updated_at = "2026-02-15"
+  stars = 51511
+  forks = 10319
   contributors = 100
   commits_30d = 100
   commits_90d = 100

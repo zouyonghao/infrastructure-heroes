@@ -6,23 +6,22 @@ logo = 'https://raw.githubusercontent.com/benc-uk/icon-collection/refs/heads/mas
 description = 'Cloud-native edge/service proxy'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 85
 [links]
   github = "envoyproxy/envoy"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 27465
-  forks = 5237
+  updated_at = "2026-02-15"
+  stars = 27510
+  forks = 5246
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
-
-maintainers = ["Matt Klein"]
+  bus_factor_people = 4
+["Matt Klein"]
 +++
 
 ### Overview

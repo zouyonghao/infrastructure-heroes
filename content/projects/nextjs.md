@@ -6,22 +6,22 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/n
 description = 'React framework for production'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  score = 92
 [links]
   github = "vercel/next.js"
 [metrics]
-  updated_at = "2026-02-07"
-  stars = 137551
-  forks = 30402
+  updated_at = "2026-02-15"
+  stars = 137677
+  forks = 30467
   contributors = 100
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 5
-maintainers = ["Guillermo Rauch"]
+["Guillermo Rauch"]
 +++
 
 ### Overview
