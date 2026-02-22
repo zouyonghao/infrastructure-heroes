@@ -9,18 +9,18 @@ description = 'Rust package manager and build tool'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 61
+  bus_factor = "medium"
+  score = 66
 [links]
   github = "rust-lang/cargo"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 14596
-  forks = 2813
+  updated_at = "2026-02-22"
+  stars = 14625
+  forks = 2826
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 ["Yehuda Katz"]
 +++
 

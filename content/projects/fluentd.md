@@ -10,16 +10,16 @@ description = 'Data collector for unified logging'
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 54
+  score = 55
 [links]
   github = "fluent/fluentd"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 13495
-  forks = 1383
+  updated_at = "2026-02-22"
+  stars = 13498
+  forks = 1384
   contributors = 100
-  commits_30d = 18
-  commits_90d = 52
+  commits_30d = 16
+  commits_90d = 51
   bus_factor_people = 1
 
 +++

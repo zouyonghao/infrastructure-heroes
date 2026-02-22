@@ -8,15 +8,15 @@ description = 'Complete multimedia framework'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
-  score = 73
+  score = 62
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 57170
-  forks = 13480
+  updated_at = "2026-02-22"
+  stars = 57320
+  forks = 13492
   contributors = 100
   commits_30d = 100
   commits_90d = 100

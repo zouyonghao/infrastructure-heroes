@@ -14,11 +14,11 @@ description = 'Java Servlet container'
 [links]
   github = "apache/tomcat"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 8095
-  forks = 5342
+  updated_at = "2026-02-22"
+  stars = 8099
+  forks = 5343
   contributors = 100
-  commits_30d = 34
+  commits_30d = 28
   commits_90d = 100
   bus_factor_people = 1
 

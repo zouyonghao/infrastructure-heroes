@@ -14,9 +14,9 @@ description = 'Cybernetically enhanced web apps'
 [links]
   github = "sveltejs/svelte"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 85758
-  forks = 4770
+  updated_at = "2026-02-22"
+  stars = 85895
+  forks = 4780
   contributors = 100
   commits_30d = 100
   commits_90d = 100

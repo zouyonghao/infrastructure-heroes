@@ -9,18 +9,18 @@ description = 'High-performance load balancer'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 79
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "haproxy/haproxy"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 6332
+  updated_at = "2026-02-22"
+  stars = 6347
   forks = 903
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

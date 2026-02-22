@@ -14,12 +14,12 @@ description = "ACME client for Let's Encrypt"
 [links]
   github = "certbot/certbot"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 32834
+  updated_at = "2026-02-22"
+  stars = 32855
   forks = 3486
   contributors = 100
-  commits_30d = 35
-  commits_90d = 66
+  commits_30d = 29
+  commits_90d = 64
   bus_factor_people = 2
 
 +++

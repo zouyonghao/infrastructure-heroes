@@ -10,15 +10,15 @@ description = 'Massively used compression library'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 68
+  score = 75
 [links]
   github = "madler/zlib"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 6671
-  forks = 2701
+  updated_at = "2026-02-22"
+  stars = 6689
+  forks = 2711
   contributors = 73
-  commits_30d = 96
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
 ["Mark Adler"]

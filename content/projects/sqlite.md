@@ -14,11 +14,11 @@ description = 'Most widely deployed database engine in the world'
 [links]
   github = "sqlite/sqlite"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 9030
-  forks = 1408
+  updated_at = "2026-02-22"
+  stars = 9071
+  forks = 1411
   contributors = 0
-  commits_30d = 98
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
 ["D. Richard Hipp"]

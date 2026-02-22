@@ -8,18 +8,18 @@ description = 'GitOps tool for Kubernetes'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
   score = 67
 [links]
   github = "fluxcd/flux2"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 7866
-  forks = 714
+  updated_at = "2026-02-22"
+  stars = 7893
+  forks = 716
   contributors = 100
-  commits_30d = 8
-  commits_90d = 29
+  commits_30d = 18
+  commits_90d = 33
   bus_factor_people = 2
 
 +++

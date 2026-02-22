@@ -14,11 +14,11 @@ description = 'JavaScript module bundler'
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-02-15"
-  stars = 65942
-  forks = 9242
+  updated_at = "2026-02-22"
+  stars = 66028
+  forks = 9259
   contributors = 100
-  commits_30d = 87
+  commits_30d = 96
   commits_90d = 100
   bus_factor_people = 2
 ["Tobias Koppers"]

@@ -6,18 +6,18 @@ description = 'The GNU C Library - foundation of Linux systems'
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "inactive"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 68
+  score = 59
 [links]
   github = "bminor/glibc"
 [metrics]
-  updated_at = "2026-02-15"
+  updated_at = "2026-02-22"
   stars = 1835
-  forks = 460
+  forks = 461
   contributors = 100
-  commits_30d = 10
+  commits_30d = 0
   commits_90d = 100
   bus_factor_people = 2
 ["Carlos O"]
