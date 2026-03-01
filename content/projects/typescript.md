@@ -14,12 +14,12 @@ description = 'Typed superset of JavaScript'
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 107895
-  forks = 13236
+  updated_at = "2026-03-01"
+  stars = 107974
+  forks = 13240
   contributors = 100
-  commits_30d = 43
-  commits_90d = 88
+  commits_30d = 40
+  commits_90d = 91
   bus_factor_people = 3
 ["Anders Hejlsberg"]
 +++

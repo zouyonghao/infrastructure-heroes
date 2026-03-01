@@ -14,11 +14,11 @@ description = 'PostgreSQL for time-series data'
 [links]
   github = "timescale/timescaledb"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 21889
-  forks = 1047
+  updated_at = "2026-03-01"
+  stars = 21963
+  forks = 1049
   contributors = 100
-  commits_30d = 65
+  commits_30d = 60
   commits_90d = 100
   bus_factor_people = 2
 

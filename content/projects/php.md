@@ -8,19 +8,19 @@ description = 'Server-side scripting language'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
-  bus_factor = "high"
-  score = 62
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 39948
-  forks = 8005
+  updated_at = "2026-03-01"
+  stars = 39966
+  forks = 8012
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 ["Rasmus Lerdorf"]
 +++
 

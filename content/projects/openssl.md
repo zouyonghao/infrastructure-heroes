@@ -9,18 +9,18 @@ description = 'Cryptography and SSL/TLS Toolkit'
   funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 92
+  bus_factor = "medium"
+  score = 85
 [links]
   github = "openssl/openssl"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 29609
-  forks = 11058
+  updated_at = "2026-03-01"
+  stars = 29651
+  forks = 11071
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 2
 
 +++
 

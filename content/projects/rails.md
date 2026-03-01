@@ -14,9 +14,9 @@ description = 'Full-stack Ruby web framework'
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 58302
-  forks = 22179
+  updated_at = "2026-03-01"
+  stars = 58320
+  forks = 22176
   contributors = 100
   commits_30d = 100
   commits_90d = 100

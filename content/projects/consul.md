@@ -10,16 +10,16 @@ description = 'Service mesh and discovery'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 89
+  score = 91
 [links]
   github = "hashicorp/consul"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 29751
-  forks = 4564
+  updated_at = "2026-03-01"
+  stars = 29759
+  forks = 4569
   contributors = 100
-  commits_30d = 19
-  commits_90d = 36
+  commits_30d = 22
+  commits_90d = 42
   bus_factor_people = 6
 ["Mitchell Hashimoto"]
 +++

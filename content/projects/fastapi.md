@@ -8,15 +8,15 @@ description = 'Modern Python web framework'
 [health]
   funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
-  score = 79
+  score = 75
 [links]
   github = "fastapi/fastapi"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 95422
-  forks = 8720
+  updated_at = "2026-03-01"
+  stars = 95703
+  forks = 8762
   contributors = 100
   commits_30d = 100
   commits_90d = 100

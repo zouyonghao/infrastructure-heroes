@@ -8,15 +8,15 @@ description = 'Command line tool and library for transferring data with URLs'
 [health]
   funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 81
+  score = 72
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 40896
-  forks = 7062
+  updated_at = "2026-03-01"
+  stars = 40984
+  forks = 7074
   contributors = 100
   commits_30d = 100
   commits_90d = 100

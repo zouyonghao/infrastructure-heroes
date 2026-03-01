@@ -13,9 +13,9 @@ description = 'High-performance RPC framework'
 [links]
   github = "grpc/grpc"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 44391
-  forks = 11059
+  updated_at = "2026-03-01"
+  stars = 44426
+  forks = 11066
   contributors = 100
   commits_30d = 100
   commits_90d = 100

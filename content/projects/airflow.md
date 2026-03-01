@@ -14,13 +14,13 @@ description = 'Workflow orchestration platform'
 [links]
   github = "apache/airflow"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 44352
-  forks = 16530
+  updated_at = "2026-03-01"
+  stars = 44443
+  forks = 16564
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 13
+  bus_factor_people = 10
 
 +++
 

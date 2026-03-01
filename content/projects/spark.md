@@ -10,17 +10,17 @@ description = 'Unified analytics engine'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 85
 [links]
   github = "apache/spark"
 [metrics]
-  updated_at = "2026-02-22"
-  stars = 42854
-  forks = 29070
+  updated_at = "2026-03-01"
+  stars = 42901
+  forks = 29082
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 5
 
 +++
 
