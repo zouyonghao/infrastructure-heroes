@@ -10,13 +10,13 @@ description = 'Secrets management tool'
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 53
+  score = 52
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 35129
-  forks = 4605
+  updated_at = "2026-03-08"
+  stars = 35170
+  forks = 4607
   contributors = 100
   commits_30d = 100
   commits_90d = 100

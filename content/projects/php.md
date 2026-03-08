@@ -14,9 +14,9 @@ description = 'Server-side scripting language'
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 39966
-  forks = 8012
+  updated_at = "2026-03-08"
+  stars = 39988
+  forks = 8018
   contributors = 100
   commits_30d = 100
   commits_90d = 100

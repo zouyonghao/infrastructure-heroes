@@ -14,12 +14,12 @@ description = 'Popular relational database'
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 12199
-  forks = 4231
+  updated_at = "2026-03-08"
+  stars = 12214
+  forks = 4234
   contributors = 100
   commits_30d = 0
-  commits_90d = 69
+  commits_90d = 43
   bus_factor_people = 6
 [successor]
   project = "MariaDB"

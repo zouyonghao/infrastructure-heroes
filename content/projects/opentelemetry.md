@@ -10,17 +10,17 @@ description = 'Observability framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "open-telemetry/opentelemetry-collector"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 6647
-  forks = 1900
+  updated_at = "2026-03-08"
+  stars = 6694
+  forks = 1920
   contributors = 100
-  commits_30d = 80
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 4
 
 +++
 

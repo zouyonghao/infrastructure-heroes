@@ -6,19 +6,19 @@ logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/
 description = 'Open source automation server'
 
 [health]
-  funding = "stable"
+  funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 79
+  score = 75
 [links]
   github = "jenkinsci/jenkins"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 25058
-  forks = 9391
+  updated_at = "2026-03-08"
+  stars = 25080
+  forks = 9398
   contributors = 100
-  commits_30d = 88
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
 

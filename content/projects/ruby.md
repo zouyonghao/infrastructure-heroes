@@ -10,17 +10,17 @@ description = 'Dynamic programming language'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 91
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-03-01"
-  stars = 23512
-  forks = 5566
+  updated_at = "2026-03-08"
+  stars = 23542
+  forks = 5569
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 5
 ["Aaron Patterson", "Yukihiro Matsumoto"]
 +++
 
