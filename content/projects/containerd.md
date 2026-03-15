@@ -10,13 +10,13 @@ description = 'Industry-standard container runtime'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 86
 [links]
   github = "containerd/containerd"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 20481
-  forks = 3826
+  updated_at = "2026-03-15"
+  stars = 20470
+  forks = 3839
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -7,19 +7,19 @@ description = 'Node.js web application framework'
 
 [health]
   funding = "at-risk"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 76
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 68869
-  forks = 22743
+  updated_at = "2026-03-15"
+  stars = 68881
+  forks = 22829
   contributors = 100
-  commits_30d = 11
-  commits_90d = 32
+  commits_30d = 8
+  commits_90d = 31
   bus_factor_people = 3
 ["TJ Holowaychuk"]
 +++

@@ -10,15 +10,15 @@ description = 'Cloud-native DNS server'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 74
+  score = 75
 [links]
   github = "coredns/coredns"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 13961
-  forks = 2415
+  updated_at = "2026-03-15"
+  stars = 13943
+  forks = 2418
   contributors = 100
-  commits_30d = 44
+  commits_30d = 53
   commits_90d = 100
   bus_factor_people = 1
 

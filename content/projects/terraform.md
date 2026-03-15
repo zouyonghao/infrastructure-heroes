@@ -8,19 +8,19 @@ description = 'Infrastructure as code software tool'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  contributors = "declining"
+  bus_factor = "low"
+  score = 77
 [links]
   github = "hashicorp/terraform"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 47897
-  forks = 10236
+  updated_at = "2026-03-15"
+  stars = 47921
+  forks = 10249
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 ["Mitchell Hashimoto"]
 +++
 

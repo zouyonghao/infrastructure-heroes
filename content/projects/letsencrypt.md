@@ -13,12 +13,12 @@ description = 'Free SSL/TLS certificate authority'
 [links]
   github = "letsencrypt/letsencrypt"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 32887
+  updated_at = "2026-03-15"
+  stars = 32897
   forks = 3493
   contributors = 100
-  commits_30d = 14
-  commits_90d = 55
+  commits_30d = 11
+  commits_90d = 52
   bus_factor_people = 2
 
 +++

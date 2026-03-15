@@ -9,18 +9,18 @@ description = 'Package manager for macOS and Linux'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "low"
+  score = 86
 [links]
   github = "Homebrew/brew"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 46892
-  forks = 10983
+  updated_at = "2026-03-15"
+  stars = 47017
+  forks = 11001
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 3
 
 +++
 

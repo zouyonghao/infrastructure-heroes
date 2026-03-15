@@ -14,12 +14,12 @@ description = 'Self-hosted runner for GitHub Actions'
 [links]
   github = "actions/runner"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 5885
-  forks = 1231
+  updated_at = "2026-03-15"
+  stars = 5892
+  forks = 1239
   contributors = 100
-  commits_30d = 33
-  commits_90d = 56
+  commits_30d = 31
+  commits_90d = 55
   bus_factor_people = 3
 
 +++

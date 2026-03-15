@@ -9,18 +9,18 @@ description = 'Web server with automatic HTTPS'
   funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 94
+  bus_factor = "medium"
+  score = 88
 [links]
   github = "caddyserver/caddy"
 [metrics]
-  updated_at = "2026-03-08"
-  stars = 70646
-  forks = 4661
+  updated_at = "2026-03-15"
+  stars = 70803
+  forks = 4675
   contributors = 100
-  commits_30d = 72
-  commits_90d = 100
-  bus_factor_people = 3
+  commits_30d = 58
+  commits_90d = 98
+  bus_factor_people = 2
 
 +++
 
