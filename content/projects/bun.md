@@ -14,9 +14,9 @@ description = 'Fast JavaScript runtime and toolkit'
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 88112
-  forks = 4181
+  updated_at = "2026-03-22"
+  stars = 88336
+  forks = 4214
   contributors = 100
   commits_30d = 100
   commits_90d = 100

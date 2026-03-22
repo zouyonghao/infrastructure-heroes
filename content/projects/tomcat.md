@@ -10,15 +10,15 @@ description = 'Java Servlet container'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 59
+  score = 55
 [links]
   github = "apache/tomcat"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 8114
-  forks = 5356
+  updated_at = "2026-03-22"
+  stars = 8123
+  forks = 5359
   contributors = 100
-  commits_30d = 73
+  commits_30d = 89
   commits_90d = 100
   bus_factor_people = 1
 

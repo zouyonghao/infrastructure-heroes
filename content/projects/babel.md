@@ -14,11 +14,11 @@ description = 'JavaScript compiler'
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 43901
-  forks = 5808
+  updated_at = "2026-03-22"
+  stars = 43910
+  forks = 5817
   contributors = 100
-  commits_30d = 62
+  commits_30d = 56
   commits_90d = 100
   bus_factor_people = 2
 ["Sebastian McKenzie"]

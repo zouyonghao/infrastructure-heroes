@@ -14,11 +14,11 @@ description = 'Distributed tracing system'
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 22574
-  forks = 2810
+  updated_at = "2026-03-22"
+  stars = 22600
+  forks = 2815
   contributors = 100
-  commits_30d = 67
+  commits_30d = 86
   commits_90d = 100
   bus_factor_people = 2
 

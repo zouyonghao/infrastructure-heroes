@@ -14,9 +14,9 @@ description = 'Popular relational database'
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 12208
-  forks = 4240
+  updated_at = "2026-03-22"
+  stars = 12233
+  forks = 4243
   contributors = 100
   commits_30d = 0
   commits_90d = 1

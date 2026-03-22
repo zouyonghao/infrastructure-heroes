@@ -9,18 +9,18 @@ description = 'High-performance NoSQL database'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 85
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "scylladb/scylladb"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 15404
-  forks = 1471
+  updated_at = "2026-03-22"
+  stars = 15420
+  forks = 1474
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 2
 
 +++
 

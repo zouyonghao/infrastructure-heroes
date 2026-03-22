@@ -14,13 +14,13 @@ description = 'Complete multimedia framework'
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-03-15"
-  stars = 57903
-  forks = 13565
+  updated_at = "2026-03-22"
+  stars = 58125
+  forks = 13602
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 4
 ["Fabrice Bellard"]
 +++
 
