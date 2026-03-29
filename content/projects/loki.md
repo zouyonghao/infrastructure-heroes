@@ -9,18 +9,18 @@ description = 'Log aggregation system by Grafana'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 86
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "grafana/loki"
 [metrics]
-  updated_at = "2026-03-22"
-  stars = 27849
-  forks = 3962
+  updated_at = "2026-03-29"
+  stars = 27891
+  forks = 3965
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

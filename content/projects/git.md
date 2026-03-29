@@ -14,9 +14,9 @@ description = 'Distributed version control system'
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-03-22"
-  stars = 59829
-  forks = 27684
+  updated_at = "2026-03-29"
+  stars = 59975
+  forks = 27709
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -14,12 +14,12 @@ description = 'Progressive JavaScript framework'
 [links]
   github = "vuejs/core"
 [metrics]
-  updated_at = "2026-03-22"
-  stars = 53290
-  forks = 9071
+  updated_at = "2026-03-29"
+  stars = 53343
+  forks = 9072
   contributors = 100
-  commits_30d = 31
-  commits_90d = 86
+  commits_30d = 45
+  commits_90d = 100
   bus_factor_people = 2
 ["Evan You"]
 +++

@@ -14,11 +14,11 @@ description = 'Modern cryptography library'
 [links]
   github = "jedisct1/libsodium"
 [metrics]
-  updated_at = "2026-03-22"
-  stars = 13534
+  updated_at = "2026-03-29"
+  stars = 13553
   forks = 1860
   contributors = 100
-  commits_30d = 32
+  commits_30d = 22
   commits_90d = 100
   bus_factor_people = 1
 

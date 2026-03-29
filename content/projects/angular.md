@@ -14,9 +14,9 @@ description = 'TypeScript-based web framework'
 [links]
   github = "angular/angular"
 [metrics]
-  updated_at = "2026-03-22"
-  stars = 100150
-  forks = 27136
+  updated_at = "2026-03-29"
+  stars = 100120
+  forks = 27147
   contributors = 100
   commits_30d = 100
   commits_90d = 100
