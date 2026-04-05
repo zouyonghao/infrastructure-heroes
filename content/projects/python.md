@@ -14,9 +14,9 @@ description = 'Popular programming language'
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 72102
-  forks = 34319
+  updated_at = "2026-04-05"
+  stars = 72154
+  forks = 34361
   contributors = 100
   commits_30d = 100
   commits_90d = 100

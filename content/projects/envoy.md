@@ -10,17 +10,17 @@ description = 'Cloud-native edge/service proxy'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "envoyproxy/envoy"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 27732
-  forks = 5314
+  updated_at = "2026-04-05"
+  stars = 27751
+  forks = 5325
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 4
 ["Matt Klein"]
 +++
 

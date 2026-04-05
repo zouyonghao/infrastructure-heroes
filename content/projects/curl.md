@@ -9,18 +9,18 @@ description = 'Command line tool and library for transferring data with URLs'
   funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 76
+  bus_factor = "medium"
+  score = 88
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 41144
-  forks = 7110
+  updated_at = "2026-04-05"
+  stars = 41182
+  forks = 7116
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 ["Daniel Stenberg"]
 +++
 

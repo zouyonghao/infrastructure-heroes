@@ -14,13 +14,13 @@ description = 'Distributed event streaming platform'
 [links]
   github = "apache/kafka"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 32221
-  forks = 15068
+  updated_at = "2026-04-05"
+  stars = 32283
+  forks = 15079
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 9
+  bus_factor_people = 10
 
 +++
 

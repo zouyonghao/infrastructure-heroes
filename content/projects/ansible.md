@@ -14,9 +14,9 @@ description = 'IT automation and configuration management'
 [links]
   github = "ansible/ansible"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 68377
-  forks = 24166
+  updated_at = "2026-04-05"
+  stars = 68392
+  forks = 24164
   contributors = 100
   commits_30d = 43
   commits_90d = 100

@@ -8,15 +8,15 @@ description = 'Cloud-native messaging system'
 [health]
   funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 71
+  score = 69
 [links]
   github = "nats-io/nats-server"
 [metrics]
-  updated_at = "2026-03-29"
-  stars = 19431
-  forks = 1762
+  updated_at = "2026-04-05"
+  stars = 19477
+  forks = 1761
   contributors = 100
   commits_30d = 100
   commits_90d = 100
