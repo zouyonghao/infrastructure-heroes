@@ -10,13 +10,13 @@ description = 'Command line tool and library for transferring data with URLs'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 88
+  score = 86
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-04-05"
-  stars = 41182
-  forks = 7116
+  updated_at = "2026-04-12"
+  stars = 41270
+  forks = 7124
   contributors = 100
   commits_30d = 100
   commits_90d = 100

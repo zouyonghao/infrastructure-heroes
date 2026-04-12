@@ -10,17 +10,17 @@ description = 'TypeScript-based web framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "angular/angular"
 [metrics]
-  updated_at = "2026-04-05"
-  stars = 100096
-  forks = 27145
+  updated_at = "2026-04-12"
+  stars = 100033
+  forks = 27153
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 4
 ["Misko Hevery", "John Papa"]
 +++
 

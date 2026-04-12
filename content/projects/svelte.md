@@ -14,11 +14,11 @@ description = 'Cybernetically enhanced web apps'
 [links]
   github = "sveltejs/svelte"
 [metrics]
-  updated_at = "2026-04-05"
-  stars = 86160
-  forks = 4844
+  updated_at = "2026-04-12"
+  stars = 86282
+  forks = 4886
   contributors = 100
-  commits_30d = 78
+  commits_30d = 70
   commits_90d = 100
   bus_factor_people = 2
 ["Rich Harris"]

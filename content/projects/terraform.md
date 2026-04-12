@@ -14,9 +14,9 @@ description = 'Infrastructure as code software tool'
 [links]
   github = "hashicorp/terraform"
 [metrics]
-  updated_at = "2026-04-05"
-  stars = 48019
-  forks = 10263
+  updated_at = "2026-04-12"
+  stars = 48121
+  forks = 10281
   contributors = 100
   commits_30d = 100
   commits_90d = 100
