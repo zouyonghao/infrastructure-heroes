@@ -10,15 +10,15 @@ description = 'Python package installer'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 74
+  score = 75
 [links]
   github = "pypa/pip"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 10163
-  forks = 3258
+  updated_at = "2026-04-19"
+  stars = 10168
+  forks = 3260
   contributors = 100
-  commits_30d = 47
+  commits_30d = 67
   commits_90d = 100
   bus_factor_people = 1
 

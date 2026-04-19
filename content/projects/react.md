@@ -14,13 +14,13 @@ description = 'JavaScript library for building UIs'
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 244421
-  forks = 50902
+  updated_at = "2026-04-19"
+  stars = 244577
+  forks = 50968
   contributors = 100
-  commits_30d = 25
+  commits_30d = 37
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 4
 ["Jordan Walke", "Dan Abramov"]
 +++
 

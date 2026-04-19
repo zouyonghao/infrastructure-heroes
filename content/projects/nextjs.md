@@ -10,17 +10,17 @@ description = 'React framework for production'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "vercel/next.js"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 138856
-  forks = 30865
+  updated_at = "2026-04-19"
+  stars = 138994
+  forks = 30928
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 4
 ["Guillermo Rauch"]
 +++
 

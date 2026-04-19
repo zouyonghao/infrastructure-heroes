@@ -7,19 +7,19 @@ description = 'Official PNG reference library'
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 51
+  score = 52
 [links]
   github = "glennrp/libpng"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 1575
+  updated_at = "2026-04-19"
+  stars = 1572
   forks = 772
   contributors = 95
-  commits_30d = 19
-  commits_90d = 54
+  commits_30d = 30
+  commits_90d = 63
   bus_factor_people = 1
 
 +++

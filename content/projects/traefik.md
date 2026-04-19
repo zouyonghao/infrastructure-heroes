@@ -10,15 +10,15 @@ description = 'Cloud-native application proxy'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 91
 [links]
   github = "traefik/traefik"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 62653
-  forks = 5906
+  updated_at = "2026-04-19"
+  stars = 62765
+  forks = 5926
   contributors = 100
-  commits_30d = 72
+  commits_30d = 48
   commits_90d = 100
   bus_factor_people = 4
 

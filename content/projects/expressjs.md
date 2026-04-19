@@ -14,12 +14,12 @@ description = 'Node.js web application framework'
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 68925
-  forks = 23076
+  updated_at = "2026-04-19"
+  stars = 68949
+  forks = 23145
   contributors = 100
   commits_30d = 2
-  commits_90d = 23
+  commits_90d = 18
   bus_factor_people = 3
 ["TJ Holowaychuk"]
 +++

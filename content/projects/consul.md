@@ -14,12 +14,12 @@ description = 'Service mesh and discovery'
 [links]
   github = "hashicorp/consul"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 29840
-  forks = 4583
+  updated_at = "2026-04-19"
+  stars = 29856
+  forks = 4580
   contributors = 100
-  commits_30d = 37
-  commits_90d = 72
+  commits_30d = 34
+  commits_90d = 76
   bus_factor_people = 5
 ["Mitchell Hashimoto"]
 +++

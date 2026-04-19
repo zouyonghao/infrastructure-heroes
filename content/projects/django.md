@@ -10,17 +10,17 @@ description = 'Python web framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "django/django"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 87253
-  forks = 33814
+  updated_at = "2026-04-19"
+  stars = 87282
+  forks = 33823
   contributors = 100
-  commits_30d = 84
+  commits_30d = 83
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 4
 
 +++
 

@@ -8,19 +8,19 @@ description = 'Data collector for unified logging'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
-  bus_factor = "high"
-  score = 61
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 76
 [links]
   github = "fluent/fluentd"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 13518
-  forks = 1386
+  updated_at = "2026-04-19"
+  stars = 13524
+  forks = 1390
   contributors = 100
-  commits_30d = 20
-  commits_90d = 51
-  bus_factor_people = 1
+  commits_30d = 17
+  commits_90d = 52
+  bus_factor_people = 2
 
 +++
 

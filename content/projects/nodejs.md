@@ -14,9 +14,9 @@ description = 'JavaScript runtime built on V8'
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 116680
-  forks = 35314
+  updated_at = "2026-04-19"
+  stars = 116802
+  forks = 35379
   contributors = 100
   commits_30d = 100
   commits_90d = 100

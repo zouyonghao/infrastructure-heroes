@@ -7,16 +7,16 @@ description = 'High-performance object storage'
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "inactive"
   contributors = "critical"
   bus_factor = "low"
-  score = 51
+  score = 47
 [links]
   github = "minio/minio"
 [metrics]
-  updated_at = "2026-04-12"
-  stars = 60668
-  forks = 7373
+  updated_at = "2026-04-19"
+  stars = 60737
+  forks = 7395
   contributors = 100
   commits_30d = 0
   commits_90d = 1
