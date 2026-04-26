@@ -10,16 +10,16 @@ description = 'Lightweight Python web framework'
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 51
+  score = 47
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 71422
-  forks = 16788
+  updated_at = "2026-04-26"
+  stars = 71451
+  forks = 16814
   contributors = 100
-  commits_30d = 9
-  commits_90d = 54
+  commits_30d = 7
+  commits_90d = 34
   bus_factor_people = 1
 ["Armin Ronacher"]
 +++

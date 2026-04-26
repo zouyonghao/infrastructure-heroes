@@ -9,18 +9,18 @@ description = 'Cloud-native storage orchestrator'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 86
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "rook/rook"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 13467
-  forks = 2820
+  updated_at = "2026-04-26"
+  stars = 13477
+  forks = 2822
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

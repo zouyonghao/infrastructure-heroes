@@ -14,9 +14,9 @@ description = 'JavaScript library for building UIs'
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 244577
-  forks = 50968
+  updated_at = "2026-04-26"
+  stars = 244673
+  forks = 50981
   contributors = 100
   commits_30d = 37
   commits_90d = 100

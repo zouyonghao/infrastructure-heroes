@@ -10,15 +10,15 @@ description = 'JavaScript linting utility'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 91
 [links]
   github = "eslint/eslint"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 27194
-  forks = 4970
+  updated_at = "2026-04-26"
+  stars = 27222
+  forks = 4972
   contributors = 100
-  commits_30d = 53
+  commits_30d = 40
   commits_90d = 100
   bus_factor_people = 5
 ["Filipe Fortes"]

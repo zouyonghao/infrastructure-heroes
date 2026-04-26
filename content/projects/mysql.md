@@ -7,16 +7,16 @@ description = 'Popular relational database'
 
 [health]
   funding = "at-risk"
-  maintenance = "inactive"
+  maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 43
+  score = 51
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 12225
-  forks = 4257
+  updated_at = "2026-04-26"
+  stars = 12243
+  forks = 4259
   contributors = 100
   commits_30d = 0
   commits_90d = 0

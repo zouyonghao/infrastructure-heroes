@@ -8,15 +8,15 @@ description = 'Message broker software'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 64
+  score = 75
 [links]
   github = "rabbitmq/rabbitmq-server"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 13595
-  forks = 4003
+  updated_at = "2026-04-26"
+  stars = 13617
+  forks = 4000
   contributors = 100
   commits_30d = 100
   commits_90d = 100

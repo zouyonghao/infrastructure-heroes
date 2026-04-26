@@ -9,18 +9,18 @@ description = 'Distributed search and analytics engine'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  bus_factor = "low"
+  score = 92
 [links]
   github = "elastic/elasticsearch"
 [metrics]
-  updated_at = "2026-04-19"
-  stars = 76538
-  forks = 25850
+  updated_at = "2026-04-26"
+  stars = 76584
+  forks = 25859
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 9
 
 +++
 
