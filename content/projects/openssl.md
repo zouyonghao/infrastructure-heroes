@@ -14,13 +14,13 @@ description = 'Cryptography and SSL/TLS Toolkit'
 [links]
   github = "openssl/openssl"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 30063
-  forks = 11223
+  updated_at = "2026-05-03"
+  stars = 30090
+  forks = 11243
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 8
+  bus_factor_people = 6
 
 +++
 

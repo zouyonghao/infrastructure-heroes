@@ -14,9 +14,9 @@ description = 'Cloud-native edge/service proxy'
 [links]
   github = "envoyproxy/envoy"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 27888
-  forks = 5346
+  updated_at = "2026-05-03"
+  stars = 27910
+  forks = 5353
   contributors = 100
   commits_30d = 100
   commits_90d = 100

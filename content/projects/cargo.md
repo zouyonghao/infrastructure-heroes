@@ -14,9 +14,9 @@ description = 'Rust package manager and build tool'
 [links]
   github = "rust-lang/cargo"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 14879
-  forks = 2890
+  updated_at = "2026-05-03"
+  stars = 14898
+  forks = 2899
   contributors = 100
   commits_30d = 100
   commits_90d = 100

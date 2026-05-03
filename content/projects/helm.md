@@ -14,11 +14,11 @@ description = 'Kubernetes package manager'
 [links]
   github = "helm/helm"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 29739
-  forks = 7590
+  updated_at = "2026-05-03"
+  stars = 29773
+  forks = 7592
   contributors = 100
-  commits_30d = 70
+  commits_30d = 74
   commits_90d = 100
   bus_factor_people = 2
 

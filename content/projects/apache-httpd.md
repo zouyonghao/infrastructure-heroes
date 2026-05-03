@@ -8,15 +8,15 @@ description = 'Most widely used web server software'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "critical"
   bus_factor = "high"
-  score = 50
+  score = 44
 [links]
   github = "apache/httpd"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 3934
-  forks = 1238
+  updated_at = "2026-05-03"
+  stars = 3937
+  forks = 1241
   contributors = 49
   commits_30d = 100
   commits_90d = 100

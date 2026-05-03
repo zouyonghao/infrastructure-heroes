@@ -8,18 +8,18 @@ description = 'Java application framework'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 59868
-  forks = 38839
+  updated_at = "2026-05-03"
+  stars = 59896
+  forks = 38845
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 
 +++
 

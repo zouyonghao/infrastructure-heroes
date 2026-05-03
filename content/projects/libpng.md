@@ -14,12 +14,12 @@ description = 'Official PNG reference library'
 [links]
   github = "glennrp/libpng"
 [metrics]
-  updated_at = "2026-04-26"
-  stars = 1577
-  forks = 778
+  updated_at = "2026-05-03"
+  stars = 1582
+  forks = 779
   contributors = 95
-  commits_30d = 16
-  commits_90d = 63
+  commits_30d = 12
+  commits_90d = 64
   bus_factor_people = 1
 
 +++
