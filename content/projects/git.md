@@ -10,15 +10,15 @@ description = 'Distributed version control system'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 68
+  score = 66
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 60702
-  forks = 27855
+  updated_at = "2026-05-10"
+  stars = 60842
+  forks = 27877
   contributors = 100
-  commits_30d = 100
+  commits_30d = 42
   commits_90d = 100
   bus_factor_people = 1
 ["Linus Torvalds", "Junio C Hamano"]

@@ -14,11 +14,11 @@ description = 'Full-stack Ruby web framework'
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 58404
-  forks = 22248
+  updated_at = "2026-05-10"
+  stars = 58419
+  forks = 22205
   contributors = 100
-  commits_30d = 77
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
 ["David Heinemeier Hansson"]

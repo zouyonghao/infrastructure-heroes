@@ -9,18 +9,18 @@ description = 'Distributed tracing system'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 85
+  bus_factor = "medium"
+  score = 79
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 22744
-  forks = 2866
+  updated_at = "2026-05-10"
+  stars = 22778
+  forks = 2888
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

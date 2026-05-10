@@ -8,17 +8,17 @@ description = 'JavaScript compiler'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "medium"
-  score = 70
+  score = 73
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 43894
-  forks = 5814
+  updated_at = "2026-05-10"
+  stars = 43898
+  forks = 5820
   contributors = 100
-  commits_30d = 43
+  commits_30d = 56
   commits_90d = 100
   bus_factor_people = 2
 ["Sebastian McKenzie"]

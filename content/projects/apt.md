@@ -10,12 +10,12 @@ description = 'Debian/Ubuntu package management'
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 25
+  score = 23
 [links]
   github = "Debian/apt"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 636
+  updated_at = "2026-05-10"
+  stars = 635
   forks = 212
   contributors = 100
   commits_30d = 0

@@ -9,18 +9,18 @@ description = 'Column-oriented OLAP database'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "ClickHouse/ClickHouse"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 47171
-  forks = 8364
+  updated_at = "2026-05-10"
+  stars = 47309
+  forks = 8386
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 
 +++
 

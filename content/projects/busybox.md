@@ -14,9 +14,9 @@ description = 'The Swiss Army Knife of Embedded Linux'
 [links]
   github = "mirror/busybox"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 2087
-  forks = 719
+  updated_at = "2026-05-10"
+  stars = 2090
+  forks = 721
   contributors = 100
   commits_30d = 0
   commits_90d = 0

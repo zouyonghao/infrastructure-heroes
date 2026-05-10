@@ -14,9 +14,9 @@ description = 'High-performance load balancer'
 [links]
   github = "haproxy/haproxy"
 [metrics]
-  updated_at = "2026-05-03"
-  stars = 6513
-  forks = 927
+  updated_at = "2026-05-10"
+  stars = 6532
+  forks = 928
   contributors = 100
   commits_30d = 100
   commits_90d = 100
