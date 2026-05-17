@@ -8,18 +8,18 @@ description = 'Time series database'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "low"
-  score = 75
+  score = 69
 [links]
   github = "influxdata/influxdb"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 31491
-  forks = 3704
+  updated_at = "2026-05-17"
+  stars = 31502
+  forks = 3706
   contributors = 100
-  commits_30d = 6
-  commits_90d = 22
+  commits_30d = 4
+  commits_90d = 18
   bus_factor_people = 3
 
 +++

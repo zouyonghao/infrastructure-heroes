@@ -14,9 +14,9 @@ description = 'Container runtime and toolkit'
 [links]
   github = "moby/moby"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 71535
-  forks = 18932
+  updated_at = "2026-05-17"
+  stars = 71560
+  forks = 18951
   contributors = 100
   commits_30d = 100
   commits_90d = 100

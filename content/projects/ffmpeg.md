@@ -9,18 +9,18 @@ description = 'Complete multimedia framework'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 73
+  bus_factor = "low"
+  score = 79
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 59846
-  forks = 13792
+  updated_at = "2026-05-17"
+  stars = 60177
+  forks = 13828
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 4
 ["Fabrice Bellard"]
 +++
 

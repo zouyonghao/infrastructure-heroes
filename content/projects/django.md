@@ -14,9 +14,9 @@ description = 'Python web framework'
 [links]
   github = "django/django"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 87454
-  forks = 33851
+  updated_at = "2026-05-17"
+  stars = 87495
+  forks = 33879
   contributors = 100
   commits_30d = 100
   commits_90d = 100

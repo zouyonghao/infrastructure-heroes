@@ -14,9 +14,9 @@ description = 'Column-oriented OLAP database'
 [links]
   github = "ClickHouse/ClickHouse"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 47309
-  forks = 8386
+  updated_at = "2026-05-17"
+  stars = 47450
+  forks = 8404
   contributors = 100
   commits_30d = 100
   commits_90d = 100

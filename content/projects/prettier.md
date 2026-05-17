@@ -10,15 +10,15 @@ description = 'Opinionated code formatter'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 75
+  score = 72
 [links]
   github = "prettier/prettier"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 51856
-  forks = 4713
+  updated_at = "2026-05-17"
+  stars = 51878
+  forks = 4719
   contributors = 100
-  commits_30d = 72
+  commits_30d = 30
   commits_90d = 100
   bus_factor_people = 1
 

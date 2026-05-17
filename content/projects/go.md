@@ -14,13 +14,13 @@ description = 'Programming language by Google'
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-05-10"
-  stars = 133818
-  forks = 18998
+  updated_at = "2026-05-17"
+  stars = 133917
+  forks = 19021
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 8
+  bus_factor_people = 9
 ["Rob Pike", "Ken Thompson"]
 +++
 
