@@ -14,9 +14,9 @@ description = 'Package manager for macOS and Linux'
 [links]
   github = "Homebrew/brew"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 48037
-  forks = 11121
+  updated_at = "2026-05-24"
+  stars = 48159
+  forks = 11135
   contributors = 100
   commits_30d = 100
   commits_90d = 100

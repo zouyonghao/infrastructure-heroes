@@ -10,16 +10,16 @@ description = 'HTTP accelerator and reverse proxy'
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 23
+  score = 20
 [links]
   github = "varnishcache/varnish-cache"
 [metrics]
-  updated_at = "2026-05-17"
+  updated_at = "2026-05-24"
   stars = 4052
-  forks = 397
+  forks = 396
   contributors = 99
   commits_30d = 0
-  commits_90d = 1
+  commits_90d = 0
   bus_factor_people = 1
 
 +++

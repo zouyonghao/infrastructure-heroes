@@ -14,9 +14,9 @@ description = 'Log aggregation system by Grafana'
 [links]
   github = "grafana/loki"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 28194
-  forks = 3997
+  updated_at = "2026-05-24"
+  stars = 28234
+  forks = 4004
   contributors = 100
   commits_30d = 100
   commits_90d = 100

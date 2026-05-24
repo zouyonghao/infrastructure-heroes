@@ -10,17 +10,17 @@ maintainers = ["Linus Torvalds"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 79
 [links]
   github = "torvalds/linux"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 233424
-  forks = 62338
+  updated_at = "2026-05-24"
+  stars = 234217
+  forks = 62481
   contributors = 0
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 8
+  bus_factor_people = 3
 
 +++
 

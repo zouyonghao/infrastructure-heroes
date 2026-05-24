@@ -8,17 +8,17 @@ description = 'JavaScript module bundler'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 67
+  score = 66
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 65768
-  forks = 9357
+  updated_at = "2026-05-24"
+  stars = 65772
+  forks = 9355
   contributors = 100
-  commits_30d = 88
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
 ["Tobias Koppers"]

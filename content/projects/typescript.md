@@ -10,15 +10,15 @@ description = 'Typed superset of JavaScript'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 70
+  score = 80
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 108871
-  forks = 13395
+  updated_at = "2026-05-24"
+  stars = 108937
+  forks = 13406
   contributors = 100
-  commits_30d = 3
+  commits_30d = 6
   commits_90d = 28
   bus_factor_people = 3
 ["Anders Hejlsberg"]

@@ -8,15 +8,15 @@ description = 'Most widely used DNS server software'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
-  score = 68
+  score = 59
 [links]
   github = "isc-projects/bind9"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 740
-  forks = 172
+  updated_at = "2026-05-24"
+  stars = 742
+  forks = 173
   contributors = 58
   commits_30d = 100
   commits_90d = 100

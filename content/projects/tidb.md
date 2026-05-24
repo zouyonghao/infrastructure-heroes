@@ -10,17 +10,17 @@ description = 'Distributed NewSQL database'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  score = 85
 [links]
   github = "pingcap/tidb"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 40097
-  forks = 6186
+  updated_at = "2026-05-24"
+  stars = 40120
+  forks = 6187
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 4
 
 +++
 

@@ -14,13 +14,13 @@ description = 'Observability framework'
 [links]
   github = "open-telemetry/opentelemetry-collector"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 7006
-  forks = 2063
+  updated_at = "2026-05-24"
+  stars = 7052
+  forks = 2072
   contributors = 100
-  commits_30d = 98
+  commits_30d = 95
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 5
 
 +++
 

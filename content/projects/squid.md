@@ -10,16 +10,16 @@ description = 'Caching proxy for the web'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "medium"
-  score = 59
+  score = 63
 [links]
   github = "squid-cache/squid"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 2963
-  forks = 627
+  updated_at = "2026-05-24"
+  stars = 2966
+  forks = 632
   contributors = 100
-  commits_30d = 5
-  commits_90d = 10
+  commits_30d = 6
+  commits_90d = 12
   bus_factor_people = 2
 
 +++

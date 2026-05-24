@@ -10,16 +10,16 @@ description = 'Time series database'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "low"
-  score = 69
+  score = 67
 [links]
   github = "influxdata/influxdb"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 31502
-  forks = 3706
+  updated_at = "2026-05-24"
+  stars = 31513
+  forks = 3703
   contributors = 100
-  commits_30d = 4
-  commits_90d = 18
+  commits_30d = 2
+  commits_90d = 17
   bus_factor_people = 3
 
 +++

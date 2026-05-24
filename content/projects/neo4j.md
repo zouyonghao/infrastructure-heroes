@@ -10,13 +10,13 @@ description = 'Graph database platform'
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 49
+  score = 51
 [links]
   github = "neo4j/neo4j"
 [metrics]
-  updated_at = "2026-05-17"
-  stars = 16506
-  forks = 2607
+  updated_at = "2026-05-24"
+  stars = 16555
+  forks = 2616
   contributors = 100
   commits_30d = 0
   commits_90d = 0
