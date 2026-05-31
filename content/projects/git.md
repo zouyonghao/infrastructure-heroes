@@ -8,15 +8,15 @@ description = 'Distributed version control system'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 61
+  score = 53
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 61114
-  forks = 27926
+  updated_at = "2026-05-31"
+  stars = 61215
+  forks = 27949
   contributors = 100
   commits_30d = 100
   commits_90d = 100

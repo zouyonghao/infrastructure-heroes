@@ -14,11 +14,11 @@ description = 'Cloud-native DNS server'
 [links]
   github = "coredns/coredns"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 14087
-  forks = 2452
+  updated_at = "2026-05-31"
+  stars = 14083
+  forks = 2459
   contributors = 100
-  commits_30d = 37
+  commits_30d = 40
   commits_90d = 100
   bus_factor_people = 1
 

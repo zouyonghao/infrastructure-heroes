@@ -9,17 +9,17 @@ description = 'High-performance RPC framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "grpc/grpc"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 44802
-  forks = 11171
+  updated_at = "2026-05-31"
+  stars = 44840
+  forks = 11155
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 4
 
 +++
 

@@ -14,11 +14,11 @@ description = 'Infrastructure as code software tool'
 [links]
   github = "hashicorp/terraform"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 48444
-  forks = 10347
+  updated_at = "2026-05-31"
+  stars = 48483
+  forks = 10351
   contributors = 100
-  commits_30d = 100
+  commits_30d = 78
   commits_90d = 100
   bus_factor_people = 3
 ["Mitchell Hashimoto"]

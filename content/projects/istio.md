@@ -10,17 +10,17 @@ description = 'Service mesh for Kubernetes'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "istio/istio"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 38208
-  forks = 8308
+  updated_at = "2026-05-31"
+  stars = 38199
+  forks = 8316
   contributors = 100
-  commits_30d = 89
+  commits_30d = 82
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 4
 
 +++
 

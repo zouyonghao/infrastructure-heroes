@@ -13,9 +13,9 @@ description = 'The GNU C Library - foundation of Linux systems'
 [links]
   github = "bminor/glibc"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 1869
-  forks = 464
+  updated_at = "2026-05-31"
+  stars = 1870
+  forks = 466
   contributors = 100
   commits_30d = 0
   commits_90d = 0

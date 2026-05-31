@@ -14,9 +14,9 @@ description = 'Container orchestration platform'
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 122436
-  forks = 43149
+  updated_at = "2026-05-31"
+  stars = 122547
+  forks = 43213
   contributors = 100
   commits_30d = 100
   commits_90d = 100

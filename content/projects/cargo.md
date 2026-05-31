@@ -8,15 +8,15 @@ description = 'Rust package manager and build tool'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 59
+  score = 68
 [links]
   github = "rust-lang/cargo"
 [metrics]
-  updated_at = "2026-05-24"
-  stars = 14995
-  forks = 2923
+  updated_at = "2026-05-31"
+  stars = 15039
+  forks = 2931
   contributors = 100
   commits_30d = 100
   commits_90d = 100
