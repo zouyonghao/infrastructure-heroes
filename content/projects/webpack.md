@@ -10,13 +10,13 @@ description = 'JavaScript module bundler'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 68
+  score = 75
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 65746
-  forks = 9351
+  updated_at = "2026-06-07"
+  stars = 65757
+  forks = 9356
   contributors = 100
   commits_30d = 100
   commits_90d = 100

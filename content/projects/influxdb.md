@@ -14,11 +14,11 @@ description = 'Time series database'
 [links]
   github = "influxdata/influxdb"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 31516
-  forks = 3700
+  updated_at = "2026-06-07"
+  stars = 31532
+  forks = 3702
   contributors = 100
-  commits_30d = 3
+  commits_30d = 1
   commits_90d = 14
   bus_factor_people = 3
 

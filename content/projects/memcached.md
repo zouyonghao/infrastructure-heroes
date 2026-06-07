@@ -8,18 +8,18 @@ description = 'Distributed memory caching system'
 [health]
   funding = "at-risk"
   maintenance = "moderate"
-  contributors = "declining"
+  contributors = "critical"
   bus_factor = "high"
-  score = 48
+  score = 43
 [links]
   github = "memcached/memcached"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 14192
-  forks = 3326
+  updated_at = "2026-06-07"
+  stars = 14195
+  forks = 3327
   contributors = 100
-  commits_30d = 12
-  commits_90d = 29
+  commits_30d = 4
+  commits_90d = 12
   bus_factor_people = 1
 
 +++

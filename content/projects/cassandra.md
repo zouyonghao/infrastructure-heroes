@@ -13,11 +13,11 @@ description = 'Distributed NoSQL database'
 [links]
   github = "apache/cassandra"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 9751
-  forks = 3869
+  updated_at = "2026-06-07"
+  stars = 9752
+  forks = 3877
   contributors = 100
-  commits_30d = 74
+  commits_30d = 98
   commits_90d = 100
   bus_factor_people = 2
 

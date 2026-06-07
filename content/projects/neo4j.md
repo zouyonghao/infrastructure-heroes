@@ -8,19 +8,19 @@ description = 'Graph database platform'
 [health]
   funding = "at-risk"
   maintenance = "moderate"
-  contributors = "critical"
+  contributors = "healthy"
   bus_factor = "low"
-  score = 51
+  score = 79
 [links]
   github = "neo4j/neo4j"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 16606
-  forks = 2618
+  updated_at = "2026-06-07"
+  stars = 16665
+  forks = 2623
   contributors = 100
-  commits_30d = 0
-  commits_90d = 0
-  bus_factor_people = 7
+  commits_30d = 9
+  commits_90d = 100
+  bus_factor_people = 11
 
 +++
 

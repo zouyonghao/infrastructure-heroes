@@ -10,13 +10,13 @@ description = 'Distributed version control system'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 53
+  score = 59
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 61215
-  forks = 27949
+  updated_at = "2026-06-07"
+  stars = 61347
+  forks = 27984
   contributors = 100
   commits_30d = 100
   commits_90d = 100

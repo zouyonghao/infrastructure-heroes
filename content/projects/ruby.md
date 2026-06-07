@@ -14,9 +14,9 @@ description = 'Dynamic programming language'
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 23576
-  forks = 5593
+  updated_at = "2026-06-07"
+  stars = 23593
+  forks = 5598
   contributors = 100
   commits_30d = 100
   commits_90d = 100

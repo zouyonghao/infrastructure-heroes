@@ -7,20 +7,20 @@ description = 'Massively used compression library'
 
 [health]
   funding = "at-risk"
-  maintenance = "inactive"
-  contributors = "critical"
-  bus_factor = "medium"
-  score = 37
+  maintenance = "active"
+  contributors = "declining"
+  bus_factor = "high"
+  score = 53
 [links]
   github = "madler/zlib"
 [metrics]
-  updated_at = "2026-05-31"
-  stars = 6897
-  forks = 2777
-  contributors = 78
-  commits_30d = 0
-  commits_90d = 10
-  bus_factor_people = 2
+  updated_at = "2026-06-07"
+  stars = 6902
+  forks = 2783
+  contributors = 79
+  commits_30d = 60
+  commits_90d = 81
+  bus_factor_people = 1
 ["Mark Adler"]
 +++
 
