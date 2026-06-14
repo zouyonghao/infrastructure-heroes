@@ -8,19 +8,19 @@ description = 'Most widely used DNS server software'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
-  bus_factor = "medium"
-  score = 59
+  contributors = "healthy"
+  bus_factor = "low"
+  score = 67
 [links]
   github = "isc-projects/bind9"
 [metrics]
-  updated_at = "2026-06-07"
+  updated_at = "2026-06-14"
   stars = 743
-  forks = 176
+  forks = 177
   contributors = 58
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 [successor]
   project = "CoreDNS"
   relation = "alternative"

@@ -8,19 +8,19 @@ description = 'Distributed version control system'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
-  bus_factor = "high"
-  score = 59
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 61347
-  forks = 27984
+  updated_at = "2026-06-14"
+  stars = 61488
+  forks = 28008
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 ["Linus Torvalds", "Junio C Hamano"]
 +++
 

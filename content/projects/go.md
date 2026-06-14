@@ -14,9 +14,9 @@ description = 'Programming language by Google'
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 134507
-  forks = 19085
+  updated_at = "2026-06-14"
+  stars = 134677
+  forks = 19006
   contributors = 100
   commits_30d = 100
   commits_90d = 100

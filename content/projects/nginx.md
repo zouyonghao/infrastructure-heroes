@@ -9,18 +9,18 @@ description = 'High-performance web server and reverse proxy'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 85
+  bus_factor = "medium"
+  score = 79
 [links]
   github = "nginx/nginx"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 30692
-  forks = 7957
-  contributors = 99
-  commits_30d = 26
-  commits_90d = 98
-  bus_factor_people = 3
+  updated_at = "2026-06-14"
+  stars = 30865
+  forks = 7975
+  contributors = 100
+  commits_30d = 22
+  commits_90d = 94
+  bus_factor_people = 2
 ["Igor Sysoev"]
 +++
 

@@ -14,13 +14,13 @@ description = 'IT automation and configuration management'
 [links]
   github = "ansible/ansible"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 68786
-  forks = 24143
+  updated_at = "2026-06-14"
+  stars = 68910
+  forks = 24092
   contributors = 100
   commits_30d = 31
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 4
 ["Jeff Geerling"]
 +++
 

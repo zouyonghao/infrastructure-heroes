@@ -14,11 +14,11 @@ description = 'Graph database platform'
 [links]
   github = "neo4j/neo4j"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 16665
-  forks = 2623
+  updated_at = "2026-06-14"
+  stars = 16710
+  forks = 2626
   contributors = 100
-  commits_30d = 9
+  commits_30d = 4
   commits_90d = 100
   bus_factor_people = 11
 

@@ -9,18 +9,18 @@ description = 'Fast JavaScript runtime and toolkit'
   funding = "at-risk"
   maintenance = "active"
   contributors = "declining"
-  bus_factor = "medium"
-  score = 65
+  bus_factor = "high"
+  score = 59
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 92884
-  forks = 4704
+  updated_at = "2026-06-14"
+  stars = 93152
+  forks = 4699
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 1
 ["Jarred Sumner"]
 +++
 

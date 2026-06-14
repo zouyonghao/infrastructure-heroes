@@ -9,18 +9,18 @@ description = 'Stream processing framework'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 73
+  bus_factor = "low"
+  score = 79
 [links]
   github = "apache/flink"
 [metrics]
-  updated_at = "2026-06-07"
-  stars = 26050
-  forks = 13939
+  updated_at = "2026-06-14"
+  stars = 26069
+  forks = 13957
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 
 +++
 
