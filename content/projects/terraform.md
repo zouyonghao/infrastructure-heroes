@@ -8,15 +8,15 @@ description = 'Infrastructure as code software tool'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 66
+  score = 75
 [links]
   github = "hashicorp/terraform"
 [metrics]
-  updated_at = "2026-06-14"
-  stars = 48689
-  forks = 10373
+  updated_at = "2026-06-21"
+  stars = 48751
+  forks = 10372
   contributors = 100
   commits_30d = 100
   commits_90d = 100

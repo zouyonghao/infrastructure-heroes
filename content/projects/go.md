@@ -10,17 +10,17 @@ description = 'Programming language by Google'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 85
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-06-14"
-  stars = 134677
-  forks = 19006
+  updated_at = "2026-06-21"
+  stars = 134843
+  forks = 19018
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 6
 ["Rob Pike", "Ken Thompson"]
 +++
 

@@ -14,11 +14,11 @@ description = 'Open source automation server'
 [links]
   github = "jenkinsci/jenkins"
 [metrics]
-  updated_at = "2026-06-14"
-  stars = 25429
-  forks = 9516
+  updated_at = "2026-06-21"
+  stars = 25496
+  forks = 9529
   contributors = 100
-  commits_30d = 82
+  commits_30d = 95
   commits_90d = 100
   bus_factor_people = 1
 

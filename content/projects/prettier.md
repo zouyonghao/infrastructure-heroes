@@ -9,18 +9,18 @@ description = 'Opinionated code formatter'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  bus_factor = "high"
+  score = 68
 [links]
   github = "prettier/prettier"
 [metrics]
-  updated_at = "2026-06-14"
-  stars = 52012
-  forks = 4741
+  updated_at = "2026-06-21"
+  stars = 52072
+  forks = 4745
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 1
 
 +++
 
