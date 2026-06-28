@@ -14,9 +14,9 @@ description = 'Distributed storage system'
 [links]
   github = "ceph/ceph"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 16728
-  forks = 6424
+  updated_at = "2026-06-28"
+  stars = 16757
+  forks = 6430
   contributors = 100
   commits_30d = 100
   commits_90d = 100

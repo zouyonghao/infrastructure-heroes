@@ -14,12 +14,12 @@ description = 'Web server with automatic HTTPS'
 [links]
   github = "caddyserver/caddy"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 73450
-  forks = 4781
+  updated_at = "2026-06-28"
+  stars = 73579
+  forks = 4798
   contributors = 100
-  commits_30d = 33
-  commits_90d = 100
+  commits_30d = 28
+  commits_90d = 98
   bus_factor_people = 6
 
 +++

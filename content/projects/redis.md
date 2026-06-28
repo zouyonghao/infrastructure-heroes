@@ -14,11 +14,11 @@ description = 'In-memory data structure store'
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 75003
-  forks = 24676
+  updated_at = "2026-06-28"
+  stars = 75140
+  forks = 24690
   contributors = 100
-  commits_30d = 37
+  commits_30d = 39
   commits_90d = 100
   bus_factor_people = 8
 ["Salvatore Sanfilippo", "Antirez"]

@@ -14,9 +14,9 @@ description = 'Unified analytics engine'
 [links]
   github = "apache/spark"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 43487
-  forks = 29248
+  updated_at = "2026-06-28"
+  stars = 43517
+  forks = 29261
   contributors = 100
   commits_30d = 100
   commits_90d = 100

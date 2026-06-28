@@ -14,9 +14,9 @@ description = 'Document-oriented NoSQL database'
 [links]
   github = "mongodb/mongo"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 28377
-  forks = 5783
+  updated_at = "2026-06-28"
+  stars = 28407
+  forks = 5782
   contributors = 100
   commits_30d = 100
   commits_90d = 100

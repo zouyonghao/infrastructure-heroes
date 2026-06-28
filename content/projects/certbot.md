@@ -10,16 +10,16 @@ description = "ACME client for Let's Encrypt"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "medium"
-  score = 67
+  score = 71
 [links]
   github = "certbot/certbot"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 33094
-  forks = 3498
+  updated_at = "2026-06-28"
+  stars = 33111
+  forks = 3502
   contributors = 100
-  commits_30d = 14
-  commits_90d = 38
+  commits_30d = 17
+  commits_90d = 39
   bus_factor_people = 2
 
 +++

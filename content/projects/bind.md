@@ -14,13 +14,13 @@ description = 'Most widely used DNS server software'
 [links]
   github = "isc-projects/bind9"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 745
+  updated_at = "2026-06-28"
+  stars = 748
   forks = 178
   contributors = 58
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
 [successor]
   project = "CoreDNS"
   relation = "alternative"

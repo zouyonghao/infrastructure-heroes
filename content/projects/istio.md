@@ -9,18 +9,18 @@ description = 'Service mesh for Kubernetes'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 86
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "istio/istio"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 38231
-  forks = 8327
+  updated_at = "2026-06-28"
+  stars = 38248
+  forks = 8338
   contributors = 100
-  commits_30d = 84
+  commits_30d = 87
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

@@ -9,18 +9,18 @@ description = 'Monitoring and alerting toolkit'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 86
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "prometheus/prometheus"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 64643
-  forks = 10512
+  updated_at = "2026-06-28"
+  stars = 64803
+  forks = 10535
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 2
 
 +++
 

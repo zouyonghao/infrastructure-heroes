@@ -10,13 +10,13 @@ description = 'Full-stack Ruby web framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 82
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 58702
-  forks = 22172
+  updated_at = "2026-06-28"
+  stars = 58728
+  forks = 22168
   contributors = 100
   commits_30d = 100
   commits_90d = 100

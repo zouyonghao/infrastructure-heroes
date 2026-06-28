@@ -8,15 +8,15 @@ description = 'JavaScript package manager'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 75
+  score = 64
 [links]
   github = "npm/cli"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 9857
-  forks = 4426
+  updated_at = "2026-06-28"
+  stars = 9878
+  forks = 4440
   contributors = 100
   commits_30d = 100
   commits_90d = 100

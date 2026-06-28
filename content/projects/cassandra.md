@@ -9,17 +9,17 @@ description = 'Distributed NoSQL database'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 85
 [links]
   github = "apache/cassandra"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 9784
-  forks = 3888
+  updated_at = "2026-06-28"
+  stars = 9790
+  forks = 3892
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 5
 
 +++
 

@@ -14,9 +14,9 @@ description = 'Language-neutral data serialization'
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 71371
-  forks = 16161
+  updated_at = "2026-06-28"
+  stars = 71419
+  forks = 16171
   contributors = 100
   commits_30d = 100
   commits_90d = 100

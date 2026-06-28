@@ -14,12 +14,12 @@ description = 'Lightweight Python web framework'
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 71681
-  forks = 16878
+  updated_at = "2026-06-28"
+  stars = 71766
+  forks = 16886
   contributors = 100
   commits_30d = 1
-  commits_90d = 17
+  commits_90d = 15
   bus_factor_people = 1
 ["Armin Ronacher"]
 +++

@@ -14,9 +14,9 @@ description = 'Distributed key-value store'
 [links]
   github = "etcd-io/etcd"
 [metrics]
-  updated_at = "2026-06-21"
-  stars = 51863
-  forks = 10394
+  updated_at = "2026-06-28"
+  stars = 51907
+  forks = 10399
   contributors = 100
   commits_30d = 100
   commits_90d = 100
