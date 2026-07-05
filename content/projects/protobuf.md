@@ -9,18 +9,18 @@ description = 'Language-neutral data serialization'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  bus_factor = "low"
+  score = 86
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
-  updated_at = "2026-06-28"
-  stars = 71419
-  forks = 16171
+  updated_at = "2026-07-05"
+  stars = 71459
+  forks = 16179
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 
 +++
 

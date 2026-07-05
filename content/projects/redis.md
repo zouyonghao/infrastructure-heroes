@@ -10,13 +10,13 @@ description = 'In-memory data structure store'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  score = 89
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-06-28"
-  stars = 75140
-  forks = 24690
+  updated_at = "2026-07-05"
+  stars = 75294
+  forks = 24700
   contributors = 100
   commits_30d = 39
   commits_90d = 100

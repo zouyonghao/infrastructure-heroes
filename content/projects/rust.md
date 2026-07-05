@@ -14,13 +14,13 @@ description = 'Systems programming language'
 [links]
   github = "rust-lang/rust"
 [metrics]
-  updated_at = "2026-06-28"
-  stars = 114253
-  forks = 15030
+  updated_at = "2026-07-05"
+  stars = 114316
+  forks = 15133
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
 ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 +++
 

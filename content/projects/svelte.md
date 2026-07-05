@@ -10,15 +10,15 @@ description = 'Cybernetically enhanced web apps'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  score = 83
 [links]
   github = "sveltejs/svelte"
 [metrics]
-  updated_at = "2026-06-28"
-  stars = 87446
-  forks = 4959
+  updated_at = "2026-07-05"
+  stars = 87492
+  forks = 4973
   contributors = 100
-  commits_30d = 40
+  commits_30d = 11
   commits_90d = 100
   bus_factor_people = 2
 ["Rich Harris"]

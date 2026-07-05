@@ -10,17 +10,17 @@ description = 'Distributed storage system'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 79
 [links]
   github = "ceph/ceph"
 [metrics]
-  updated_at = "2026-06-28"
-  stars = 16757
-  forks = 6430
+  updated_at = "2026-07-05"
+  stars = 16775
+  forks = 6438
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 4
 
 +++
 
