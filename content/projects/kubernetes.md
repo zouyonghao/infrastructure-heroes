@@ -9,18 +9,18 @@ description = 'Container orchestration platform'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 123429
-  forks = 43428
+  updated_at = "2026-07-12"
+  stars = 123732
+  forks = 43724
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 ["Jessie Frazelle", "Kelsey Hightower"]
 +++
 

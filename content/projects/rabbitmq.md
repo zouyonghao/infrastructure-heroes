@@ -14,9 +14,9 @@ description = 'Message broker software'
 [links]
   github = "rabbitmq/rabbitmq-server"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 13735
-  forks = 4016
+  updated_at = "2026-07-12"
+  stars = 13741
+  forks = 4019
   contributors = 100
   commits_30d = 100
   commits_90d = 100

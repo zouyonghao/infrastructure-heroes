@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-05T01:02:58.500868",
-  "total_snapshots": 22,
+  "generated_at": "2026-07-12T03:38:01.637002",
+  "total_snapshots": 23,
   "date_range": {
     "from": "2026-02-08",
-    "to": "2026-07-05"
+    "to": "2026-07-12"
   },
   "current_status": {
-    "critical": 19,
-    "warning": 33,
+    "critical": 21,
+    "warning": 31,
     "healthy": 56,
-    "avg_score": 74.47222222222223
+    "avg_score": 74.32407407407408
   },
   "trends": {
     "avg_score_over_time": [
@@ -100,6 +100,10 @@
       {
         "date": "2026-07-05",
         "value": 74.47222222222223
+      },
+      {
+        "date": "2026-07-12",
+        "value": 74.32407407407408
       }
     ],
     "critical_count_over_time": [
@@ -190,6 +194,10 @@
       {
         "date": "2026-07-05",
         "value": 19
+      },
+      {
+        "date": "2026-07-12",
+        "value": 21
       }
     ]
   }

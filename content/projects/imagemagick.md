@@ -8,14 +8,14 @@ description = 'Image manipulation toolkit'
 [health]
   funding = "stable"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "high"
-  score = 83
+  score = 74
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 16887
+  updated_at = "2026-07-12"
+  stars = 16930
   forks = 1616
   contributors = 100
   commits_30d = 100

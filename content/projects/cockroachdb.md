@@ -14,11 +14,11 @@ description = 'Distributed SQL database'
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 32248
-  forks = 4064
+  updated_at = "2026-07-12"
+  stars = 32280
+  forks = 4068
   contributors = 100
-  commits_30d = 18
+  commits_30d = 12
   commits_90d = 100
   bus_factor_people = 2
 

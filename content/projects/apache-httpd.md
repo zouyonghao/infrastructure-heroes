@@ -10,13 +10,13 @@ description = 'Most widely used web server software'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "medium"
-  score = 57
+  score = 55
 [links]
   github = "apache/httpd"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 4018
-  forks = 1273
+  updated_at = "2026-07-12"
+  stars = 4125
+  forks = 1413
   contributors = 52
   commits_30d = 100
   commits_90d = 100

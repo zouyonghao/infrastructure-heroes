@@ -14,9 +14,9 @@ description = 'Modern Python web framework'
 [links]
   github = "fastapi/fastapi"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 100013
-  forks = 9538
+  updated_at = "2026-07-12"
+  stars = 100390
+  forks = 9593
   contributors = 100
   commits_30d = 100
   commits_90d = 100

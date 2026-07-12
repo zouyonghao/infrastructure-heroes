@@ -9,18 +9,18 @@ description = 'Distributed key-value store'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  bus_factor = "low"
+  score = 86
 [links]
   github = "etcd-io/etcd"
 [metrics]
-  updated_at = "2026-07-05"
-  stars = 51944
-  forks = 10404
+  updated_at = "2026-07-12"
+  stars = 51975
+  forks = 10417
   contributors = 100
-  commits_30d = 84
+  commits_30d = 68
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 
 +++
 
