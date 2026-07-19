@@ -14,11 +14,11 @@ description = 'Community-developed MySQL fork'
 [links]
   github = "MariaDB/server"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 7844
-  forks = 2073
-  contributors = 79
-  commits_30d = 93
+  updated_at = "2026-07-19"
+  stars = 7870
+  forks = 2075
+  contributors = 80
+  commits_30d = 56
   commits_90d = 100
   bus_factor_people = 4
 

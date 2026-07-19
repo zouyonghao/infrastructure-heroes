@@ -14,9 +14,9 @@ description = 'Command line tool and library for transferring data with URLs'
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 42385
-  forks = 7271
+  updated_at = "2026-07-19"
+  stars = 42417
+  forks = 7269
   contributors = 100
   commits_30d = 100
   commits_90d = 100

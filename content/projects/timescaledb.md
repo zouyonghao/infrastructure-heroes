@@ -8,15 +8,15 @@ description = 'PostgreSQL for time-series data'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 66
+  score = 75
 [links]
   github = "timescale/timescaledb"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 23078
-  forks = 1119
+  updated_at = "2026-07-19"
+  stars = 23125
+  forks = 1121
   contributors = 100
   commits_30d = 100
   commits_90d = 100

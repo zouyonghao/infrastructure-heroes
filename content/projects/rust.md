@@ -14,9 +14,9 @@ description = 'Systems programming language'
 [links]
   github = "rust-lang/rust"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 114663
-  forks = 15392
+  updated_at = "2026-07-19"
+  stars = 114724
+  forks = 15361
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -10,17 +10,17 @@ description = 'Compiler infrastructure and toolchain'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 91
 [links]
   github = "llvm/llvm-project"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 39216
-  forks = 17804
+  updated_at = "2026-07-19"
+  stars = 39345
+  forks = 17892
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 14
+  bus_factor_people = 17
 ["Chris Lattner"]
 +++
 

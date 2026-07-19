@@ -10,15 +10,15 @@ description = 'In-memory data structure store'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 89
+  score = 91
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 75428
-  forks = 24717
+  updated_at = "2026-07-19"
+  stars = 75582
+  forks = 24714
   contributors = 100
-  commits_30d = 43
+  commits_30d = 53
   commits_90d = 100
   bus_factor_people = 8
 ["Salvatore Sanfilippo", "Antirez"]

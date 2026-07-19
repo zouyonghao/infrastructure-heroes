@@ -9,18 +9,18 @@ description = 'Open source automation server'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "jenkinsci/jenkins"
 [metrics]
-  updated_at = "2026-07-12"
-  stars = 25649
-  forks = 9693
+  updated_at = "2026-07-19"
+  stars = 25587
+  forks = 9613
   contributors = 100
-  commits_30d = 93
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 1
+  bus_factor_people = 2
 
 +++
 
