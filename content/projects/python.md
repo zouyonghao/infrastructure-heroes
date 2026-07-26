@@ -9,18 +9,18 @@ description = 'Popular programming language'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 85
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 73809
-  forks = 34943
+  updated_at = "2026-07-26"
+  stars = 73920
+  forks = 35005
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 11
+  bus_factor_people = 2
 ["Guido van Rossum"]
 +++
 

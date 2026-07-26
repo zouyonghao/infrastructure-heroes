@@ -14,13 +14,13 @@ description = 'TypeScript-based web framework'
 [links]
   github = "angular/angular"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 100589
-  forks = 27441
+  updated_at = "2026-07-26"
+  stars = 100619
+  forks = 27304
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 5
 ["Misko Hevery", "John Papa"]
 +++
 

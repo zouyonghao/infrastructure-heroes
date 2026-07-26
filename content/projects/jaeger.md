@@ -10,15 +10,15 @@ description = 'Distributed tracing system'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  score = 80
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 23012
-  forks = 3011
+  updated_at = "2026-07-26"
+  stars = 23030
+  forks = 3024
   contributors = 100
-  commits_30d = 98
+  commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
 

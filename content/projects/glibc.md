@@ -9,13 +9,13 @@ description = 'The GNU C Library - foundation of Linux systems'
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "medium"
-  score = 30
+  score = 28
 [links]
   github = "bminor/glibc"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 1892
-  forks = 473
+  updated_at = "2026-07-26"
+  stars = 1895
+  forks = 475
   contributors = 100
   commits_30d = 0
   commits_90d = 0

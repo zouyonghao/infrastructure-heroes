@@ -10,15 +10,15 @@ description = 'Database clustering for MySQL'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 85
 [links]
   github = "vitessio/vitess"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 21146
+  updated_at = "2026-07-26"
+  stars = 21169
   forks = 2374
   contributors = 100
-  commits_30d = 75
+  commits_30d = 85
   commits_90d = 100
   bus_factor_people = 3
 

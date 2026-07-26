@@ -10,16 +10,16 @@ description = 'Self-hosted runner for GitHub Actions'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 82
+  score = 85
 [links]
   github = "actions/runner"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 6125
-  forks = 1381
+  updated_at = "2026-07-26"
+  stars = 6140
+  forks = 1383
   contributors = 100
-  commits_30d = 19
-  commits_90d = 61
+  commits_30d = 20
+  commits_90d = 51
   bus_factor_people = 3
 
 +++

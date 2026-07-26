@@ -14,13 +14,13 @@ description = 'JavaScript linting utility'
 [links]
   github = "eslint/eslint"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 27371
-  forks = 5099
+  updated_at = "2026-07-26"
+  stars = 27422
+  forks = 5137
   contributors = 100
-  commits_30d = 74
+  commits_30d = 84
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 7
 ["Filipe Fortes"]
 +++
 

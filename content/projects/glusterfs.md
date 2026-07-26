@@ -14,8 +14,8 @@ description = 'Scalable network filesystem'
 [links]
   github = "gluster/glusterfs"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 5210
+  updated_at = "2026-07-26"
+  stars = 5214
   forks = 1111
   contributors = 100
   commits_30d = 0

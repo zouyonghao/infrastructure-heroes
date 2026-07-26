@@ -10,13 +10,13 @@ description = 'Popular relational database'
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 58
+  score = 56
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 12338
-  forks = 4309
+  updated_at = "2026-07-26"
+  stars = 12347
+  forks = 4313
   contributors = 100
   commits_30d = 2
   commits_90d = 2

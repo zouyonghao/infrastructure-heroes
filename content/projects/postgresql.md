@@ -10,17 +10,17 @@ description = "The world's most advanced open source relational database"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 85
 [links]
   github = "postgres/postgres"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 21513
-  forks = 5785
+  updated_at = "2026-07-26"
+  stars = 21588
+  forks = 5803
   contributors = 42
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 5
 
 +++
 

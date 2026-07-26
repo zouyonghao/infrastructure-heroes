@@ -14,12 +14,12 @@ description = 'High-performance web server and reverse proxy'
 [links]
   github = "nginx/nginx"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 31157
-  forks = 8107
+  updated_at = "2026-07-26"
+  stars = 31224
+  forks = 8141
   contributors = 100
-  commits_30d = 37
-  commits_90d = 98
+  commits_30d = 38
+  commits_90d = 96
   bus_factor_people = 3
 ["Igor Sysoev"]
 +++

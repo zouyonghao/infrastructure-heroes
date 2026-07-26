@@ -14,13 +14,13 @@ description = 'Compiler infrastructure and toolchain'
 [links]
   github = "llvm/llvm-project"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 39345
-  forks = 17892
+  updated_at = "2026-07-26"
+  stars = 39462
+  forks = 17979
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 17
+  bus_factor_people = 12
 ["Chris Lattner"]
 +++
 

@@ -10,13 +10,13 @@ description = 'High-performance object storage'
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "low"
-  score = 45
+  score = 43
 [links]
   github = "minio/minio"
 [metrics]
-  updated_at = "2026-07-19"
-  stars = 61350
-  forks = 7675
+  updated_at = "2026-07-26"
+  stars = 61390
+  forks = 7683
   contributors = 100
   commits_30d = 0
   commits_90d = 0
