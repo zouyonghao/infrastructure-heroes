@@ -14,11 +14,11 @@ description = 'Cloud-native application proxy'
 [links]
   github = "traefik/traefik"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 64116
-  forks = 6086
+  updated_at = "2026-08-02"
+  stars = 64224
+  forks = 6113
   contributors = 100
-  commits_30d = 88
+  commits_30d = 87
   commits_90d = 100
   bus_factor_people = 2
 

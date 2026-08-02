@@ -14,13 +14,13 @@ description = 'JavaScript runtime built on V8'
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 118389
-  forks = 36139
+  updated_at = "2026-08-02"
+  stars = 118608
+  forks = 36289
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 8
+  bus_factor_people = 7
 ["Ryan Dahl", "Matteo Collina"]
 +++
 

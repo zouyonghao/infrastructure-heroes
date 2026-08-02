@@ -14,9 +14,9 @@ description = 'Image manipulation toolkit'
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 17024
-  forks = 1626
+  updated_at = "2026-08-02"
+  stars = 17072
+  forks = 1625
   contributors = 100
   commits_30d = 100
   commits_90d = 100

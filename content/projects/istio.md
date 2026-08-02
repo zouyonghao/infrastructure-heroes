@@ -14,11 +14,11 @@ description = 'Service mesh for Kubernetes'
 [links]
   github = "istio/istio"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 38301
-  forks = 8352
+  updated_at = "2026-08-02"
+  stars = 38317
+  forks = 8362
   contributors = 100
-  commits_30d = 90
+  commits_30d = 89
   commits_90d = 100
   bus_factor_people = 6
 

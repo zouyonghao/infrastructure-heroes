@@ -8,15 +8,15 @@ description = 'Secrets management tool'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "critical"
+  contributors = "declining"
   bus_factor = "high"
-  score = 57
+  score = 59
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 36016
-  forks = 4723
+  updated_at = "2026-08-02"
+  stars = 36043
+  forks = 4727
   contributors = 100
   commits_30d = 100
   commits_90d = 100

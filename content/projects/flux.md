@@ -14,11 +14,11 @@ description = 'GitOps tool for Kubernetes'
 [links]
   github = "fluxcd/flux2"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 8293
-  forks = 776
+  updated_at = "2026-08-02"
+  stars = 8310
+  forks = 778
   contributors = 100
-  commits_30d = 49
+  commits_30d = 28
   commits_90d = 100
   bus_factor_people = 1
 

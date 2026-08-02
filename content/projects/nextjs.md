@@ -14,9 +14,9 @@ description = 'React framework for production'
 [links]
   github = "vercel/next.js"
 [metrics]
-  updated_at = "2026-07-26"
-  stars = 141138
-  forks = 31533
+  updated_at = "2026-08-02"
+  stars = 141219
+  forks = 31600
   contributors = 100
   commits_30d = 100
   commits_90d = 100
