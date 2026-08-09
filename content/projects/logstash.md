@@ -10,16 +10,16 @@ description = 'Server-side data processing pipeline'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 89
+  score = 91
 [links]
   github = "elastic/logstash"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 14905
-  forks = 3508
+  updated_at = "2026-08-09"
+  stars = 14914
+  forks = 3506
   contributors = 100
-  commits_30d = 19
-  commits_90d = 63
+  commits_30d = 22
+  commits_90d = 62
   bus_factor_people = 5
 
 +++

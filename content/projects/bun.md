@@ -10,13 +10,13 @@ description = 'Fast JavaScript runtime and toolkit'
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 53
+  score = 57
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 95142
-  forks = 4928
+  updated_at = "2026-08-09"
+  stars = 95338
+  forks = 4940
   contributors = 100
   commits_30d = 100
   commits_90d = 100

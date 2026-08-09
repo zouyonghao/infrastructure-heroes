@@ -14,11 +14,11 @@ description = 'Cloud-native messaging system'
 [links]
   github = "nats-io/nats-server"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 20375
-  forks = 1888
+  updated_at = "2026-08-09"
+  stars = 20409
+  forks = 1894
   contributors = 100
-  commits_30d = 99
+  commits_30d = 78
   commits_90d = 100
   bus_factor_people = 1
 

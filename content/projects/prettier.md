@@ -14,9 +14,9 @@ description = 'Opinionated code formatter'
 [links]
   github = "prettier/prettier"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 52168
-  forks = 4933
+  updated_at = "2026-08-09"
+  stars = 52183
+  forks = 4977
   contributors = 100
   commits_30d = 100
   commits_90d = 100

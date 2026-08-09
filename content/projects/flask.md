@@ -7,16 +7,16 @@ description = 'Lightweight Python web framework'
 
 [health]
   funding = "at-risk"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
-  score = 45
+  score = 44
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 72017
-  forks = 16923
+  updated_at = "2026-08-09"
+  stars = 72181
+  forks = 16932
   contributors = 100
   commits_30d = 5
   commits_90d = 10

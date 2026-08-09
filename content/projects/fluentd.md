@@ -14,11 +14,11 @@ description = 'Data collector for unified logging'
 [links]
   github = "fluent/fluentd"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 13573
-  forks = 1401
+  updated_at = "2026-08-09"
+  stars = 13576
+  forks = 1402
   contributors = 100
-  commits_30d = 24
+  commits_30d = 20
   commits_90d = 51
   bus_factor_people = 1
 

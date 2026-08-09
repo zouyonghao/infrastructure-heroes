@@ -14,11 +14,11 @@ description = 'Database clustering for MySQL'
 [links]
   github = "vitessio/vitess"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 21180
-  forks = 2380
+  updated_at = "2026-08-09"
+  stars = 21209
+  forks = 2382
   contributors = 100
-  commits_30d = 88
+  commits_30d = 73
   commits_90d = 100
   bus_factor_people = 2
 

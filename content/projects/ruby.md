@@ -14,13 +14,13 @@ description = 'Dynamic programming language'
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 23668
-  forks = 5624
+  updated_at = "2026-08-09"
+  stars = 23672
+  forks = 5627
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
 ["Aaron Patterson", "Yukihiro Matsumoto"]
 +++
 

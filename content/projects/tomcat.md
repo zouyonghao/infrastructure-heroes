@@ -8,17 +8,17 @@ description = 'Java Servlet container'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "critical"
+  contributors = "declining"
   bus_factor = "high"
-  score = 51
+  score = 53
 [links]
   github = "apache/tomcat"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 8217
-  forks = 5387
+  updated_at = "2026-08-09"
+  stars = 8229
+  forks = 5389
   contributors = 100
-  commits_30d = 62
+  commits_30d = 63
   commits_90d = 100
   bus_factor_people = 1
 

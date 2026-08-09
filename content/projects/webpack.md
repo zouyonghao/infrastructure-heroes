@@ -14,9 +14,9 @@ description = 'JavaScript module bundler'
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 65867
-  forks = 9473
+  updated_at = "2026-08-09"
+  stars = 65991
+  forks = 9533
   contributors = 100
   commits_30d = 100
   commits_90d = 100

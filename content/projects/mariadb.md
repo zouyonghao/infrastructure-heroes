@@ -9,18 +9,18 @@ description = 'Community-developed MySQL fork'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 81
+  bus_factor = "medium"
+  score = 78
 [links]
   github = "MariaDB/server"
 [metrics]
-  updated_at = "2026-08-02"
-  stars = 7916
-  forks = 2081
-  contributors = 80
-  commits_30d = 19
+  updated_at = "2026-08-09"
+  stars = 8059
+  forks = 2082
+  contributors = 81
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 2
 
 +++
 
