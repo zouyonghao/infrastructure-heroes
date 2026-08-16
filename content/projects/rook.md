@@ -14,9 +14,9 @@ description = 'Cloud-native storage orchestrator'
 [links]
   github = "rook/rook"
 [metrics]
-  updated_at = "2026-08-09"
-  stars = 13596
-  forks = 2843
+  updated_at = "2026-08-16"
+  stars = 13598
+  forks = 2848
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -10,13 +10,13 @@ description = 'Dynamic programming language'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 85
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-08-09"
-  stars = 23672
-  forks = 5627
+  updated_at = "2026-08-16"
+  stars = 23678
+  forks = 5630
   contributors = 100
   commits_30d = 100
   commits_90d = 100

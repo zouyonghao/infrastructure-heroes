@@ -8,15 +8,15 @@ description = 'JavaScript module bundler'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "high"
-  score = 66
+  score = 68
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-08-09"
-  stars = 65991
-  forks = 9533
+  updated_at = "2026-08-16"
+  stars = 65979
+  forks = 9530
   contributors = 100
   commits_30d = 100
   commits_90d = 100
