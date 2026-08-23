@@ -14,8 +14,8 @@ description = 'Most widely deployed database engine in the world'
 [links]
   github = "sqlite/sqlite"
 [metrics]
-  updated_at = "2026-08-16"
-  stars = 10275
+  updated_at = "2026-08-23"
+  stars = 10318
   forks = 1627
   contributors = 0
   commits_30d = 100

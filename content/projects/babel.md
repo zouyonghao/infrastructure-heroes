@@ -10,16 +10,16 @@ description = 'JavaScript compiler'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  score = 77
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-08-16"
-  stars = 43984
-  forks = 5981
+  updated_at = "2026-08-23"
+  stars = 43988
+  forks = 5980
   contributors = 100
-  commits_30d = 21
-  commits_90d = 92
+  commits_30d = 14
+  commits_90d = 88
   bus_factor_people = 2
 ["Sebastian McKenzie"]
 +++

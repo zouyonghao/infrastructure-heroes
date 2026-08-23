@@ -14,13 +14,13 @@ description = 'Popular programming language'
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-08-16"
-  stars = 74326
-  forks = 35210
+  updated_at = "2026-08-23"
+  stars = 74670
+  forks = 35259
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 5
 ["Guido van Rossum"]
 +++
 

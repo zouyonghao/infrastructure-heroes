@@ -14,9 +14,9 @@ description = 'Complete multimedia framework'
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-08-16"
-  stars = 63333
-  forks = 14150
+  updated_at = "2026-08-23"
+  stars = 63545
+  forks = 14178
   contributors = 100
   commits_30d = 100
   commits_90d = 100

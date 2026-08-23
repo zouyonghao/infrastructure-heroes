@@ -9,18 +9,18 @@ description = 'Distributed storage system'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  score = 85
+  bus_factor = "medium"
+  score = 73
 [links]
   github = "ceph/ceph"
 [metrics]
-  updated_at = "2026-08-16"
-  stars = 16939
-  forks = 6480
+  updated_at = "2026-08-23"
+  stars = 16957
+  forks = 6483
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 2
 
 +++
 
