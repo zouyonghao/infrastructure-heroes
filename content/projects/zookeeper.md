@@ -10,16 +10,16 @@ description = 'Distributed coordination service'
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "low"
-  score = 66
+  score = 74
 [links]
   github = "apache/zookeeper"
 [metrics]
-  updated_at = "2026-08-23"
+  updated_at = "2026-08-30"
   stars = 12794
-  forks = 7328
+  forks = 7329
   contributors = 100
-  commits_30d = 4
-  commits_90d = 20
+  commits_30d = 8
+  commits_90d = 24
   bus_factor_people = 3
 
 +++

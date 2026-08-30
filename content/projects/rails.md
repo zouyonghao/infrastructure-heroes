@@ -10,17 +10,17 @@ description = 'Full-stack Ruby web framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 85
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 58702
-  forks = 22365
+  updated_at = "2026-08-30"
+  stars = 58740
+  forks = 22369
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
 ["David Heinemeier Hansson"]
 +++
 

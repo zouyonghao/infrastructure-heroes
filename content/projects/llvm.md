@@ -14,9 +14,9 @@ description = 'Compiler infrastructure and toolchain'
 [links]
   github = "llvm/llvm-project"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 39870
-  forks = 18333
+  updated_at = "2026-08-30"
+  stars = 40000
+  forks = 18431
   contributors = 100
   commits_30d = 100
   commits_90d = 100

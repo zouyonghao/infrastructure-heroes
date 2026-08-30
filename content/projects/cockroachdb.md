@@ -10,13 +10,13 @@ description = 'Distributed SQL database'
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "low"
-  score = 74
+  score = 76
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 32411
-  forks = 4095
+  updated_at = "2026-08-30"
+  stars = 32433
+  forks = 4097
   contributors = 100
   commits_30d = 15
   commits_90d = 100

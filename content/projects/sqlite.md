@@ -10,13 +10,13 @@ description = 'Most widely deployed database engine in the world'
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 51
+  score = 49
 [links]
   github = "sqlite/sqlite"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 10318
-  forks = 1627
+  updated_at = "2026-08-30"
+  stars = 10366
+  forks = 1635
   contributors = 0
   commits_30d = 100
   commits_90d = 100

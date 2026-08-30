@@ -10,16 +10,16 @@ description = 'Scalable network filesystem'
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 61
+  score = 63
 [links]
   github = "gluster/glusterfs"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 5218
+  updated_at = "2026-08-30"
+  stars = 5221
   forks = 1108
   contributors = 100
-  commits_30d = 9
-  commits_90d = 9
+  commits_30d = 12
+  commits_90d = 12
   bus_factor_people = 5
 
 +++

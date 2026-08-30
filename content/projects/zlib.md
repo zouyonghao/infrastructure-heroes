@@ -14,9 +14,9 @@ description = 'Massively used compression library'
 [links]
   github = "madler/zlib"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 7041
-  forks = 2837
+  updated_at = "2026-08-30"
+  stars = 7055
+  forks = 2845
   contributors = 79
   commits_30d = 0
   commits_90d = 60

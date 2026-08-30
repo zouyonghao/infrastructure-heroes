@@ -8,17 +8,17 @@ description = 'Modern Python web framework'
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
-  score = 73
+  score = 70
 [links]
   github = "fastapi/fastapi"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 101763
-  forks = 9806
+  updated_at = "2026-08-30"
+  stars = 101929
+  forks = 9828
   contributors = 100
-  commits_30d = 100
+  commits_30d = 88
   commits_90d = 100
   bus_factor_people = 2
 ["Sebastian Ramirez"]

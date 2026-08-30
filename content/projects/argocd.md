@@ -9,18 +9,18 @@ description = 'Declarative GitOps CD for Kubernetes'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 80
+  bus_factor = "low"
+  score = 86
 [links]
   github = "argoproj/argo-cd"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 23973
-  forks = 7765
+  updated_at = "2026-08-30"
+  stars = 24034
+  forks = 7807
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 
 +++
 

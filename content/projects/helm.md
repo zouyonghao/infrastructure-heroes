@@ -10,15 +10,15 @@ description = 'Kubernetes package manager'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 85
 [links]
   github = "helm/helm"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 30164
-  forks = 7757
+  updated_at = "2026-08-30"
+  stars = 30192
+  forks = 7767
   contributors = 100
-  commits_30d = 59
+  commits_30d = 26
   commits_90d = 100
   bus_factor_people = 3
 

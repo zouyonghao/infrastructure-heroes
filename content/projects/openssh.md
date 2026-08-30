@@ -7,18 +7,18 @@ description = 'Secure Shell connectivity tools'
 
 [health]
   funding = "at-risk"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "declining"
   bus_factor = "medium"
-  score = 60
+  score = 57
 [links]
   github = "openssh/openssh-portable"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 3966
-  forks = 2153
+  updated_at = "2026-08-30"
+  stars = 3974
+  forks = 2155
   contributors = 100
-  commits_30d = 59
+  commits_30d = 48
   commits_90d = 100
   bus_factor_people = 2
 ["Theo de Raadt"]

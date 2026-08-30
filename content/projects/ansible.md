@@ -10,16 +10,16 @@ description = 'IT automation and configuration management'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 83
 [links]
   github = "ansible/ansible"
 [metrics]
-  updated_at = "2026-08-23"
-  stars = 70436
-  forks = 24317
+  updated_at = "2026-08-30"
+  stars = 70494
+  forks = 24328
   contributors = 100
-  commits_30d = 22
-  commits_90d = 72
+  commits_30d = 16
+  commits_90d = 73
   bus_factor_people = 4
 ["Jeff Geerling"]
 +++
