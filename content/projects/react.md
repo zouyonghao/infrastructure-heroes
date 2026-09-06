@@ -10,15 +10,15 @@ description = 'JavaScript library for building UIs'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 83
+  score = 85
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 248320
-  forks = 51262
+  updated_at = "2026-09-06"
+  stars = 249117
+  forks = 51288
   contributors = 100
-  commits_30d = 46
+  commits_30d = 55
   commits_90d = 100
   bus_factor_people = 3
 ["Jordan Walke", "Dan Abramov"]

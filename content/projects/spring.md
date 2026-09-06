@@ -13,9 +13,9 @@ description = 'Java application framework'
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 60211
-  forks = 38765
+  updated_at = "2026-09-06"
+  stars = 60229
+  forks = 38766
   contributors = 100
   commits_30d = 100
   commits_90d = 100

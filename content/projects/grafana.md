@@ -14,13 +14,13 @@ description = 'Analytics and monitoring visualization'
 [links]
   github = "grafana/grafana"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 76492
-  forks = 14654
+  updated_at = "2026-09-06"
+  stars = 76608
+  forks = 14708
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 12
+  bus_factor_people = 14
 
 +++
 

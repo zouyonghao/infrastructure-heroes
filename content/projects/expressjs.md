@@ -7,16 +7,16 @@ description = 'Node.js web application framework'
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 70
+  score = 71
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 69403
-  forks = 24863
+  updated_at = "2026-09-06"
+  stars = 69427
+  forks = 24918
   contributors = 100
   commits_30d = 5
   commits_90d = 17

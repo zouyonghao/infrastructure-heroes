@@ -14,9 +14,9 @@ description = 'Monitoring and alerting toolkit'
 [links]
   github = "prometheus/prometheus"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 65895
-  forks = 10813
+  updated_at = "2026-09-06"
+  stars = 65959
+  forks = 10824
   contributors = 100
   commits_30d = 100
   commits_90d = 100

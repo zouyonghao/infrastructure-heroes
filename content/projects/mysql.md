@@ -7,20 +7,20 @@ description = 'Popular relational database'
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  score = 85
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 12406
-  forks = 4341
+  updated_at = "2026-09-06"
+  stars = 12419
+  forks = 4352
   contributors = 100
-  commits_30d = 1
+  commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 5
 [successor]
   project = "MariaDB"
   relation = "alternative"

@@ -14,9 +14,9 @@ description = 'Typed superset of JavaScript'
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 110783
-  forks = 13773
+  updated_at = "2026-09-06"
+  stars = 110911
+  forks = 13808
   contributors = 100
   commits_30d = 100
   commits_90d = 100

@@ -14,13 +14,13 @@ maintainers = ["Linus Torvalds"]
 [links]
   github = "torvalds/linux"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 245225
-  forks = 64186
+  updated_at = "2026-09-06"
+  stars = 246771
+  forks = 64339
   contributors = 0
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 10
 
 +++
 

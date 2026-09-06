@@ -10,17 +10,17 @@ description = 'JavaScript runtime built on V8'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  score = 86
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 119951
-  forks = 36629
+  updated_at = "2026-09-06"
+  stars = 120659
+  forks = 36674
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 7
+  bus_factor_people = 3
 ["Ryan Dahl", "Matteo Collina"]
 +++
 

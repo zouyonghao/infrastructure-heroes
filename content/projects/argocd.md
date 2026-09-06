@@ -14,13 +14,13 @@ description = 'Declarative GitOps CD for Kubernetes'
 [links]
   github = "argoproj/argo-cd"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 24034
-  forks = 7807
+  updated_at = "2026-09-06"
+  stars = 24085
+  forks = 7827
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 3
+  bus_factor_people = 4
 
 +++
 

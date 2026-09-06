@@ -14,9 +14,9 @@ description = 'Lightweight Python web framework'
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 72148
-  forks = 16955
+  updated_at = "2026-09-06"
+  stars = 72177
+  forks = 16968
   contributors = 100
   commits_30d = 11
   commits_90d = 17

@@ -10,17 +10,17 @@ description = 'Popular programming language'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 79
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 75283
-  forks = 35296
+  updated_at = "2026-09-06"
+  stars = 75999
+  forks = 35340
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 5
+  bus_factor_people = 3
 ["Guido van Rossum"]
 +++
 

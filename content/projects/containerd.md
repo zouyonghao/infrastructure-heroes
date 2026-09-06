@@ -14,9 +14,9 @@ description = 'Industry-standard container runtime'
 [links]
   github = "containerd/containerd"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 21218
-  forks = 4081
+  updated_at = "2026-09-06"
+  stars = 21255
+  forks = 4097
   contributors = 100
   commits_30d = 100
   commits_90d = 100

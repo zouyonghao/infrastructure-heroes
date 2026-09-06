@@ -14,8 +14,8 @@ description = 'Most widely used web server software'
 [links]
   github = "apache/httpd"
 [metrics]
-  updated_at = "2026-08-30"
-  stars = 4053
+  updated_at = "2026-09-06"
+  stars = 4054
   forks = 1359
   contributors = 53
   commits_30d = 100
