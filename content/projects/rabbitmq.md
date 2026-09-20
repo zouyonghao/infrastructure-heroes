@@ -10,13 +10,13 @@ description = 'Message broker software'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "medium"
-  score = 69
+  score = 71
 [links]
   github = "rabbitmq/rabbitmq-server"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 13839
-  forks = 4018
+  updated_at = "2026-09-20"
+  stars = 13860
+  forks = 4024
   contributors = 100
   commits_30d = 100
   commits_90d = 100

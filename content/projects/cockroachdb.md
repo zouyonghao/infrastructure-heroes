@@ -8,18 +8,18 @@ description = 'Distributed SQL database'
 [health]
   funding = "at-risk"
   maintenance = "moderate"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "low"
-  score = 64
+  score = 67
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 32442
-  forks = 4102
+  updated_at = "2026-09-20"
+  stars = 32476
+  forks = 4112
   contributors = 100
-  commits_30d = 4
-  commits_90d = 49
+  commits_30d = 5
+  commits_90d = 48
   bus_factor_people = 3
 
 +++

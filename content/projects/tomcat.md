@@ -14,9 +14,9 @@ description = 'Java Servlet container'
 [links]
   github = "apache/tomcat"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 8242
-  forks = 5391
+  updated_at = "2026-09-20"
+  stars = 8251
+  forks = 5395
   contributors = 100
   commits_30d = 100
   commits_90d = 100

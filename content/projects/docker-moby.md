@@ -10,13 +10,13 @@ description = 'Container runtime and toolkit'
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 64
+  score = 62
 [links]
   github = "moby/moby"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 72045
-  forks = 19235
+  updated_at = "2026-09-20"
+  stars = 72113
+  forks = 19233
   contributors = 100
   commits_30d = 100
   commits_90d = 100

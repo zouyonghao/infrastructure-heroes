@@ -14,13 +14,13 @@ description = 'Stream processing framework'
 [links]
   github = "apache/flink"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 26325
-  forks = 14024
+  updated_at = "2026-09-20"
+  stars = 26345
+  forks = 14036
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 6
+  bus_factor_people = 7
 
 +++
 

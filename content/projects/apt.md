@@ -14,8 +14,8 @@ description = 'Debian/Ubuntu package management'
 [links]
   github = "Debian/apt"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 648
+  updated_at = "2026-09-20"
+  stars = 643
   forks = 220
   contributors = 100
   commits_30d = 0

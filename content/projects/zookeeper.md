@@ -14,12 +14,12 @@ description = 'Distributed coordination service'
 [links]
   github = "apache/zookeeper"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 12798
-  forks = 7322
+  updated_at = "2026-09-20"
+  stars = 12807
+  forks = 7320
   contributors = 100
-  commits_30d = 15
-  commits_90d = 31
+  commits_30d = 19
+  commits_90d = 36
   bus_factor_people = 3
 
 +++

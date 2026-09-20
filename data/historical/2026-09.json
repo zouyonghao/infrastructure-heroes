@@ -2056,5 +2056,2063 @@
       "healthy": 53,
       "avg_score": 74.89814814814815
     }
+  },
+  {
+    "date": "2026-09-20",
+    "month": "2026-09",
+    "total_projects": 108,
+    "projects": [
+      {
+        "name": "angular",
+        "slug": "angular",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 101016,
+          "forks": 28079,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "docker-moby",
+        "slug": "docker-moby",
+        "health": {
+          "score": 62,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 72113,
+          "forks": 19233,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "kubernetes",
+        "slug": "kubernetes",
+        "health": {
+          "score": 75,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 127843,
+          "forks": 44691,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "argocd",
+        "slug": "argocd",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 24201,
+          "forks": 7859,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "spring",
+        "slug": "spring",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 60250,
+          "forks": 38772,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "nodejs",
+        "slug": "nodejs",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 122015,
+          "forks": 37400,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "kafka",
+        "slug": "kafka",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 33759,
+          "forks": 15524,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 13
+        }
+      },
+      {
+        "name": "istio",
+        "slug": "istio",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 38401,
+          "forks": 8375,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "react",
+        "slug": "react",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 250602,
+          "forks": 51379,
+          "contributors": 100,
+          "commits_30d": 65,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "postgresql",
+        "slug": "postgresql",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 22155,
+          "forks": 5923,
+          "contributors": 42,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "redis",
+        "slug": "redis",
+        "health": {
+          "score": 91,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 76408,
+          "forks": 24812,
+          "contributors": 100,
+          "commits_30d": 34,
+          "commits_90d": 100,
+          "bus_factor_people": 6
+        }
+      },
+      {
+        "name": "mysql",
+        "slug": "mysql",
+        "health": {
+          "score": 83,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 12433,
+          "forks": 4359,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "traefik",
+        "slug": "traefik",
+        "health": {
+          "score": 92,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 64904,
+          "forks": 6202,
+          "contributors": 100,
+          "commits_30d": 74,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "flink",
+        "slug": "flink",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 26345,
+          "forks": 14036,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "zookeeper",
+        "slug": "zookeeper",
+        "health": {
+          "score": 76,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 12807,
+          "forks": 7320,
+          "contributors": 100,
+          "commits_30d": 19,
+          "commits_90d": 36,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "ffmpeg",
+        "slug": "ffmpeg",
+        "health": {
+          "score": 68,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 64362,
+          "forks": 14282,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "bind",
+        "slug": "bind",
+        "health": {
+          "score": 74,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 775,
+          "forks": 187,
+          "contributors": 60,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "deno",
+        "slug": "deno",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 108473,
+          "forks": 6373,
+          "contributors": 100,
+          "commits_30d": 77,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "git",
+        "slug": "git",
+        "health": {
+          "score": 73,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 63246,
+          "forks": 28421,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "python",
+        "slug": "python",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 77227,
+          "forks": 35978,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "mongodb",
+        "slug": "mongodb",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 28568,
+          "forks": 5807,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 19
+        }
+      },
+      {
+        "name": "influxdb",
+        "slug": "influxdb",
+        "health": {
+          "score": 63,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 31747,
+          "forks": 3717,
+          "contributors": 100,
+          "commits_30d": 1,
+          "commits_90d": 7,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "ansible",
+        "slug": "ansible",
+        "health": {
+          "score": 91,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 70740,
+          "forks": 24333,
+          "contributors": 100,
+          "commits_30d": 37,
+          "commits_90d": 86,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "coredns",
+        "slug": "coredns",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 14330,
+          "forks": 2532,
+          "contributors": 100,
+          "commits_30d": 76,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "gnupg",
+        "slug": "gnupg",
+        "health": {
+          "score": 45,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "at-risk",
+          "bus_factor": "critical"
+        },
+        "metrics": {}
+      },
+      {
+        "name": "certbot",
+        "slug": "certbot",
+        "health": {
+          "score": 68,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 33242,
+          "forks": 3504,
+          "contributors": 100,
+          "commits_30d": 7,
+          "commits_90d": 27,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "libpng",
+        "slug": "libpng",
+        "health": {
+          "score": 38,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 1656,
+          "forks": 819,
+          "contributors": 99,
+          "commits_30d": 3,
+          "commits_90d": 5,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "spark",
+        "slug": "spark",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 44015,
+          "forks": 29392,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "rust",
+        "slug": "rust",
+        "health": {
+          "score": 88,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 118973,
+          "forks": 16196,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "llvm",
+        "slug": "llvm",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 40560,
+          "forks": 18722,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 14
+        }
+      },
+      {
+        "name": "actions-runner",
+        "slug": "actions-runner",
+        "health": {
+          "score": 74,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 6274,
+          "forks": 1432,
+          "contributors": 100,
+          "commits_30d": 36,
+          "commits_90d": 87,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "vitess",
+        "slug": "vitess",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 21345,
+          "forks": 2402,
+          "contributors": 100,
+          "commits_30d": 87,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "clickhouse",
+        "slug": "clickhouse",
+        "health": {
+          "score": 64,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 49978,
+          "forks": 8977,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "memcached",
+        "slug": "memcached",
+        "health": {
+          "score": 42,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 14284,
+          "forks": 3348,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 47,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "prometheus",
+        "slug": "prometheus",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 66132,
+          "forks": 10846,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "libsodium",
+        "slug": "libsodium",
+        "health": {
+          "score": 49,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 13955,
+          "forks": 1885,
+          "contributors": 100,
+          "commits_30d": 11,
+          "commits_90d": 23,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "tidb",
+        "slug": "tidb",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 40553,
+          "forks": 6243,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "tomcat",
+        "slug": "tomcat",
+        "health": {
+          "score": 49,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 8251,
+          "forks": 5395,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "cassandra",
+        "slug": "cassandra",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 10100,
+          "forks": 4118,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "eslint",
+        "slug": "eslint",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 27515,
+          "forks": 5186,
+          "contributors": 100,
+          "commits_30d": 51,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "webpack",
+        "slug": "webpack",
+        "health": {
+          "score": 64,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 65943,
+          "forks": 9547,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "squid",
+        "slug": "squid",
+        "health": {
+          "score": 82,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 3104,
+          "forks": 660,
+          "contributors": 100,
+          "commits_30d": 9,
+          "commits_90d": 25,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "curl",
+        "slug": "curl",
+        "health": {
+          "score": 88,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 42893,
+          "forks": 7370,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "zlib",
+        "slug": "zlib",
+        "health": {
+          "score": 35,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 7095,
+          "forks": 2854,
+          "contributors": 79,
+          "commits_30d": 4,
+          "commits_90d": 4,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "cargo",
+        "slug": "cargo",
+        "health": {
+          "score": 80,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 15495,
+          "forks": 3048,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "ruby",
+        "slug": "ruby",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 23747,
+          "forks": 5644,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "containerd",
+        "slug": "containerd",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 21318,
+          "forks": 4124,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "loki",
+        "slug": "loki",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 28916,
+          "forks": 4115,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "consul",
+        "slug": "consul",
+        "health": {
+          "score": 91,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 30072,
+          "forks": 4623,
+          "contributors": 100,
+          "commits_30d": 26,
+          "commits_90d": 69,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "minio",
+        "slug": "minio",
+        "health": {
+          "score": 43,
+          "funding": "at-risk",
+          "maintenance": "inactive",
+          "contributors": "critical",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 61357,
+          "forks": 7960,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 0,
+          "bus_factor_people": 6
+        }
+      },
+      {
+        "name": "jaeger",
+        "slug": "jaeger",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 23223,
+          "forks": 3122,
+          "contributors": 100,
+          "commits_30d": 97,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "rook",
+        "slug": "rook",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 13663,
+          "forks": 2862,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "haproxy",
+        "slug": "haproxy",
+        "health": {
+          "score": 59,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 6863,
+          "forks": 972,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "go",
+        "slug": "go",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 138899,
+          "forks": 19960,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 6
+        }
+      },
+      {
+        "name": "vault",
+        "slug": "vault",
+        "health": {
+          "score": 54,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 36267,
+          "forks": 4763,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "libjpeg-turbo",
+        "slug": "libjpeg-turbo",
+        "health": {
+          "score": 47,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 4431,
+          "forks": 1179,
+          "contributors": 45,
+          "commits_30d": 7,
+          "commits_90d": 32,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "fluentd",
+        "slug": "fluentd",
+        "health": {
+          "score": 71,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 13588,
+          "forks": 1404,
+          "contributors": 100,
+          "commits_30d": 12,
+          "commits_90d": 52,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "helm",
+        "slug": "helm",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 30262,
+          "forks": 7789,
+          "contributors": 100,
+          "commits_30d": 45,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "openssl",
+        "slug": "openssl",
+        "health": {
+          "score": 98,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 30807,
+          "forks": 11470,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "sqlite",
+        "slug": "sqlite",
+        "health": {
+          "score": 51,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 10515,
+          "forks": 1662,
+          "contributors": 0,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "flask",
+        "slug": "flask",
+        "health": {
+          "score": 43,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 74755,
+          "forks": 16988,
+          "contributors": 100,
+          "commits_30d": 1,
+          "commits_90d": 17,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "varnish",
+        "slug": "varnish",
+        "health": {
+          "score": 23,
+          "funding": "at-risk",
+          "maintenance": "inactive",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 4045,
+          "forks": 393,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 0,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "envoy",
+        "slug": "envoy",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 28961,
+          "forks": 5622,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "linux-kernel",
+        "slug": "linux-kernel",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 249557,
+          "forks": 65205,
+          "contributors": 0,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "airflow",
+        "slug": "airflow",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 46914,
+          "forks": 17872,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 8
+        }
+      },
+      {
+        "name": "imagemagick",
+        "slug": "imagemagick",
+        "health": {
+          "score": 68,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 17481,
+          "forks": 1659,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "babel",
+        "slug": "babel",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 44003,
+          "forks": 5992,
+          "contributors": 100,
+          "commits_30d": 37,
+          "commits_90d": 79,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "etcd",
+        "slug": "etcd",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 52276,
+          "forks": 10510,
+          "contributors": 100,
+          "commits_30d": 58,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "nextjs",
+        "slug": "nextjs",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 142385,
+          "forks": 32492,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "apache-httpd",
+        "slug": "apache-httpd",
+        "health": {
+          "score": 52,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 4036,
+          "forks": 1358,
+          "contributors": 53,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "grpc",
+        "slug": "grpc",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 45328,
+          "forks": 11371,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 6
+        }
+      },
+      {
+        "name": "flux",
+        "slug": "flux",
+        "health": {
+          "score": 72,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 8416,
+          "forks": 785,
+          "contributors": 100,
+          "commits_30d": 11,
+          "commits_90d": 78,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "glibc",
+        "slug": "glibc",
+        "health": {
+          "score": 28,
+          "funding": "at-risk",
+          "maintenance": "inactive",
+          "contributors": "critical",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 1894,
+          "forks": 487,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 0,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "svelte",
+        "slug": "svelte",
+        "health": {
+          "score": 92,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 88151,
+          "forks": 5840,
+          "contributors": 100,
+          "commits_30d": 76,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "openssh",
+        "slug": "openssh",
+        "health": {
+          "score": 61,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 4013,
+          "forks": 2167,
+          "contributors": 100,
+          "commits_30d": 71,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "prettier",
+        "slug": "prettier",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 52286,
+          "forks": 5008,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "nats",
+        "slug": "nats",
+        "health": {
+          "score": 75,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 20751,
+          "forks": 1963,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "rabbitmq",
+        "slug": "rabbitmq",
+        "health": {
+          "score": 71,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 13860,
+          "forks": 4024,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "busybox",
+        "slug": "busybox",
+        "health": {
+          "score": 23,
+          "funding": "at-risk",
+          "maintenance": "inactive",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 2172,
+          "forks": 755,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 0,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "bun",
+        "slug": "bun",
+        "health": {
+          "score": 60,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 95986,
+          "forks": 5044,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "glusterfs",
+        "slug": "glusterfs",
+        "health": {
+          "score": 57,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "critical",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 5237,
+          "forks": 1107,
+          "contributors": 100,
+          "commits_30d": 22,
+          "commits_90d": 24,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "homebrew",
+        "slug": "homebrew",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 49720,
+          "forks": 11358,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "cockroachdb",
+        "slug": "cockroachdb",
+        "health": {
+          "score": 67,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 32476,
+          "forks": 4112,
+          "contributors": 100,
+          "commits_30d": 5,
+          "commits_90d": 48,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "vuejs",
+        "slug": "vuejs",
+        "health": {
+          "score": 86,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 54417,
+          "forks": 9203,
+          "contributors": 100,
+          "commits_30d": 41,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "jenkins",
+        "slug": "jenkins",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 26570,
+          "forks": 9832,
+          "contributors": 100,
+          "commits_30d": 83,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "protobuf",
+        "slug": "protobuf",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 72047,
+          "forks": 16293,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "nginx",
+        "slug": "nginx",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 31691,
+          "forks": 8307,
+          "contributors": 100,
+          "commits_30d": 30,
+          "commits_90d": 93,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "ceph",
+        "slug": "ceph",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 17057,
+          "forks": 6504,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 6
+        }
+      },
+      {
+        "name": "typescript",
+        "slug": "typescript",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 111121,
+          "forks": 14416,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "npm",
+        "slug": "npm",
+        "health": {
+          "score": 77,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 10123,
+          "forks": 4748,
+          "contributors": 100,
+          "commits_30d": 13,
+          "commits_90d": 81,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "timescaledb",
+        "slug": "timescaledb",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 23547,
+          "forks": 1154,
+          "contributors": 100,
+          "commits_30d": 79,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      },
+      {
+        "name": "php",
+        "slug": "php",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 40394,
+          "forks": 8150,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "elasticsearch",
+        "slug": "elasticsearch",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 77939,
+          "forks": 26076,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 7
+        }
+      },
+      {
+        "name": "scylladb",
+        "slug": "scylladb",
+        "health": {
+          "score": 79,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 15769,
+          "forks": 1519,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "expressjs",
+        "slug": "expressjs",
+        "health": {
+          "score": 66,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 69459,
+          "forks": 25025,
+          "contributors": 100,
+          "commits_30d": 12,
+          "commits_90d": 17,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "logstash",
+        "slug": "logstash",
+        "health": {
+          "score": 91,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 14946,
+          "forks": 3495,
+          "contributors": 100,
+          "commits_30d": 23,
+          "commits_90d": 66,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "fastapi",
+        "slug": "fastapi",
+        "health": {
+          "score": 66,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "declining",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 102470,
+          "forks": 9913,
+          "contributors": 100,
+          "commits_30d": 22,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "mariadb",
+        "slug": "mariadb",
+        "health": {
+          "score": 84,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 8250,
+          "forks": 2105,
+          "contributors": 83,
+          "commits_30d": 29,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "django",
+        "slug": "django",
+        "health": {
+          "score": 92,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 91142,
+          "forks": 34911,
+          "contributors": 100,
+          "commits_30d": 62,
+          "commits_90d": 100,
+          "bus_factor_people": 5
+        }
+      },
+      {
+        "name": "pip",
+        "slug": "pip",
+        "health": {
+          "score": 77,
+          "funding": "stable",
+          "maintenance": "moderate",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 10287,
+          "forks": 3383,
+          "contributors": 100,
+          "commits_30d": 13,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "caddy",
+        "slug": "caddy",
+        "health": {
+          "score": 94,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 75868,
+          "forks": 4976,
+          "contributors": 100,
+          "commits_30d": 36,
+          "commits_90d": 77,
+          "bus_factor_people": 10
+        }
+      },
+      {
+        "name": "apt",
+        "slug": "apt",
+        "health": {
+          "score": 23,
+          "funding": "at-risk",
+          "maintenance": "inactive",
+          "contributors": "critical",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 643,
+          "forks": 220,
+          "contributors": 100,
+          "commits_30d": 0,
+          "commits_90d": 0,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "rails",
+        "slug": "rails",
+        "health": {
+          "score": 85,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 58779,
+          "forks": 23027,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 4
+        }
+      },
+      {
+        "name": "neo4j",
+        "slug": "neo4j",
+        "health": {
+          "score": 77,
+          "funding": "at-risk",
+          "maintenance": "moderate",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 17245,
+          "forks": 2703,
+          "contributors": 100,
+          "commits_30d": 1,
+          "commits_90d": 100,
+          "bus_factor_people": 9
+        }
+      },
+      {
+        "name": "Let's Encrypt",
+        "slug": "letsencrypt",
+        "health": {
+          "score": 68,
+          "funding": "stable",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "high"
+        },
+        "metrics": {
+          "stars": 33242,
+          "forks": 3504,
+          "contributors": 100,
+          "commits_30d": 7,
+          "commits_90d": 27,
+          "bus_factor_people": 1
+        }
+      },
+      {
+        "name": "grafana",
+        "slug": "grafana",
+        "health": {
+          "score": 92,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 76812,
+          "forks": 14758,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 15
+        }
+      },
+      {
+        "name": "terraform",
+        "slug": "terraform",
+        "health": {
+          "score": 80,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "medium"
+        },
+        "metrics": {
+          "stars": 49692,
+          "forks": 10627,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 2
+        }
+      },
+      {
+        "name": "opentelemetry",
+        "slug": "opentelemetry",
+        "health": {
+          "score": 86,
+          "funding": "at-risk",
+          "maintenance": "active",
+          "contributors": "healthy",
+          "bus_factor": "low"
+        },
+        "metrics": {
+          "stars": 7577,
+          "forks": 2254,
+          "contributors": 100,
+          "commits_30d": 100,
+          "commits_90d": 100,
+          "bus_factor_people": 3
+        }
+      }
+    ],
+    "summary": {
+      "critical": 18,
+      "warning": 32,
+      "healthy": 58,
+      "avg_score": 74.64814814814815
+    }
   }
 ]

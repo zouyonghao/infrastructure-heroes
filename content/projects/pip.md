@@ -7,18 +7,18 @@ description = 'Python package installer'
 
 [health]
   funding = "stable"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  score = 77
 [links]
   github = "pypa/pip"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 10276
-  forks = 3369
+  updated_at = "2026-09-20"
+  stars = 10287
+  forks = 3383
   contributors = 100
-  commits_30d = 39
+  commits_30d = 13
   commits_90d = 100
   bus_factor_people = 2
 

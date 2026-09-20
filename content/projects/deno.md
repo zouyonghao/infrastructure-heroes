@@ -14,11 +14,11 @@ description = 'Secure runtime for JavaScript/TypeScript'
 [links]
   github = "denoland/deno"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 108382
-  forks = 6372
+  updated_at = "2026-09-20"
+  stars = 108473
+  forks = 6373
   contributors = 100
-  commits_30d = 100
+  commits_30d = 77
   commits_90d = 100
   bus_factor_people = 2
 ["Ryan Dahl"]

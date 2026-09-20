@@ -9,18 +9,18 @@ description = 'Dynamic programming language'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 79
+  bus_factor = "low"
+  score = 86
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-09-06"
-  stars = 23702
-  forks = 5635
+  updated_at = "2026-09-20"
+  stars = 23747
+  forks = 5644
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 ["Aaron Patterson", "Yukihiro Matsumoto"]
 +++
 
