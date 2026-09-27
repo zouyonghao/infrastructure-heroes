@@ -14,11 +14,11 @@ description = 'Secure Shell connectivity tools'
 [links]
   github = "openssh/openssh-portable"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 4013
-  forks = 2167
+  updated_at = "2026-09-27"
+  stars = 4023
+  forks = 2171
   contributors = 100
-  commits_30d = 71
+  commits_30d = 76
   commits_90d = 100
   bus_factor_people = 1
 ["Theo de Raadt"]

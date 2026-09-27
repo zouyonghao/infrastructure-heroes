@@ -14,11 +14,11 @@ description = 'Python package installer'
 [links]
   github = "pypa/pip"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 10287
-  forks = 3383
+  updated_at = "2026-09-27"
+  stars = 10286
+  forks = 3389
   contributors = 100
-  commits_30d = 13
+  commits_30d = 16
   commits_90d = 100
   bus_factor_people = 2
 

@@ -9,13 +9,13 @@ description = 'Java application framework'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  score = 80
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 60250
-  forks = 38772
+  updated_at = "2026-09-27"
+  stars = 60258
+  forks = 38761
   contributors = 100
   commits_30d = 100
   commits_90d = 100

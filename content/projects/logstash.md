@@ -14,12 +14,12 @@ description = 'Server-side data processing pipeline'
 [links]
   github = "elastic/logstash"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 14946
+  updated_at = "2026-09-27"
+  stars = 14950
   forks = 3495
   contributors = 100
   commits_30d = 23
-  commits_90d = 66
+  commits_90d = 64
   bus_factor_people = 5
 
 +++

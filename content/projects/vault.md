@@ -14,8 +14,8 @@ description = 'Secrets management tool'
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 36267
+  updated_at = "2026-09-27"
+  stars = 36303
   forks = 4763
   contributors = 100
   commits_30d = 100

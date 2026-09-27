@@ -14,13 +14,13 @@ description = 'Server-side scripting language'
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 40394
-  forks = 8150
+  updated_at = "2026-09-27"
+  stars = 40403
+  forks = 8153
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 4
+  bus_factor_people = 3
 ["Rasmus Lerdorf"]
 +++
 

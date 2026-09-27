@@ -10,15 +10,15 @@ description = 'Distributed key-value store'
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 86
 [links]
   github = "etcd-io/etcd"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 52276
-  forks = 10510
+  updated_at = "2026-09-27"
+  stars = 52309
+  forks = 10517
   contributors = 100
-  commits_30d = 58
+  commits_30d = 57
   commits_90d = 100
   bus_factor_people = 3
 

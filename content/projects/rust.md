@@ -9,18 +9,18 @@ description = 'Systems programming language'
   funding = "stable"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 88
+  bus_factor = "low"
+  score = 94
 [links]
   github = "rust-lang/rust"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 118973
-  forks = 16196
+  updated_at = "2026-09-27"
+  stars = 119222
+  forks = 16910
   contributors = 100
   commits_30d = 100
   commits_90d = 100
-  bus_factor_people = 2
+  bus_factor_people = 3
 ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 +++
 

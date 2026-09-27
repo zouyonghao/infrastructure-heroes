@@ -9,18 +9,18 @@ description = 'JavaScript package manager'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 77
+  bus_factor = "low"
+  score = 82
 [links]
   github = "npm/cli"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 10123
-  forks = 4748
+  updated_at = "2026-09-27"
+  stars = 10155
+  forks = 4781
   contributors = 100
-  commits_30d = 13
-  commits_90d = 81
-  bus_factor_people = 2
+  commits_30d = 7
+  commits_90d = 57
+  bus_factor_people = 3
 
 +++
 

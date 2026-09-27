@@ -14,12 +14,12 @@ description = 'JPEG image codec with SIMD acceleration'
 [links]
   github = "libjpeg-turbo/libjpeg-turbo"
 [metrics]
-  updated_at = "2026-09-20"
-  stars = 4431
-  forks = 1179
+  updated_at = "2026-09-27"
+  stars = 4434
+  forks = 1181
   contributors = 45
-  commits_30d = 7
-  commits_90d = 32
+  commits_30d = 8
+  commits_90d = 35
   bus_factor_people = 1
 
 +++
