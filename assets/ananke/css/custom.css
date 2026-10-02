@@ -744,6 +744,11 @@ a.btn-ghost:hover {
   line-height: 1.2;
 }
 
+/* The highlighted phrase gets its own line in the hero headline. */
+.hero-title .text-gradient {
+  display: block;
+}
+
 @media (min-width: 640px) {
   .hero-title {
     font-size: var(--text-5xl);
