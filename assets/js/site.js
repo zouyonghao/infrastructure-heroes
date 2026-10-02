@@ -69,8 +69,27 @@
     });
   }
 
+  function initRelativeTimes() {
+    var now = Date.now();
+    document.querySelectorAll('time[data-relative-time]').forEach(function (el) {
+      var raw = el.getAttribute('datetime');
+      if (!raw) return;
+      var then = Date.parse(raw);
+      if (isNaN(then)) return;
+      var days = Math.max(0, Math.floor((now - then) / 86400000));
+      var label;
+      if (days === 0) label = 'today';
+      else if (days === 1) label = 'yesterday';
+      else if (days < 30) label = days + ' days ago';
+      else if (days < 60) label = '1 month ago';
+      else label = Math.floor(days / 30) + ' months ago';
+      el.textContent = label;
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
     initSmoothScroll();
+    initRelativeTimes();
   });
 })();

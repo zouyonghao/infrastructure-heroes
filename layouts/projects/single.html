@@ -110,17 +110,7 @@
                     {{ $updatedDate := time .Params.metrics.updated_at }}
                     {{ $daysAgo := div (sub now.Unix $updatedDate.Unix) 86400 }}
                     Metrics last updated: 
-                    {{ if eq $daysAgo 0 }}
-                        today
-                    {{ else if eq $daysAgo 1 }}
-                        yesterday
-                    {{ else if lt $daysAgo 30 }}
-                        {{ $daysAgo }} days ago
-                    {{ else if lt $daysAgo 60 }}
-                        1 month ago
-                    {{ else }}
-                        {{ div $daysAgo 30 }} months ago
-                    {{ end }}
+                    <time datetime="{{ .Params.metrics.updated_at }}" data-relative-time>{{ if eq $daysAgo 0 }}today{{ else if eq $daysAgo 1 }}yesterday{{ else if lt $daysAgo 30 }}{{ $daysAgo }} days ago{{ else if lt $daysAgo 60 }}1 month ago{{ else }}{{ div $daysAgo 30 }} months ago{{ end }}</time>
                     ({{ .Params.metrics.updated_at }})
                 </span>
             </div>
