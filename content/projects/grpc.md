@@ -5,11 +5,13 @@ logo = "/images/logos/grpc.svg"
 description = 'High-performance RPC framework'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "grpc/grpc"
 [metrics]
@@ -42,4 +44,4 @@ gRPC is a high-performance, open-source universal RPC framework originally devel
 
 ### Sustainability
 
-gRPC is a CNCF project with strong backing from Google and widespread adoption.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

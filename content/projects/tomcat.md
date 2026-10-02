@@ -6,11 +6,13 @@ logo = "/images/logos/tomcat.svg"
 description = 'Java Servlet container'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 53
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/tomcat"
 [metrics]
@@ -43,4 +45,4 @@ Apache Tomcat is an open-source implementation of Java Servlet, JavaServer Pages
 
 ### Sustainability
 
-Tomcat is an Apache Foundation project with volunteer maintainers. Despite widespread enterprise use, direct funding is limited.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

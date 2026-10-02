@@ -5,11 +5,13 @@ logo = "/images/logos/cassandra.svg"
 description = 'Distributed NoSQL database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/cassandra"
 [metrics]
@@ -42,4 +44,4 @@ Apache Cassandra is an open-source, distributed, wide-column store NoSQL databas
 
 ### Sustainability
 
-Cassandra is an Apache Foundation project with backing from DataStax and a strong community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

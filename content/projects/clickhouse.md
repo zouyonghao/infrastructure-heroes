@@ -6,11 +6,13 @@ logo = "/images/logos/clickhouse.svg"
 description = 'Column-oriented OLAP database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "ClickHouse/ClickHouse"
 [metrics]
@@ -43,4 +45,4 @@ ClickHouse is an open-source column-oriented database management system that all
 
 ### Sustainability
 
-ClickHouse is backed by ClickHouse Inc. with strong commercial support and an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

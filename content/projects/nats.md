@@ -6,11 +6,13 @@ logo = "/images/logos/nats.webp"
 description = 'Cloud-native messaging system'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 84
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "nats-io/nats-server"
 [metrics]
@@ -43,4 +45,4 @@ NATS is a connective technology for adaptive edge and distributed systems, provi
 
 ### Sustainability
 
-NATS is a CNCF incubating project with strong backing from Synadia and the community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

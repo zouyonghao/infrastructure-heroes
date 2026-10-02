@@ -7,11 +7,13 @@ description = 'Distributed version control system'
 maintainers = ["Linus Torvalds", "Junio C Hamano"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 73
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "git/git"
 [metrics]
@@ -44,4 +46,4 @@ Git is a free and open source distributed version control system designed to han
 
 ### Sustainability
 
-Git is maintained by Junio Hamano and a community of contributors. While widely used, direct funding is limited compared to its impact. Development is supported partly by companies like Google.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

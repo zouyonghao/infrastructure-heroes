@@ -6,11 +6,13 @@ logo = "/images/logos/pip.svg"
 description = 'Python package installer'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 76
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "pypa/pip"
 [metrics]
@@ -43,4 +45,4 @@ pip is the package installer for Python. It can install packages from the Python
 
 ### Sustainability
 
-pip is maintained by the Python Packaging Authority with limited funding. The small team manages infrastructure critical to Python's ecosystem.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -2,29 +2,19 @@
 date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Fabrice Bellard"
-role = "FFmpeg and QEMU Creator"
+role = "FFmpeg and QEMU Creator; Former FFmpeg Lead"
 avatar = "/images/maintainers/fabrice-bellard.webp"
 
 projects = ["FFmpeg", "QEMU", "TinyCC"]
+role_source = "https://bellard.org/"
+role_checked_at = "2026-10-02"
+
 [links]
   github = "fabrice"
 +++
 
-## Biography
+## Infrastructure contributions
 
-Fabrice Bellard is a legendary programmer who created FFmpeg, QEMU, TinyCC, and JSLinux. He holds a Pi computation record and has made extraordinary contributions to computing.
+Fabrice Bellard created FFmpeg and QEMU. His project page records that he launched FFmpeg in 2000 and led it for several years. This profile recognizes that founding role; it does not identify him as FFmpeg's current maintainer. [Fabrice Bellard's project page](https://bellard.org/).
 
-## Daily Work
-
-- Working on personal projects
-- Continuing to innovate in video, emulation, and web
-- Developing new technologies
-- Publishing technical papers
-
-## Challenges
-
-> "I enjoy working on challenging problems. When others say something is impossible, I find it interesting to prove otherwise."
-
-## Impact
-
-FFmpeg powers video processing everywhere. QEMU enables virtualization across the industry. Fabrice's work influences computing in profound ways.
+For current participation routes, use [FFmpeg's developer documentation](https://ffmpeg.org/developer.html).

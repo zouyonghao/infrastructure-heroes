@@ -7,11 +7,13 @@ description = 'Service mesh and discovery'
 maintainers = ["Mitchell Hashimoto"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "hashicorp/consul"
 [metrics]
@@ -44,4 +46,4 @@ HashiCorp Consul is a service networking solution to automate network configurat
 
 ### Sustainability
 
-Consul is backed by HashiCorp with strong commercial support. The open-source edition remains actively developed.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

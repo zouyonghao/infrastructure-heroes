@@ -14,16 +14,13 @@
             </button>
         </div>
 
-        <select id="health-filter" class="filter-select" aria-label="Filter projects by health status">
-            <option value="">All Health Status</option>
-            <option value="critical">🔴 Critical (0-59)</option>
-            <option value="warning">🟡 Warning (60-79)</option>
-            <option value="healthy">🟢 Healthy (80-100)</option>
+        <select id="health-filter" class="filter-select" aria-label="Filter projects by support information">
+            <option value="">All projects</option>
+            <option value="support">Support links checked</option>
+            <option value="unreviewed">Support links not yet checked</option>
         </select>
 
         <select id="sort-by" class="filter-select" aria-label="Sort projects">
-            <option value="score-desc">Score: High to Low</option>
-            <option value="score-asc">Score: Low to High</option>
             <option value="name-asc">Name: A to Z</option>
             <option value="name-desc">Name: Z to A</option>
         </select>
@@ -85,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         cardData.set(card, {
             title: (card.querySelector('.project-title')?.textContent || '').toLowerCase(),
             description: (card.querySelector('.project-description')?.textContent || '').toLowerCase(),
-            score: parseInt(card.querySelector('.score-number')?.textContent || '0', 10) || 0,
             health: card.dataset.health || ''
         });
     });
@@ -109,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (healthFilter.value) {
-            const healthText = healthFilter.options[healthFilter.selectedIndex].text.split(' ')[1];
-            filters.push('Status: ' + healthText);
+            const healthText = healthFilter.options[healthFilter.selectedIndex].text;
+            filters.push('Support: ' + healthText);
         }
 
         if (filters.length > 0) {
@@ -131,15 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const db = cardData.get(b);
 
             switch (sortValue) {
-                case 'score-asc':
-                    return da.score - db.score;
-                case 'name-asc':
-                    return da.title.localeCompare(db.title);
                 case 'name-desc':
                     return db.title.localeCompare(da.title);
-                case 'score-desc':
+                case 'name-asc':
                 default:
-                    return db.score - da.score;
+                    return da.title.localeCompare(db.title);
             }
         });
 
@@ -207,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             params.set('health', healthFilter.value);
         }
 
-        if (sortBy.value !== 'score-desc') {
+        if (sortBy.value !== 'name-asc') {
             params.set('sort', sortBy.value);
         }
 
@@ -257,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetAllFilters() {
         searchInput.value = '';
         healthFilter.value = '';
-        sortBy.value = 'score-desc';
+        sortBy.value = 'name-asc';
         clearSearchBtn.style.display = 'none';
         filterProjects();
     }

@@ -6,11 +6,13 @@ logo = "/images/logos/busybox.webp"
 description = 'The Swiss Army Knife of Embedded Linux'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 23
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "mirror/busybox"
 [metrics]

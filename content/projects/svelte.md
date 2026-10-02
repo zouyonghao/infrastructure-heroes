@@ -7,11 +7,13 @@ description = 'Cybernetically enhanced web apps'
 maintainers = ["Rich Harris"]
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 96
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "sveltejs/svelte"
 [metrics]
@@ -44,4 +46,4 @@ Svelte is a radical new approach to building user interfaces. It compiles your c
 
 ### Sustainability
 
-Svelte is maintained by Rich Harris (now at Vercel) with community support but limited direct funding.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/grafana.svg"
 description = 'Analytics and monitoring visualization'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "grafana/grafana"
 [metrics]
@@ -43,4 +45,4 @@ Grafana is an open-source analytics and interactive visualization web applicatio
 
 ### Sustainability
 
-Grafana is backed by Grafana Labs with strong commercial support. The open-source project thrives alongside the enterprise product.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

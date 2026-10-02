@@ -6,26 +6,16 @@ role = "Express.js Creator"
 avatar = "/images/maintainers/tj-holowaychuk.webp"
 
 projects = ["Express.js", "Koa", "Commander.js"]
+role_source = "https://github.com/expressjs/express"
+role_checked_at = "2026-10-02"
+
 [links]
   github = "tj"
   twitter = "tjholowaychuk"
 +++
 
-## Biography
+## Infrastructure contributions
 
-TJ Holowaychuk created Express.js, Koa, and dozens of other influential Node.js projects before moving to Go.
+The Express repository credits TJ Holowaychuk as its original author and documents its project team separately. This profile recognizes the creator's role; the project team and governance links are the source for current responsibilities. [Express repository](https://github.com/expressjs/express).
 
-## Daily Work
-
-- Building products at Apex
-- Contributing to open source
-- Designing APIs and tools
-- Exploring new technologies
-
-## Challenges
-
-> "Simple APIs let developers be productive. Complexity should be an option, not a requirement."
-
-## Impact
-
-TJ's projects power millions of Node.js applications. Express.js remains the most popular Node.js framework.
+For participation and support channels, see the [Express community page](https://expressjs.com/en/resources/community/).

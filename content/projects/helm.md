@@ -6,11 +6,13 @@ logo = "/images/logos/helm.svg"
 description = 'Kubernetes package manager'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "helm/helm"
 [metrics]
@@ -43,4 +45,4 @@ Helm is the package manager for Kubernetes, helping you manage Kubernetes applic
 
 ### Sustainability
 
-Helm is a CNCF graduated project with strong community support and corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/vitess.webp"
 description = 'Database clustering for MySQL'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "vitessio/vitess"
 [metrics]
@@ -43,4 +45,4 @@ Vitess is a database clustering system for horizontal scaling of MySQL through g
 
 ### Sustainability
 
-Vitess is a CNCF graduated project with strong backing from PlanetScale and others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

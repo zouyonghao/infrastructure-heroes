@@ -7,11 +7,13 @@ description = 'Dynamic programming language'
 maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "ruby/ruby"
 [metrics]
@@ -44,4 +46,4 @@ Ruby is a dynamic, open-source programming language with a focus on simplicity a
 
 ### Sustainability
 
-Ruby is led by Matz with a small core team. While popular, the project operates with limited funding compared to its widespread use.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

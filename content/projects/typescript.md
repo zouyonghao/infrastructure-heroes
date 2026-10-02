@@ -7,11 +7,13 @@ description = 'Typed superset of JavaScript'
 maintainers = ["Anders Hejlsberg"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "microsoft/TypeScript"
 [metrics]
@@ -44,4 +46,4 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 
 ### Sustainability
 
-TypeScript is developed by Microsoft with strong corporate backing and a healthy community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

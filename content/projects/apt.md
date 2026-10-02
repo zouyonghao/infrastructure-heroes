@@ -6,11 +6,13 @@ logo = "/images/logos/apt.svg"
 description = 'Debian/Ubuntu package management'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 23
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "Debian/apt"
 [metrics]
@@ -43,4 +45,4 @@ APT (Advanced Package Tool) is a package management system for Debian-based Linu
 
 ### Sustainability
 
-APT is maintained by the Debian project with limited funding. Development relies heavily on volunteer contributors.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

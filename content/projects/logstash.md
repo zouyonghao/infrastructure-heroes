@@ -6,11 +6,13 @@ logo = "/images/logos/logstash.svg"
 description = 'Server-side data processing pipeline'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "elastic/logstash"
 [metrics]
@@ -43,4 +45,4 @@ Logstash is a free and open server-side data processing pipeline that ingests da
 
 ### Sustainability
 
-Logstash is backed by Elastic NV with strong commercial support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

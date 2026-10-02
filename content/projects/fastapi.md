@@ -7,11 +7,13 @@ description = 'Modern Python web framework'
 maintainers = ["Sebastian Ramirez"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "fastapi/fastapi"
 [metrics]
@@ -44,4 +46,4 @@ FastAPI is a modern, fast (high-performance), web framework for building APIs wi
 
 ### Sustainability
 
-FastAPI is primarily maintained by one developer (Sebastián Ramírez). The project needs more contributors and funding.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

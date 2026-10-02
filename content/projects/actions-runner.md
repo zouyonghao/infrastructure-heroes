@@ -6,11 +6,13 @@ logo = "/images/logos/actions-runner.svg"
 description = 'Self-hosted runner for GitHub Actions'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 72
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "actions/runner"
 [metrics]
@@ -43,4 +45,4 @@ GitHub Actions Runner is the application that runs jobs from a GitHub Actions wo
 
 ### Sustainability
 
-GitHub Actions Runner is maintained by GitHub (Microsoft) with strong corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -1,0 +1,190 @@
+{
+  "curl": {
+    "checked_at": "2026-10-02",
+    "context": "curl publishes both financial and volunteer contribution routes. Its donation page explains that project donations cover project expenses.",
+    "actions": [
+      {
+        "label": "Support curl project expenses",
+        "url": "https://curl.se/donation.html",
+        "description": "Use the donation route linked by curl; review its description of how funds are used."
+      },
+      {
+        "label": "Help with questions and patch review",
+        "url": "https://curl.se/donation.html",
+        "description": "The project also welcomes time spent answering questions, contributing code, and reviewing patches."
+      }
+    ],
+    "sources": [
+      {
+        "label": "curl donation guidance",
+        "url": "https://curl.se/donation.html"
+      }
+    ]
+  },
+  "zlib": {
+    "checked_at": "2026-10-02",
+    "context": "The zlib website directs development contributions and issues to its GitHub repository. We have not verified a project donation route.",
+    "actions": [
+      {
+        "label": "Prepare a zlib issue or contribution",
+        "url": "https://github.com/madler/zlib",
+        "description": "Read the FAQ and manual first, then use the development repository for a reproducible issue or proposed change."
+      }
+    ],
+    "sources": [
+      {
+        "label": "zlib project website",
+        "url": "https://zlib.net/"
+      }
+    ]
+  },
+  "openssl": {
+    "checked_at": "2026-10-02",
+    "context": "OpenSSL documents a team of committers and routes for documentation, code, and community contributions.",
+    "actions": [
+      {
+        "label": "Contribute documentation or a fix",
+        "url": "https://openssl-library.org/community/",
+        "description": "Follow the contribution guidance and linked getting-started page. Use the separate security-reporting process for vulnerabilities."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenSSL community guidance",
+        "url": "https://openssl-library.org/community/"
+      }
+    ]
+  },
+  "openssh": {
+    "checked_at": "2026-10-02",
+    "context": "OpenSSH directs financial support through the OpenBSD donation framework.",
+    "actions": [
+      {
+        "label": "Use the official OpenSSH donation route",
+        "url": "https://www.openssh.org/donations.html",
+        "description": "Follow the project page to OpenBSD’s donation options and review where the funds go."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenSSH donations",
+        "url": "https://www.openssh.org/donations.html"
+      }
+    ]
+  },
+  "gnupg": {
+    "checked_at": "2026-10-02",
+    "context": "GnuPG’s donation page says it established a financing model and asks recurring donors to redirect funds to other projects. We have not independently audited its finances.",
+    "actions": [
+      {
+        "label": "Help reproduce or fix a reported bug",
+        "url": "https://www.gnupg.org/documentation/bts.html",
+        "description": "Search existing reports, include a minimal reproduction, and follow the project’s patch and security-reporting guidance."
+      }
+    ],
+    "sources": [
+      {
+        "label": "GnuPG funding statement",
+        "url": "https://www.gnupg.org/donate/"
+      },
+      {
+        "label": "GnuPG bug-reporting guidance",
+        "url": "https://www.gnupg.org/documentation/bts.html"
+      }
+    ]
+  },
+  "sqlite": {
+    "checked_at": "2026-10-02",
+    "context": "SQLite offers consortium membership for organizations that want to fund ongoing development and receive technical support.",
+    "actions": [
+      {
+        "label": "Explore SQLite Consortium membership",
+        "url": "https://www.sqlite.org/consortium.html",
+        "description": "Organizations can review the membership terms and contact route on SQLite’s own site."
+      }
+    ],
+    "sources": [
+      {
+        "label": "SQLite Consortium",
+        "url": "https://www.sqlite.org/consortium.html"
+      }
+    ]
+  },
+  "libpng": {
+    "checked_at": "2026-10-02",
+    "context": "The official libpng page identifies Cosmin Truta as its current maintainer and directs library questions to the png-mng-implement mailing list.",
+    "actions": [
+      {
+        "label": "Discuss a libpng issue with the project",
+        "url": "https://www.libpng.org/pub/png/libpng.html",
+        "description": "Use the linked implementation mailing list and review the current documentation before reporting a problem."
+      }
+    ],
+    "sources": [
+      {
+        "label": "libpng project website",
+        "url": "https://www.libpng.org/pub/png/libpng.html"
+      }
+    ]
+  },
+  "libsodium": {
+    "checked_at": "2026-10-02",
+    "context": "libsodium’s documentation describes volunteer development and provides its source repository and discussion mailing list.",
+    "actions": [
+      {
+        "label": "Join a technical discussion",
+        "url": "https://libsodium.gitbook.io/doc",
+        "description": "Use the mailing-list instructions to discuss a proposed change or a portability issue with the project."
+      }
+    ],
+    "sources": [
+      {
+        "label": "libsodium documentation",
+        "url": "https://libsodium.gitbook.io/doc"
+      }
+    ]
+  },
+  "ffmpeg": {
+    "checked_at": "2026-10-02",
+    "context": "FFmpeg documents separate routes for donations to the project and gifts to individual developers.",
+    "actions": [
+      {
+        "label": "Support FFmpeg through its official donation page",
+        "url": "https://ffmpeg.org/donations.html",
+        "description": "Choose deliberately between project funds and individual developer support."
+      },
+      {
+        "label": "Prepare an FFmpeg contribution",
+        "url": "https://ffmpeg.org/developer.html",
+        "description": "Read the developer guidelines before submitting a patch, including the testing and review requirements."
+      }
+    ],
+    "sources": [
+      {
+        "label": "FFmpeg donation guidance",
+        "url": "https://ffmpeg.org/donations.html"
+      },
+      {
+        "label": "FFmpeg developer documentation",
+        "url": "https://ffmpeg.org/developer.html"
+      }
+    ]
+  },
+  "busybox": {
+    "checked_at": "2026-10-02",
+    "context": "BusyBox’s FAQ explains how useful bug reports let other developers reproduce a problem, including on unusual hardware.",
+    "actions": [
+      {
+        "label": "Create a reproducible BusyBox bug report",
+        "url": "https://www.busybox.net/FAQ.html",
+        "description": "Confirm the problem on a current version and provide a reproduction recipe; include an emulation setup when hardware is unusual."
+      }
+    ],
+    "sources": [
+      {
+        "label": "BusyBox FAQ",
+        "url": "https://www.busybox.net/FAQ.html"
+      }
+    ]
+  }
+}

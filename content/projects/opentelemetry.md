@@ -6,11 +6,13 @@ logo = "/images/logos/opentelemetry.webp"
 description = 'Observability framework'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "open-telemetry/opentelemetry-collector"
 [metrics]
@@ -43,4 +45,4 @@ OpenTelemetry is a collection of APIs, SDKs, and tools to instrument, generate, 
 
 ### Sustainability
 
-OpenTelemetry is a CNCF project with strong corporate backing from major observability vendors and cloud providers.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

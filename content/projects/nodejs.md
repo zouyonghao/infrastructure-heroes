@@ -7,11 +7,13 @@ description = 'JavaScript runtime built on V8'
 maintainers = ["Ryan Dahl", "Matteo Collina"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "nodejs/node"
 [metrics]
@@ -44,4 +46,4 @@ Node.js is a cross-platform, open-source JavaScript runtime environment that run
 
 ### Sustainability
 
-Node.js is supported by the OpenJS Foundation with strong corporate backing from major tech companies including IBM, Microsoft, and Google.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/ceph.svg"
 description = 'Distributed storage system'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "ceph/ceph"
 [metrics]
@@ -43,4 +45,4 @@ Ceph is an open-source software-defined storage platform that provides object, b
 
 ### Sustainability
 
-Ceph is supported by the Ceph Foundation with backing from Red Hat, SUSE, and others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

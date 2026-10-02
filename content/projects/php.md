@@ -7,11 +7,13 @@ description = 'Server-side scripting language'
 maintainers = ["Rasmus Lerdorf"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "php/php-src"
 [metrics]
@@ -44,4 +46,4 @@ PHP is a general-purpose scripting language geared towards web development. It p
 
 ### Sustainability
 
-PHP is developed by volunteers with limited funding. Despite powering most of the web, the project relies heavily on volunteer contributions.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

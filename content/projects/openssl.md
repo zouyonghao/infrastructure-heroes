@@ -6,11 +6,13 @@ logo = "/images/logos/openssl.svg"
 description = 'Cryptography and SSL/TLS Toolkit'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 98
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "openssl/openssl"
 [metrics]

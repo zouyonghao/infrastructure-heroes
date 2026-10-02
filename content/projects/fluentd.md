@@ -6,11 +6,13 @@ logo = "/images/logos/fluentd.webp"
 description = 'Data collector for unified logging'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 72
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "fluent/fluentd"
 [metrics]
@@ -43,4 +45,4 @@ Fluentd is an open-source data collector for unified logging that allows you to 
 
 ### Sustainability
 
-Fluentd is a CNCF graduated project with strong community support and backing from Treasure Data.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

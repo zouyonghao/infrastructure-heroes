@@ -7,11 +7,13 @@ description = 'Secure runtime for JavaScript/TypeScript'
 maintainers = ["Ryan Dahl"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "denoland/deno"
 [metrics]
@@ -44,4 +46,4 @@ Deno is a secure runtime for JavaScript and TypeScript, created by Ryan Dahl, th
 
 ### Sustainability
 
-Deno is backed by Deno Land Inc. with commercial products supporting development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

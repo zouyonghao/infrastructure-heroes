@@ -6,11 +6,13 @@ logo = "/images/logos/certbot.svg"
 description = "ACME client for Let's Encrypt"
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 70
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "certbot/certbot"
 [metrics]
@@ -43,4 +45,4 @@ Certbot is a free, open-source software tool for automatically using Let's Encry
 
 ### Sustainability
 
-Certbot is developed by EFF with limited resources. Despite its importance for web security, funding is constrained.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

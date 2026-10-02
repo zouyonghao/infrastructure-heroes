@@ -6,11 +6,13 @@ logo = "/images/logos/argocd.svg"
 description = 'Declarative GitOps CD for Kubernetes'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "argoproj/argo-cd"
 [metrics]
@@ -43,4 +45,4 @@ Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that fo
 
 ### Sustainability
 
-Argo CD is a CNCF graduated project with strong community and corporate support from Akuity, Intuit, and others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/flux.webp"
 description = 'GitOps tool for Kubernetes'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 72
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "fluxcd/flux2"
 [metrics]
@@ -43,4 +45,4 @@ Flux is a set of continuous and progressive delivery solutions for Kubernetes th
 
 ### Sustainability
 
-Flux is a CNCF graduated project with support from Weaveworks and the community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

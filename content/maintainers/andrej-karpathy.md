@@ -1,6 +1,7 @@
 +++
 date = '2025-06-08T15:30:49+08:00'
-draft = false
+draft = true
+# Outside the infrastructure profile criteria; retained for editorial review.
 title = "Andrej Karpathy"
 role = "AI Researcher and Educator"
 avatar = "/images/maintainers/andrej-karpathy.webp"

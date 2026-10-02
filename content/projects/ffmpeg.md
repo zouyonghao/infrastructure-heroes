@@ -7,11 +7,13 @@ description = 'Complete multimedia framework'
 maintainers = ["Fabrice Bellard"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
@@ -44,4 +46,6 @@ FFmpeg is a complete, cross-platform solution to record, convert, and stream aud
 
 ### Sustainability
 
-FFmpeg is developed by volunteers with limited funding. Despite its critical role in video infrastructure, the project operates with minimal resources.
+FFmpeg documents separate routes for donations to the project and gifts to individual developers. [FFmpeg donation guidance](https://ffmpeg.org/donations.html). [FFmpeg developer documentation](https://ffmpeg.org/developer.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

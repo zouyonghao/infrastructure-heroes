@@ -6,11 +6,13 @@ logo = "/images/logos/rabbitmq.svg"
 description = 'Message broker software'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 75
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "rabbitmq/rabbitmq-server"
 [metrics]
@@ -43,4 +45,4 @@ RabbitMQ is an open-source message-broker software that originally implemented t
 
 ### Sustainability
 
-RabbitMQ is developed by VMware (Broadcom) with strong commercial support. The project has active development and a healthy community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

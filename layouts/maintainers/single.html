@@ -12,6 +12,9 @@
             {{ if .Params.role }}
             <p class="maintainer-role-large">{{ .Params.role }}</p>
             {{ end }}
+            {{ with .Params.role_source }}
+            <p class="support-provenance"><a href="{{ . }}">Role source</a> · checked {{ $.Params.role_checked_at }}</p>
+            {{ end }}
             {{ with .Params.status }}
             <p class="maintainer-status">
                 <span class="status-badge status-{{ . }}">
@@ -33,13 +36,7 @@
                     {{ end }}
                 {{ end }}
                 {{ if $projectPage }}
-                {{ $healthClass := "" }}
-                {{ with $projectPage.Params.health }}
-                    {{ if lt .score 60 }}{{ $healthClass = "project-tag-critical" }}
-                    {{ else if lt .score 80 }}{{ $healthClass = "project-tag-warning" }}
-                    {{ else }}{{ $healthClass = "project-tag-healthy" }}{{ end }}
-                {{ end }}
-                <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link {{ $healthClass }}"{{ with $projectPage.Params.health }} title="Health score: {{ .score }}/100"{{ end }}>{{ $projectName }}</a>
+                <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link">{{ $projectName }}</a>
                 {{ else }}
                 <span class="project-tag">{{ $projectName }}</span>
                 {{ end }}

@@ -7,11 +7,13 @@ description = 'JavaScript library for building UIs'
 maintainers = ["Jordan Walke", "Dan Abramov"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "facebook/react"
 [metrics]
@@ -44,4 +46,4 @@ React is a JavaScript library for building user interfaces, developed and mainta
 
 ### Sustainability
 
-React is developed by Meta with strong corporate backing and an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

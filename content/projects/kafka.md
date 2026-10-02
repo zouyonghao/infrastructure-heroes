@@ -6,11 +6,13 @@ logo = "/images/logos/kafka.svg"
 description = 'Distributed event streaming platform'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/kafka"
 [metrics]
@@ -43,4 +45,4 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
 
 ### Sustainability
 
-Kafka is backed by Confluent with strong commercial support. The Apache project has active development and a large contributor base.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

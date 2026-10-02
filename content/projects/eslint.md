@@ -7,11 +7,13 @@ description = 'JavaScript linting utility'
 maintainers = ["Filipe Fortes"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "eslint/eslint"
 [metrics]
@@ -44,4 +46,4 @@ ESLint is a pluggable JavaScript linter that helps identify and report on patter
 
 ### Sustainability
 
-ESLint is maintained by volunteers with sponsorship funding. The project needs more sustainable support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

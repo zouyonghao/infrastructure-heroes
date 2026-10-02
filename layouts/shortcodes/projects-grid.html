@@ -1,13 +1,13 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
 {{ $limit := .Get "limit" | default 0 }}
-{{ $sortedProjects := $projects.ByParam "health.score" }}
-{{ $sortedProjects = $sortedProjects.Reverse }}
+{{ $sortedProjects := $projects.ByTitle }}
+
 {{ if gt $limit 0 }}
     {{ $sortedProjects = first $limit $sortedProjects }}
 {{ end }}
 <div class="projects-grid">
     {{ range $sortedProjects }}
-    <div class="project-card" data-health="{{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
+    <div class="project-card" data-health="{{ if index site.Data.project_support .File.ContentBaseName }}support{{ else }}unreviewed{{ end }}">
         <div class="project-header">
             {{ if .Params.logo }}
             <div class="project-logo">
@@ -27,33 +27,31 @@
 
         {{ if .Params.health }}
         <div class="health-indicator">
-            <div class="health-score-display">
-                <div class="health-score-circle {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
-                    <span class="score-number">{{ .Params.health.score }}</span>
-                </div>
-                <span class="health-score-label">Health Score</span>
-            </div>
+            <p class="assessment-label">Automated indicators · <a href="/methodology/">About this data</a></p>
             <div class="health-metrics">
-                <div class="health-metric {{ if eq .Params.health.funding "stable" }}good{{ else if eq .Params.health.funding "at-risk" }}medium{{ else }}bad{{ end }}">
+                <div class="health-metric unknown">
                     <span class="metric-label">Funding</span>
-                    <span class="metric-value">{{ .Params.health.funding }}</span>
+                    <span class="metric-value">Unknown</span>
                 </div>
-                <div class="health-metric {{ if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}medium{{ else }}bad{{ end }}">
+                <div class="health-metric {{ if or (not .Params.health.maintenance) (eq .Params.health.maintenance "unknown") }}unknown{{ else if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}medium{{ else }}bad{{ end }}">
                     <span class="metric-label">Maintenance</span>
                     <span class="metric-value">{{ .Params.health.maintenance }}</span>
                 </div>
-                <div class="health-metric {{ if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}medium{{ else }}bad{{ end }}">
+                <div class="health-metric {{ if or (not .Params.health.contributors) (eq .Params.health.contributors "unknown") }}unknown{{ else if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}medium{{ else }}bad{{ end }}">
                     <span class="metric-label">Contributors</span>
-                    <span class="metric-value">{{ .Params.health.contributors }}</span>
+                    <span class="metric-value">{{ partial "indicator-label.html" (dict "dimension" "contributors" "value" .Params.health.contributors) }}</span>
                 </div>
-                <div class="health-metric {{ if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}medium{{ else }}bad{{ end }}">
-                    <span class="metric-label">Bus Factor</span>
-                    <span class="metric-value">{{ .Params.health.bus_factor }}</span>
+                <div class="health-metric {{ if or (not .Params.health.bus_factor) (eq .Params.health.bus_factor "unknown") }}unknown{{ else if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}medium{{ else }}bad{{ end }}">
+                    <span class="metric-label">Commit concentration</span>
+                    <span class="metric-value">{{ partial "indicator-label.html" (dict "dimension" "bus_factor" "value" .Params.health.bus_factor) }}</span>
                 </div>
             </div>
         </div>
         {{ end }}
         
+        {{ if index site.Data.project_support .File.ContentBaseName }}
+        <p class="project-action"><a class="link-arrow" href="{{ .RelPermalink }}#support">Ways to help →</a></p>
+        {{ end }}
         {{ if .Params.metrics.updated_at }}
         <div class="project-meta">
             <span class="last-updated" title="Last metrics update: {{ .Params.metrics.updated_at }}">

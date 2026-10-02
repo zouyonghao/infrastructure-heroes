@@ -6,11 +6,13 @@ logo = "/images/logos/apache-httpd.svg"
 description = 'Most widely used web server software'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 56
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/httpd"
 [metrics]
@@ -43,4 +45,4 @@ Apache HTTP Server is a free and open-source cross-platform web server software 
 
 ### Sustainability
 
-Apache HTTP Server is an Apache Foundation project with volunteer maintainers. Despite its importance, active development has slowed and the project needs new contributors.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/rook.svg"
 description = 'Cloud-native storage orchestrator'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "rook/rook"
 [metrics]
@@ -43,4 +45,4 @@ Rook is an open-source cloud-native storage orchestrator for Kubernetes, providi
 
 ### Sustainability
 
-Rook is a CNCF graduated project with strong community support and corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -7,11 +7,13 @@ description = 'Systems programming language'
 maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 94
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "rust-lang/rust"
 [metrics]
@@ -44,4 +46,4 @@ Rust is a multi-paradigm, general-purpose programming language designed for perf
 
 ### Sustainability
 
-Rust is supported by the Rust Foundation with strong corporate backing from AWS, Google, Microsoft, Mozilla, and Huawei.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

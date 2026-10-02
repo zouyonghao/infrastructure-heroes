@@ -1,0 +1,20 @@
+<section class="project-evidence" aria-labelledby="evidence-title">
+  <h2 id="evidence-title">Evidence and limitations</h2>
+  {{ with .Params.links.github }}
+  <p>Activity source: <a href="https://github.com/{{ . }}">{{ . }}</a> via the GitHub API.
+  Counts describe this repository, which may be a mirror or only part of the project.</p>
+  {{ end }}
+  {{ with .Params.metrics }}
+  <dl class="evidence-metrics">
+    <div><dt>Commits in 30 days</dt><dd>{{ .commits_30d }}</dd></div>
+    <div><dt>Commits in 90 days</dt><dd>{{ .commits_90d }}</dd></div>
+    <div><dt>Authors accounting for half the sampled commits</dt><dd>{{ if gt (.bus_factor_people | default 0) 0 }}{{ .bus_factor_people }}{{ else }}Unknown{{ end }}</dd></div>
+  </dl>
+  {{ if isset . "commits_sample_truncated" }}
+    {{ if .commits_sample_truncated }}<p>The 200-commit author sample does not cover the full 90 days. Author counts are lower bounds; concentration describes the sample only.</p>
+    {{ else }}<p>The sampled commit history reached the 90-day boundary or the end of the repository history.</p>{{ end }}
+  {{ else }}<p>Sample coverage was not recorded in this snapshot. Contributor and concentration indicators are unverified estimates until the next metrics collection.</p>{{ end }}
+  {{ end }}
+  <p>Few commits can reflect mature software. Commit authors do not establish merge rights, available maintainers, organizational diversity, or knowledge distribution. Funding is unknown; donation links alone do not establish income or runway.</p>
+  <a class="link-arrow" href="https://github.com/{{ site.Params.github }}/{{ site.Params.github_repo }}/issues/new?title={{ printf "Assessment correction: %s" .Title | urlquery }}">Correct this assessment or provide evidence →</a>
+</section>

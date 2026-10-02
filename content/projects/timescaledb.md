@@ -6,11 +6,13 @@ logo = "/images/logos/timescaledb.svg"
 description = 'PostgreSQL for time-series data'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "timescale/timescaledb"
 [metrics]
@@ -43,4 +45,4 @@ TimescaleDB is an open-source time-series database optimized for fast ingest and
 
 ### Sustainability
 
-TimescaleDB is backed by Timescale Inc. with strong commercial support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

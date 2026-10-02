@@ -1,309 +1,89 @@
----
-title: "Health Score Methodology"
-description: "How we calculate and evaluate the health of open source infrastructure projects"
----
++++
+title = "Methodology and Editorial Criteria"
+description = "What our activity indicators measure, what remains unknown, and how we review sources"
++++
 
-## Overview
+## What the site can tell you
 
-The Infrastructure Heroes health scoring system provides a standardized way to assess the sustainability and risk level of critical open source infrastructure projects. Our methodology combines quantitative metrics from GitHub with qualitative assessments to produce a comprehensive 0-100 health score.
+Infrastructure Heroes publishes repository activity indicators and sourced ways to support projects. **We do not currently publish an overall health rating.** Financial sustainability, security, and maintainer capacity cannot be established from stars, commit counts, or donation links.
 
-## Scoring Formula
+This is methodology **v2.0**, introduced on October 2, 2026. Earlier composite scores are retained as historical estimates, not current assessments. Changing the methodology does not mean the projects themselves became less healthy.
 
-The overall health score is calculated using a weighted formula:
+## Funding
 
-```
-Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
-```
+Funding is **unknown** unless financial evidence has been reviewed separately. A donation button shows a way to give; it does not show income, expenses, paid maintenance time, or runway. Popularity and corporate affiliation are not funding measurements.
 
-Each dimension is scored on a 0-100 scale, then weighted and combined for the final score.
+The automation may detect donation platforms in a repository's `FUNDING.yml` or topics. It does not assign funding points or a funding status from those signals. Official funding statements can be described with attribution in a project's support section; they are not independently audited financial ratings.
 
----
+## Automated activity indicators
 
-## The Four Dimensions
+The weekly GitHub job reads public repository metadata, recent commits, contributor counts, and GitHub releases. The collection date and repository link appear on each project page. An update to these metrics is not an editorial review of the profile.
 
-### 1. 💰 Funding (25% weight)
+### Maintenance
 
-Financial sustainability ensures a project can continue development, security audits, and infrastructure costs.
+The maintenance indicator adds three components, up to 100 internal points:
 
-| Status | Score | Criteria |
-|--------|-------|----------|
-| **Stable** | 90-100 | Multiple funding sources (corporate sponsors, foundations, donations) with 2+ year runway |
-| **At-Risk** | 40-89 | Limited funding, single source, or < 2 year runway |
-| **Critical** | 0-39 | No funding, unsustainable burn rate, or maintainer working unpaid |
+| Component | Observations → points |
+|---|---|
+| Days since repository push | <7 → 40; <30 → 35; <60 → 25; <90 → 15; <180 → 10; otherwise → 5 |
+| Days since latest GitHub release | <30 → 30; <90 → 25; <180 → 15; <365 → 10; otherwise → 5 |
+| Commits in 30 days | ≥50 → 30; ≥20 → 25; ≥10 → 20; ≥5 → 15; ≥1 → 10; none → 0 |
 
-**Indicators we track:**
-- GitHub Sponsors status
-- Open Collective funding
-- Corporate backing
-- Foundation support (Linux Foundation, Apache, etc.)
-- Recent funding announcements
+Totals of 70 or more display as **active**, 40–69 as **moderate**, and below 40 as **inactive**. These labels describe the automation's activity estimate. Missing release or push dates use the oldest recency bucket. Releases outside GitHub may be missed, and push time is not necessarily the time of a code change. Mature software may need few changes.
 
----
+### Contributors
 
-### 2. 🔧 Maintenance (30% weight)
+We sample up to the newest 200 commits and count distinct author identities observed within 90 days. The internal indicator is eight points per observed author, capped at 80, plus 20 points at ten or more authors. It is displayed as **many observed** (70+ points), **some observed** (40–69), or **few observed** (below 40).
 
-Active maintenance ensures bugs are fixed, security vulnerabilities are patched, and the project keeps up with dependencies.
+This does not measure growth, decline, company diversity, review work, or community health. Author identities can include bots or duplicate names. The separate all-time contributor count is not an active-maintainer count.
 
-| Status | Score | Criteria |
-|--------|-------|----------|
-| **Active** | 90-100 | Commit within 30 days, regular releases, < 50 open issues per maintainer |
-| **Moderate** | 40-89 | Commit within 90 days, releases within 6 months |
-| **Inactive** | 0-39 | No commits for 90+ days, stale issues/PRs |
+### Commit concentration
 
-**Automated metrics:**
-- Last commit date
-- Release frequency (average days between releases)
-- Issue response time
-- PR merge rate
-- Dependency update frequency
+We count how many authors account for half the sampled commits within 90 days. One author displays as **high** concentration, two as **moderate**, and three or more as **lower**. No recent author evidence means **unknown**.
 
-**Score calculation:**
-```
-Maintenance Score = (Recency × 0.4) + (Release Health × 0.3) + (Issue Velocity × 0.3)
-```
-
----
-
-### 3. 👥 Contributors (25% weight)
-
-A diverse contributor base reduces risk and brings varied perspectives to the project.
-
-| Status | Score | Criteria |
-|--------|-------|----------|
-| **Healthy** | 90-100 | 10+ active contributors, diverse companies, growing community |
-| **Declining** | 40-89 | < 10 active contributors, or decreasing trend over 12 months |
-| **Critical** | 0-39 | < 3 active contributors, or single-company dominated |
+The field is historically named `bus_factor`, but it is only a commit-concentration proxy. It does not establish how many people understand the software, hold release credentials, or can maintain it. A higher actual bus factor means more people can sustain a project and generally lower key-person risk.
 
-**Automated metrics:**
-- Unique contributors (last 90 days)
-- Contributor trend (6 month comparison)
-- First-time contributors (last 90 days)
-- Organizational diversity (companies represented)
-- Core team size
+### Sampling and missing data
 
-**Score calculation:**
-```
-Contributors Score = min(100, (Active Contributors × 8) + (Diversity Bonus × 10))
-```
+If 200 commits do not reach the 90-day boundary, additional count queries obtain the window's commit totals. Author counts and concentration still describe only the sample. The sample-coverage flag is stored with new collections; older records without it explicitly show that coverage is unverified.
 
----
+A required API failure prevents updating the affected project. If GitHub cannot provide the all-time contributor count for a large repository, the previous value is retained and flagged as unavailable. A GitHub mirror may omit development happening elsewhere. Funding and missing author evidence are never replaced by a zero health score.
 
-### 4. 🚌 Bus Factor (20% weight)
+## Support information
 
-Bus factor measures how many people would need to be unavailable before the project stalls. A high bus factor is a significant risk.
+Checked support entries contain a specific action, its destination, official source links, and the date those pages were checked. Checking a public page does not mean a maintainer confirmed an urgent need. We do not infer urgent requests from activity indicators.
 
-| Status | Score | Risk Level | Criteria |
-|--------|-------|------------|----------|
-| **Low** | 90-100 | Low | 5+ people with deep knowledge, documented processes |
-| **Medium** | 40-89 | Medium | 2-4 people with critical knowledge |
-| **High** | 0-39 | High | Single point of failure, tribal knowledge |
+For projects without checked entries, the site says so and links to their repository guidance. Contributors can suggest an official funding page, contribution guide, or a dated public request in an issue or pull request. Confirm the intended recipient of donations and respect each project's contribution and security-reporting instructions.
 
-**Assessment criteria:**
-- Number of core maintainers with merge rights
-- Documentation completeness
-- Onboarding process existence
-- Code review coverage
-- Domain expertise distribution
-
-**Automated indicators:**
-- Commit distribution (Gini coefficient of commits per author)
-- Code review participants
-- Documentation presence (README, CONTRIBUTING, etc.)
-
----
-
-## Automated Data Collection
-
-### GitHub API Metrics
-
-Our `fetch-github-metrics.py` script collects:
-
-```python
-metrics = {
-    "stars": repository stargazers count,
-    "forks": repository forks count,
-    "open_issues": open issues count,
-    "open_prs": open pull requests count,
-    "last_commit_date": date of most recent commit,
-    "last_release_date": date of most recent release,
-    "contributors_90d": unique contributors in last 90 days,
-    "commit_frequency": commits per week (average),
-    "issue_response_time_days": median days to first response,
-    "pr_merge_rate": percentage of PRs merged vs closed,
-    "bus_factor": number of contributors accounting for 50% of commits
-}
-```
+## Editorial scope
 
-### Score Auto-Calculation
-
-For each project, we fetch the metrics and calculate:
+We focus on reusable software infrastructure: libraries, runtimes, operating-system components, protocols, build tools, deployment tools, and services that other software depends on. A project's inclusion should explain that dependency role.
 
-```python
-def calculate_maintenance_score(metrics):
-    days_since_commit = (today - metrics['last_commit_date']).days
-    recency_score = max(0, 100 - (days_since_commit * 1.5))
-    
-    if metrics['last_release_date']:
-        days_since_release = (today - metrics['last_release_date']).days
-        release_score = max(0, 100 - (days_since_release / 3))
-    else:
-        release_score = 0
-    
-    return (recency_score * 0.6) + (release_score * 0.4)
+People profiles should document a concrete role in creating, maintaining, or contributing to that infrastructure. Being a technology celebrity, company founder, author, or educator alone is not enough. Profiles without a documented infrastructure connection are held as drafts for review.
 
-def calculate_contributor_score(metrics):
-    base_score = min(100, metrics['contributors_90d'] * 8)
-    trend_bonus = 10 if metrics['contributor_trend'] == 'growing' else 0
-    return min(100, base_score + trend_bonus)
+A creator, current maintainer, former maintainer, and contributor are different roles. Use the specific role supported by project documentation; do not treat a project's linked profiles as its complete current team. Existing profiles remain subject to source review. New or revised claims about current roles need a primary source and review date. Quotations require a traceable source.
 
-def calculate_bus_factor_score(metrics):
-    if metrics['bus_factor'] >= 5:
-        return 100
-    elif metrics['bus_factor'] >= 3:
-        return 70
-    elif metrics['bus_factor'] >= 2:
-        return 40
-    else:
-        return 15
-```
+## Corrections and review
 
----
+Each project page links to an assessment-correction issue. Please include the claim, proposed correction, primary source, and the date the evidence applies to. Project maintainers are welcome to clarify roles and support needs; being listed does not imply endorsement.
 
-## Manual Review Process
+There is no claim that all profiles receive quarterly human review. Automated collection and editorial source checking are separate processes. Financial ratings will require a documented evidence standard before they return.
 
-Automated scores are reviewed quarterly by maintainers for:
+## Historical estimates
 
-1. **Context accuracy** - Does the score reflect reality?
-2. **Recent events** - Security incidents, funding changes, maintainer departures
-3. **Qualitative factors** - Community health, governance quality, ecosystem importance
-
-### Adjustment Guidelines
-
-- **Maximum adjustment**: ±15 points from automated score
-- **Documentation required**: All manual adjustments must include rationale
-- **Review frequency**: Quarterly for scores < 60, annually for scores ≥ 60
-
----
-
-## Score Categories
-
-| Range | Status | Action Required |
-|-------|--------|-----------------|
-| 80-100 | 🟢 Healthy | Regular monitoring |
-| 60-79 | 🟡 Warning | Quarterly review, support outreach |
-| 0-59 | 🔴 Critical | Immediate attention, intervention planning |
-
----
-
-## Limitations & Considerations
-
-### What We Don't Capture
-
-- **Code quality** - We measure activity, not code correctness
-- **Security posture** - No automatic vulnerability scanning
-- **User satisfaction** - No user surveys or NPS scores
-- **Documentation quality** - Presence checked, not quality assessed
-
-### Project Maturity
-
-Mature, stable projects (like `zlib`) may have lower activity scores but are actually healthy. We manually adjust for:
-- Feature-complete projects
-- Maintenance-mode projects
-- Spec/reference implementations
-
-### GitHub Bias
-
-Our metrics favor GitHub-hosted projects. For projects on GitLab, SourceHut, or self-hosted:
-- We use available APIs where possible
-- Manual assessment is weighted higher
-- We encourage mirroring to GitHub for visibility
-
----
-
-## Data Transparency
-
-### Public Availability
-
-All health score data is:
-- ✅ Publicly visible on project pages
-- ✅ Version controlled in this repository
-- ✅ Available via API (planned)
-
-### Privacy
-
-We only collect:
-- Public repository data
-- Public contributor information
-- Public funding information
-
-No private data, emails, or non-public information is collected.
-
----
-
-## Contributing to Assessments
-
-### For Project Maintainers
-
-If you maintain a project listed here:
-1. Review your project's health data
-2. Open a PR to update funding/contribution information
-3. Contact us if automated metrics don't reflect reality
-
-### For Community Members
-
-Help improve our methodology:
-- Suggest new metrics via GitHub issues
-- Report inaccuracies
-- Contribute to the assessment scripts
-
----
-
-## Methodology Changelog
-
-### v1.0 (Current)
-- Initial four-dimension model
-- GitHub API automation
-- Quarterly review process
-
-### Planned v1.1
-- Security vulnerability tracking
-- Dependency freshness metrics
-- Community sentiment analysis
-
----
+Methodology v1.0 combined funding, maintenance, contributor, and commit-concentration estimates with weights of 25%, 30%, 25%, and 20%. Its funding heuristic used popularity and donation-link detection. Those numbers and their old categories are archived for transparency and must not be used as current funding or health assessments.
 
 {{< health-trends >}}
-
----
-
-## Questions?
-
-If you have questions about our methodology or want to discuss a specific project's assessment:
-
-- 🐛 [Open an issue on GitHub](https://github.com/zouyonghao/infrastructure-heroes/issues)
-- 📧 Contact: See our [About page](/about/)
-
----
-
-*Last updated: February 2026*
 
 
 
 ## 📈 Health Trends
 
-_Last updated: 2026-10-02_
+_Last collection: 2026-10-02_
 
-### Current Status
+Projects collected: 108. Projects without an overall rating: 108.
 
-| Metric | Value |
-|--------|-------|
-| Total Projects | 108 |
-| 🟢 Healthy (80-100) | 61 |
-| 🟡 Warning (60-79) | 30 |
-| 🔴 Critical (0-59) | 17 |
-| Average Score | 76.1 |
+35 snapshots recorded from 2026-02-08 to 2026-10-02.
 
-### Historical Data Points
-
-34 snapshots recorded from 2026-02-08 to 2026-10-02
+Earlier numeric scores are archived v1.0 estimates, not current health assessments. See the historical estimates section above.
 

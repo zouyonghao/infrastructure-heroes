@@ -6,11 +6,13 @@ description = 'The foundation of modern computing infrastructure'
 maintainers = ["Linus Torvalds"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "torvalds/linux"
 [metrics]

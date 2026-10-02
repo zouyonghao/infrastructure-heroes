@@ -6,11 +6,13 @@ logo = "/images/logos/influxdb.webp"
 description = 'Time series database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "low"
-  score = 63
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "influxdata/influxdb"
 [metrics]
@@ -43,4 +45,4 @@ InfluxDB is an open-source time series database designed to handle high write an
 
 ### Sustainability
 
-InfluxDB is backed by InfluxData with strong commercial support. The open-source edition remains actively developed.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

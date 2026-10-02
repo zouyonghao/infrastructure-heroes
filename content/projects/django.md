@@ -6,11 +6,13 @@ logo = "/images/logos/django.svg"
 description = 'Python web framework'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "django/django"
 [metrics]
@@ -43,4 +45,4 @@ Django is a high-level Python web framework that encourages rapid development an
 
 ### Sustainability
 
-Django is supported by the Django Software Foundation but relies heavily on volunteer contributions. More funding needed.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

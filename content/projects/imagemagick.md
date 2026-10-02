@@ -6,11 +6,13 @@ logo = "/images/logos/imagemagick.svg"
 description = 'Image manipulation toolkit'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 83
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
@@ -43,4 +45,4 @@ ImageMagick is a free and open-source cross-platform software suite for displayi
 
 ### Sustainability
 
-ImageMagick is maintained by a small team with minimal funding. The project needs sustainable support for such widely-used software.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -7,11 +7,13 @@ description = 'TypeScript-based web framework'
 maintainers = ["Misko Hevery", "John Papa"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "angular/angular"
 [metrics]
@@ -44,4 +46,4 @@ Angular is a TypeScript-based web application framework led by the Angular Team 
 
 ### Sustainability
 
-Angular is developed by Google with strong corporate backing and an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

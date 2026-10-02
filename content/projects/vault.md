@@ -7,11 +7,13 @@ description = 'Secrets management tool'
 maintainers = ["Mitchell Hashimoto"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 54
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "hashicorp/vault"
 [metrics]
@@ -44,4 +46,4 @@ HashiCorp Vault is a secrets management tool that provides a unified interface t
 
 ### Sustainability
 
-Vault is backed by HashiCorp with strong commercial support. The open-source project has a healthy community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

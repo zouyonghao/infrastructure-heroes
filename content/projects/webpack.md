@@ -7,11 +7,13 @@ description = 'JavaScript module bundler'
 maintainers = ["Tobias Koppers"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 66
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "webpack/webpack"
 [metrics]
@@ -44,4 +46,4 @@ webpack is a static module bundler for modern JavaScript applications that build
 
 ### Sustainability
 
-webpack is maintained by a small team with limited funding. Despite its critical role, the project needs sustainable support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

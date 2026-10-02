@@ -6,11 +6,13 @@ logo = "/images/logos/libsodium.webp"
 description = 'Modern cryptography library'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
-  score = 47
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "jedisct1/libsodium"
 [metrics]
@@ -43,4 +45,6 @@ libsodium is a modern, easy-to-use software library for encryption, decryption, 
 
 ### Sustainability
 
-libsodium is maintained by a small team with limited funding. The project needs support for such important security infrastructure.
+libsodium’s documentation describes volunteer development and provides its source repository and discussion mailing list. [libsodium documentation](https://libsodium.gitbook.io/doc).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

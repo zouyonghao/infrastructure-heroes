@@ -64,12 +64,14 @@ def compute_summary(projects: list) -> dict:
 
     Buckets match the site: critical < 60, warning 60-79, healthy >= 80.
     """
-    scores = [p["health"]["score"] for p in projects]
+    scores = [p["health"]["score"] for p in projects
+              if isinstance(p["health"].get("score"), (int, float))]
     return {
         "critical": sum(1 for s in scores if s < WARNING_MIN),
         "warning": sum(1 for s in scores if WARNING_MIN <= s < HEALTHY_MIN),
         "healthy": sum(1 for s in scores if s >= HEALTHY_MIN),
-        "avg_score": sum(scores) / len(scores) if scores else 0,
+        "avg_score": sum(scores) / len(scores) if scores else None,
+        "unrated": len(projects) - len(scores),
     }
 
 
@@ -106,8 +108,7 @@ def create_snapshot(
         except Exception as e:
             print(f"⚠️  Error loading {pf}: {e}")
             continue
-        if data["health"].get("score") is not None:
-            projects.append(data)
+        projects.append(data)
 
     # Create snapshot. total_projects is stored both at the top level and
     # inside summary: summary.json copies the latest snapshot's summary into
@@ -118,6 +119,7 @@ def create_snapshot(
     summary["total_projects"] = total
 
     snapshot = {
+        "methodology_version": "2.0",
         "date": today.strftime("%Y-%m-%d"),
         "month": today.strftime("%Y-%m"),
         "total_projects": total,
@@ -135,7 +137,9 @@ def create_snapshot(
             monthly_data = normalize_monthly_data(json.load(f))
 
     # Check if we already have an entry for today
-    monthly_data = [e for e in monthly_data if e["date"] != snapshot["date"]]
+    monthly_data = [e for e in monthly_data
+                    if (e["date"], e.get("methodology_version", "1.0")) !=
+                    (snapshot["date"], snapshot["methodology_version"])]
     monthly_data.append(snapshot)
 
     # Save updated monthly file
@@ -168,7 +172,11 @@ def update_summary_stats(data_dir: Path):
         print("⚠️  No historical data found")
         return
 
+    all_snapshots.sort(key=lambda s: (s["date"], s.get("methodology_version", "1.0")))
     current_summary = all_snapshots[-1].get("summary", {})
+    scored_snapshots = [s for s in all_snapshots
+                        if s["summary"].get("avg_score") is not None]
+    last_scored = scored_snapshots[-1]["summary"] if scored_snapshots else {}
 
     # Calculate trends
     summary = {
@@ -179,21 +187,22 @@ def update_summary_stats(data_dir: Path):
             "to": all_snapshots[-1]["date"],
         },
         "current_status": current_summary,
+        "last_scored_date": scored_snapshots[-1]["date"] if scored_snapshots else None,
         "trends": {
             "avg_score_over_time": [
                 {"date": s["date"], "value": s["summary"]["avg_score"]}
-                for s in all_snapshots
+                for s in scored_snapshots
             ],
             "critical_count_over_time": [
                 {"date": s["date"], "value": s["summary"]["critical"]}
-                for s in all_snapshots
+                for s in scored_snapshots
             ],
-            # Distribution of the latest snapshot; consumed by
+            # Distribution of the latest scored snapshot; consumed by
             # layouts/shortcodes/health-trends.html.
             "score_distribution": {
-                "healthy": current_summary.get("healthy", 0),
-                "warning": current_summary.get("warning", 0),
-                "critical": current_summary.get("critical", 0),
+                "healthy": last_scored.get("healthy", 0),
+                "warning": last_scored.get("warning", 0),
+                "critical": last_scored.get("critical", 0),
             },
         },
     }
@@ -223,26 +232,18 @@ def generate_trend_report():
     if report_path.exists():
         content = report_path.read_text(encoding="utf-8")
 
-        # Find or create trends section
+        # Report collection coverage separately from archived score estimates.
         trends_section = f"""
 
 ## 📈 Health Trends
 
-_Last updated: {summary['generated_at'][:10]}_
+_Last collection: {summary['generated_at'][:10]}_
 
-### Current Status
+Projects collected: {summary['current_status'].get('total_projects', 'N/A')}. Projects without an overall rating: {summary['current_status'].get('unrated', 0)}.
 
-| Metric | Value |
-|--------|-------|
-| Total Projects | {summary['current_status'].get('total_projects', 'N/A')} |
-| 🟢 Healthy (80-100) | {summary['current_status'].get('healthy', 'N/A')} |
-| 🟡 Warning (60-79) | {summary['current_status'].get('warning', 'N/A')} |
-| 🔴 Critical (0-59) | {summary['current_status'].get('critical', 'N/A')} |
-| Average Score | {summary['current_status'].get('avg_score', 0):.1f} |
+{summary['total_snapshots']} snapshots recorded from {summary['date_range']['from']} to {summary['date_range']['to']}.
 
-### Historical Data Points
-
-{summary['total_snapshots']} snapshots recorded from {summary['date_range']['from']} to {summary['date_range']['to']}
+Earlier numeric scores are archived v1.0 estimates, not current health assessments. See the historical estimates section above.
 
 """
 
@@ -274,10 +275,7 @@ def main():
     # Print summary
     print("\n📋 Current Status:")
     print(f"  Total Projects: {snapshot['total_projects']}")
-    print(f"  🟢 Healthy: {snapshot['summary']['healthy']}")
-    print(f"  🟡 Warning: {snapshot['summary']['warning']}")
-    print(f"  🔴 Critical: {snapshot['summary']['critical']}")
-    print(f"  📊 Average Score: {snapshot['summary']['avg_score']:.1f}")
+    print(f"  Unrated: {snapshot['summary']['unrated']}")
 
     # Generate trend report
     generate_trend_report()

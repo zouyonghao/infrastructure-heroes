@@ -7,11 +7,13 @@ description = 'Popular programming language'
 maintainers = ["Guido van Rossum"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "python/cpython"
 [metrics]
@@ -44,4 +46,4 @@ Python is a high-level, general-purpose programming language emphasizing code re
 
 ### Sustainability
 
-Python is supported by the Python Software Foundation with strong corporate backing. Guido van Rossum and the core team have built sustainable governance.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

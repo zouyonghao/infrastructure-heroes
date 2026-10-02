@@ -6,11 +6,13 @@ logo = "/images/logos/mongodb.svg"
 description = 'Document-oriented NoSQL database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "mongodb/mongo"
 [metrics]
@@ -43,4 +45,4 @@ MongoDB is a source-available cross-platform document-oriented database program.
 
 ### Sustainability
 
-MongoDB is backed by MongoDB Inc. with strong commercial support. Recent license changes (SSPL) affected open-source status but development continues.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

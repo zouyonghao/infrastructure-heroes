@@ -1,0 +1,19 @@
+<section class="project-support" id="support" aria-labelledby="support-title">
+  <h2 id="support-title">Ways to help {{ .Title }}</h2>
+  {{ with index site.Data.project_support .File.ContentBaseName }}
+    <p>{{ .context }}</p>
+    <ul class="support-actions">
+      {{ range .actions }}
+      <li><a href="{{ .url }}">{{ .label }}</a><p>{{ .description }}</p></li>
+      {{ end }}
+    </ul>
+    <p class="support-provenance">Official sources checked <time datetime="{{ .checked_at }}">{{ .checked_at }}</time>.
+      {{ range $i, $source := .sources }}{{ if $i }} · {{ end }}<a href="{{ $source.url }}">{{ $source.label }}</a>{{ end }}.
+      These are public participation routes, not a maintainer-confirmed urgent request.
+    </p>
+  {{ else }}
+    <p>We have not yet checked this project's specific support needs.</p>
+    {{ with .Params.links.github }}<p><a href="https://github.com/{{ . }}">Read the repository's contribution and security guidance</a> before proposing work.</p>{{ end }}
+    <p><a href="https://github.com/{{ site.Params.github }}/{{ site.Params.github_repo }}/issues/new?title={{ printf "Support information: %s" .Title | urlquery }}">Suggest a support route with an official source</a>.</p>
+  {{ end }}
+</section>

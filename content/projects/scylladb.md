@@ -6,11 +6,13 @@ logo = "/images/logos/scylladb.svg"
 description = 'High-performance NoSQL database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "scylladb/scylladb"
 [metrics]
@@ -43,4 +45,4 @@ ScyllaDB is a high-performance NoSQL database compatible with Apache Cassandra, 
 
 ### Sustainability
 
-ScyllaDB is backed by ScyllaDB Inc. with strong commercial support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

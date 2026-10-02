@@ -7,11 +7,13 @@ description = 'Compiler infrastructure and toolchain'
 maintainers = ["Chris Lattner"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "llvm/llvm-project"
 [metrics]
@@ -44,4 +46,4 @@ LLVM is a collection of modular and reusable compiler and toolchain technologies
 
 ### Sustainability
 
-LLVM is well-funded through the LLVM Foundation and corporate sponsors. It has a healthy contributor base and active development community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/istio.svg"
 description = 'Service mesh for Kubernetes'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "istio/istio"
 [metrics]
@@ -43,4 +45,4 @@ Istio is an open-source service mesh that provides a uniform way to connect, sec
 
 ### Sustainability
 
-Istio is a CNCF project with strong backing from Google, IBM, and major cloud providers.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

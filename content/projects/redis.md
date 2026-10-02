@@ -7,11 +7,13 @@ description = 'In-memory data structure store'
 maintainers = ["Salvatore Sanfilippo"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "redis/redis"
 [metrics]
@@ -44,4 +46,4 @@ Redis is an open-source, in-memory data structure store, used as a database, cac
 
 ### Sustainability
 
-Redis is backed by Redis Ltd. with commercial support. The open-source version has undergone license changes but remains actively maintained.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

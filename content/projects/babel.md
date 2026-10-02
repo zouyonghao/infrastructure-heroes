@@ -7,11 +7,13 @@ description = 'JavaScript compiler'
 maintainers = ["Sebastian McKenzie"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "babel/babel"
 [metrics]
@@ -44,4 +46,4 @@ Babel is a JavaScript compiler that allows you to use next-generation JavaScript
 
 ### Sustainability
 
-Babel is maintained by a small team with limited funding. The project has faced funding challenges despite its critical role.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

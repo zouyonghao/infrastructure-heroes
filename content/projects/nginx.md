@@ -7,11 +7,13 @@ description = 'High-performance web server and reverse proxy'
 maintainers = ["Igor Sysoev"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "nginx/nginx"
 [metrics]

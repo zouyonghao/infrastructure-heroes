@@ -7,11 +7,13 @@ description = 'Lightweight Python web framework'
 maintainers = ["Armin Ronacher"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
-  score = 43
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "pallets/flask"
 [metrics]
@@ -44,4 +46,4 @@ Flask is a lightweight WSGI web application framework in Python. It is designed 
 
 ### Sustainability
 
-Flask is maintained by Pallets with limited funding. The project needs more sustainable support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

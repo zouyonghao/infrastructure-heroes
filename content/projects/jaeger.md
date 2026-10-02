@@ -6,11 +6,13 @@ logo = "/images/logos/jaeger.svg"
 description = 'Distributed tracing system'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
@@ -43,4 +45,4 @@ Jaeger is an open-source, end-to-end distributed tracing system used for monitor
 
 ### Sustainability
 
-Jaeger is a CNCF graduated project with strong community support and backing from Uber and others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """
 Infrastructure Heroes - GitHub Metrics Fetcher
-Fetches project metrics from the GitHub API and computes health scores
+Fetches project metrics from the GitHub API and describes activity indicators
 
 Usage:
     python fetch-github-metrics.py --repo owner/repo [--output metrics.json]
     python fetch-github-metrics.py --repo owner/repo --frontmatter content/projects/project.md
 
-Health Score Formula (Methodology v1.0):
-    Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
-
-Each dimension scored 0-100, weighted and combined for final 0-100 score.
+Methodology v2.0 publishes activity indicators, not an overall health rating.
+Funding is unknown unless separately reviewed against public evidence.
 
 Authentication is read from the GITHUB_TOKEN environment variable only.
 """
@@ -152,7 +150,7 @@ def retry_delay(status_code: Optional[int], headers, body: Optional[str], attemp
 
 
 class GitHubMetricsFetcher:
-    """GitHub project metrics fetcher - Infrastructure Heroes Methodology v1.0"""
+    """GitHub project metrics fetcher - Infrastructure Heroes Methodology v2.0"""
 
     def __init__(self, token: Optional[str] = None):
         self.token = token or os.environ.get('GITHUB_TOKEN')
@@ -366,17 +364,20 @@ class GitHubMetricsFetcher:
             author = commit.get("author", {}).get("login") if commit.get("author") else None
             if not author:
                 # Fall back to the commit author name
-                author = commit.get("commit", {}).get("author", {}).get("name", "unknown")
+                author = commit.get("commit", {}).get("author", {}).get("name")
 
-            all_commit_authors.append(author)
+            if author and commit_time > ninety_days_ago:
+                all_commit_authors.append(author)
 
             if commit_time > thirty_days_ago:
                 recent_30d_commits += 1
-                authors_30d.add(author)
+                if author:
+                    authors_30d.add(author)
 
             if commit_time > ninety_days_ago:
                 recent_90d_commits += 1
-                authors_90d.add(author)
+                if author:
+                    authors_90d.add(author)
 
         if truncated:
             # The commit sample did not reach the 90-day boundary: get exact window counts with two per_page=1 requests.
@@ -452,12 +453,12 @@ class GitHubMetricsFetcher:
 
     def calculate_maintenance_score(self, metrics: dict) -> int:
         """
-        Compute the maintenance activity score (0-100) - Methodology v1.0
+        Compute the maintenance activity score (0-100) - Methodology v2.0
 
         Criteria:
-        - Last commit recency (40%)
-        - Release frequency (30%)
-        - Issue management (30%)
+        - Repository push recency (40 points)
+        - GitHub release recency (30 points)
+        - Commit activity (30 points)
         """
         score = 0
 
@@ -508,11 +509,11 @@ class GitHubMetricsFetcher:
 
     def calculate_contributors_score(self, metrics: dict) -> int:
         """
-        Compute the contributor health score (0-100) - Methodology v1.0
+        Compute the contributor health score (0-100) - Methodology v2.0
 
         Criteria:
         - Active contributors in last 90 days (80%)
-        - Contributor trend bonus (20%)
+        - Contributor count bonus (20 points at 10+ authors)
         """
         # Based on active contributors in the last 90 days
         contributors_90d = metrics.get("unique_contributors_last_90_days", 0)
@@ -520,14 +521,14 @@ class GitHubMetricsFetcher:
         # Base score: 8 points per contributor, capped at 80
         base_score = min(contributors_90d * 8, 80)
 
-        # Trend bonus: +20 points when there are 10+ contributors
+        # Count bonus: +20 points when there are 10+ contributors
         trend_bonus = 20 if contributors_90d >= 10 else 0
 
         return min(base_score + trend_bonus, 100)
 
-    def calculate_bus_factor_score(self, metrics: dict) -> int:
+    def calculate_bus_factor_score(self, metrics: dict) -> Optional[int]:
         """
-        Compute the bus-factor risk score (0-100) - Methodology v1.0
+        Compute the bus-factor risk score (0-100) - Methodology v2.0
 
         Higher score = lower risk
 
@@ -540,14 +541,11 @@ class GitHubMetricsFetcher:
         """
         authors = metrics.get("all_commit_authors", [])
         if not authors:
-            return 50  # Unknown
+            return None  # No author evidence; unknown is not a midpoint score.
 
         # Count commits per author
         author_counts = Counter(authors)
         total_commits = len(authors)
-
-        if total_commits == 0:
-            return 50
 
         # Number of people needed to cover 50% of commits
         sorted_authors = author_counts.most_common()
@@ -622,69 +620,13 @@ class GitHubMetricsFetcher:
 
         return funding_info
 
-    def calculate_funding_score(self, metrics: dict, funding_info: dict = None) -> Tuple[int, str]:
-        """
-        Estimate the funding score (0-100) - Methodology v1.0 Enhanced
-
-        Uses both popularity metrics and actual funding sources detected.
-        Manual verification is always recommended.
-
-        Returns: (score, status)
-        """
-        stars = metrics.get("stars", 0)
-        contributors = metrics.get("total_contributors") or 0
-
-        # Base score from popularity (as before)
-        if stars >= 10000 or contributors >= 100:
-            base_score = 70  # large projects usually have a funding base
-        elif stars >= 1000 or contributors >= 20:
-            base_score = 50  # mid-size projects may have unstable funding
-        else:
-            base_score = 25  # small projects likely lack funding
-
-        # Boost score based on detected funding sources
-        funding_boost = 0
-        if funding_info:
-            sources = funding_info.get("funding_sources", [])
-
-            # Having a FUNDING.yml shows intent
-            if funding_info.get("has_funding_file"):
-                funding_boost += 10
-
-            # Multiple funding sources is good
-            unique_sources = len(set(sources))
-            funding_boost += min(unique_sources * 5, 15)  # Max 15 points for diversity
-
-            # Specific platforms indicate active fundraising
-            platform_scores = {
-                "github_sponsors": 10,  # GitHub sponsors is reliable
-                "open_collective": 8,   # Open Collective is transparent
-                "tidelift": 8,          # Tidelift is professional
-                "patreon": 5,           # Patreon is common
-                "ko-fi": 3,
-                "liberapay": 3,
-                "custom": 2
-            }
-
-            for source in sources:
-                if source in platform_scores:
-                    funding_boost += platform_scores[source]
-
-        final_score = min(100, base_score + funding_boost)
-
-        # Determine status
-        if final_score >= 80:
-            return final_score, "stable"
-        elif final_score >= 50:
-            return final_score, "at-risk"
-        else:
-            return final_score, "critical"
+    def calculate_funding_score(self, metrics: dict, funding_info: dict = None) -> Tuple[Optional[int], str]:
+        """Popularity and donation links do not establish financial sustainability."""
+        return None, "unknown"
 
     def assess_health(self, metrics: dict) -> dict:
         """
-        Assess project health using Methodology v1.0.
-
-        Formula: (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
+        Describe automated activity indicators using Methodology v2.0.
         """
         if not metrics:
             return {}
@@ -696,13 +638,8 @@ class GitHubMetricsFetcher:
         funding_info = metrics.get("funding_info")
         funding_score, funding_status = self.calculate_funding_score(metrics, funding_info)
 
-        # Overall score (weighted average)
-        overall_score = int(
-            funding_score * 0.25 +
-            maintenance_score * 0.30 +
-            contributors_score * 0.25 +
-            bus_factor_score * 0.20
-        )
+        # Withhold the composite: these proxies cannot establish overall health.
+        overall_score = None
 
         # Dimension status labels
         def get_maintenance_status(score):
@@ -716,6 +653,7 @@ class GitHubMetricsFetcher:
             else: return "critical"
 
         def get_bus_factor_status(score):
+            if score is None: return "unknown"
             if score >= 70: return "low"
             elif score >= 40: return "medium"
             else: return "high"
@@ -731,7 +669,7 @@ class GitHubMetricsFetcher:
             "bus_factor": get_bus_factor_status(bus_factor_score),
             "bus_factor_score": bus_factor_score,
             "calculated_at": datetime.now().isoformat(),
-            "methodology_version": "1.0",
+            "methodology_version": "2.0",
             "recommendations": []
         }
 
@@ -740,10 +678,10 @@ class GitHubMetricsFetcher:
             assessment["recommendations"].append("⚠️ Low maintenance activity - consider contributing code or documentation")
 
         if contributors_score < 40:
-            assessment["recommendations"].append("🚨 Few active contributors - high community risk")
+            assessment["recommendations"].append("Few authors observed in the recent commit sample; review project context")
 
-        if bus_factor_score < 40:
-            assessment["recommendations"].append(f"🚌 High bus factor risk - only {metrics.get('bus_factor_people', 1)} person(s) handle 50% of work")
+        if bus_factor_score is not None and bus_factor_score < 40:
+            assessment["recommendations"].append(f"Concentrated commit sample - {metrics.get('bus_factor_people', 1)} author(s) account for 50% of sampled commits")
 
         if funding_status == "critical":
             assessment["recommendations"].append("💰 Project likely lacks funding - consider sponsorship")
@@ -778,18 +716,18 @@ def print_report(metrics: dict, assessment: dict):
     print(f"  ┌──────────────────┬────────┬──────────────┐")
     print(f"  │ Dimension        │ Score  │ Status       │")
     print(f"  ├──────────────────┼────────┼──────────────┤")
-    print(f"  │ 💰 Funding       │ {assessment.get('funding_score', 0):>3}/100 │ {assessment.get('funding', 'unknown'):>12} │")
+    print(f"  │ 💰 Funding       │ {str(assessment.get('funding_score') or '—'):>3}/100 │ {assessment.get('funding', 'unknown'):>12} │")
     print(f"  │ 🔧 Maintenance   │ {assessment.get('maintenance_score', 0):>3}/100 │ {assessment.get('maintenance', 'unknown'):>12} │")
     print(f"  │ 👥 Contributors  │ {assessment.get('contributors_score', 0):>3}/100 │ {assessment.get('contributors', 'unknown'):>12} │")
-    print(f"  │ 🚌 Bus Factor    │ {assessment.get('bus_factor_score', 0):>3}/100 │ {assessment.get('bus_factor', 'unknown'):>12} │")
+    print(f"  │ 🚌 Bus Factor    │ {str(assessment.get('bus_factor_score') or '—'):>3}/100 │ {assessment.get('bus_factor', 'unknown'):>12} │")
     print(f"  ├──────────────────┼────────┼──────────────┤")
-    print(f"  │ 📊 OVERALL       │ {assessment.get('overall_score', 0):>3}/100 │ {'🟢' if assessment.get('overall_score', 0) >= 80 else '🟡' if assessment.get('overall_score', 0) >= 60 else '🔴'} {assessment.get('overall_score', 0):>8} │")
+    print("  Overall health: not rated (insufficient evidence)")
     print(f"  └──────────────────┴────────┴──────────────┘")
 
     # Show funding sources if detected
     funding_info = metrics.get('funding_info', {})
     if funding_info and funding_info.get('funding_sources'):
-        print(f"\n💰 Funding Sources Detected:")
+        print(f"\n💰 Donation links detected (not evidence of income):")
         if funding_info.get('has_funding_file'):
             print(f"  ✅ FUNDING.yml file present")
         sources = funding_info.get('funding_sources', [])
@@ -803,9 +741,9 @@ def print_report(metrics: dict, assessment: dict):
 
     print("\n" + "="*70)
     if funding_info and funding_info.get('funding_sources'):
-        print("💡 Funding sources detected automatically. Score may still need manual verification.")
+        print("💡 Donation links do not establish funding received or financial runway.")
     else:
-        print("💡 Note: Funding status is estimated. Please verify manually.")
+        print("💡 Funding status is unknown; financial evidence requires a separate review.")
     print("="*70)
 
 
@@ -916,11 +854,12 @@ def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> b
         return False
 
     health_values = {
-        "funding": assessment.get('funding', 'unknown'),
+        "funding": "unknown",
         "maintenance": assessment.get('maintenance', 'unknown'),
         "contributors": assessment.get('contributors', 'unknown'),
         "bus_factor": assessment.get('bus_factor', 'unknown'),
-        "score": int(assessment.get('overall_score', 0) or 0),
+        "methodology_version": "2.0",
+        "assessment": "automated",
     }
 
     existing_metrics = existing.get("metrics")
@@ -942,6 +881,9 @@ def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> b
         "commits_30d": int(metrics.get('commits_last_30_days', 0) or 0),
         "commits_90d": int(metrics.get('commits_last_90_days', 0) or 0),
         "bus_factor_people": int(metrics.get('bus_factor_people', 0) or 0),
+        "contributors_90d": int(metrics.get('unique_contributors_last_90_days', 0) or 0),
+        "commits_sample_truncated": bool(metrics.get('commits_sample_truncated', False)),
+        "contributors_unavailable": bool(metrics.get('contributors_unavailable', False)),
     })
 
     new_frontmatter = rewrite_health_and_metrics(frontmatter, health_values, metrics_values)
@@ -959,7 +901,7 @@ def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> b
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch GitHub metrics and calculate health scores for Infrastructure Heroes",
+        description="Fetch GitHub metrics and describe activity indicators for Infrastructure Heroes",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

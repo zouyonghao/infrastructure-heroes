@@ -9,7 +9,7 @@ title: "Infrastructure Heroes"
 Supporting the <span class="text-gradient">Critical Infrastructure</span> Behind Our Digital World
 </h1>
 <p class="hero-description">
-Discover and support the open source projects that power billions of devices. Track project health, identify at-risk infrastructure, and help build a sustainable future for open source.
+Discover and support the open source projects that power billions of devices. Explore the people behind them, understand the available evidence, and find concrete ways to help.
 </p>
 <div class="hero-actions">
 <a href="#projects" class="btn btn-primary btn-large">Explore Projects</a>
@@ -25,9 +25,9 @@ Discover and support the open source projects that power billions of devices. Tr
 <section class="section" id="projects">
 <div class="container-wide">
 <div class="section-header">
-<h2 class="section-title">Project Health Monitor</h2>
+<h2 class="section-title">Project Activity & Support</h2>
 <p class="section-subtitle">
-Each project is scored on funding, maintenance, community health, and bus factor risk.
+Explore repository activity, evidence gaps, and practical ways to support each project.
 <a href="/projects/" class="link-arrow">View all projects →</a>
 </p>
 </div>

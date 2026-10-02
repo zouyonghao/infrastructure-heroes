@@ -6,11 +6,13 @@ logo = "/images/logos/memcached.svg"
 description = 'Distributed memory caching system'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
-  score = 34
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "memcached/memcached"
 [metrics]
@@ -43,4 +45,4 @@ Memcached is a free and open-source, high-performance, distributed memory object
 
 ### Sustainability
 
-Memcached has limited active development and few maintainers. This critical caching infrastructure needs renewed attention.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

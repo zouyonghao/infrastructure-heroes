@@ -7,11 +7,13 @@ description = 'Rust package manager and build tool'
 maintainers = ["Yehuda Katz"]
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "rust-lang/cargo"
 [metrics]
@@ -44,4 +46,4 @@ Cargo is the Rust package manager and build system, handling downloading depende
 
 ### Sustainability
 
-Cargo is developed as part of the Rust project, which is well-supported by the Rust Foundation with strong corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

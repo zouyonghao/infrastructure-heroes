@@ -8192,3 +8192,36 @@ article code,
     width: 100%;
   }
 }
+
+/* Evidence and project-specific support */
+.assessment-label, .support-provenance {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.assessment-note, .project-evidence, .project-support {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  line-height: 1.65;
+}
+.assessment-note { background: var(--color-primary-50); }
+.project-support { scroll-margin-top: 6rem; }
+.support-actions { padding-left: 1.25rem; }
+.support-actions li + li { margin-top: 1rem; }
+.support-actions a { font-weight: 600; }
+.support-actions p { margin: 0.25rem 0; }
+.evidence-metrics { display: grid; gap: 1rem; }
+.evidence-metrics dd { margin: 0.25rem 0 0; font-weight: 600; }
+.health-metric.unknown, .health-dimension.unknown, .dimension-value.unknown {
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+}
+.project-pill.unknown { border-color: var(--border-light); }
+@media (min-width: 640px) {
+  .evidence-metrics { grid-template-columns: repeat(3, 1fr); }
+}
+.projects-grid .health-indicator { flex-direction: column; }
+.projects-grid .health-metrics { width: 100%; }
+.assessment-label { margin: 0; }

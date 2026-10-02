@@ -11,7 +11,8 @@ maintainers = []
   maintenance = "unknown"  # active | moderate | inactive | unknown
   contributors = "unknown" # healthy | declining | critical | unknown
   bus_factor = "unknown"   # low | medium | high | unknown
-  score = 0               # 0-100 health score
+  methodology_version = "2.0"
+  assessment = "automated"
 
 # Optional: Track project succession for continuity
 # [successor]

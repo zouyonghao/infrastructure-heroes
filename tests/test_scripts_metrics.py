@@ -148,7 +148,7 @@ class HealthScoreTest(unittest.TestCase):
                 expected, f"active {active}")
 
     def test_bus_factor_boundaries(self):
-        self.assertEqual(self.fetcher.calculate_bus_factor_score({}), 50)
+        self.assertIsNone(self.fetcher.calculate_bus_factor_score({}))
         self.assertEqual(
             self.fetcher.calculate_bus_factor_score({"all_commit_authors": ["a"] * 10}), 15)
         self.assertEqual(
@@ -164,18 +164,26 @@ class HealthScoreTest(unittest.TestCase):
             self.fetcher.calculate_bus_factor_score(
                 {"all_commit_authors": list("abcdefghi")}), 100)
 
-    def test_funding_status_boundaries(self):
-        self.assertEqual(self.fetcher.calculate_funding_score({"stars": 999})[1], "critical")
-        self.assertEqual(self.fetcher.calculate_funding_score({"stars": 1000})[1], "at-risk")
-        self.assertEqual(self.fetcher.calculate_funding_score(
-            {"stars": 1000, "total_contributors": 0})[0], 50)
-        # Popularity base (70) plus a FUNDING.yml boost (10) crosses "stable".
-        score, status = self.fetcher.calculate_funding_score(
-            {"stars": 10000}, {"has_funding_file": True, "funding_sources": []})
-        self.assertEqual((score, status), (80, "stable"))
-        # An unavailable contributor count must not crash or inflate the score.
-        self.assertEqual(self.fetcher.calculate_funding_score(
-            {"stars": 0, "total_contributors": None})[0], 25)
+    def test_popularity_and_donation_links_never_establish_funding(self):
+        for metrics in ({"stars": 0}, {"stars": 1000000, "total_contributors": 1000},
+                        {"stars": 1000, "total_contributors": None}):
+            for funding in (None, {"has_funding_file": True,
+                                  "funding_sources": ["github_sponsors", "open_collective"]}):
+                self.assertEqual(self.fetcher.calculate_funding_score(metrics, funding),
+                                 (None, "unknown"))
+
+    def test_missing_evidence_is_not_a_composite_or_concentration_score(self):
+        assessment = self.fetcher.assess_health({"stars": 1000000})
+        self.assertIsNone(assessment["overall_score"])
+        self.assertIsNone(assessment["funding_score"])
+        self.assertEqual(assessment["bus_factor"], "unknown")
+        self.assertEqual(assessment["methodology_version"], "2.0")
+        # The CLI must also handle unknown values without formatting None as a number.
+        import contextlib
+        import io
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            metrics_mod.print_report({"stars": 1000000}, assessment)
+        self.assertIn("not rated", output.getvalue())
 
 
 class FrontmatterRewriteTest(unittest.TestCase):
@@ -235,8 +243,9 @@ class FrontmatterRewriteTest(unittest.TestCase):
         data, text = self.parsed()
 
         self.assertEqual(data["health"], {
-            "funding": "stable", "maintenance": "active",
-            "contributors": "healthy", "bus_factor": "low", "score": 88,
+            "funding": "unknown", "maintenance": "active",
+            "contributors": "healthy", "bus_factor": "low",
+            "methodology_version": "2.0", "assessment": "automated",
         })
         self.assertEqual(data["metrics"]["stars"], 100)
         self.assertEqual(data["metrics"]["commits_30d"], 3)
@@ -256,6 +265,21 @@ class FrontmatterRewriteTest(unittest.TestCase):
         # Each section appears exactly once.
         self.assertEqual(text.count("[health]"), 1)
         self.assertEqual(text.count("[metrics]"), 1)
+
+    def test_sample_coverage_is_persisted_without_overwriting_editorial_evidence(self):
+        original = self.path.read_text()
+        self.path.write_text(original.replace("[health]", '[review]\n  source = "https://example.org/report"\n  checked_at = "2026-10-02"\n[health]'))
+        self.assertTrue(self.update(metrics={
+            "unique_contributors_last_90_days": 7,
+            "commits_sample_truncated": True,
+            "contributors_unavailable": True,
+        }))
+        data, _ = self.parsed()
+        self.assertTrue(data["metrics"]["commits_sample_truncated"])
+        self.assertTrue(data["metrics"]["contributors_unavailable"])
+        self.assertEqual(data["metrics"]["contributors_90d"], 7)
+        self.assertEqual(data["review"]["source"], "https://example.org/report")
+        self.assertNotIn("score", data["health"])
 
     def test_metrics_last_section_round_trips(self):
         # The sample already has [metrics] as the final table; a second update
@@ -279,7 +303,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.path.write_text("+++\ntitle = 'T'\n+++\n\nBody\n", encoding="utf-8")
         self.assertTrue(self.update())
         data, text = self.parsed()
-        self.assertEqual(data["health"]["score"], 88)
+        self.assertNotIn("score", data["health"])
         self.assertEqual(data["metrics"]["stars"], 100)
         self.assertEqual(text.count("[health]"), 1)
         self.assertEqual(text.count("[metrics]"), 1)
@@ -413,6 +437,7 @@ class CommitCountFallbackTest(unittest.TestCase):
         self.assertEqual(metrics["commits_last_30_days"], 5)
         self.assertEqual(metrics["commits_last_90_days"], 5)
         self.assertEqual(metrics["total_contributors"], 42)
+        self.assertNotIn("old", metrics["all_commit_authors"])
         self.assertFalse([c for c in api.calls if "since=" in c],
                          "sample reached the boundary; no count calls expected")
 

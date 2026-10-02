@@ -5,11 +5,13 @@ logo = "/images/logos/letsencrypt.svg"
 description = 'Free SSL/TLS certificate authority'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 70
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "letsencrypt/letsencrypt"
 [metrics]
@@ -42,4 +44,4 @@ Let's Encrypt is a nonprofit certificate authority providing free TLS certificat
 
 ### Sustainability
 
-Let's Encrypt is run by ISRG with strong corporate sponsors including Mozilla, Cisco, Chrome, and major tech companies.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

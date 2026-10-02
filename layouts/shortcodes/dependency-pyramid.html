@@ -76,11 +76,7 @@
         </div>
         <div class="tier-content">
           {{ range sort $members "Title" }}
-            {{ $healthScore := .Params.health.score | default 50 }}
-            {{ $healthClass := "healthy" }}
-            {{ if lt $healthScore 60 }}{{ $healthClass = "critical" }}
-            {{ else if lt $healthScore 80 }}{{ $healthClass = "warning" }}{{ end }}
-            <a href="{{ .RelPermalink }}" class="project-pill {{ $healthClass }}" title="Health: {{ $healthScore }}/100">
+            <a href="{{ .RelPermalink }}" class="project-pill unknown" title="View project evidence and support options">
               {{ .Title }}
             </a>
           {{ end }}
@@ -90,9 +86,5 @@
     {{ end }}
   </div>
 
-  <div class="pyramid-legend">
-    <span class="legend-item"><span class="legend-dot healthy"></span> Healthy (80-100)</span>
-    <span class="legend-item"><span class="legend-dot warning"></span> Warning (60-79)</span>
-    <span class="legend-item"><span class="legend-dot critical"></span> Critical (&lt;60)</span>
-  </div>
+  <p class="pyramid-legend">Relationships are curated and may be incomplete. Project health is not rated.</p>
 </div>

@@ -1,6 +1,6 @@
 # Infrastructure Heroes - Data Automation Scripts
 
-This directory contains the scripts that collect, score, and maintain the site's project data.
+This directory contains the scripts that collect and maintain the site's project data.
 
 ## Quick start
 
@@ -83,39 +83,21 @@ CLI options: `--repo owner/repo`, `--output/-o`, `--frontmatter/-f`, `--dry-run`
   👤 Active Contributors (90d): 8
 
 🏥 Health Assessment:
-  Overall Score: 78/100
-  Funding: at-risk
+  Overall health: not rated (insufficient evidence)
+  Funding: unknown
   Maintenance: active
   Contributors: healthy
   Bus Factor: medium
 ============================================================
 ```
 
-### Health scoring (Methodology v1.0)
+### Activity indicators (Methodology v2.0)
 
-```
-Health Score = (Funding × 0.25) + (Maintenance × 0.30)
-             + (Contributors × 0.25) + (Bus Factor × 0.20)
-```
+See [the methodology](../content/methodology.md) for exact thresholds. Funding and overall scores are no longer inferred from GitHub popularity or donation links. The JSON report uses `null` for unavailable scores; project front matter omits the overall `score` field.
 
-| Dimension | Scoring basis |
-|-----------|---------------|
-| maintenance | Time since the last commit (40) + latest release (30) + commits in the last 30 days (30) |
-| contributors | Active contributors in the last 90 days × 8 (capped at 80) + 20 more when there are 10+ |
-| bus_factor | People needed to cover 50% of recent commits: ≥5 → 100; 3–4 → 70; 2 → 40; 1 → 15 |
-| funding | See the heuristic below |
+New collections persist `contributors_90d`, `commits_sample_truncated`, and `contributors_unavailable`. Author counts describe at most 200 recent commits. Commit concentration uses only sampled commits within 90 days. No recent author evidence means unknown.
 
-Dimension status thresholds: maintenance ≥70 active / ≥40 moderate / otherwise inactive; contributors ≥70 healthy / ≥40 declining / otherwise critical; bus_factor ≥70 low / ≥40 medium / otherwise high.
-
-### Funding heuristic (computed automatically)
-
-The script reads `.github/FUNDING.yml` and repository topics, then adds funding-source points on top of a popularity-based base score:
-
-- **Base score**: stars ≥ 10000 or contributors ≥ 100 → 70; stars ≥ 1000 or contributors ≥ 20 → 50; otherwise 25.
-- **Bonuses**: FUNDING.yml present +10; number of sources ×5 (capped at 15); per-platform points (github_sponsors 10, open_collective 8, tidelift 8, patreon 5, ko-fi 3, liberapay 3, custom 2).
-- **Status**: final score ≥80 stable; ≥50 at-risk; otherwise critical.
-
-> The funding score remains an automatic estimate and should be reviewed manually — but it is not "impossible to obtain automatically".
+Editorial support routes in `data/project_support.json` are maintained separately and are not overwritten by metrics collection.
 
 ## batch-update-health.py
 

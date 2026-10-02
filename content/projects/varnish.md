@@ -6,11 +6,13 @@ logo = "/images/logos/varnish.webp"
 description = 'HTTP accelerator and reverse proxy'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "high"
-  score = 23
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "varnishcache/varnish-cache"
 [metrics]
@@ -43,4 +45,4 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 
 ### Sustainability
 
-Varnish has commercial backing from Varnish Software, but the open-source project has limited resources.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

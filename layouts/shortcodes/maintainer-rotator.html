@@ -1,10 +1,10 @@
 {{/*
   Maintainer Rotator
-  Rotates through "[Project] is maintained by [Maintainer]" pairs.
+  Rotates through "[Project] has contributions from [Maintainer]" pairs.
 
   - Server-rendered: works without JavaScript (shows the first pair).
   - Pairs: one-maintainer projects, one per maintainer, excluding
-    stepped-back/retired maintainers; ordered worst health score first as
+    stepped-back/retired maintainers; ordered by project name as
     the no-JS fallback.
   - assets/js/site.js randomly selects `data-rotation-size` pairs and
     cycles them in random order, re-picking on each cycle; respects
@@ -26,12 +26,12 @@
 
 {{ $pairs := slice }}
 {{ $seen := slice }}
-{{ range sort $singles ".Params.health.score" "asc" }}
+{{ range sort $singles "Title" "asc" }}
   {{ $name := index .Params.maintainers 0 }}
   {{ $maintainerPage := index $maintainerPages $name }}
   {{ $status := "" }}
   {{ with $maintainerPage }}{{ $status = .Params.status | default "" }}{{ end }}
-  {{ if and (not (in $seen $name)) (not (in (slice "stepped-back" "retired") $status)) }}
+  {{ if and (not (in $seen $name)) (not (in (slice "stepped-back" "retired" "deceased") $status)) }}
     {{ $pairs = $pairs | append (dict "project" . "name" $name "maintainer" $maintainerPage) }}
     {{ $seen = $seen | append $name }}
   {{ end }}
@@ -51,7 +51,7 @@
           {{ end }}
           <p class="rotator-line">
             <a class="rotator-project" href="{{ $pair.project.RelPermalink }}">{{ $pair.project.Title }}</a>
-            <span class="rotator-verb">is maintained by</span>
+            <span class="rotator-verb">has contributions from</span>
             {{ with $pair.maintainer }}
               <a class="rotator-maintainer" href="{{ .RelPermalink }}">{{ $pair.name }}</a>
             {{ else }}

@@ -25,7 +25,7 @@
 {{ $critical := slice }}
 {{ range $published }}
   {{ $status := .Params.status | default "" }}
-  {{ if not (in (slice "stepped-back" "retired") $status) }}
+  {{ if not (in (slice "stepped-back" "retired" "deceased") $status) }}
     {{ $crit := intersect (.Params.projects | default slice) $highTitles }}
     {{ if $crit }}
       {{ $critical = $critical | append (dict "page" . "projects" $crit "n" (len $crit)) }}
@@ -44,7 +44,8 @@
         <div class="section-header">
             <h1 class="section-title">Infrastructure Maintainers</h1>
             <p class="section-subtitle">
-                Meet the dedicated individuals who keep critical open source infrastructure running.
+                Meet the creators, contributors, and maintainers behind open source infrastructure.
+                <a href="/methodology/#editorial-scope">Our inclusion criteria</a>.
             </p>
         </div>
 
@@ -59,16 +60,16 @@
             </div>
             <div class="maintainer-stat">
                 <span class="maintainer-stat-value">{{ len $highTitles }}</span>
-                <span class="maintainer-stat-label">High Bus-Factor Projects</span>
+                <span class="maintainer-stat-label">Concentrated Commit Samples</span>
             </div>
         </div>
 
         {{ if $critical }}
         <section class="critical-maintainers" aria-labelledby="critical-maintainers-title">
-            <h2 id="critical-maintainers-title" class="critical-maintainers-title">Single points of failure</h2>
+            <h2 id="critical-maintainers-title" class="critical-maintainers-title">Projects with concentrated commit activity</h2>
             <p class="critical-maintainers-intro">
-                These {{ len $critical }} maintainers are the only identified person behind at least one
-                high bus-factor project. Supporting them has the highest leverage for the ecosystem.
+                These profiles are associated with projects whose sampled commits are concentrated among few authors.
+                This does not establish sole responsibility, current availability, or an urgent need.
             </p>
             <div class="critical-maintainer-list">
                 {{ range $critical }}
@@ -86,7 +87,7 @@
             {{ if $unmappedHigh }}
             <div class="coverage-gap">
                 <p class="coverage-gap-title">
-                    {{ len $unmappedHigh }} more high bus-factor projects have no identified maintainer yet.
+                    {{ len $unmappedHigh }} more projects with concentrated commit samples have no linked profile yet.
                     Know who maintains them? Help us map them.
                 </p>
                 <ul class="coverage-gap-list">
@@ -142,7 +143,7 @@
                             {{ if eq $status "active" }}<span class="status-badge status-active">Active</span>{{ end }}
                             {{ if eq $status "stepped-back" }}<span class="status-badge status-stepped-back">Stepped back</span>{{ end }}
                             {{ if eq $status "retired" }}<span class="status-badge status-retired">Retired</span>{{ end }}
-                            {{ if $crit }}<span class="status-badge badge-critical" title="Maintainer of a high bus-factor project">High bus-factor risk</span>{{ end }}
+                            {{ if $crit }}<span class="status-badge badge-critical" title="Associated project has concentrated sampled commits">Concentrated activity</span>{{ end }}
                         </div>
                         {{ end }}
                     </div>

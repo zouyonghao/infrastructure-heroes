@@ -6,11 +6,13 @@ logo = "/images/logos/prettier.webp"
 description = 'Opinionated code formatter'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "prettier/prettier"
 [metrics]
@@ -43,4 +45,4 @@ Prettier is an opinionated code formatter that supports many languages and integ
 
 ### Sustainability
 
-Prettier is maintained by volunteers with limited funding. The project needs sustainable support for such widely-used software.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

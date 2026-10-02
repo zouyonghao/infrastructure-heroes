@@ -6,11 +6,13 @@ logo = "/images/logos/bind.webp"
 description = 'Most widely used DNS server software'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 74
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "isc-projects/bind9"
 [metrics]
@@ -47,4 +49,4 @@ BIND (Berkeley Internet Name Domain) is the most widely used DNS server software
 
 ### Sustainability
 
-BIND is maintained by ISC with limited funding. This critical internet infrastructure relies on grants and donations.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

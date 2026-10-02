@@ -6,11 +6,13 @@ logo = "/images/logos/traefik.svg"
 description = 'Cloud-native application proxy'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "traefik/traefik"
 [metrics]
@@ -43,4 +45,4 @@ Traefik is an open-source edge router that makes publishing your services easy. 
 
 ### Sustainability
 
-Traefik is backed by Traefik Labs with commercial support. The open-source project has a healthy community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

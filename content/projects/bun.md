@@ -7,11 +7,13 @@ description = 'Fast JavaScript runtime and toolkit'
 maintainers = ["Jarred Sumner"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 66
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "oven-sh/bun"
 [metrics]
@@ -44,4 +46,4 @@ Bun is a fast all-in-one JavaScript runtime and toolkit, including a bundler, te
 
 ### Sustainability
 
-Bun is backed by Oven (VC-funded) with commercial support planned. Development is active but dependent on funding.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

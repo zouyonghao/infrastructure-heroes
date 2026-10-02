@@ -7,11 +7,13 @@ description = 'Node.js web application framework'
 maintainers = ["TJ Holowaychuk"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 73
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "expressjs/express"
 [metrics]
@@ -44,4 +46,4 @@ Express.js is a minimal and flexible Node.js web application framework that prov
 
 ### Sustainability
 
-Express.js has minimal active maintenance and limited funding. This critical infrastructure needs renewed attention and support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

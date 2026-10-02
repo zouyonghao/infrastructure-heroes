@@ -39,8 +39,14 @@ class ComputeSummaryTest(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(
             hist.compute_summary([]),
-            {"critical": 0, "warning": 0, "healthy": 0, "avg_score": 0},
+            {"critical": 0, "warning": 0, "healthy": 0, "avg_score": None, "unrated": 0},
         )
+
+    def test_unknown_is_neither_zero_nor_critical(self):
+        summary = hist.compute_summary([{"health": {"funding": "unknown"}}, self._project(80)])
+        self.assertEqual(summary["unrated"], 1)
+        self.assertEqual(summary["critical"], 0)
+        self.assertEqual(summary["avg_score"], 80)
 
 
 class NormalizeMonthlyDataTest(unittest.TestCase):
@@ -115,6 +121,26 @@ class CreateSnapshotTest(_TempDirs):
         stored = json.loads(month_file.read_text())
         self.assertIsInstance(stored, list)
         self.assertEqual(stored[0]["summary"]["total_projects"], 3)
+
+    def test_unrated_projects_survive_and_same_day_legacy_history_is_preserved(self):
+        (self.projects / "unknown.md").write_text('+++\ntitle = "Unknown"\n[health]\nfunding = "unknown"\n+++\n')
+        self.data.mkdir(parents=True)
+        today = datetime.now()
+        month_file = self.data / f"{today:%Y-%m}.json"
+        legacy = {"date": f"{today:%Y-%m-%d}", "summary": {"avg_score": 90, "critical": 0}}
+        month_file.write_text(json.dumps([legacy]))
+        snapshot = hist.create_snapshot(projects_dir=self.projects, data_dir=self.data)
+        self.assertEqual(snapshot["total_projects"], 1)
+        self.assertEqual(snapshot["summary"]["unrated"], 1)
+        self.assertIsNone(snapshot["summary"]["avg_score"])
+        hist.create_snapshot(projects_dir=self.projects, data_dir=self.data)
+        stored = json.loads(month_file.read_text())
+        self.assertEqual(len(stored), 2)
+        self.assertEqual(stored[0], legacy)
+        summary = json.loads((self.data / "summary.json").read_text())
+        self.assertEqual(summary["trends"]["avg_score_over_time"],
+                         [{"date": legacy["date"], "value": 90}])
+        self.assertEqual(summary["current_status"]["unrated"], 1)
 
     def test_legacy_single_object_month_file_is_normalized(self):
         self.write_project("a", 90, health_last=True)

@@ -6,11 +6,13 @@ logo = "/images/logos/prometheus.svg"
 description = 'Monitoring and alerting toolkit'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "prometheus/prometheus"
 [metrics]
@@ -43,4 +45,4 @@ Prometheus is an open-source systems monitoring and alerting toolkit originally 
 
 ### Sustainability
 
-Prometheus is a CNCF graduated project with strong community and corporate support. It has a healthy contributor ecosystem and solid governance.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

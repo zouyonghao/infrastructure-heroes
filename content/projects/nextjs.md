@@ -7,11 +7,13 @@ description = 'React framework for production'
 maintainers = ["Guillermo Rauch"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "vercel/next.js"
 [metrics]
@@ -44,4 +46,4 @@ Next.js is a React framework that enables functionality such as server-side rend
 
 ### Sustainability
 
-Next.js is developed by Vercel with strong corporate backing and an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

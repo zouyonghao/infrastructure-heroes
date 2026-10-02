@@ -6,11 +6,13 @@ logo = "/images/logos/tidb.svg"
 description = 'Distributed NewSQL database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "pingcap/tidb"
 [metrics]
@@ -43,4 +45,4 @@ TiDB is an open-source, cloud-native, distributed SQL database designed to suppo
 
 ### Sustainability
 
-TiDB is backed by PingCAP with strong commercial support. The project has an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

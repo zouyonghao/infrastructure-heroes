@@ -7,11 +7,13 @@ description = 'Progressive JavaScript framework'
 maintainers = ["Evan You"]
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "vuejs/core"
 [metrics]
@@ -44,4 +46,4 @@ Vue.js is a progressive JavaScript framework for building user interfaces, desig
 
 ### Sustainability
 
-Vue.js is funded through sponsorships and maintained by Evan You and the team. More sustainable funding is needed.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

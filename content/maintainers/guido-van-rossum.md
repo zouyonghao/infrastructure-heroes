@@ -2,30 +2,19 @@
 date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Guido van Rossum"
-role = "Python Creator"
+role = "Python Creator; Former BDFL"
 avatar = "/images/maintainers/guido-van-rossum.webp"
 
 projects = ["Python"]
+role_source = "https://peps.python.org/pep-0013/"
+role_checked_at = "2026-10-02"
+
 [links]
   github = "gvanrossum"
-  twitter = "gaborrossum"
 +++
 
-## Biography
+## Infrastructure contributions
 
-Guido van Rossum created Python in 1991 and served as the Benevolent Dictator For Life (BDFL) until 2018. He now works at Microsoft on improving Python.
+Guido van Rossum created Python. The Python FAQ documents the language's origins. [Python's history](https://docs.python.org/3/faq/general.html#why-was-python-created-in-the-first-place).
 
-## Daily Work
-
-- Contributing to Python core development
-- Advising on language evolution
-- Improving Python performance at Microsoft
-- Mentoring the next generation of Python developers
-
-## Challenges
-
-> "Python's success is both gratifying and sometimes overwhelming. The language serves so many different communities with different needs."
-
-## Impact
-
-Python is one of the most popular programming languages, powering AI, data science, web development, and automation. Guido's design decisions continue to shape modern programming.
+Python's present governance uses a steering council and core team, as described in PEP 13. This profile recognizes Guido's founding role and does not imply that he alone leads or maintains Python. [Python governance](https://peps.python.org/pep-0013/).

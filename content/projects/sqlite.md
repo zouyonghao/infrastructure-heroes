@@ -7,11 +7,13 @@ description = 'Most widely deployed database engine in the world'
 maintainers = ["D. Richard Hipp"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 51
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "sqlite/sqlite"
 [metrics]
@@ -45,4 +47,6 @@ SQLite is a C library that implements a small, fast, self-contained, high-reliab
 
 ### Sustainability
 
-SQLite is developed by a small team led by D. Richard Hipp through Hwaci. While well-funded through consulting and support contracts, the project relies heavily on a small team.
+SQLite offers consortium membership for organizations that want to fund ongoing development and receive technical support. [SQLite Consortium](https://www.sqlite.org/consortium.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

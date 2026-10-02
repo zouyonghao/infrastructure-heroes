@@ -7,11 +7,13 @@ description = 'Programming language by Google'
 maintainers = ["Rob Pike", "Ken Thompson"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "golang/go"
 [metrics]
@@ -44,4 +46,4 @@ Go is a statically typed, compiled programming language designed at Google. It i
 
 ### Sustainability
 
-Go is developed and funded by Google with a strong open-source community. The project has sustainable governance and active development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

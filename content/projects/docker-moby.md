@@ -6,11 +6,13 @@ logo = "/images/logos/docker-moby.svg"
 description = 'Container runtime and toolkit'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 75
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "moby/moby"
 [metrics]
@@ -43,4 +45,4 @@ Moby is an open-source project created by Docker to advance the software contain
 
 ### Sustainability
 
-Moby is well-supported by Docker Inc. and the container ecosystem. It has a strong contributor base and corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

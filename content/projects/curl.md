@@ -7,11 +7,13 @@ description = 'Command line tool and library for transferring data with URLs'
 maintainers = ["Daniel Stenberg"]
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "curl/curl"
 [metrics]
@@ -45,4 +47,6 @@ curl is a command-line tool and library for transferring data with URLs. It supp
 
 ### Sustainability
 
-While curl has an active maintainer (Daniel Stenberg), the project relies heavily on his continued involvement. The project needs more funding for sustainable development.
+curl publishes both financial and volunteer contribution routes. Its donation page explains that project donations cover project expenses. [curl donation guidance](https://curl.se/donation.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

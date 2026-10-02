@@ -6,11 +6,13 @@ logo = "/images/logos/squid.webp"
 description = 'Caching proxy for the web'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 76
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "squid-cache/squid"
 [metrics]
@@ -43,4 +45,4 @@ Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It r
 
 ### Sustainability
 
-Squid has minimal funding and few active maintainers. This long-standing infrastructure project needs support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

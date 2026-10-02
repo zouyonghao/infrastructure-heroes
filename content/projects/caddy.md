@@ -6,11 +6,13 @@ logo = "/images/logos/caddy.svg"
 description = 'Web server with automatic HTTPS'
 
 [health]
-  funding = "stable"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 98
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "caddyserver/caddy"
 [metrics]
@@ -43,4 +45,4 @@ Caddy is an open-source web server with automatic HTTPS. It is designed to be ea
 
 ### Sustainability
 
-Caddy is developed by a small team with sponsorship funding. The project operates with limited resources despite its importance.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

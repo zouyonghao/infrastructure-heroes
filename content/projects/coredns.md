@@ -6,11 +6,13 @@ logo = "/images/logos/coredns.svg"
 description = 'Cloud-native DNS server'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 79
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "coredns/coredns"
 [metrics]
@@ -43,4 +45,4 @@ CoreDNS is a DNS server that chains plugins. It is written in Go and is the defa
 
 ### Sustainability
 
-CoreDNS is a CNCF graduated project with strong community support and corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

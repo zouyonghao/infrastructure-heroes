@@ -6,11 +6,13 @@ logo = "/images/logos/mysql.svg"
 description = 'Popular relational database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "low"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "mysql/mysql-server"
 [metrics]
@@ -47,4 +49,4 @@ MySQL is an open-source relational database management system. It is one of the 
 
 ### Sustainability
 
-MySQL is owned by Oracle with commercial support. The community edition remains open source, though development is controlled by Oracle.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

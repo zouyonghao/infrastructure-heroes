@@ -6,11 +6,13 @@ logo = "/images/logos/airflow.svg"
 description = 'Workflow orchestration platform'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/airflow"
 [metrics]
@@ -43,4 +45,4 @@ Apache Airflow is a platform to programmatically author, schedule, and monitor w
 
 ### Sustainability
 
-Airflow is an Apache Foundation project with strong backing from Astronomer and cloud providers.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

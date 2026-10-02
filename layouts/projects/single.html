@@ -18,17 +18,15 @@
 
         {{ if .Params.health }}
         <div class="health-dashboard">
-            <div class="health-score-display-large">
-                <div class="health-score-number {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
-                    {{ .Params.health.score }}
-                </div>
-                <div class="health-score-status {{ if ge .Params.health.score 80 }}healthy{{ else if ge .Params.health.score 60 }}warning{{ else }}critical{{ end }}">
-                    {{ if ge .Params.health.score 80 }}Project is healthy{{ else if ge .Params.health.score 60 }}Needs attention{{ else }}Critical - needs support{{ end }}
-                </div>
+            <div class="assessment-note">
+                <strong>Automated activity indicators</strong>
+                <p>Overall health is not rated. Funding has not been independently assessed.
+                These repository signals do not establish financial stability, security, or maintainer availability.
+                <a href="/methodology/">How to interpret this data</a>.</p>
             </div>
 
             <div class="health-dimensions">
-                <div class="health-dimension {{ if eq .Params.health.funding "stable" }}good{{ else if eq .Params.health.funding "at-risk" }}warning{{ else }}critical{{ end }}">
+                <div class="health-dimension unknown">
                     <div class="dimension-icon-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -37,24 +35,24 @@
                         </svg>
                     </div>
                     <div class="dimension-name">Funding</div>
-                    <div class="dimension-value {{ if eq .Params.health.funding "stable" }}healthy{{ else if eq .Params.health.funding "at-risk" }}warning{{ else }}critical{{ end }}">
-                        {{ .Params.health.funding | humanize }}
+                    <div class="dimension-value unknown">
+                        Unknown
                     </div>
                 </div>
 
-                <div class="health-dimension {{ if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
+                <div class="health-dimension {{ if or (not .Params.health.maintenance) (eq .Params.health.maintenance "unknown") }}unknown{{ else if eq .Params.health.maintenance "active" }}good{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
                     <div class="dimension-icon-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                         </svg>
                     </div>
                     <div class="dimension-name">Maintenance</div>
-                    <div class="dimension-value {{ if eq .Params.health.maintenance "active" }}healthy{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
+                    <div class="dimension-value {{ if or (not .Params.health.maintenance) (eq .Params.health.maintenance "unknown") }}unknown{{ else if eq .Params.health.maintenance "active" }}healthy{{ else if eq .Params.health.maintenance "moderate" }}warning{{ else }}critical{{ end }}">
                         {{ .Params.health.maintenance | humanize }}
                     </div>
                 </div>
 
-                <div class="health-dimension {{ if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
+                <div class="health-dimension {{ if or (not .Params.health.contributors) (eq .Params.health.contributors "unknown") }}unknown{{ else if eq .Params.health.contributors "healthy" }}good{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
                     <div class="dimension-icon-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -64,12 +62,12 @@
                         </svg>
                     </div>
                     <div class="dimension-name">Contributors</div>
-                    <div class="dimension-value {{ if eq .Params.health.contributors "healthy" }}healthy{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
-                        {{ .Params.health.contributors | humanize }}
+                    <div class="dimension-value {{ if or (not .Params.health.contributors) (eq .Params.health.contributors "unknown") }}unknown{{ else if eq .Params.health.contributors "healthy" }}healthy{{ else if eq .Params.health.contributors "declining" }}warning{{ else }}critical{{ end }}">
+                        {{ partial "indicator-label.html" (dict "dimension" "contributors" "value" .Params.health.contributors) }}
                     </div>
                 </div>
 
-                <div class="health-dimension {{ if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
+                <div class="health-dimension {{ if or (not .Params.health.bus_factor) (eq .Params.health.bus_factor "unknown") }}unknown{{ else if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
                     <div class="dimension-icon-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
@@ -77,29 +75,13 @@
                             <line x1="12" y1="17" x2="12.01" y2="17"></line>
                         </svg>
                     </div>
-                    <div class="dimension-name">Bus Factor</div>
-                    <div class="dimension-value {{ if eq .Params.health.bus_factor "low" }}healthy{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
-                        {{ .Params.health.bus_factor | humanize }} risk
+                    <div class="dimension-name">Commit concentration</div>
+                    <div class="dimension-value {{ if or (not .Params.health.bus_factor) (eq .Params.health.bus_factor "unknown") }}unknown{{ else if eq .Params.health.bus_factor "low" }}healthy{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
+                        {{ partial "indicator-label.html" (dict "dimension" "bus_factor" "value" .Params.health.bus_factor) }}
                     </div>
                 </div>
             </div>
 
-            {{ if lt .Params.health.score 60 }}
-            <div class="alert-critical" style="margin-top: 24px;">
-                <div class="alert-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
-                </div>
-                <div class="alert-content">
-                    <strong>This project needs your help!</strong>
-                    Consider contributing code, documentation, or funding to help maintain this critical infrastructure.
-                </div>
-            </div>
-            {{ end }}
-            
             {{ if .Params.metrics.updated_at }}
             <div class="last-updated-section">
                 <span class="metrics-timestamp">
@@ -117,6 +99,10 @@
             {{ end }}
         </div>
         {{ end }}
+
+        {{ partial "project-evidence.html" . }}
+
+        {{ partial "project-support.html" . }}
 
         {{ partial "project-successor.html" . }}
 

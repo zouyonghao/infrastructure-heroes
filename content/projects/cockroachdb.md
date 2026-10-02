@@ -6,11 +6,13 @@ logo = "/images/logos/cockroachdb.svg"
 description = 'Distributed SQL database'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "declining"
   bus_factor = "low"
-  score = 65
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
@@ -43,4 +45,4 @@ CockroachDB is a distributed SQL database built on a transactional and strongly-
 
 ### Sustainability
 
-CockroachDB is backed by Cockroach Labs with strong commercial support. The core edition remains open source.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

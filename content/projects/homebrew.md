@@ -6,11 +6,13 @@ logo = "/images/logos/homebrew.svg"
 description = 'Package manager for macOS and Linux'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "Homebrew/brew"
 [metrics]
@@ -43,4 +45,4 @@ Homebrew is a free and open-source software package management system that simpl
 
 ### Sustainability
 
-Homebrew is maintained by a volunteer team with some sponsorship funding. The project serves millions of developers but operates with limited resources.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

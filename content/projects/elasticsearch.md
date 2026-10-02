@@ -6,11 +6,13 @@ logo = "/images/logos/elasticsearch.svg"
 description = 'Distributed search and analytics engine'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "elastic/elasticsearch"
 [metrics]
@@ -43,4 +45,4 @@ Elasticsearch is a distributed, RESTful search and analytics engine capable of a
 
 ### Sustainability
 
-Elasticsearch is backed by Elastic NV with strong commercial support. Recent license changes created forks, but the project remains well-funded.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

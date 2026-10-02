@@ -6,11 +6,13 @@ logo = "/images/logos/glusterfs.webp"
 description = 'Scalable network filesystem'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "low"
-  score = 55
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "gluster/glusterfs"
 [metrics]
@@ -43,4 +45,4 @@ GlusterFS is a scalable network filesystem suitable for data-intensive tasks suc
 
 ### Sustainability
 
-GlusterFS development has slowed after Red Hat reduced investment. The project needs renewed community support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

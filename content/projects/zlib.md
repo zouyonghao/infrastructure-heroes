@@ -7,11 +7,13 @@ description = 'Massively used compression library'
 maintainers = ["Mark Adler"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 46
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "madler/zlib"
 [metrics]
@@ -44,4 +46,6 @@ zlib is a software library used for data compression. It is one of the most wide
 
 ### Sustainability
 
-zlib has been maintained by Mark Adler and Jean-loup Gailly since 1995. The project has minimal funding and relies on volunteer effort for a library used by billions of devices.
+The zlib website directs development contributions and issues to its GitHub repository. We have not verified a project donation route. [zlib project website](https://zlib.net/).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

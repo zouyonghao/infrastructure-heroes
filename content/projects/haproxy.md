@@ -6,11 +6,13 @@ logo = "/images/logos/haproxy.svg"
 description = 'High-performance load balancer'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 73
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "haproxy/haproxy"
 [metrics]
@@ -43,4 +45,4 @@ HAProxy is a free, very fast, and reliable reverse proxy offering high availabil
 
 ### Sustainability
 
-HAProxy has commercial backing from HAProxy Technologies. The open-source project benefits from corporate support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -7,11 +7,13 @@ description = 'Free implementation of OpenPGP'
 
 maintainers = ["Werner Koch"]
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 46
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "gpg/gnupg"
 
@@ -45,4 +47,6 @@ GnuPG (GNU Privacy Guard) is a free implementation of the OpenPGP standard for e
 
 ### Sustainability
 
-GnuPG is maintained primarily by Werner Koch with limited funding. This critical security tool has faced funding challenges despite its importance.
+GnuPG’s donation page says it established a financing model and asks recurring donors to redirect funds to other projects. We have not independently audited its finances. [GnuPG funding statement](https://www.gnupg.org/donate/). [GnuPG bug-reporting guidance](https://www.gnupg.org/documentation/bts.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

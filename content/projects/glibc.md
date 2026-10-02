@@ -6,11 +6,13 @@ description = 'The GNU C Library - foundation of Linux systems'
 maintainers = ["Carlos O'Donell"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "medium"
-  score = 28
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "bminor/glibc"
 [metrics]

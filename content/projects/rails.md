@@ -7,11 +7,13 @@ description = 'Full-stack Ruby web framework'
 maintainers = ["David Heinemeier Hansson"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 92
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "rails/rails"
 [metrics]
@@ -44,4 +46,4 @@ Ruby on Rails is a full-stack web application framework written in Ruby that inc
 
 ### Sustainability
 
-Rails is maintained by Rails Core with sponsorship funding but operates with limited resources relative to its importance.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

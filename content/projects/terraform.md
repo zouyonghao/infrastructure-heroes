@@ -7,11 +7,13 @@ description = 'Infrastructure as code software tool'
 maintainers = ["Mitchell Hashimoto"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "hashicorp/terraform"
 [metrics]
@@ -44,4 +46,4 @@ Terraform is an open-source infrastructure as code software tool that enables us
 
 ### Sustainability
 
-Terraform is backed by HashiCorp with strong commercial support. The open-source project has a large contributor community and solid corporate funding.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

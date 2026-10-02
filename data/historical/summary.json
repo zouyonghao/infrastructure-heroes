@@ -1,17 +1,19 @@
 {
-  "generated_at": "2026-10-02T09:02:31.049444",
-  "total_snapshots": 34,
+  "generated_at": "2026-10-02T09:09:24.658020",
+  "total_snapshots": 35,
   "date_range": {
     "from": "2026-02-08",
     "to": "2026-10-02"
   },
   "current_status": {
-    "critical": 17,
-    "warning": 30,
-    "healthy": 61,
-    "avg_score": 76.12037037037037,
+    "critical": 0,
+    "warning": 0,
+    "healthy": 0,
+    "avg_score": null,
+    "unrated": 108,
     "total_projects": 108
   },
+  "last_scored_date": "2026-10-02",
   "trends": {
     "avg_score_over_time": [
       {

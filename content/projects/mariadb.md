@@ -6,11 +6,13 @@ logo = "/images/logos/mariadb.svg"
 description = 'Community-developed MySQL fork'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 78
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "MariaDB/server"
 [metrics]
@@ -43,4 +45,4 @@ MariaDB is a community-developed, commercially supported fork of MySQL, intended
 
 ### Sustainability
 
-MariaDB is supported by the MariaDB Foundation and MariaDB Corporation. The project has governance challenges but maintains active development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

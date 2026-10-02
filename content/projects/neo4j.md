@@ -6,11 +6,13 @@ logo = "/images/logos/neo4j.svg"
 description = 'Graph database platform'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 83
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "neo4j/neo4j"
 [metrics]
@@ -43,4 +45,4 @@ Neo4j is a graph database management system described as an ACID-compliant trans
 
 ### Sustainability
 
-Neo4j is backed by Neo4j Inc. with strong commercial support. The community edition remains open source.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -8,10 +8,10 @@ A website dedicated to celebrating, documenting, and tracking the health of crit
 
 Infrastructure Heroes helps the community identify and support critical infrastructure projects that power modern software, particularly those at risk or underfunded. We track project health across four dimensions:
 
-- **Funding** - Financial sustainability
+- **Funding** - Evidence gaps and attributed public statements
 - **Maintenance** - Development activity and release frequency
-- **Contributors** - Community health and growth
-- **Bus Factor** - Risk from key person dependency
+- **Contributors** - Authors observed in a recent commit sample
+- **Commit concentration** - Distribution of sampled commits across authors
 
 ## Getting Started
 
@@ -80,11 +80,12 @@ infrastructure-heroes/
    description = 'Brief description of the project'
 
    [health]
-     funding = "stable"        # stable | at-risk | critical
+     funding = "unknown"       # Requires separately reviewed financial evidence
      maintenance = "active"    # active | moderate | inactive
      contributors = "healthy"  # healthy | declining | critical
      bus_factor = "low"        # low | medium | high
-     score = 85               # 0-100
+     methodology_version = "2.0"
+     assessment = "automated"
    +++
 
    ### Overview
@@ -135,17 +136,11 @@ infrastructure-heroes/
    Bio and details about the maintainer...
    ```
 
-## Health Score System
+## Activity indicators and evidence
 
-Projects are rated on a 0-100 scale based on four dimensions:
+The site publishes repository activity indicators, evidence limitations, and sourced support actions. Funding remains unknown and no composite health rating is published. Earlier v1.0 scores are archived estimates.
 
-| Score Range | Status | Color |
-|-------------|--------|-------|
-| 80-100 | Healthy | Green |
-| 60-79 | Warning | Yellow |
-| 0-59 | Critical | Red |
-
-See [HEALTH_METRICS.md](HEALTH_METRICS.md) for detailed methodology.
+See [the methodology and editorial criteria](content/methodology.md) for the exact collection rules, source requirements, and correction process. Checked support routes live in [data/project_support.json](data/project_support.json).
 
 ### Project Succession
 
@@ -277,7 +272,7 @@ Project metrics are automatically refreshed weekly via GitHub Actions:
 - **Workflow**: `.github/workflows/update-metrics.yml`
 - **Features**:
   - Fetches latest GitHub metrics for all projects
-  - Recalculates health scores using Methodology v1.0
+  - Refreshes activity indicators using Methodology v2.0
   - Records historical snapshots for trend analysis
   - Refreshes the Health Trends section of the Methodology page
   - Commits changes automatically and triggers a site deployment
@@ -288,25 +283,17 @@ You can manually trigger an update from the Actions tab, with options for:
 - **Dry run**: Preview changes without committing
 - **Limit**: Update only first N projects
 
-### Funding Detection
+### Funding information
 
-The updated metrics fetcher now detects real funding sources:
-- GitHub Sponsors (via FUNDING.yml)
-- Open Collective
-- Patreon
-- Tidelift
-- Ko-fi
-- Liberapay
-
-This provides more accurate funding scores beyond popularity heuristics.
+The metrics fetcher can detect donation platforms in `FUNDING.yml` and repository topics. These do not establish income or runway, so funding remains unknown. Public funding statements and participation routes are recorded separately with official sources and a checking date.
 
 ## Dependency Chain Visualization
 
 Inspired by [xkcd #2347](https://xkcd.com/2347/), the site includes a **Dependencies** page that visualizes how modern software stacks depend on critical infrastructure:
 
-- **Dependency Chains**: See how a simple React app depends on OpenSSL (maintained by 5 people) and zlib (single maintainer)
+- **Dependency Chains**: Explore curated relationships between applications and infrastructure libraries
 - **Foundation Projects**: Identify load-bearing infrastructure with no dependencies but depended on by everything
-- **At-Risk Pathways**: Highlight chains where high bus factor projects sit at the bottom
+- **Project Context**: Follow dependency links to activity evidence and support options
 
 Edit `data/dependencies.yaml` to add new dependency relationships.
 

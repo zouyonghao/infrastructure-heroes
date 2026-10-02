@@ -6,11 +6,13 @@ logo = "/images/logos/postgresql.svg"
 description = "The world's most advanced open source relational database"
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "postgres/postgres"
 [metrics]

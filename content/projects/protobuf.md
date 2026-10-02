@@ -6,11 +6,13 @@ logo = "/images/logos/protobuf.svg"
 description = 'Language-neutral data serialization'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
@@ -43,4 +45,4 @@ Protocol Buffers (protobuf) is Google's language-neutral, platform-neutral, exte
 
 ### Sustainability
 
-Protocol Buffers is maintained by Google with strong corporate backing and active development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

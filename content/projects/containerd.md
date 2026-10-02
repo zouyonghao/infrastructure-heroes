@@ -6,11 +6,13 @@ logo = "/images/logos/containerd.svg"
 description = 'Industry-standard container runtime'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "containerd/containerd"
 [metrics]
@@ -43,4 +45,4 @@ containerd is an industry-standard container runtime that manages the complete c
 
 ### Sustainability
 
-containerd is a CNCF graduated project with strong corporate support. It has an active community and solid funding through the foundation.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

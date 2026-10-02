@@ -6,11 +6,13 @@ logo = "/images/logos/zookeeper.svg"
 description = 'Distributed coordination service'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 77
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/zookeeper"
 [metrics]
@@ -43,4 +45,4 @@ Apache ZooKeeper is a centralized service for maintaining configuration informat
 
 ### Sustainability
 
-ZooKeeper is an Apache Foundation project but has seen reduced activity as newer solutions emerge.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

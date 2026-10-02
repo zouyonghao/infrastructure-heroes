@@ -6,11 +6,13 @@ logo = "/images/logos/loki.svg"
 description = 'Log aggregation system by Grafana'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 75
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "grafana/loki"
 [metrics]
@@ -43,4 +45,4 @@ Grafana Loki is a horizontally-scalable, highly-available, multi-tenant log aggr
 
 ### Sustainability
 
-Loki is backed by Grafana Labs with strong commercial support and active development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

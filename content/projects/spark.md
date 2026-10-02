@@ -6,11 +6,13 @@ logo = "/images/logos/spark.svg"
 description = 'Unified analytics engine'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/spark"
 [metrics]
@@ -43,4 +45,4 @@ Apache Spark is a unified analytics engine for large-scale data processing with 
 
 ### Sustainability
 
-Spark is an Apache Foundation project with strong backing from Databricks and major cloud providers.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

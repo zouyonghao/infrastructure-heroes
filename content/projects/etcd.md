@@ -6,11 +6,13 @@ logo = "/images/logos/etcd.webp"
 description = 'Distributed key-value store'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "etcd-io/etcd"
 [metrics]
@@ -43,4 +45,4 @@ etcd is a distributed, reliable key-value store for the most critical data of a 
 
 ### Sustainability
 
-etcd is a CNCF graduated project with strong community support. It has solid governance and corporate backing.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

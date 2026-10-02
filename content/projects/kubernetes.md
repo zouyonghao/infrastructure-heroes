@@ -7,11 +7,13 @@ description = 'Container orchestration platform'
 maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
@@ -44,4 +46,4 @@ Kubernetes is an open-source container orchestration system for automating deplo
 
 ### Sustainability
 
-Kubernetes is supported by the Cloud Native Computing Foundation (CNCF) with strong corporate backing from Google, Red Hat, Microsoft, and many others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

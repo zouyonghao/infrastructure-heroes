@@ -6,11 +6,13 @@ logo = "/images/logos/minio.svg"
 description = 'High-performance object storage'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
   bus_factor = "low"
-  score = 43
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "minio/minio"
 [metrics]
@@ -43,4 +45,4 @@ MinIO is a high-performance, S3 compatible object store built for large scale AI
 
 ### Sustainability
 
-MinIO has commercial backing from MinIO Inc. The project has a healthy open-source community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

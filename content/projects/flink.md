@@ -6,11 +6,13 @@ logo = "/images/logos/flink.webp"
 description = 'Stream processing framework'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "apache/flink"
 [metrics]
@@ -43,4 +45,4 @@ Apache Flink is a framework and distributed processing engine for stateful compu
 
 ### Sustainability
 
-Flink is an Apache Foundation project with strong backing from Alibaba and Ververica.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

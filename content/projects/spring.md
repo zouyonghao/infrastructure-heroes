@@ -5,11 +5,13 @@ logo = "/images/logos/spring.svg"
 description = 'Java application framework'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
@@ -42,4 +44,4 @@ Spring Framework is a comprehensive programming and configuration model for mode
 
 ### Sustainability
 
-Spring is backed by VMware (Broadcom) with strong commercial support. The project has an active community.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

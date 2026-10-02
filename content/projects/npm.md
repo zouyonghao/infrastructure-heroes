@@ -6,11 +6,13 @@ logo = "/images/logos/npm.svg"
 description = 'JavaScript package manager'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 82
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "npm/cli"
 [metrics]
@@ -43,4 +45,4 @@ npm is the world's largest software registry and package manager for JavaScript,
 
 ### Sustainability
 
-npm is owned by GitHub (Microsoft) with strong corporate backing. The registry and CLI are well-funded and actively developed.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/jenkins.svg"
 description = 'Open source automation server'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 75
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "jenkinsci/jenkins"
 [metrics]
@@ -43,4 +45,4 @@ Jenkins is an open-source automation server that enables developers to reliably 
 
 ### Sustainability
 
-Jenkins is supported by the Continuous Delivery Foundation but needs more funding for sustainable development.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

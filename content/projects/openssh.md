@@ -7,11 +7,13 @@ description = 'Secure Shell connectivity tools'
 maintainers = ["Theo de Raadt"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 68
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "openssh/openssh-portable"
 [metrics]
@@ -44,4 +46,6 @@ OpenSSH is a suite of secure networking utilities based on the Secure Shell prot
 
 ### Sustainability
 
-OpenSSH is developed primarily by the OpenBSD project. While critical to internet security, it relies heavily on OpenBSD Foundation funding and volunteer contributions.
+OpenSSH directs financial support through the OpenBSD donation framework. [OpenSSH donations](https://www.openssh.org/donations.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

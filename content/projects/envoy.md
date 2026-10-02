@@ -7,11 +7,13 @@ description = 'Cloud-native edge/service proxy'
 maintainers = ["Matt Klein"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "envoyproxy/envoy"
 [metrics]
@@ -44,4 +46,4 @@ Envoy is an open-source edge and service proxy designed for cloud-native applica
 
 ### Sustainability
 
-Envoy is a CNCF graduated project with strong community and corporate backing from Lyft, Google, and others.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

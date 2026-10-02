@@ -7,11 +7,13 @@ description = 'IT automation and configuration management'
 maintainers = ["Jeff Geerling"]
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 91
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "ansible/ansible"
 [metrics]
@@ -44,4 +46,4 @@ Ansible is an open-source software provisioning, configuration management, and a
 
 ### Sustainability
 
-Ansible is owned by Red Hat and has strong corporate backing. The community version remains actively developed with a healthy contributor base.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

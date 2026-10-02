@@ -6,11 +6,13 @@ logo = "/images/logos/libjpeg-turbo.svg"
 description = 'JPEG image codec with SIMD acceleration'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  score = 44
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "libjpeg-turbo/libjpeg-turbo"
 [metrics]
@@ -43,4 +45,4 @@ libjpeg-turbo is a JPEG image codec that uses SIMD instructions to accelerate ba
 
 ### Sustainability
 
-libjpeg-turbo is maintained by a single developer with minimal funding. This critical library needs sustainable support.
+Financial sustainability and maintainer capacity have not yet been reviewed against current primary sources. See the evidence and support sections above for available information and a way to suggest corrections.

@@ -6,11 +6,13 @@ logo = "/images/logos/libpng.svg"
 description = 'Official PNG reference library'
 
 [health]
-  funding = "at-risk"
+  funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
-  score = 41
+  methodology_version = "2.0"
+  assessment = "automated"
+
 [links]
   github = "glennrp/libpng"
 [metrics]
@@ -43,4 +45,6 @@ libpng is the official PNG reference library. It is used by virtually every appl
 
 ### Sustainability
 
-libpng has minimal funding and very few active maintainers. This critical library needs support for a library used by virtually every computer.
+The official libpng page identifies Cosmin Truta as its current maintainer and directs library questions to the png-mng-implement mailing list. [libpng project website](https://www.libpng.org/pub/png/libpng.html).
+
+Source pages checked 2026-10-02. Financial capacity has not been independently assessed.

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Batch update health scores for all projects
+Batch update activity indicators for all projects
 Usage: python scripts/batch-update-health.py [--dry-run] [--limit 10]
 
 This script:
 1. Reads all project files
 2. Extracts GitHub repo from [links] section
 3. Fetches metrics from GitHub API
-4. Calculates health scores using Methodology v1.0
+4. Describes activity indicators using Methodology v2.0
 5. Updates project frontmatter
 
 Requirements:
@@ -57,7 +57,7 @@ def extract_github_repo(project_file: Path) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Batch update health scores for all Infrastructure Heroes projects"
+        description="Batch update activity indicators for all Infrastructure Heroes projects"
     )
     parser.add_argument(
         "--dry-run",
@@ -142,7 +142,7 @@ def main():
             if not update_hugo_frontmatter(project_file, assessment, metrics):
                 raise RuntimeError("failed to update front matter")
             
-            print(f"  ✅ Updated: Score {assessment.get('overall_score', 0)}/100 "
+            print(f"  ✅ Updated: automated indicators "
                   f"({assessment.get('maintenance', 'unknown')}/"
                   f"{assessment.get('contributors', 'unknown')}/"
                   f"{assessment.get('bus_factor', 'unknown')}/"
@@ -176,7 +176,7 @@ def main():
         print("\n📝 Next steps:")
         print("  1. Review the updated files with: git diff content/projects/")
         print("  2. Build site locally: hugo server -D")
-        print("  3. Commit changes: git add content/projects/ && git commit -m 'Update health scores'")
+        print("  3. Commit changes: git add content/projects/ && git commit -m 'Update activity indicators'")
 
 
 if __name__ == "__main__":
