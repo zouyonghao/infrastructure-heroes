@@ -92,4 +92,7 @@ jobs:
           Workflow: ${{ github.workflow }}
           Run: ${{ github.run_number }}"
           
+          # Rebase onto any human commits that landed while metrics were
+          # fetching, otherwise the push is rejected as non-fast-forward.
+          git pull --rebase origin master
           git push
