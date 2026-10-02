@@ -9,6 +9,13 @@
             {{ if .Params.role }}
             <p class="maintainer-role-large">{{ .Params.role }}</p>
             {{ end }}
+            {{ with .Params.status }}
+            <p class="maintainer-status">
+                <span class="status-badge status-{{ . }}">
+                    {{ if eq . "active" }}Active{{ else if eq . "stepped-back" }}Stepped back{{ else if eq . "retired" }}Retired{{ else }}{{ . }}{{ end }}
+                </span>
+            </p>
+            {{ end }}
             {{ if .Params.projects }}
             <div class="maintainer-projects-large">
                 {{ range .Params.projects }}
@@ -23,7 +30,13 @@
                     {{ end }}
                 {{ end }}
                 {{ if $projectPage }}
-                <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link">{{ $projectName }}</a>
+                {{ $healthClass := "" }}
+                {{ with $projectPage.Params.health }}
+                    {{ if lt .score 60 }}{{ $healthClass = "project-tag-critical" }}
+                    {{ else if lt .score 80 }}{{ $healthClass = "project-tag-warning" }}
+                    {{ else }}{{ $healthClass = "project-tag-healthy" }}{{ end }}
+                {{ end }}
+                <a href="{{ $projectPage.RelPermalink }}" class="project-tag project-tag-link {{ $healthClass }}"{{ with $projectPage.Params.health }} title="Health score: {{ .score }}/100"{{ end }}>{{ $projectName }}</a>
                 {{ else }}
                 <span class="project-tag">{{ $projectName }}</span>
                 {{ end }}
@@ -53,6 +66,16 @@
                         <line x1="2" y1="12" x2="22" y2="12"></line>
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                     </svg>
+                </a>
+                {{ end }}
+                {{ $sponsor := "" }}
+                {{ with .Params.links }}{{ $sponsor = .sponsors | default .funding }}{{ end }}
+                {{ with $sponsor }}
+                <a class="sponsor-link" href="{{ . }}" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    Support {{ $.Title }}
                 </a>
                 {{ end }}
             </div>

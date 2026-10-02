@@ -115,6 +115,8 @@ infrastructure-heroes/
      github = "username"
      twitter = "username"
      website = "https://example.com"
+     # Optional: where people can support this maintainer
+     # sponsors = "https://github.com/sponsors/username"
    
    # Optional: Track maintainer succession
    # [successor]

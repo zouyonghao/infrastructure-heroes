@@ -4,25 +4,33 @@ draft = false
 title = "Salvatore Sanfilippo"
 role = "Redis Creator"
 projects = ["Redis"]
+status = 'stepped-back'
+aliases = ["/maintainers/antirez/"]
 [links]
   github = "antirez"
   twitter = "antirez"
+
+[successor]
+  name = "Redis Team"
+  relation = "succeeded"
+  date = "2020-06-30"
+  reason = "Salvatore stepped back from Redis maintenance in June 2020. Redis is now maintained by a team at Redis Labs with community contributors."
 +++
 
 ## Biography
 
-Salvatore Sanfilippo (antirez) created Redis, the most popular in-memory data store, and led its development for over a decade.
+Salvatore Sanfilippo (antirez) created Redis in 2009, the most popular in-memory data store, and led its development for over a decade before stepping back from day-to-day maintenance.
 
 ## Daily Work
 
 - Working on personal projects
-- Contributing to open source
-- Writing about software
+- Contributing to Redis occasionally
+- Writing about software development
 - Exploring new ideas
 
 ## Challenges
 
-> "Redis was designed to be simple. The hardest part is resisting the urge to add complexity."
+> "Redis was designed to be simple and fast. Maintaining that simplicity while adding features is always a tension."
 
 ## Impact
 

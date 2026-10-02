@@ -26,8 +26,11 @@
 {{ $seen := slice }}
 {{ range sort $singles ".Params.health.score" "asc" }}
   {{ $name := index .Params.maintainers 0 }}
-  {{ if not (in $seen $name) }}
-    {{ $pairs = $pairs | append (dict "project" . "name" $name "maintainer" (index $maintainerPages $name)) }}
+  {{ $maintainerPage := index $maintainerPages $name }}
+  {{ $status := "" }}
+  {{ with $maintainerPage }}{{ $status = .Params.status | default "" }}{{ end }}
+  {{ if and (not (in $seen $name)) (not (in (slice "stepped-back" "retired") $status)) }}
+    {{ $pairs = $pairs | append (dict "project" . "name" $name "maintainer" $maintainerPage) }}
     {{ $seen = $seen | append $name }}
   {{ end }}
   {{ if ge (len $pairs) 12 }}{{ break }}{{ end }}
@@ -58,6 +61,6 @@
         {{ end }}
       </ul>
     </div>
-    <p class="rotator-cta"><a href="/maintainers/" class="link-arrow">Meet the maintainers →</a></p>
+    <p class="rotator-cta"><a href="/maintainers/" class="link-arrow">Meet all {{ len (where .Site.RegularPages "Section" "maintainers") }} maintainers →</a></p>
   </div>
 </section>
