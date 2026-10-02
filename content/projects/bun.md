@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Bun'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bun/bun-original.svg'
 description = 'Fast JavaScript runtime and toolkit'
+maintainers = ["Jarred Sumner"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Fast JavaScript runtime and toolkit'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
-["Jarred Sumner"]
+
 +++
 
 ### Overview

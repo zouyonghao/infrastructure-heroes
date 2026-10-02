@@ -6,67 +6,324 @@ Infrastructure Heroes - GitHub Metrics Fetcher
 Usage:
     python fetch-github-metrics.py --repo owner/repo [--output metrics.json]
     python fetch-github-metrics.py --repo owner/repo --frontmatter content/projects/project.md
-    
+
 Health Score Formula (Methodology v1.0):
     Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
-    
+
 Each dimension scored 0-100, weighted and combined for final 0-100 score.
+
+Authentication is read from the GITHUB_TOKEN environment variable only.
 """
 
 import argparse
+import base64
 import json
 import os
-import sys
 import re
-from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Tuple
-import urllib.request
+import sys
+import time
+import tomllib
 import urllib.error
+import urllib.request
+from collections import Counter
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+API_BASE = "https://api.github.com"
+MAX_RETRIES = 4           # retries after the initial attempt
+MAX_PAGES = 10            # pagination cap for generic list endpoints
+COMMIT_SAMPLE_PAGES = 2   # newest 2x100 commits sampled for authors/bus factor
+RETRY_BASE_DELAY = 1.0    # seconds, doubled on every attempt
+RETRY_MAX_DELAY = 60.0    # upper bound for a single backoff sleep
+
+
+class FetchError(Exception):
+    """A required GitHub API request failed, even after retries."""
+
+
+class ContributorsUnavailable(Exception):
+    """GitHub refuses to enumerate contributors for this repository (list too large)."""
+
+
+def _get_header(headers, name: str) -> Optional[str]:
+    """Case-insensitive header lookup that works for both dicts and HTTPMessage."""
+    if not headers:
+        return None
+    getter = getattr(headers, "get", None)
+    if getter is not None:
+        value = getter(name)
+        if value is not None:
+            return value
+    lowered = {str(key).lower(): value for key, value in headers.items()}
+    return lowered.get(name.lower())
+
+
+def parse_link_rel(link_header: Optional[str], rel: str) -> Optional[str]:
+    """Return the URL for a given ``rel`` in a GitHub ``Link`` header."""
+    if not link_header:
+        return None
+    for part in link_header.split(","):
+        match = re.match(r'\s*<([^>]+)>\s*;\s*rel\s*=\s*"([^"]*)"', part)
+        if match and rel in match.group(2).split():
+            return match.group(1)
+    return None
+
+
+def parse_next_link(link_header: Optional[str]) -> Optional[str]:
+    """Return the URL of the ``rel="next"`` entry of a GitHub ``Link`` header."""
+    return parse_link_rel(link_header, "next")
+
+
+def page_from_url(url: Optional[str]) -> Optional[int]:
+    """Extract the ``page`` query parameter from a paginated GitHub URL."""
+    if not url:
+        return None
+    match = re.search(r'[?&]page=(\d+)', url)
+    return int(match.group(1)) if match else None
+
+
+def is_contributors_too_large(body: Optional[str]) -> bool:
+    """True when a 403 response means GitHub cannot list contributors at all."""
+    if not body:
+        return False
+    text = body.lower()
+    return "too large" in text and "contributor" in text
+
+
+def _retry_after_seconds(header_value: Optional[str]) -> Optional[float]:
+    """Parse a ``Retry-After`` header (delay-seconds or HTTP-date) into seconds."""
+    if not header_value:
+        return None
+    header_value = header_value.strip()
+    try:
+        return max(0.0, float(header_value))
+    except ValueError:
+        pass
+    try:
+        when = parsedate_to_datetime(header_value)
+    except (TypeError, ValueError):
+        return None
+    if when is None:
+        return None
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=timezone.utc)
+    return max(0.0, (when - datetime.now(timezone.utc)).total_seconds())
+
+
+def retry_delay(status_code: Optional[int], headers, body: Optional[str], attempt: int,
+                max_retries: int = MAX_RETRIES) -> Optional[float]:
+    """
+    Decide whether a failed request should be retried.
+
+    Returns the number of seconds to wait before the next attempt, or ``None``
+    when the response must not be retried. A ``status_code`` of ``None`` denotes
+    a network-level failure (timeout, connection reset, ...), which is retryable.
+
+    Retried: 5xx, 429, and 403 responses carrying rate-limit signals
+    (``Retry-After``, exhausted ``X-RateLimit-Remaining``, or a rate-limit
+    message). ``Retry-After`` is honored (capped at ``RETRY_MAX_DELAY``);
+    otherwise exponential backoff is used.
+    """
+    if attempt >= max_retries:
+        return None
+
+    retry_after = _retry_after_seconds(_get_header(headers, "Retry-After"))
+
+    if status_code is None:
+        retryable = True
+    elif status_code in (429, 500, 502, 503, 504):
+        retryable = True
+    elif status_code == 403:
+        remaining = _get_header(headers, "X-RateLimit-Remaining")
+        message = (body or "").lower()
+        retryable = bool(
+            retry_after is not None or remaining == "0" or "rate limit" in message
+        )
+    else:
+        retryable = False
+
+    if not retryable:
+        return None
+    if retry_after is not None:
+        return min(retry_after, RETRY_MAX_DELAY)
+    return min(RETRY_BASE_DELAY * (2 ** attempt), RETRY_MAX_DELAY)
 
 
 class GitHubMetricsFetcher:
     """GitHub 项目指标获取器 - Infrastructure Heroes Methodology v1.0"""
-    
+
     def __init__(self, token: Optional[str] = None):
         self.token = token or os.environ.get('GITHUB_TOKEN')
-        self.base_url = "https://api.github.com"
-        
-    def _api_request(self, endpoint: str) -> dict:
-        """发送 GitHub API 请求"""
-        url = f"{self.base_url}{endpoint}"
+        self.base_url = API_BASE
+        self.request_count = 0
+
+    def _request_headers(self) -> dict:
         headers = {
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "Infrastructure-Heroes-Metrics"
         }
         if self.token:
             headers["Authorization"] = f"token {self.token}"
-        
-        req = urllib.request.Request(url, headers=headers)
-        
+        return headers
+
+    def _raw_request(self, url: str):
+        self.request_count += 1
+        request = urllib.request.Request(url, headers=self._request_headers())
+        with urllib.request.urlopen(request, timeout=30) as response:
+            raw = response.read().decode('utf-8')
+            data = json.loads(raw) if raw.strip() else None
+            return data, response.headers
+
+    def _api_request(self, endpoint: str, *, allow_404: bool = False,
+                     unavailable_on_too_large: bool = False):
+        """
+        Send a GitHub API request, retrying transient failures.
+
+        Returns ``(data, headers)``. Raises :class:`FetchError` when the request
+        cannot be completed, or :class:`ContributorsUnavailable` for the special
+        403 "contributor list is too large" case. ``allow_404`` returns
+        ``(None, headers)`` instead of failing when the resource is absent.
+        """
+        url = endpoint if endpoint.startswith("http") else f"{self.base_url}{endpoint}"
+
+        for attempt in range(MAX_RETRIES + 1):
+            try:
+                return self._raw_request(url)
+            except urllib.error.HTTPError as error:
+                body = ""
+                try:
+                    body = error.read().decode('utf-8', 'replace')
+                except Exception:
+                    pass
+
+                if error.code == 404 and allow_404:
+                    return None, error.headers
+                if unavailable_on_too_large and error.code == 403 \
+                        and is_contributors_too_large(body):
+                    raise ContributorsUnavailable(
+                        f"GitHub will not list contributors for {endpoint}"
+                    ) from error
+
+                delay = retry_delay(error.code, error.headers, body, attempt)
+                if delay is None:
+                    raise FetchError(
+                        f"HTTP {error.code} for {endpoint}: {body[:200].strip()}"
+                    ) from error
+                print(f"⚠️  HTTP {error.code} on {endpoint}; retrying in {delay:.1f}s "
+                      f"(attempt {attempt + 1}/{MAX_RETRIES})")
+                time.sleep(delay)
+            except FetchError:
+                raise
+            except Exception as error:
+                delay = retry_delay(None, None, str(error), attempt)
+                if delay is None:
+                    raise FetchError(f"Request failed for {endpoint}: {error}") from error
+                print(f"⚠️  Network error on {endpoint}: {error}; retrying in {delay:.1f}s "
+                      f"(attempt {attempt + 1}/{MAX_RETRIES})")
+                time.sleep(delay)
+
+        raise FetchError(f"Request failed for {endpoint} after {MAX_RETRIES} retries")
+
+    def _paginate(self, endpoint: str, *, unavailable_on_too_large: bool = False,
+                  max_pages: int = MAX_PAGES) -> List[dict]:
+        """Follow ``Link rel="next"`` and collect up to ``max_pages`` of list results."""
+        items: List[dict] = []
+        url: Optional[str] = endpoint
+        for _ in range(max_pages):
+            if not url:
+                break
+            data, headers = self._api_request(
+                url, unavailable_on_too_large=unavailable_on_too_large
+            )
+            if isinstance(data, list):
+                items.extend(data)
+            elif data is not None:
+                items.append(data)
+            url = parse_next_link(_get_header(headers, "Link"))
+        return items
+
+    @staticmethod
+    def _commit_date(commit: dict) -> Optional[datetime]:
+        if not isinstance(commit, dict):
+            return None
+        raw = commit.get("commit", {}).get("committer", {}).get("date", "")
+        if not raw:
+            return None
         try:
-            with urllib.request.urlopen(req, timeout=30) as response:
-                return json.loads(response.read().decode('utf-8'))
-        except urllib.error.HTTPError as e:
-            if e.code == 404:
-                print(f"❌ Repository not found: {endpoint}")
-            elif e.code == 403:
-                print(f"❌ API rate limit exceeded. Consider using GITHUB_TOKEN.")
-            else:
-                print(f"❌ HTTP Error {e.code}: {e.reason}")
-            return {}
-        except Exception as e:
-            print(f"❌ Error fetching {url}: {e}")
-            return {}
-    
+            return datetime.fromisoformat(raw.replace("Z", "+00:00")).replace(tzinfo=None)
+        except ValueError:
+            return None
+
+    def _count_from_link(self, endpoint: str, *,
+                         unavailable_on_too_large: bool = False) -> int:
+        """
+        Return the exact item count for a list endpoint using a single request.
+
+        Requests ``per_page=1`` and reads the ``Link rel="last"`` page number,
+        which equals the total item count. When GitHub sends no ``Link`` header
+        the response is a single page and its length is the count.
+        """
+        url = endpoint if endpoint.startswith("http") else f"{self.base_url}{endpoint}"
+        if re.search(r'[?&]per_page=\d+', url):
+            url = re.sub(r'([?&]per_page=)\d+', r'\g<1>1', url)
+        else:
+            url += ("&" if "?" in url else "?") + "per_page=1"
+
+        data, headers = self._api_request(
+            url, unavailable_on_too_large=unavailable_on_too_large
+        )
+        if not isinstance(data, list):
+            return 0
+        last_page = page_from_url(parse_link_rel(_get_header(headers, "Link"), "last"))
+        return last_page if last_page is not None else len(data)
+
+    def fetch_commit_sample(self, owner: str, repo: str,
+                            stop_before: Optional[datetime] = None,
+                            max_pages: int = COMMIT_SAMPLE_PAGES) -> Tuple[List[dict], bool]:
+        """
+        Fetch the newest commits (newest first) up to ``max_pages`` pages.
+
+        Returns ``(commits, truncated)``. ``truncated`` is True when the page cap
+        was reached while more commits (and the 90-day boundary) remained, i.e.
+        the sample is not sufficient to count the full activity window.
+        """
+        commits: List[dict] = []
+        url: Optional[str] = f"/repos/{owner}/{repo}/commits?per_page=100"
+        truncated = False
+        for page_index in range(max_pages):
+            if not url:
+                break
+            data, headers = self._api_request(url)
+            if not isinstance(data, list) or not data:
+                break
+            commits.extend(data)
+            next_url = parse_next_link(_get_header(headers, "Link"))
+            if stop_before is not None:
+                dates = [d for d in (self._commit_date(c) for c in data) if d is not None]
+                if dates and min(dates) < stop_before:
+                    # Reached the 90-day boundary: the sample is complete for the window.
+                    next_url = None
+            if next_url and page_index == max_pages - 1:
+                truncated = True
+            url = next_url
+        return commits, truncated
+
     def fetch_repo_metrics(self, owner: str, repo: str) -> dict:
-        """获取仓库基本指标和扩展指标"""
+        """
+        获取仓库基本指标和扩展指标
+
+        Raises :class:`FetchError` when a required endpoint fails so callers never
+        persist partial metrics.
+        """
         print(f"📊 Fetching metrics for {owner}/{repo}...")
-        
+
         # 基本信息
-        repo_data = self._api_request(f"/repos/{owner}/{repo}")
-        if not repo_data:
-            return {}
-        
+        repo_data, _ = self._api_request(f"/repos/{owner}/{repo}")
+        if not isinstance(repo_data, dict):
+            raise FetchError(f"Unexpected repository response for {owner}/{repo}")
+
         metrics = {
             "name": repo_data.get("name"),
             "full_name": repo_data.get("full_name"),
@@ -83,81 +340,98 @@ class GitHubMetricsFetcher:
             "archived": repo_data.get("archived", False),
             "disabled": repo_data.get("disabled", False),
         }
-        
-        # 获取最近100次提交（用于计算贡献者和巴士因子）
-        commits = self._api_request(f"/repos/{owner}/{repo}/commits?per_page=100")
-        metrics["commits_data"] = commits if commits else []
-        
+
         # 计算时间维度指标
         today = datetime.now()
-        
-        # 最近30天提交和作者
         thirty_days_ago = today - timedelta(days=30)
-        # 最近90天提交和作者
         ninety_days_ago = today - timedelta(days=90)
-        
+
+        # 采样最近提交（最多 2 页 / 200 条）用于作者数与巴士因子
+        commits, truncated = self.fetch_commit_sample(
+            owner, repo, stop_before=ninety_days_ago
+        )
+        metrics["commits_data"] = commits
+        metrics["commits_sample_truncated"] = truncated
+
         recent_30d_commits = 0
         recent_90d_commits = 0
         authors_30d = set()
         authors_90d = set()
         all_commit_authors = []  # 用于计算巴士因子
-        
-        for commit in metrics["commits_data"]:
-            if isinstance(commit, dict):
-                commit_date_str = commit.get("commit", {}).get("committer", {}).get("date", "")
-                if commit_date_str:
-                    try:
-                        commit_time = datetime.fromisoformat(commit_date_str.replace("Z", "+00:00"))
-                        commit_time = commit_time.replace(tzinfo=None)
-                        
-                        author = commit.get("author", {}).get("login") if commit.get("author") else None
-                        if not author:
-                            # 使用 commit 中的作者名称
-                            author = commit.get("commit", {}).get("author", {}).get("name", "unknown")
-                        
-                        all_commit_authors.append(author)
-                        
-                        if commit_time > thirty_days_ago:
-                            recent_30d_commits += 1
-                            authors_30d.add(author)
-                        
-                        if commit_time > ninety_days_ago:
-                            recent_90d_commits += 1
-                            authors_90d.add(author)
-                    except Exception as e:
-                        pass
-        
+
+        for commit in commits:
+            commit_time = self._commit_date(commit)
+            if commit_time is None:
+                continue
+            author = commit.get("author", {}).get("login") if commit.get("author") else None
+            if not author:
+                # 使用 commit 中的作者名称
+                author = commit.get("commit", {}).get("author", {}).get("name", "unknown")
+
+            all_commit_authors.append(author)
+
+            if commit_time > thirty_days_ago:
+                recent_30d_commits += 1
+                authors_30d.add(author)
+
+            if commit_time > ninety_days_ago:
+                recent_90d_commits += 1
+                authors_90d.add(author)
+
+        if truncated:
+            # 采样未覆盖到 90 天边界：用两次 per_page=1 请求精确统计窗口内提交数。
+            since_30d = thirty_days_ago.strftime('%Y-%m-%dT%H:%M:%SZ')
+            since_90d = ninety_days_ago.strftime('%Y-%m-%dT%H:%M:%SZ')
+            commits_30d = self._count_from_link(
+                f"/repos/{owner}/{repo}/commits?since={since_30d}"
+            )
+            commits_30_to_90d = self._count_from_link(
+                f"/repos/{owner}/{repo}/commits?since={since_90d}&until={since_30d}"
+            )
+            recent_30d_commits = commits_30d
+            recent_90d_commits = commits_30d + commits_30_to_90d
+
         metrics["commits_last_30_days"] = recent_30d_commits
         metrics["commits_last_90_days"] = recent_90d_commits
         metrics["unique_contributors_last_30_days"] = len(authors_30d)
         metrics["unique_contributors_last_90_days"] = len(authors_90d)
         metrics["all_commit_authors"] = all_commit_authors
-        
+
         # 获取最近更新时间（pushed_at）
         if metrics.get("pushed_at"):
             try:
                 pushed_time = datetime.fromisoformat(metrics["pushed_at"].replace("Z", "+00:00"))
                 metrics["days_since_last_push"] = (today - pushed_time.replace(tzinfo=None)).days
-            except:
+            except ValueError:
                 metrics["days_since_last_push"] = 365
         else:
             metrics["days_since_last_push"] = 365
-        
-        # 获取贡献者统计 (需要 token 才能访问)
-        contributors = self._api_request(f"/repos/{owner}/{repo}/contributors?per_page=100")
-        metrics["total_contributors"] = len(contributors) if contributors else 0
-        
+
+        # 获取贡献者统计：仅需总数，用一次 per_page=1 请求读取 Link rel="last"
+        try:
+            metrics["total_contributors"] = self._count_from_link(
+                f"/repos/{owner}/{repo}/contributors",
+                unavailable_on_too_large=True,
+            )
+            metrics["contributors_unavailable"] = False
+        except ContributorsUnavailable:
+            # GitHub 拒绝列出超大仓库的贡献者；这不是失败，也不应记为零。
+            print("⚠️  GitHub will not list contributors for this repository "
+                  "(list too large); keeping the existing value.")
+            metrics["total_contributors"] = None
+            metrics["contributors_unavailable"] = True
+
         # 获取最近发布
-        releases = self._api_request(f"/repos/{owner}/{repo}/releases?per_page=5")
+        releases = self._paginate(f"/repos/{owner}/{repo}/releases?per_page=5", max_pages=1)
         metrics["recent_releases"] = [
             {
                 "tag": r.get("tag_name"),
                 "published_at": r.get("published_at"),
                 "prerelease": r.get("prerelease", False)
             }
-            for r in (releases if releases else [])
+            for r in releases if isinstance(r, dict)
         ]
-        
+
         # 计算最近一次发布时间
         if metrics["recent_releases"]:
             try:
@@ -165,28 +439,28 @@ class GitHubMetricsFetcher:
                     metrics["recent_releases"][0]["published_at"].replace("Z", "+00:00")
                 )
                 metrics["days_since_last_release"] = (today - last_release.replace(tzinfo=None)).days
-            except:
+            except (ValueError, AttributeError):
                 metrics["days_since_last_release"] = 365
         else:
             metrics["days_since_last_release"] = 365
-        
+
         # Fetch funding information
         funding_info = self.fetch_funding_info(owner, repo)
         metrics["funding_info"] = funding_info
-        
+
         return metrics
-    
+
     def calculate_maintenance_score(self, metrics: dict) -> int:
         """
         计算维护活跃度分数 (0-100) - Methodology v1.0
-        
+
         Criteria:
         - Last commit recency (40%)
-        - Release frequency (30%)  
+        - Release frequency (30%)
         - Issue management (30%)
         """
         score = 0
-        
+
         # 1. 最近提交时间 (40分)
         days_since_push = metrics.get("days_since_last_push", 365)
         if days_since_push < 7:
@@ -201,7 +475,7 @@ class GitHubMetricsFetcher:
             score += 10
         else:
             score += 5
-        
+
         # 2. 发布频率 (30分)
         days_since_release = metrics.get("days_since_last_release", 365)
         if days_since_release < 30:
@@ -214,7 +488,7 @@ class GitHubMetricsFetcher:
             score += 10
         else:
             score += 5
-        
+
         # 3. 活跃程度 (30分) - 基于最近30天提交数
         commits_30d = metrics.get("commits_last_30_days", 0)
         if commits_30d >= 50:
@@ -229,34 +503,34 @@ class GitHubMetricsFetcher:
             score += 10
         else:
             score += 0
-        
+
         return min(score, 100)
-    
+
     def calculate_contributors_score(self, metrics: dict) -> int:
         """
         计算贡献者健康度分数 (0-100) - Methodology v1.0
-        
+
         Criteria:
         - Active contributors in last 90 days (80%)
         - Contributor trend bonus (20%)
         """
         # 基于最近90天活跃贡献者
         contributors_90d = metrics.get("unique_contributors_last_90_days", 0)
-        
+
         # 基础分数：每个贡献者8分，最高80分
         base_score = min(contributors_90d * 8, 80)
-        
+
         # 趋势奖励：如果有10+贡献者，加20分
         trend_bonus = 20 if contributors_90d >= 10 else 0
-        
+
         return min(base_score + trend_bonus, 100)
-    
+
     def calculate_bus_factor_score(self, metrics: dict) -> int:
         """
         计算巴士因子风险分数 (0-100) - Methodology v1.0
-        
+
         Higher score = lower risk
-        
+
         Criteria:
         - Number of people accounting for 50% of recent commits
         - 5+ people = low risk (100)
@@ -267,28 +541,27 @@ class GitHubMetricsFetcher:
         authors = metrics.get("all_commit_authors", [])
         if not authors:
             return 50  # Unknown
-        
+
         # 统计每个作者的提交数
-        from collections import Counter
         author_counts = Counter(authors)
         total_commits = len(authors)
-        
+
         if total_commits == 0:
             return 50
-        
+
         # 计算需要多少人覆盖50%的提交
         sorted_authors = author_counts.most_common()
         cumulative = 0
         people_for_50_percent = 0
-        
+
         for author, count in sorted_authors:
             cumulative += count
             people_for_50_percent += 1
             if cumulative >= total_commits * 0.5:
                 break
-        
+
         metrics["bus_factor_people"] = people_for_50_percent
-        
+
         # 根据巴士因子人数评分
         if people_for_50_percent >= 5:
             return 100  # Low risk
@@ -298,11 +571,11 @@ class GitHubMetricsFetcher:
             return 40   # High risk
         else:
             return 15   # Critical risk
-    
+
     def fetch_funding_info(self, owner: str, repo: str) -> dict:
         """
         Fetch funding information from GitHub API
-        
+
         Returns dict with funding sources found
         """
         funding_info = {
@@ -311,15 +584,16 @@ class GitHubMetricsFetcher:
             "has_sponsors": False,
             "sponsor_count": 0
         }
-        
-        # Check for FUNDING.yml file
-        funding_content = self._api_request(f"/repos/{owner}/{repo}/contents/.github/FUNDING.yml")
+
+        # Check for FUNDING.yml file (404 == not present, not a failure)
+        funding_content, _ = self._api_request(
+            f"/repos/{owner}/{repo}/contents/.github/FUNDING.yml", allow_404=True
+        )
         if funding_content and funding_content.get("content"):
-            import base64
             try:
                 content = base64.b64decode(funding_content["content"]).decode('utf-8')
                 funding_info["has_funding_file"] = True
-                
+
                 # Parse funding sources
                 if 'github:' in content:
                     funding_info["funding_sources"].append("github_sponsors")
@@ -337,29 +611,29 @@ class GitHubMetricsFetcher:
                     funding_info["funding_sources"].append("custom")
             except Exception:
                 pass
-        
+
         # Check repository topics for funding-related tags
-        topics_data = self._api_request(f"/repos/{owner}/{repo}/topics")
+        topics_data, _ = self._api_request(f"/repos/{owner}/{repo}/topics", allow_404=True)
         if topics_data and "names" in topics_data:
-            funding_topics = [t for t in topics_data["names"] if t in 
+            funding_topics = [t for t in topics_data["names"] if t in
                             ['funding', 'sponsors', 'donate', 'sustainability', 'open-collective']]
             if funding_topics:
                 funding_info["funding_sources"].extend(funding_topics)
-        
+
         return funding_info
-    
+
     def calculate_funding_score(self, metrics: dict, funding_info: dict = None) -> Tuple[int, str]:
         """
         估算资金状况分数 (0-100) - Methodology v1.0 Enhanced
-        
+
         Uses both popularity metrics and actual funding sources detected.
         Manual verification is always recommended.
-        
+
         Returns: (score, status)
         """
         stars = metrics.get("stars", 0)
-        contributors = metrics.get("total_contributors", 0)
-        
+        contributors = metrics.get("total_contributors") or 0
+
         # Base score from popularity (as before)
         if stars >= 10000 or contributors >= 100:
             base_score = 70  # 大型项目通常有资助基础
@@ -367,20 +641,20 @@ class GitHubMetricsFetcher:
             base_score = 50  # 中型项目可能资助不稳定
         else:
             base_score = 25  # 小型项目很可能缺乏资助
-        
+
         # Boost score based on detected funding sources
         funding_boost = 0
         if funding_info:
             sources = funding_info.get("funding_sources", [])
-            
+
             # Having a FUNDING.yml shows intent
             if funding_info.get("has_funding_file"):
                 funding_boost += 10
-            
+
             # Multiple funding sources is good
             unique_sources = len(set(sources))
             funding_boost += min(unique_sources * 5, 15)  # Max 15 points for diversity
-            
+
             # Specific platforms indicate active fundraising
             platform_scores = {
                 "github_sponsors": 10,  # GitHub sponsors is reliable
@@ -391,13 +665,13 @@ class GitHubMetricsFetcher:
                 "liberapay": 3,
                 "custom": 2
             }
-            
+
             for source in sources:
                 if source in platform_scores:
                     funding_boost += platform_scores[source]
-        
+
         final_score = min(100, base_score + funding_boost)
-        
+
         # Determine status
         if final_score >= 80:
             return final_score, "stable"
@@ -405,23 +679,23 @@ class GitHubMetricsFetcher:
             return final_score, "at-risk"
         else:
             return final_score, "critical"
-    
+
     def assess_health(self, metrics: dict) -> dict:
         """
         基于方法论 v1.0 评估项目健康度
-        
+
         Formula: (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
         """
         if not metrics:
             return {}
-        
+
         # 计算各维度分数
         maintenance_score = self.calculate_maintenance_score(metrics)
         contributors_score = self.calculate_contributors_score(metrics)
         bus_factor_score = self.calculate_bus_factor_score(metrics)
         funding_info = metrics.get("funding_info")
         funding_score, funding_status = self.calculate_funding_score(metrics, funding_info)
-        
+
         # 计算总体分数（加权平均）
         overall_score = int(
             funding_score * 0.25 +
@@ -429,23 +703,23 @@ class GitHubMetricsFetcher:
             contributors_score * 0.25 +
             bus_factor_score * 0.20
         )
-        
+
         # 确定各维度状态
         def get_maintenance_status(score):
             if score >= 70: return "active"
             elif score >= 40: return "moderate"
             else: return "inactive"
-        
+
         def get_contributors_status(score):
             if score >= 70: return "healthy"
             elif score >= 40: return "declining"
             else: return "critical"
-        
+
         def get_bus_factor_status(score):
             if score >= 70: return "low"
             elif score >= 40: return "medium"
             else: return "high"
-        
+
         assessment = {
             "overall_score": overall_score,
             "funding": funding_status,
@@ -460,20 +734,20 @@ class GitHubMetricsFetcher:
             "methodology_version": "1.0",
             "recommendations": []
         }
-        
+
         # 生成建议
         if maintenance_score < 40:
             assessment["recommendations"].append("⚠️ Low maintenance activity - consider contributing code or documentation")
-        
+
         if contributors_score < 40:
             assessment["recommendations"].append("🚨 Few active contributors - high community risk")
-        
+
         if bus_factor_score < 40:
             assessment["recommendations"].append(f"🚌 High bus factor risk - only {metrics.get('bus_factor_people', 1)} person(s) handle 50% of work")
-        
+
         if funding_status == "critical":
             assessment["recommendations"].append("💰 Project likely lacks funding - consider sponsorship")
-        
+
         return assessment
 
 
@@ -483,20 +757,23 @@ def print_report(metrics: dict, assessment: dict):
     print(f"📋 Health Report: {metrics.get('full_name')}")
     print(f"   Methodology: v{assessment.get('methodology_version', '1.0')}")
     print("="*70)
-    
+
+    contributors = metrics.get('total_contributors')
+    contributors_label = "unavailable" if contributors is None else f"{contributors}"
+
     print(f"\n📊 Basic Metrics:")
     print(f"  ⭐ Stars: {metrics.get('stars', 0):,}")
     print(f"  🍴 Forks: {metrics.get('forks', 0):,}")
     print(f"  🐛 Open Issues: {metrics.get('open_issues', 0):,}")
-    print(f"  👥 Total Contributors: {metrics.get('total_contributors', 0)}")
-    
+    print(f"  👥 Total Contributors: {contributors_label}")
+
     print(f"\n📈 Activity:")
     print(f"  📝 Commits (30d): {metrics.get('commits_last_30_days', 0)}")
     print(f"  📝 Commits (90d): {metrics.get('commits_last_90_days', 0)}")
     print(f"  👤 Active Contributors (90d): {metrics.get('unique_contributors_last_90_days', 0)}")
     print(f"  📅 Days Since Last Push: {metrics.get('days_since_last_push', 'N/A')}")
     print(f"  📅 Days Since Last Release: {metrics.get('days_since_last_release', 'N/A')}")
-    
+
     print(f"\n🏥 Health Assessment:")
     print(f"  ┌──────────────────┬────────┬──────────────┐")
     print(f"  │ Dimension        │ Score  │ Status       │")
@@ -508,7 +785,7 @@ def print_report(metrics: dict, assessment: dict):
     print(f"  ├──────────────────┼────────┼──────────────┤")
     print(f"  │ 📊 OVERALL       │ {assessment.get('overall_score', 0):>3}/100 │ {'🟢' if assessment.get('overall_score', 0) >= 80 else '🟡' if assessment.get('overall_score', 0) >= 60 else '🔴'} {assessment.get('overall_score', 0):>8} │")
     print(f"  └──────────────────┴────────┴──────────────┘")
-    
+
     # Show funding sources if detected
     funding_info = metrics.get('funding_info', {})
     if funding_info and funding_info.get('funding_sources'):
@@ -518,12 +795,12 @@ def print_report(metrics: dict, assessment: dict):
         sources = funding_info.get('funding_sources', [])
         for source in set(sources):
             print(f"  • {source.replace('_', ' ').title()}")
-    
+
     if assessment.get('recommendations'):
         print(f"\n⚠️  Recommendations:")
         for rec in assessment['recommendations']:
             print(f"  • {rec}")
-    
+
     print("\n" + "="*70)
     if funding_info and funding_info.get('funding_sources'):
         print("💡 Funding sources detected automatically. Score may still need manual verification.")
@@ -532,78 +809,152 @@ def print_report(metrics: dict, assessment: dict):
     print("="*70)
 
 
+# --- Hugo front matter rewriting -------------------------------------------
+
+_FRONTMATTER_RE = re.compile(r'\A(\+\+\+\r?\n)(.*?)(\r?\n\+\+\+)', re.DOTALL)
+_SECTION_HEADER_RE = re.compile(r'^\s*\[([^\[\]]+)\]\s*$')
+
+
+def split_frontmatter(content: str) -> Optional[Tuple[str, str, str]]:
+    """
+    Split a Hugo file into ``(prefix, frontmatter_body, suffix)``.
+
+    ``prefix`` includes the opening ``+++`` line, ``suffix`` the closing
+    delimiter and everything after it, so reassembling the three parts is
+    byte-for-byte identical to the input.
+    """
+    match = _FRONTMATTER_RE.match(content)
+    if not match:
+        return None
+    # Suffix starts at the newline that precedes the closing delimiter so that
+    # ``prefix + body + suffix`` reproduces the original bytes exactly.
+    return match.group(1), match.group(2), content[match.start(3):]
+
+
+def _section_bounds(lines: List[str], name: str) -> Optional[Tuple[int, int]]:
+    """Locate a top-level TOML table ``[name]`` in ``lines`` (header to next header)."""
+    start = None
+    for index, line in enumerate(lines):
+        header = _SECTION_HEADER_RE.match(line)
+        if not header:
+            continue
+        if start is not None:
+            return start, index
+        if header.group(1).strip() == name:
+            start = index
+    if start is not None:
+        return start, len(lines)
+    return None
+
+
+def _toml_value(value) -> str:
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return str(value)
+    text = str(value).replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{text}"'
+
+
+def _render_section(name: str, values: Dict[str, object]) -> List[str]:
+    lines = [f"[{name}]\n"]
+    for key, value in values.items():
+        if value is None:
+            continue
+        lines.append(f"  {key} = {_toml_value(value)}\n")
+    return lines
+
+
+def rewrite_health_and_metrics(frontmatter: str, health_values: Dict[str, object],
+                               metrics_values: Dict[str, object]) -> str:
+    """
+    Replace only the top-level ``[health]`` and ``[metrics]`` TOML tables.
+
+    Every other line of the front matter is preserved. Missing tables are
+    appended. The ``[metrics]`` table is handled first so earlier line indices
+    for ``[health]`` stay valid.
+    """
+    lines = frontmatter.splitlines(keepends=True)
+    for name, values in (("metrics", metrics_values), ("health", health_values)):
+        bounds = _section_bounds(lines, name)
+        replacement = _render_section(name, values)
+        if bounds is not None:
+            start, end = bounds
+            lines[start:end] = replacement
+        else:
+            if lines and not lines[-1].endswith(("\n", "\r")):
+                lines[-1] += "\n"
+            if lines and lines[-1].strip():
+                lines.append("\n")
+            lines.extend(replacement)
+    return "".join(lines).rstrip("\r\n")
+
+
 def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> bool:
-    """更新 Hugo 项目文件的 front matter"""
-    if not os.path.exists(filepath):
+    """更新 Hugo 项目文件的 front matter（只替换 [health] 与 [metrics]）"""
+    path = Path(filepath)
+    if not path.exists():
         print(f"❌ File not found: {filepath}")
         return False
-    
+
     try:
-        with open(filepath, 'r') as f:
-            content = f.read()
-        
-        # 解析 front matter (TOML format between +++)
-        frontmatter_match = re.search(r'\+\+\+(.*?)\+\+\+', content, re.DOTALL)
-        if not frontmatter_match:
-            print("❌ Could not find front matter in file")
-            return False
-        
-        frontmatter = frontmatter_match.group(1)
-        
-        # 更新 health section
-        health_section = f"""[health]
-  funding = "{assessment.get('funding', 'unknown')}"
-  maintenance = "{assessment.get('maintenance', 'unknown')}"
-  contributors = "{assessment.get('contributors', 'unknown')}"
-  bus_factor = "{assessment.get('bus_factor', 'unknown')}"
-  score = {assessment.get('overall_score', 0)}"""
-        
-        # 检查是否已有 [health] section
-        if '[health]' in frontmatter:
-            # 替换现有 section
-            new_frontmatter = re.sub(
-                r'\[health\].*?(?=\[|$)',
-                health_section + "\n",
-                frontmatter,
-                flags=re.DOTALL
-            )
-        else:
-            # 添加新 section
-            new_frontmatter = frontmatter.rstrip() + "\n\n" + health_section + "\n"
-        
-        # 添加 metrics section
-        metrics_section = f"""\n[metrics]
-  updated_at = "{datetime.now().strftime('%Y-%m-%d')}"
-  stars = {metrics.get('stars', 0)}
-  forks = {metrics.get('forks', 0)}
-  contributors = {metrics.get('total_contributors', 0)}
-  commits_30d = {metrics.get('commits_last_30_days', 0)}
-  commits_90d = {metrics.get('commits_last_90_days', 0)}
-  bus_factor_people = {metrics.get('bus_factor_people', 0)}
-"""
-        
-        if '[metrics]' in new_frontmatter:
-            new_frontmatter = re.sub(
-                r'\[metrics\].*?(?=\[|$)',
-                metrics_section.strip() + "\n",
-                new_frontmatter,
-                flags=re.DOTALL
-            )
-        else:
-            new_frontmatter = new_frontmatter.rstrip() + metrics_section
-        
-        # 重新组装文件
-        new_content = content.replace(frontmatter_match.group(0), f"+++{new_frontmatter}+++")
-        
-        with open(filepath, 'w') as f:
-            f.write(new_content)
-        
-        print(f"✅ Updated front matter in: {filepath}")
-        return True
-        
-    except Exception as e:
-        print(f"❌ Error updating front matter: {e}")
+        content = path.read_text(encoding="utf-8")
+    except OSError as error:
+        print(f"❌ Could not read {filepath}: {error}")
         return False
+
+    split = split_frontmatter(content)
+    if not split:
+        print(f"❌ Could not find front matter in file: {filepath}")
+        return False
+    prefix, frontmatter, suffix = split
+
+    try:
+        existing = tomllib.loads(frontmatter)
+    except tomllib.TOMLDecodeError as error:
+        print(f"❌ Existing front matter is not valid TOML ({error}); refusing to rewrite {filepath}")
+        return False
+
+    health_values = {
+        "funding": assessment.get('funding', 'unknown'),
+        "maintenance": assessment.get('maintenance', 'unknown'),
+        "contributors": assessment.get('contributors', 'unknown'),
+        "bus_factor": assessment.get('bus_factor', 'unknown'),
+        "score": int(assessment.get('overall_score', 0) or 0),
+    }
+
+    existing_metrics = existing.get("metrics")
+    if not isinstance(existing_metrics, dict):
+        existing_metrics = {}
+
+    metrics_values: Dict[str, object] = {
+        "updated_at": datetime.now().strftime('%Y-%m-%d'),
+        "stars": int(metrics.get('stars', 0) or 0),
+        "forks": int(metrics.get('forks', 0) or 0),
+    }
+    if metrics.get("contributors_unavailable"):
+        # Never persist 0 for an endpoint that failed; keep the previous value.
+        if "contributors" in existing_metrics:
+            metrics_values["contributors"] = existing_metrics["contributors"]
+    else:
+        metrics_values["contributors"] = int(metrics.get('total_contributors', 0) or 0)
+    metrics_values.update({
+        "commits_30d": int(metrics.get('commits_last_30_days', 0) or 0),
+        "commits_90d": int(metrics.get('commits_last_90_days', 0) or 0),
+        "bus_factor_people": int(metrics.get('bus_factor_people', 0) or 0),
+    })
+
+    new_frontmatter = rewrite_health_and_metrics(frontmatter, health_values, metrics_values)
+
+    try:
+        tomllib.loads(new_frontmatter)
+    except tomllib.TOMLDecodeError as error:
+        print(f"❌ Refusing to write invalid front matter for {filepath}: {error}")
+        return False
+
+    path.write_text(prefix + new_frontmatter + suffix, encoding="utf-8")
+    print(f"✅ Updated front matter in: {filepath}")
+    return True
 
 
 def main():
@@ -615,6 +966,8 @@ Examples:
     python fetch-github-metrics.py --repo openssl/openssl
     python fetch-github-metrics.py --repo torvalds/linux --output linux-metrics.json
     python fetch-github-metrics.py --repo python/cpython --frontmatter content/projects/python.md
+
+Set GITHUB_TOKEN in the environment to raise the API rate limit.
         """
     )
     parser.add_argument(
@@ -632,44 +985,45 @@ Examples:
         help="Update Hugo front matter in specified file"
     )
     parser.add_argument(
-        "--token",
-        "-t",
-        help="GitHub personal access token (or set GITHUB_TOKEN env var)"
-    )
-    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Calculate scores but don't write to file"
     )
-    
+
     args = parser.parse_args()
-    
+
     if not args.repo:
         parser.print_help()
         print("\n❌ Please specify a repository with --repo owner/repo")
         sys.exit(1)
-    
+
     # 解析 owner/repo
     try:
         owner, repo = args.repo.split("/")
     except ValueError:
         print("❌ Invalid repo format. Use: owner/repo")
         sys.exit(1)
-    
+
     # 创建获取器并获取指标
-    fetcher = GitHubMetricsFetcher(token=args.token)
-    metrics = fetcher.fetch_repo_metrics(owner, repo)
-    
+    fetcher = GitHubMetricsFetcher()
+    try:
+        metrics = fetcher.fetch_repo_metrics(owner, repo)
+    except FetchError as error:
+        print(f"❌ Failed to fetch metrics: {error}")
+        sys.exit(1)
+
     if not metrics:
         print("❌ Failed to fetch metrics")
         sys.exit(1)
-    
+
     # 评估健康度
     assessment = fetcher.assess_health(metrics)
-    
+
+    print(f"🔢 GitHub API requests used: {fetcher.request_count}")
+
     # 打印报告
     print_report(metrics, assessment)
-    
+
     # 保存 JSON
     if args.output:
         output_data = {
@@ -680,7 +1034,7 @@ Examples:
         with open(args.output, 'w') as f:
             json.dump(output_data, f, indent=2, default=str)
         print(f"\n💾 Metrics saved to: {args.output}")
-    
+
     # 更新 Hugo front matter
     if args.frontmatter:
         if args.dry_run:
@@ -689,7 +1043,7 @@ Examples:
             success = update_hugo_frontmatter(args.frontmatter, assessment, metrics)
             if not success:
                 sys.exit(1)
-    
+
     print("\n✅ Done!")
 
 

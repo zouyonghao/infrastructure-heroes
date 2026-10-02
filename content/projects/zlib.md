@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'zlib'
 logo = 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Zlib_3D_green.png'
 description = 'Massively used compression library'
+maintainers = ["Mark Adler"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Massively used compression library'
   commits_30d = 24
   commits_90d = 24
   bus_factor_people = 1
-["Mark Adler"]
+
 +++
 
 ### Overview

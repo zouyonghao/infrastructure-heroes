@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Kubernetes'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg'
 description = 'Container orchestration platform'
+maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Container orchestration platform'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Jessie Frazelle", "Kelsey Hightower"]
+
 +++
 
 ### Overview

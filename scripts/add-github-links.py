@@ -5,58 +5,55 @@ Usage: python scripts/add-github-links.py
 """
 
 import json
-import os
 import re
 from pathlib import Path
 
-# Load mapping
-with open('scripts/project-github-mapping.json', 'r') as f:
+# Resolve paths relative to the repository root, not the current directory.
+REPO_ROOT = Path(__file__).resolve().parent.parent
+MAPPING_FILE = Path(__file__).resolve().parent / 'project-github-mapping.json'
+PROJECTS_DIR = REPO_ROOT / 'content/projects'
+
+FRONTMATTER_RE = re.compile(r'\A\+\+\+\r?\n(.*?)\r?\n\+\+\+', re.DOTALL)
+
+with MAPPING_FILE.open('r', encoding='utf-8') as f:
     mapping = json.load(f)
 
-projects_dir = Path('content/projects')
 updated = 0
 skipped = 0
 not_found = []
 
-for project_file in sorted(projects_dir.glob('*.md')):
+for project_file in sorted(PROJECTS_DIR.glob('*.md')):
     if project_file.name == '_index.md':
         continue
-    
+
     project_name = project_file.stem
-    
+
     if project_name not in mapping:
         not_found.append(project_name)
         continue
-    
+
     github_repo = mapping[project_name]
-    
-    with open(project_file, 'r') as f:
-        content = f.read()
-    
-    # Check if already has links section
-    if '[links]' in content:
-        skipped += 1
-        continue
-    
-    # Find the frontmatter end
-    match = re.search(r'\+\+\+(.*?)\+\+\+', content, re.DOTALL)
+
+    content = project_file.read_text(encoding='utf-8')
+
+    # Find the frontmatter; only skip when [links] is already inside it.
+    match = FRONTMATTER_RE.match(content)
     if not match:
         print(f"⚠️ No frontmatter found in {project_file}")
         continue
-    
+
     frontmatter = match.group(1)
-    
+    if re.search(r'^\s*\[links\]\s*$', frontmatter, re.MULTILINE):
+        skipped += 1
+        continue
+
     # Add links section before the closing +++
-    links_section = f'''\n[links]
-  github = "{github_repo}"
-'''
-    
+    links_section = f'\n[links]\n  github = "{github_repo}"\n'
     new_frontmatter = frontmatter.rstrip() + links_section
-    new_content = content.replace(match.group(0), f'+++{new_frontmatter}+++')
-    
-    with open(project_file, 'w') as f:
-        f.write(new_content)
-    
+    new_content = content[:match.start(1)] + new_frontmatter + content[match.end(1):]
+
+    project_file.write_text(new_content, encoding='utf-8')
+
     print(f"✅ Added GitHub link to {project_name}: {github_repo}")
     updated += 1
 

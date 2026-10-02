@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'FFmpeg'
 logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/ffmpeg-icon.svg'
 description = 'Complete multimedia framework'
+maintainers = ["Fabrice Bellard"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Complete multimedia framework'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Fabrice Bellard"]
+
 +++
 
 ### Overview

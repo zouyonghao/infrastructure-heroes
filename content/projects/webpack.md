@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'webpack'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg'
 description = 'JavaScript module bundler'
+maintainers = ["Tobias Koppers"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'JavaScript module bundler'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
-["Tobias Koppers"]
+
 +++
 
 ### Overview

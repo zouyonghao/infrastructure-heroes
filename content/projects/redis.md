@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Redis'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg'
 description = 'In-memory data structure store'
+maintainers = ["Salvatore Sanfilippo", "Antirez"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'In-memory data structure store'
   commits_30d = 35
   commits_90d = 100
   bus_factor_people = 6
-["Salvatore Sanfilippo", "Antirez"]
+
 +++
 
 ### Overview

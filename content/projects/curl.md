@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'curl'
 logo = 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/curl.svg'
 description = 'Command line tool and library for transferring data with URLs'
+maintainers = ["Daniel Stenberg"]
 
 [health]
   funding = "stable"
@@ -21,7 +22,7 @@ description = 'Command line tool and library for transferring data with URLs'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Daniel Stenberg"]
+
 +++
 
 ### Overview

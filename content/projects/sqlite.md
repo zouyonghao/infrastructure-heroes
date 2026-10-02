@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'SQLite'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg'
 description = 'Most widely deployed database engine in the world'
+maintainers = ["D. Richard Hipp"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Most widely deployed database engine in the world'
   commits_30d = 98
   commits_90d = 100
   bus_factor_people = 1
-["D. Richard Hipp"]
+
 +++
 
 ### Overview

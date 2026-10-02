@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Rust'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg'
 description = 'Systems programming language'
+maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 
 [health]
   funding = "stable"
@@ -21,7 +22,7 @@ description = 'Systems programming language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
-["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
+
 +++
 
 ### Overview

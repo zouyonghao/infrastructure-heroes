@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Ansible'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg'
 description = 'IT automation and configuration management'
+maintainers = ["Jeff Geerling"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'IT automation and configuration management'
   commits_30d = 35
   commits_90d = 81
   bus_factor_people = 5
-["Jeff Geerling"]
+
 +++
 
 ### Overview

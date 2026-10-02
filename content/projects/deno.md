@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Deno'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/denojs-original.svg'
 description = 'Secure runtime for JavaScript/TypeScript'
+maintainers = ["Ryan Dahl"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Secure runtime for JavaScript/TypeScript'
   commits_30d = 53
   commits_90d = 100
   bus_factor_people = 2
-["Ryan Dahl"]
+
 +++
 
 ### Overview

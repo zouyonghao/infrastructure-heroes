@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Python'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg'
 description = 'Popular programming language'
+maintainers = ["Guido van Rossum"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Popular programming language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 5
-["Guido van Rossum"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Next.js'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg'
 description = 'React framework for production'
+maintainers = ["Guillermo Rauch"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'React framework for production'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 5
-["Guillermo Rauch"]
+
 +++
 
 ### Overview

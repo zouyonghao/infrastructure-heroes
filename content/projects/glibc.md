@@ -3,6 +3,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Glibc'
 logo = 'https://www.gnu.org/graphics/heckert_gnu.transp.small.png'
 description = 'The GNU C Library - foundation of Linux systems'
+maintainers = ["Carlos O"]
 
 [health]
   funding = "at-risk"
@@ -20,7 +21,7 @@ description = 'The GNU C Library - foundation of Linux systems'
   commits_30d = 0
   commits_90d = 0
   bus_factor_people = 2
-["Carlos O"]
+
 +++
 
 ### Overview

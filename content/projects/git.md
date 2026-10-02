@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Git'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg'
 description = 'Distributed version control system'
+maintainers = ["Linus Torvalds", "Junio C Hamano"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Distributed version control system'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Linus Torvalds", "Junio C Hamano"]
+
 +++
 
 ### Overview

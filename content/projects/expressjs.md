@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Express.js'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg'
 description = 'Node.js web application framework'
+maintainers = ["TJ Holowaychuk"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Node.js web application framework'
   commits_30d = 7
   commits_90d = 17
   bus_factor_people = 2
-["TJ Holowaychuk"]
+
 +++
 
 ### Overview

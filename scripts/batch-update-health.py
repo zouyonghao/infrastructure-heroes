@@ -11,31 +11,33 @@ This script:
 5. Updates project frontmatter
 
 Requirements:
-- GITHUB_TOKEN environment variable (or --token flag)
+- GITHUB_TOKEN environment variable
 - Internet connection to GitHub API
 """
 
 import argparse
-import json
 import os
 import sys
 from pathlib import Path
-from datetime import datetime
+
+# Repository root (batch-update-health.py lives in <root>/scripts/)
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Add scripts directory to path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 try:
     # Import using importlib since filename has hyphens
     import importlib.util
     spec = importlib.util.spec_from_file_location(
         "fetch_metrics", 
-        str(Path(__file__).parent / "fetch-github-metrics.py")
+        str(Path(__file__).resolve().parent / "fetch-github-metrics.py")
     )
     fetch_metrics = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(fetch_metrics)
     GitHubMetricsFetcher = fetch_metrics.GitHubMetricsFetcher
     update_hugo_frontmatter = fetch_metrics.update_hugo_frontmatter
+    FetchError = fetch_metrics.FetchError
 except Exception as e:
     print(f"❌ Could not import fetch-github-metrics: {e}")
     sys.exit(1)
@@ -69,28 +71,24 @@ def main():
         help="Limit to first N projects (for testing)"
     )
     parser.add_argument(
-        "--token",
-        help="GitHub token (or set GITHUB_TOKEN env var)"
-    )
-    parser.add_argument(
         "--filter",
         help="Only process projects matching this name pattern"
     )
     
     args = parser.parse_args()
     
-    # Check for GitHub token
-    token = args.token or os.environ.get('GITHUB_TOKEN')
+    # Check for GitHub token (environment only)
+    token = os.environ.get('GITHUB_TOKEN')
     if not token:
         print("⚠️  Warning: No GITHUB_TOKEN provided. API rate limits will be strict (60 requests/hour).")
-        print("   Set GITHUB_TOKEN environment variable or use --token flag for higher limits.")
+        print("   Set the GITHUB_TOKEN environment variable for higher limits.")
         print()
     
     # Initialize fetcher
     fetcher = GitHubMetricsFetcher(token=token)
     
     # Get all project files
-    projects_dir = Path('content/projects')
+    projects_dir = REPO_ROOT / 'content/projects'
     project_files = sorted([f for f in projects_dir.glob('*.md') if f.name != '_index.md'])
     
     if args.filter:
@@ -105,6 +103,7 @@ def main():
     success_count = 0
     skip_count = 0
     error_count = 0
+    failed_projects = []
     
     for i, project_file in enumerate(project_files, 1):
         project_name = project_file.stem
@@ -128,46 +127,50 @@ def main():
         try:
             parts = github_repo.split('/')
             if len(parts) != 2:
-                print(f"  ❌ Invalid repo format: {github_repo}")
-                error_count += 1
-                continue
+                raise ValueError(f"Invalid repo format: {github_repo}")
             
             owner, repo = parts
             metrics = fetcher.fetch_repo_metrics(owner, repo)
             
             if not metrics:
-                print(f"  ❌ Failed to fetch metrics")
-                error_count += 1
-                continue
+                raise FetchError("no metrics returned")
             
             # Calculate health assessment
             assessment = fetcher.assess_health(metrics)
             
-            # Update frontmatter
-            success = update_hugo_frontmatter(project_file, assessment, metrics)
+            # Update frontmatter (refuses to write if any required endpoint failed)
+            if not update_hugo_frontmatter(project_file, assessment, metrics):
+                raise RuntimeError("failed to update front matter")
             
-            if success:
-                print(f"  ✅ Updated: Score {assessment.get('overall_score', 0)}/100 "
-                      f"({assessment.get('maintenance', 'unknown')}/"
-                      f"{assessment.get('contributors', 'unknown')}/"
-                      f"{assessment.get('bus_factor', 'unknown')}/"
-                      f"{assessment.get('funding', 'unknown')})")
-                success_count += 1
-            else:
-                print(f"  ❌ Failed to update frontmatter")
-                error_count += 1
-                
+            print(f"  ✅ Updated: Score {assessment.get('overall_score', 0)}/100 "
+                  f"({assessment.get('maintenance', 'unknown')}/"
+                  f"{assessment.get('contributors', 'unknown')}/"
+                  f"{assessment.get('bus_factor', 'unknown')}/"
+                  f"{assessment.get('funding', 'unknown')})")
+            success_count += 1
+        except FetchError as e:
+            print(f"  ❌ Fetch failed, skipping project: {e}")
+            failed_projects.append(project_name)
+            error_count += 1
         except Exception as e:
-            print(f"  ❌ Error: {e}")
+            print(f"  ❌ Error, skipping project: {e}")
+            failed_projects.append(project_name)
             error_count += 1
     
     # Summary
     print("\n" + "="*70)
     print("📋 Summary:")
     print(f"  ✅ Successfully updated: {success_count}")
-    print(f"  ⏭️  Skipped: {skip_count}")
+    print(f"  ⏭️  Skipped (no GitHub link): {skip_count}")
     print(f"  ❌ Errors: {error_count}")
+    if failed_projects:
+        print(f"  Failed projects: {', '.join(failed_projects)}")
     print("="*70)
+
+    # A systemic failure means CI must alert instead of silently committing.
+    if not args.dry_run and error_count > len(project_files) / 2:
+        print(f"\n❌ Systemic failure: {error_count}/{len(project_files)} projects failed. Exiting nonzero.")
+        sys.exit(1)
     
     if not args.dry_run and success_count > 0:
         print("\n📝 Next steps:")

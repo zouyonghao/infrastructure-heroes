@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Cargo'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg'
 description = 'Rust package manager and build tool'
+maintainers = ["Yehuda Katz"]
 
 [health]
   funding = "stable"
@@ -21,7 +22,7 @@ description = 'Rust package manager and build tool'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Yehuda Katz"]
+
 +++
 
 ### Overview

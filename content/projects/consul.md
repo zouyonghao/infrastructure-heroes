@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Consul'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/consul/consul-original.svg'
 description = 'Service mesh and discovery'
+maintainers = ["Mitchell Hashimoto"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Service mesh and discovery'
   commits_30d = 32
   commits_90d = 73
   bus_factor_people = 5
-["Mitchell Hashimoto"]
+
 +++
 
 ### Overview

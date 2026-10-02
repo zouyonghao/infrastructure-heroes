@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'OpenSSH'
 logo = 'https://avatars.githubusercontent.com/u/2387206?s=200&v=4'
 description = 'Secure Shell connectivity tools'
+maintainers = ["Theo de Raadt"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Secure Shell connectivity tools'
   commits_30d = 76
   commits_90d = 100
   bus_factor_people = 1
-["Theo de Raadt"]
+
 +++
 
 ### Overview

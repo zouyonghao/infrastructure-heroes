@@ -1,0 +1,4 @@
+# Infrastructure Heroes 自动化脚本依赖
+# 需要 Python >= 3.11（脚本使用 tomllib 解析 TOML front matter）
+
+requests>=2.31

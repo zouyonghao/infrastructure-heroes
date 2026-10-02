@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Svelte'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/svelte/svelte-original.svg'
 description = 'Cybernetically enhanced web apps'
+maintainers = ["Rich Harris"]
 
 [health]
   funding = "stable"
@@ -21,7 +22,7 @@ description = 'Cybernetically enhanced web apps'
   commits_30d = 35
   commits_90d = 100
   bus_factor_people = 4
-["Rich Harris"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Node.js'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg'
 description = 'JavaScript runtime built on V8'
+maintainers = ["Ryan Dahl", "Matteo Collina"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'JavaScript runtime built on V8'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
-["Ryan Dahl", "Matteo Collina"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'ESLint'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg'
 description = 'JavaScript linting utility'
+maintainers = ["Filipe Fortes"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'JavaScript linting utility'
   commits_30d = 53
   commits_90d = 100
   bus_factor_people = 7
-["Filipe Fortes"]
+
 +++
 
 ### Overview

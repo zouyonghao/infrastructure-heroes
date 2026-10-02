@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'PHP'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
 description = 'Server-side scripting language'
+maintainers = ["Rasmus Lerdorf"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Server-side scripting language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
-["Rasmus Lerdorf"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Terraform'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg'
 description = 'Infrastructure as code software tool'
+maintainers = ["Mitchell Hashimoto"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Infrastructure as code software tool'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 2
-["Mitchell Hashimoto"]
+
 +++
 
 ### Overview

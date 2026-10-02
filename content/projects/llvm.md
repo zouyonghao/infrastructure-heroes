@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'LLVM'
 logo = 'https://raw.githubusercontent.com/cncf/landscape/master/hosted_logos/llvm.svg'
 description = 'Compiler infrastructure and toolchain'
+maintainers = ["Chris Lattner"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Compiler infrastructure and toolchain'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 11
-["Chris Lattner"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Flask'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg'
 description = 'Lightweight Python web framework'
+maintainers = ["Armin Ronacher"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Lightweight Python web framework'
   commits_30d = 1
   commits_90d = 17
   bus_factor_people = 1
-["Armin Ronacher"]
+
 +++
 
 ### Overview

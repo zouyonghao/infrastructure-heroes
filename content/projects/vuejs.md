@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Vue.js'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg'
 description = 'Progressive JavaScript framework'
+maintainers = ["Evan You"]
 
 [health]
   funding = "stable"
@@ -21,7 +22,7 @@ description = 'Progressive JavaScript framework'
   commits_30d = 29
   commits_90d = 96
   bus_factor_people = 2
-["Evan You"]
+
 +++
 
 ### Overview

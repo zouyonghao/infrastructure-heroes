@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'TypeScript'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
 description = 'Typed superset of JavaScript'
+maintainers = ["Anders Hejlsberg"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Typed superset of JavaScript'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 3
-["Anders Hejlsberg"]
+
 +++
 
 ### Overview

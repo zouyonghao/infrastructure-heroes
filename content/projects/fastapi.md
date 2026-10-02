@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'FastAPI'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg'
 description = 'Modern Python web framework'
+maintainers = ["Sebastian Ramirez"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Modern Python web framework'
   commits_30d = 20
   commits_90d = 100
   bus_factor_people = 2
-["Sebastian Ramirez"]
+
 +++
 
 ### Overview

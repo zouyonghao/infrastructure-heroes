@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Babel'
 logo = 'https://raw.githubusercontent.com/dochne/wappalyzer/main/src/images/icons/Babel.svg'
 description = 'JavaScript compiler'
+maintainers = ["Sebastian McKenzie"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'JavaScript compiler'
   commits_30d = 32
   commits_90d = 76
   bus_factor_people = 2
-["Sebastian McKenzie"]
+
 +++
 
 ### Overview

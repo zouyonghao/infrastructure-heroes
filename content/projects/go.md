@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Go'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg'
 description = 'Programming language by Google'
+maintainers = ["Rob Pike", "Ken Thompson"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Programming language by Google'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 10
-["Rob Pike", "Ken Thompson"]
+
 +++
 
 ### Overview

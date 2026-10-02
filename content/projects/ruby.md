@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Ruby'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg'
 description = 'Dynamic programming language'
+maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Dynamic programming language'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 1
-["Aaron Patterson", "Yukihiro Matsumoto"]
+
 +++
 
 ### Overview

@@ -4,6 +4,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Ruby on Rails'
 logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-plain.svg'
 description = 'Full-stack Ruby web framework'
+maintainers = ["David Heinemeier Hansson"]
 
 [health]
   funding = "at-risk"
@@ -21,7 +22,7 @@ description = 'Full-stack Ruby web framework'
   commits_30d = 100
   commits_90d = 100
   bus_factor_people = 4
-["David Heinemeier Hansson"]
+
 +++
 
 ### Overview
