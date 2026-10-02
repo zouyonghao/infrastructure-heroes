@@ -7,6 +7,7 @@ avatar_style = "initials"
 
 projects = ["Abseil", "Software Engineering at Google"]
 [links]
+  github = "tituswinters"
   twitter = "TitusWinters"
 +++
 

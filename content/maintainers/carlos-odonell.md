@@ -3,11 +3,12 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Carlos O'Donell"
 role = "GNU C Library Maintainer"
-avatar_style = "initials"
+avatar = "/images/maintainers/carlos-odonell.webp"
+aliases = ["/maintainers/carlos-odf/"]
 
 projects = ["Glibc", "GNU Toolchain"]
 [links]
-  github = "carlos-odf"
+  github = "codonell"
 +++
 
 ## Biography

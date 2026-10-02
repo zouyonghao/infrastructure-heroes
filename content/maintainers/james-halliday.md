@@ -7,7 +7,6 @@ avatar_style = "initials"
 
 projects = ["Browserify", "Tape"]
 [links]
-  github = "substack"
   twitter = "substack"
 +++
 
