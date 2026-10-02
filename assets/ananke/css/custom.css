@@ -8144,6 +8144,14 @@ article code,
   color: inherit;
   text-decoration: underline;
 }
+.thanks-policy {
+  margin: var(--space-6) 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.thanks-policy a {
+  color: var(--color-primary);
+}
 .maintainer-card[hidden] {
   display: none !important;
 }
