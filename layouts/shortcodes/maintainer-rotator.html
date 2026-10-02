@@ -1,0 +1,63 @@
+{{/*
+  Maintainer Rotator
+  Rotates through "[Project] is maintained by [Maintainer]" pairs.
+
+  - Server-rendered: works without JavaScript (shows the first pair).
+  - Prefers one-maintainer projects, worst health score first, one pair per
+    maintainer, limited to 12 so the page stays light.
+  - assets/js/site.js cycles the pairs; respects prefers-reduced-motion and
+    pauses on hover/focus/tab-hidden.
+*/}}
+{{ $maintainerPages := dict }}
+{{ range where .Site.RegularPages "Section" "maintainers" }}
+  {{ if not .Draft }}
+    {{ $maintainerPages = merge $maintainerPages (dict .Title .) }}
+  {{ end }}
+{{ end }}
+
+{{ $singles := slice }}
+{{ range where .Site.RegularPages "Section" "projects" }}
+  {{ if and .Params.maintainers (eq (len .Params.maintainers) 1) }}
+    {{ $singles = $singles | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $pairs := slice }}
+{{ $seen := slice }}
+{{ range sort $singles ".Params.health.score" "asc" }}
+  {{ $name := index .Params.maintainers 0 }}
+  {{ if not (in $seen $name) }}
+    {{ $pairs = $pairs | append (dict "project" . "name" $name "maintainer" (index $maintainerPages $name)) }}
+    {{ $seen = $seen | append $name }}
+  {{ end }}
+  {{ if ge (len $pairs) 12 }}{{ break }}{{ end }}
+{{ end }}
+
+<section class="maintainer-rotator-section">
+  <div class="container-narrow">
+    <p class="rotator-eyebrow">Behind every project is a person</p>
+    <div class="maintainer-rotator" data-maintainer-rotator data-interval="4200">
+      <ul class="rotator-track">
+        {{ range $i, $pair := $pairs }}
+        <li class="rotator-item{{ if eq $i 0 }} is-active{{ end }}">
+          {{ with $pair.maintainer }}
+          <div class="rotator-avatar">
+            {{ partial "maintainer-avatar.html" (dict "maintainer" . "size" 72 "class" "rotator-avatar-img") }}
+          </div>
+          {{ end }}
+          <p class="rotator-line">
+            <a class="rotator-project" href="{{ $pair.project.RelPermalink }}">{{ $pair.project.Title }}</a>
+            <span class="rotator-verb">is maintained by</span>
+            {{ with $pair.maintainer }}
+              <a class="rotator-maintainer" href="{{ .RelPermalink }}">{{ $pair.name }}</a>
+            {{ else }}
+              <span class="rotator-maintainer">{{ $pair.name }}</span>
+            {{ end }}
+          </p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <p class="rotator-cta"><a href="/maintainers/" class="link-arrow">Meet the maintainers →</a></p>
+  </div>
+</section>

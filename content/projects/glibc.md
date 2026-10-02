@@ -3,7 +3,7 @@ date = '2025-06-08T15:30:11+08:00'
 title = 'Glibc'
 logo = 'https://www.gnu.org/graphics/heckert_gnu.transp.small.png'
 description = 'The GNU C Library - foundation of Linux systems'
-maintainers = ["Carlos O"]
+maintainers = ["Carlos O'Donell"]
 
 [health]
   funding = "at-risk"

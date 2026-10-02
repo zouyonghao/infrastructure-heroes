@@ -20,6 +20,8 @@ Discover and support the open source projects that power billions of devices. Tr
 {{< hero-stats >}}
 </section>
 
+{{< maintainer-rotator >}}
+
 <section class="section" id="projects">
 <div class="container-wide">
 <div class="section-header">
