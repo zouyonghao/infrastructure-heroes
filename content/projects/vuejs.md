@@ -6,6 +6,8 @@ logo = "/images/logos/vuejs.svg"
 description = 'Progressive JavaScript framework'
 maintainers = ["Evan You"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -6,6 +6,8 @@ logo = "/images/logos/cargo.svg"
 description = 'Rust package manager and build tool'
 maintainers = ["Yehuda Katz"]
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

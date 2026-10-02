@@ -5,6 +5,8 @@ title = 'OpenSSL'
 logo = "/images/logos/openssl.svg"
 description = 'Cryptography and SSL/TLS Toolkit'
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

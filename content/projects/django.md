@@ -5,6 +5,8 @@ title = 'Django'
 logo = "/images/logos/django.svg"
 description = 'Python web framework'
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

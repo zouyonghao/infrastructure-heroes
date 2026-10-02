@@ -5,6 +5,8 @@ title = 'Apache HTTP Server'
 logo = "/images/logos/apache-httpd.svg"
 description = 'Most widely used web server software'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

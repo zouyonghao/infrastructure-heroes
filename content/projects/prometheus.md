@@ -5,6 +5,8 @@ title = 'Prometheus'
 logo = "/images/logos/prometheus.svg"
 description = 'Monitoring and alerting toolkit'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

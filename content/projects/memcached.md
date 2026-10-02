@@ -5,6 +5,8 @@ title = 'Memcached'
 logo = "/images/logos/memcached.svg"
 description = 'Distributed memory caching system'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

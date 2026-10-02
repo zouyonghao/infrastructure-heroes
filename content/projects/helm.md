@@ -5,6 +5,8 @@ title = 'Helm'
 logo = "/images/logos/helm.svg"
 description = 'Kubernetes package manager'
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

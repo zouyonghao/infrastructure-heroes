@@ -5,6 +5,8 @@ title = 'Jaeger'
 logo = "/images/logos/jaeger.svg"
 description = 'Distributed tracing system'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

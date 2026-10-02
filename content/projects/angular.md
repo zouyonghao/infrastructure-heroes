@@ -6,6 +6,8 @@ logo = "/images/logos/angular.svg"
 description = 'TypeScript-based web framework'
 maintainers = ["Misko Hevery", "John Papa"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

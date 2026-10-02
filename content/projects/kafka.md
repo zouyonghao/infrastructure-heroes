@@ -5,6 +5,8 @@ title = 'Apache Kafka'
 logo = "/images/logos/kafka.svg"
 description = 'Distributed event streaming platform'
 
+category = "messaging"
+
 [health]
   funding = "unknown"
   maintenance = "active"

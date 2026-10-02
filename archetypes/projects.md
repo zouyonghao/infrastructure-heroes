@@ -5,6 +5,7 @@ title = '{{ replace .Name "-" " " | title }}'
 logo = ''
 description = ''
 maintainers = []
+category = "" # Choose a key from data/project_categories.json
 
 [health]
   funding = "unknown"      # stable | at-risk | critical | unknown

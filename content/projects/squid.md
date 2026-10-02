@@ -5,6 +5,8 @@ title = 'Squid'
 logo = "/images/logos/squid.webp"
 description = 'Caching proxy for the web'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

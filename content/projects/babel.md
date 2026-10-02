@@ -6,6 +6,8 @@ logo = "/images/logos/babel.svg"
 description = 'JavaScript compiler'
 maintainers = ["Sebastian McKenzie"]
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

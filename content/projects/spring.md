@@ -4,6 +4,8 @@ title = 'Spring Framework'
 logo = "/images/logos/spring.svg"
 description = 'Java application framework'
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

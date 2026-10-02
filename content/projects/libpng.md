@@ -5,6 +5,8 @@ title = 'libpng'
 logo = "/images/logos/libpng.svg"
 description = 'Official PNG reference library'
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

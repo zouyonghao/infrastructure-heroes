@@ -5,6 +5,8 @@ title = 'Prettier'
 logo = "/images/logos/prettier.webp"
 description = 'Opinionated code formatter'
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

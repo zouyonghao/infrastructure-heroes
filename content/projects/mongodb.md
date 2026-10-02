@@ -5,6 +5,8 @@ title = 'MongoDB'
 logo = "/images/logos/mongodb.svg"
 description = 'Document-oriented NoSQL database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

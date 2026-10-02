@@ -5,6 +5,8 @@ title = 'APT'
 logo = "/images/logos/apt.svg"
 description = 'Debian/Ubuntu package management'
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "inactive"

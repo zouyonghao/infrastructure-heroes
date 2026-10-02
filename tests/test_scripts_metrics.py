@@ -193,6 +193,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         "title = 'Demo'\n"
         "description = 'D'\n"
         "maintainers = [\"Alice\"]\n"
+        "category = \"networking\"\n"
         "\n"
         "[health]\n"
         "  funding = \"old\"\n"
@@ -259,6 +260,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.assertEqual(data["date"], "2025-06-08T15:30:11+08:00")
         self.assertEqual(data["title"], "Demo")
         self.assertEqual(data["maintainers"], ["Alice"])
+        self.assertEqual(data["category"], "networking")
         self.assertEqual(data["links"], {"github": "o/r"})
         # Body is byte-identical.
         self.assertIn("\n+++\n\nBody line 1\nBody line 2\n", text)

@@ -5,6 +5,8 @@ title = 'Homebrew'
 logo = "/images/logos/homebrew.svg"
 description = 'Package manager for macOS and Linux'
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

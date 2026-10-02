@@ -8,6 +8,7 @@ description: "Discover the critical infrastructure projects that power our digit
 <p class="section-subtitle">
 Critical open source projects that form the backbone of modern software.
 Explore repository activity, evidence gaps, and practical ways to support each project.
+<a href="/categories/">Browse categories →</a>
 </p>
 </div>
 

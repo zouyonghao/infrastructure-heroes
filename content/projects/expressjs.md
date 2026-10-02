@@ -6,6 +6,8 @@ logo = "/images/logos/expressjs.svg"
 description = 'Node.js web application framework'
 maintainers = ["TJ Holowaychuk"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

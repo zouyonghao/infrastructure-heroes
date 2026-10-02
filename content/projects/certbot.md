@@ -5,6 +5,8 @@ title = 'Certbot'
 logo = "/images/logos/certbot.svg"
 description = "ACME client for Let's Encrypt"
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

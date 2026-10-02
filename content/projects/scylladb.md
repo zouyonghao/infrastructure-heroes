@@ -5,6 +5,8 @@ title = 'ScyllaDB'
 logo = "/images/logos/scylladb.svg"
 description = 'High-performance NoSQL database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

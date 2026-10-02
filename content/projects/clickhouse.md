@@ -5,6 +5,8 @@ title = 'ClickHouse'
 logo = "/images/logos/clickhouse.svg"
 description = 'Column-oriented OLAP database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

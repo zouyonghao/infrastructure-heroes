@@ -6,6 +6,8 @@ logo = "/images/logos/redis.svg"
 description = 'In-memory data structure store'
 maintainers = ["Salvatore Sanfilippo"]
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

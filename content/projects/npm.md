@@ -5,6 +5,8 @@ title = 'npm'
 logo = "/images/logos/npm.svg"
 description = 'JavaScript package manager'
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

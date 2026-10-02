@@ -5,6 +5,8 @@ title = 'Vitess'
 logo = "/images/logos/vitess.webp"
 description = 'Database clustering for MySQL'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

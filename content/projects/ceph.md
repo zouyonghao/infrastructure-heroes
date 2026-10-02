@@ -5,6 +5,8 @@ title = 'Ceph'
 logo = "/images/logos/ceph.svg"
 description = 'Distributed storage system'
 
+category = "storage"
+
 [health]
   funding = "unknown"
   maintenance = "active"

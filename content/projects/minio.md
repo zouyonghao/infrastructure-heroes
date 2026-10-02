@@ -5,6 +5,8 @@ title = 'MinIO'
 logo = "/images/logos/minio.svg"
 description = 'High-performance object storage'
 
+category = "storage"
+
 [health]
   funding = "unknown"
   maintenance = "inactive"

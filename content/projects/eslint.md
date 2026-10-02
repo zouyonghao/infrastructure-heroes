@@ -6,6 +6,8 @@ logo = "/images/logos/eslint.svg"
 description = 'JavaScript linting utility'
 maintainers = ["Filipe Fortes"]
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ logo = "/images/logos/linux-kernel.svg"
 description = 'The foundation of modern computing infrastructure'
 maintainers = ["Linus Torvalds"]
 
+category = "operating-systems"
+
 [health]
   funding = "unknown"
   maintenance = "active"

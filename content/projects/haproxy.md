@@ -5,6 +5,8 @@ title = 'HAProxy'
 logo = "/images/logos/haproxy.svg"
 description = 'High-performance load balancer'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

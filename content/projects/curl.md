@@ -6,6 +6,8 @@ logo = "/images/logos/curl.svg"
 description = 'Command line tool and library for transferring data with URLs'
 maintainers = ["Daniel Stenberg"]
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

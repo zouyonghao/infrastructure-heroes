@@ -6,6 +6,8 @@ logo = "/images/logos/svelte.svg"
 description = 'Cybernetically enhanced web apps'
 maintainers = ["Rich Harris"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

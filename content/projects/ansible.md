@@ -6,6 +6,8 @@ logo = "/images/logos/ansible.svg"
 description = 'IT automation and configuration management'
 maintainers = ["Jeff Geerling"]
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

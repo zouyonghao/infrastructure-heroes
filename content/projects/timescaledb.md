@@ -5,6 +5,8 @@ title = 'TimescaleDB'
 logo = "/images/logos/timescaledb.svg"
 description = 'PostgreSQL for time-series data'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

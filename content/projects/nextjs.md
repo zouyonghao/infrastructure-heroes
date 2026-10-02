@@ -6,6 +6,8 @@ logo = "/images/logos/nextjs.svg"
 description = 'React framework for production'
 maintainers = ["Guillermo Rauch"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

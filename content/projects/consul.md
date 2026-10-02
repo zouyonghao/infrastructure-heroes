@@ -6,6 +6,8 @@ logo = "/images/logos/consul.svg"
 description = 'Service mesh and discovery'
 maintainers = ["Mitchell Hashimoto"]
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

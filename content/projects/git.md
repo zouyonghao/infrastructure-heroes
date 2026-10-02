@@ -6,6 +6,8 @@ logo = "/images/logos/git.svg"
 description = 'Distributed version control system'
 maintainers = ["Linus Torvalds", "Junio C Hamano"]
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

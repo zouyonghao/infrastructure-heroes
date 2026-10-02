@@ -5,6 +5,8 @@ title = 'containerd'
 logo = "/images/logos/containerd.svg"
 description = 'Industry-standard container runtime'
 
+category = "containers"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'GlusterFS'
 logo = "/images/logos/glusterfs.webp"
 description = 'Scalable network filesystem'
 
+category = "storage"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

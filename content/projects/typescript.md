@@ -6,6 +6,8 @@ logo = "/images/logos/typescript.svg"
 description = 'Typed superset of JavaScript'
 maintainers = ["Anders Hejlsberg"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

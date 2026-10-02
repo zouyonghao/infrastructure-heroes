@@ -5,6 +5,8 @@ title = 'Fluentd'
 logo = "/images/logos/fluentd.webp"
 description = 'Data collector for unified logging'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -6,6 +6,8 @@ logo = "/images/logos/envoy.svg"
 description = 'Cloud-native edge/service proxy'
 maintainers = ["Matt Klein"]
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

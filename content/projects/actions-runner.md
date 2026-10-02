@@ -5,6 +5,8 @@ title = 'GitHub Actions Runner'
 logo = "/images/logos/actions-runner.svg"
 description = 'Self-hosted runner for GitHub Actions'
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

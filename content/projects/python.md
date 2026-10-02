@@ -6,6 +6,8 @@ logo = "/images/logos/python.svg"
 description = 'Popular programming language'
 maintainers = ["Guido van Rossum"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

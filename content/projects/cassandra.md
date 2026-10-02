@@ -4,6 +4,8 @@ title = 'Cassandra'
 logo = "/images/logos/cassandra.svg"
 description = 'Distributed NoSQL database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

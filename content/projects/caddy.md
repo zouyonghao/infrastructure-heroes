@@ -5,6 +5,8 @@ title = 'Caddy'
 logo = "/images/logos/caddy.svg"
 description = 'Web server with automatic HTTPS'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

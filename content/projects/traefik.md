@@ -5,6 +5,8 @@ title = 'Traefik'
 logo = "/images/logos/traefik.svg"
 description = 'Cloud-native application proxy'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

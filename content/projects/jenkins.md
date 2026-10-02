@@ -5,6 +5,8 @@ title = 'Jenkins'
 logo = "/images/logos/jenkins.svg"
 description = 'Open source automation server'
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

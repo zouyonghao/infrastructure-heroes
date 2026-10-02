@@ -6,6 +6,8 @@ logo = "/images/logos/ffmpeg.svg"
 description = 'Complete multimedia framework'
 maintainers = ["Fabrice Bellard"]
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "active"

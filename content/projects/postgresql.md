@@ -5,6 +5,8 @@ title = 'PostgreSQL'
 logo = "/images/logos/postgresql.svg"
 description = "The world's most advanced open source relational database"
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

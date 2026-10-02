@@ -5,6 +5,8 @@ title = 'Varnish'
 logo = "/images/logos/varnish.webp"
 description = 'HTTP accelerator and reverse proxy'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "inactive"

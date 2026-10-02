@@ -78,6 +78,7 @@ infrastructure-heroes/
    title = 'Project Name'
    logo = 'https://example.com/logo.svg'
    description = 'Brief description of the project'
+   category = 'networking'   # Choose a key from data/project_categories.json
 
    [health]
      funding = "unknown"       # Requires separately reviewed financial evidence
@@ -287,15 +288,13 @@ You can manually trigger an update from the Actions tab, with options for:
 
 The metrics fetcher can detect donation platforms in `FUNDING.yml` and repository topics. These do not establish income or runway, so funding remains unknown. Public funding statements and participation routes are recorded separately with official sources and a checking date.
 
-## Dependency Chain Visualization
+## Project categories and dependencies
 
-Inspired by [xkcd #2347](https://xkcd.com/2347/), the site includes a **Dependencies** page that visualizes how modern software stacks depend on critical infrastructure:
+The [category directory](content/categories.md) groups projects by their primary purpose. Each project has one top-level `category` key in its TOML front matter. Category names and scope descriptions live in `data/project_categories.json` and are shared by the directory, project cards, detail pages, and filters.
 
-- **Dependency Chains**: Explore curated relationships between applications and infrastructure libraries
-- **Foundation Projects**: Identify load-bearing infrastructure with no dependencies but depended on by everything
-- **Project Context**: Follow dependency links to activity evidence and support options
+Choose the capability users adopt the project for, independently of implementation language or deployment environment. For example, Prometheus is observability, Ceph and Rook are storage, Airflow is data processing/workflows, and Argo CD is delivery automation. Categories do not imply importance or dependency order. Multifunction projects use the closest primary purpose; additional roles belong in the profile description.
 
-Edit `data/dependencies.yaml` to add new dependency relationships.
+Project pages show curated dependency relationships separately. Their `dependencies` front matter drives the per-project view; `data/dependencies.yaml` retains the broader relationship catalog, including external components. Neither contains category tiers. The former `/dependencies/` pyramid URL redirects to `/categories/`.
 
 ## License
 

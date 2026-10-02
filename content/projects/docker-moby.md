@@ -5,6 +5,8 @@ title = 'Moby (Docker Engine)'
 logo = "/images/logos/docker-moby.svg"
 description = 'Container runtime and toolkit'
 
+category = "containers"
+
 [health]
   funding = "unknown"
   maintenance = "active"

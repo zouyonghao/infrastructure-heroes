@@ -6,6 +6,8 @@ logo = "/images/logos/sqlite.svg"
 description = 'Most widely deployed database engine in the world'
 maintainers = ["D. Richard Hipp"]
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

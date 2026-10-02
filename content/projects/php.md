@@ -6,6 +6,8 @@ logo = "/images/logos/php.svg"
 description = 'Server-side scripting language'
 maintainers = ["Rasmus Lerdorf"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -1,0 +1,58 @@
+{
+  "operating-systems": {
+    "name": "Operating systems & system utilities",
+    "description": "Kernels, C system libraries, and essential userland utilities."
+  },
+  "security": {
+    "name": "Security & cryptography",
+    "description": "Encryption, secure access, certificates, and secrets management."
+  },
+  "formats-media": {
+    "name": "Data formats & media",
+    "description": "Compression, serialization, image codecs, and media processing."
+  },
+  "languages": {
+    "name": "Languages, compilers & runtimes",
+    "description": "Programming languages and the toolchains or engines that compile and execute them."
+  },
+  "networking": {
+    "name": "Networking & traffic management",
+    "description": "DNS, data transfer, RPC, service discovery, proxies, and web serving."
+  },
+  "databases": {
+    "name": "Databases, search & caching",
+    "description": "Structured data storage, queries, search indexes, and application caches."
+  },
+  "storage": {
+    "name": "File & object storage",
+    "description": "Filesystems, object stores, distributed storage, and tools that operate them."
+  },
+  "messaging": {
+    "name": "Messaging & coordination",
+    "description": "Message delivery, event streams, and distributed coordination."
+  },
+  "data-pipelines": {
+    "name": "Data processing & workflows",
+    "description": "Batch and stream computation, data pipelines, and workflow scheduling."
+  },
+  "observability": {
+    "name": "Observability",
+    "description": "Metrics, logs, tracing, instrumentation, and monitoring dashboards."
+  },
+  "containers": {
+    "name": "Containers & orchestration",
+    "description": "Container engines, runtimes, and workload scheduling."
+  },
+  "delivery": {
+    "name": "Infrastructure automation & delivery",
+    "description": "Provisioning, configuration, CI, deployment, and release automation."
+  },
+  "developer-tools": {
+    "name": "Developer tools & packages",
+    "description": "Version control, package management, bundling, linting, and formatting."
+  },
+  "frameworks": {
+    "name": "Application frameworks & UI",
+    "description": "Libraries and frameworks for building application backends and user interfaces."
+  }
+}

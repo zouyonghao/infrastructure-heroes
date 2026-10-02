@@ -5,6 +5,8 @@ title = 'Logstash'
 logo = "/images/logos/logstash.svg"
 description = 'Server-side data processing pipeline'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

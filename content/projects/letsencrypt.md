@@ -4,6 +4,8 @@ title = "Let's Encrypt"
 logo = "/images/logos/letsencrypt.svg"
 description = 'Free SSL/TLS certificate authority'
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

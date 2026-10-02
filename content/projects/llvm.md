@@ -6,6 +6,8 @@ logo = "/images/logos/llvm.svg"
 description = 'Compiler infrastructure and toolchain'
 maintainers = ["Chris Lattner"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

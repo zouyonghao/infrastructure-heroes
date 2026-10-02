@@ -6,6 +6,8 @@ logo = "/images/logos/openssh.webp"
 description = 'Secure Shell connectivity tools'
 maintainers = ["Theo de Raadt"]
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

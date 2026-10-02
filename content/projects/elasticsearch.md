@@ -5,6 +5,8 @@ title = 'Elasticsearch'
 logo = "/images/logos/elasticsearch.svg"
 description = 'Distributed search and analytics engine'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

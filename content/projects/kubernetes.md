@@ -6,6 +6,8 @@ logo = "/images/logos/kubernetes.svg"
 description = 'Container orchestration platform'
 maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 
+category = "containers"
+
 [health]
   funding = "unknown"
   maintenance = "active"

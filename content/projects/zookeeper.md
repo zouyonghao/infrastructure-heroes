@@ -5,6 +5,8 @@ title = 'Apache ZooKeeper'
 logo = "/images/logos/zookeeper.svg"
 description = 'Distributed coordination service'
 
+category = "messaging"
+
 [health]
   funding = "unknown"
   maintenance = "active"

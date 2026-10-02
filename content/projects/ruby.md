@@ -6,6 +6,8 @@ logo = "/images/logos/ruby.svg"
 description = 'Dynamic programming language'
 maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'Argo CD'
 logo = "/images/logos/argocd.svg"
 description = 'Declarative GitOps CD for Kubernetes'
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

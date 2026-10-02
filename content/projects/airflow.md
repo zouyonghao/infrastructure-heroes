@@ -5,6 +5,8 @@ title = 'Apache Airflow'
 logo = "/images/logos/airflow.svg"
 description = 'Workflow orchestration platform'
 
+category = "data-pipelines"
+
 [health]
   funding = "unknown"
   maintenance = "active"

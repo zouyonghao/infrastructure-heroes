@@ -5,6 +5,8 @@ title = 'Apache Flink'
 logo = "/images/logos/flink.webp"
 description = 'Stream processing framework'
 
+category = "data-pipelines"
+
 [health]
   funding = "unknown"
   maintenance = "active"

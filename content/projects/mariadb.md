@@ -5,6 +5,8 @@ title = 'MariaDB'
 logo = "/images/logos/mariadb.svg"
 description = 'Community-developed MySQL fork'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

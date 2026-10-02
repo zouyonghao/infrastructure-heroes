@@ -31,12 +31,13 @@ infrastructure-heroes/
 │   ├── _index.md           # Homepage
 │   ├── about.md            # About page
 │   ├── thanks.md           # Thank wall page
-│   ├── dependencies.md     # Dependency visualization page
+│   ├── categories.md       # Projects grouped by primary purpose
 │   ├── methodology.md      # Health scoring methodology
 │   ├── projects/           # Project profiles (*.md)
 │   └── maintainers/        # Maintainer profiles (*.md)
 ├── data/                    # Data files
-│   ├── dependencies.yaml   # Dependency graph data
+│   ├── dependencies.yaml   # Dependency graph data (no category tiers)
+│   ├── project_categories.json # Category names and scope descriptions
 │   └── historical/         # Health score snapshots (JSON)
 ├── layouts/                 # Hugo templates
 │   ├── _default/           # Base templates
@@ -107,6 +108,7 @@ logo = 'https://example.com/logo.svg'
 description = 'Brief description'
 date = '2025-01-01T00:00:00+08:00'
 maintainers = ["Maintainer Name"]  # Links to maintainer profiles
+category = "networking"   # Key from data/project_categories.json
 
 [health]
   funding = "stable"        # stable | at-risk | critical | unknown
@@ -317,8 +319,9 @@ Edit `data/dependencies.yaml` and add:
 ```yaml
 Project Name:
   depends_on: ["Dependency1", "Dependency2"]
-  tier: foundation|system|runtime|web|data|containers|cicd|apps|tools|external
 ```
+
+Choose the project's top-level `category` in `content/projects/*.md` separately, using a key from `data/project_categories.json`. Categories describe primary purpose, not dependency layers. The per-project dependency view reads the project's `dependencies` front matter; update that when changing a displayed relationship.
 
 ### Create Custom Shortcode
 Add HTML file to `layouts/shortcodes/`, use in content:

@@ -59,6 +59,8 @@ For projects without checked entries, the site says so and links to their reposi
 
 We focus on reusable software infrastructure: libraries, runtimes, operating-system components, protocols, build tools, deployment tools, and services that other software depends on. A project's inclusion should explain that dependency role.
 
+[Categories](/categories/) group projects by the primary capability they provide. They are not dependency layers or rankings. A tool that runs on Kubernetes may belong under storage, observability, or delivery, depending on its purpose. Dependency relationships are documented separately on project pages.
+
 People profiles should document a concrete role in creating, maintaining, or contributing to that infrastructure. Being a technology celebrity, company founder, author, or educator alone is not enough. Profiles without a documented infrastructure connection are held as drafts for review.
 
 A creator, current maintainer, former maintainer, and contributor are different roles. Use the specific role supported by project documentation; do not treat a project's linked profiles as its complete current team. Existing profiles remain subject to source review. New or revised claims about current roles need a primary source and review date. Quotations require a traceable source.

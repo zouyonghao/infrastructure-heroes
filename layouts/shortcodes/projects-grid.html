@@ -7,7 +7,7 @@
 {{ end }}
 <div class="projects-grid">
     {{ range $sortedProjects }}
-    <div class="project-card" data-health="{{ if index site.Data.project_support .File.ContentBaseName }}support{{ else }}unreviewed{{ end }}">
+    <div class="project-card" data-category="{{ .Params.category }}" data-health="{{ if index site.Data.project_support .File.ContentBaseName }}support{{ else }}unreviewed{{ end }}">
         <div class="project-header">
             {{ if .Params.logo }}
             <div class="project-logo">
@@ -19,6 +19,10 @@
             {{ end }}
             <div class="project-info">
                 <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ $project := . }}
+                {{ with index site.Data.project_categories (.Params.category | default "") }}
+                <a class="project-category" href="/projects/#category={{ $project.Params.category }}">{{ .name }}</a>
+                {{ end }}
                 {{ if .Params.description }}
                 <p class="project-description">{{ .Params.description }}</p>
                 {{ end }}

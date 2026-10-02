@@ -11,6 +11,9 @@
             </div>
             {{ end }}
             <h1>{{ .Title }}</h1>
+            {{ with index site.Data.project_categories (.Params.category | default "") }}
+            <a class="project-category" href="/projects/#category={{ $.Params.category }}">{{ .name }}</a>
+            {{ end }}
             {{ if .Params.description }}
             <p class="section-subtitle">{{ .Params.description }}</p>
             {{ end }}

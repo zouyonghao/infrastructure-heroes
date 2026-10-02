@@ -6,6 +6,8 @@ logo = "/images/logos/nginx.svg"
 description = 'High-performance web server and reverse proxy'
 maintainers = ["Igor Sysoev"]
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

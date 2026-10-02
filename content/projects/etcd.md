@@ -5,6 +5,8 @@ title = 'etcd'
 logo = "/images/logos/etcd.webp"
 description = 'Distributed key-value store'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

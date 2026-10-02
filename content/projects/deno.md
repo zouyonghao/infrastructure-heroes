@@ -6,6 +6,8 @@ logo = "/images/logos/deno.svg"
 description = 'Secure runtime for JavaScript/TypeScript'
 maintainers = ["Ryan Dahl"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

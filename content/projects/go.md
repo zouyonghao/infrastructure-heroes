@@ -6,6 +6,8 @@ logo = "/images/logos/go.svg"
 description = 'Programming language by Google'
 maintainers = ["Rob Pike", "Ken Thompson"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

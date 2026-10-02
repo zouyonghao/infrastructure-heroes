@@ -6,6 +6,8 @@ logo = "/images/logos/flask.svg"
 description = 'Lightweight Python web framework'
 maintainers = ["Armin Ronacher"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

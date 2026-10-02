@@ -5,6 +5,8 @@ title = 'MySQL'
 logo = "/images/logos/mysql.svg"
 description = 'Popular relational database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

@@ -6,6 +6,8 @@ logo = "/images/logos/webpack.svg"
 description = 'JavaScript module bundler'
 maintainers = ["Tobias Koppers"]
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -6,6 +6,8 @@ logo = "/images/logos/vault.svg"
 description = 'Secrets management tool'
 maintainers = ["Mitchell Hashimoto"]
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

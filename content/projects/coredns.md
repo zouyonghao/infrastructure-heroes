@@ -5,6 +5,8 @@ title = 'CoreDNS'
 logo = "/images/logos/coredns.svg"
 description = 'Cloud-native DNS server'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

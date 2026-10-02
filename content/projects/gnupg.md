@@ -6,6 +6,8 @@ logo = "/images/logos/gnupg.svg"
 description = 'Free implementation of OpenPGP'
 
 maintainers = ["Werner Koch"]
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "active"

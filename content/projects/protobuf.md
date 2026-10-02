@@ -5,6 +5,8 @@ title = 'Protocol Buffers'
 logo = "/images/logos/protobuf.svg"
 description = 'Language-neutral data serialization'
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "active"

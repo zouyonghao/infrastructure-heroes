@@ -5,6 +5,8 @@ title = 'BIND'
 logo = "/images/logos/bind.webp"
 description = 'Most widely used DNS server software'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

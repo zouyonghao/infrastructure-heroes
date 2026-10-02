@@ -6,6 +6,8 @@ logo = "/images/logos/terraform.svg"
 description = 'Infrastructure as code software tool'
 maintainers = ["Mitchell Hashimoto"]
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"

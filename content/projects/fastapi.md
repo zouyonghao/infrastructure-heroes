@@ -6,6 +6,8 @@ logo = "/images/logos/fastapi.svg"
 description = 'Modern Python web framework'
 maintainers = ["Sebastian Ramirez"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

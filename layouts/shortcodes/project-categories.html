@@ -1,0 +1,19 @@
+{{ $projects := where site.RegularPages "Section" "projects" }}
+<p class="category-summary">{{ len $projects }} projects · {{ len site.Data.project_categories }} categories</p>
+<div class="category-grid">
+  {{ range $key, $category := site.Data.project_categories }}
+    {{ $members := where $projects "Params.category" $key }}
+    {{ if $members }}
+    <section class="category-card" id="{{ $key }}" aria-labelledby="category-{{ $key }}">
+      <h2 id="category-{{ $key }}"><a href="/projects/#category={{ $key }}">{{ $category.name }}</a></h2>
+      <p>{{ $category.description }}</p>
+      <p class="category-count">{{ len $members }} projects</p>
+      <ul class="category-projects">
+        {{ range $members.ByTitle }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  {{ end }}
+</div>

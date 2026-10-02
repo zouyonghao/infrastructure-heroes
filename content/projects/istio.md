@@ -5,6 +5,8 @@ title = 'Istio'
 logo = "/images/logos/istio.svg"
 description = 'Service mesh for Kubernetes'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

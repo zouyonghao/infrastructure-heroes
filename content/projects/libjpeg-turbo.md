@@ -5,6 +5,8 @@ title = 'libjpeg-turbo'
 logo = "/images/logos/libjpeg-turbo.svg"
 description = 'JPEG image codec with SIMD acceleration'
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "active"

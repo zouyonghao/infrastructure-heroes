@@ -5,6 +5,8 @@ title = 'Grafana'
 logo = "/images/logos/grafana.svg"
 description = 'Analytics and monitoring visualization'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

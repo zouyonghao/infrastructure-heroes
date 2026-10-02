@@ -6,6 +6,8 @@ logo = "/images/logos/bun.svg"
 description = 'Fast JavaScript runtime and toolkit'
 maintainers = ["Jarred Sumner"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -6,6 +6,8 @@ logo = "/images/logos/nodejs.svg"
 description = 'JavaScript runtime built on V8'
 maintainers = ["Ryan Dahl", "Matteo Collina"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -84,12 +84,9 @@
         </div>
         <div class="dep-current-name">{{ .Title }}</div>
         <div class="dep-current-tier">
-          {{/* Tier is driven by data/dependencies.yaml (case-insensitive title match) */}}
-          {{ $tier := "unknown" }}
-          {{ range $name, $info := site.Data.dependencies }}
-            {{ if eq (lower $name) (lower $title) }}{{ $tier = $info.tier | default "unknown" }}{{ end }}
+          {{ with index site.Data.project_categories (.Params.category | default "") }}
+          {{ .name }}
           {{ end }}
-          {{ $tier }}
         </div>
       </div>
     </div>

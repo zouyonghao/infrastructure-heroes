@@ -5,6 +5,8 @@ title = 'ImageMagick'
 logo = "/images/logos/imagemagick.svg"
 description = 'Image manipulation toolkit'
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "active"

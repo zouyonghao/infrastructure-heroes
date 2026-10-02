@@ -14,8 +14,15 @@
             </button>
         </div>
 
+        <select id="category-filter" class="filter-select" aria-label="Filter projects by category">
+            <option value="">All categories</option>
+            {{ range $key, $category := site.Data.project_categories }}
+            <option value="{{ $key }}">{{ $category.name }}</option>
+            {{ end }}
+        </select>
+
         <select id="health-filter" class="filter-select" aria-label="Filter projects by support information">
-            <option value="">All projects</option>
+            <option value="">Any support information</option>
             <option value="support">Support links checked</option>
             <option value="unreviewed">Support links not yet checked</option>
         </select>
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elements
     const searchInput = document.getElementById('project-search');
     const healthFilter = document.getElementById('health-filter');
+    const categoryFilter = document.getElementById('category-filter');
     const sortBy = document.getElementById('sort-by');
     const resetBtn = document.getElementById('reset-filters');
     const clearSearchBtn = document.getElementById('clear-search');
@@ -82,7 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
         cardData.set(card, {
             title: (card.querySelector('.project-title')?.textContent || '').toLowerCase(),
             description: (card.querySelector('.project-description')?.textContent || '').toLowerCase(),
-            health: card.dataset.health || ''
+            health: card.dataset.health || '',
+            category: card.dataset.category || ''
         });
     });
 
@@ -107,6 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (healthFilter.value) {
             const healthText = healthFilter.options[healthFilter.selectedIndex].text;
             filters.push('Support: ' + healthText);
+        }
+
+        if (categoryFilter.value) {
+            filters.push('Category: ' + categoryFilter.options[categoryFilter.selectedIndex].text);
         }
 
         if (filters.length > 0) {
@@ -147,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterProjects() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const healthValue = healthFilter.value;
+        const categoryValue = categoryFilter.value;
         let visible = 0;
 
         // Show/hide clear search button
@@ -157,8 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const matchesSearch = !searchTerm || data.title.includes(searchTerm) || data.description.includes(searchTerm);
             const matchesHealth = !healthValue || data.health === healthValue;
+            const matchesCategory = !categoryValue || data.category === categoryValue;
 
-            if (matchesSearch && matchesHealth) {
+            if (matchesSearch && matchesHealth && matchesCategory) {
                 card.style.display = '';
                 visible++;
             } else {
@@ -199,6 +214,10 @@ document.addEventListener('DOMContentLoaded', function() {
             params.set('health', healthFilter.value);
         }
 
+        if (categoryFilter.value) {
+            params.set('category', categoryFilter.value);
+        }
+
         if (sortBy.value !== 'name-asc') {
             params.set('sort', sortBy.value);
         }
@@ -213,22 +232,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load filters from URL hash
     function loadFiltersFromHash() {
-        const hash = window.location.hash.slice(1);
-        if (!hash) return;
-
-        const params = new URLSearchParams(hash);
-
-        if (params.has('search')) {
-            searchInput.value = params.get('search');
+        const params = new URLSearchParams(window.location.hash.slice(1));
+        searchInput.value = params.get('search') || '';
+        // Ignore invalid or retired filter values; reset missing keys on hash navigation.
+        function selectValue(select, value, fallback = '') {
+            select.value = Array.from(select.options).some(option => option.value === value)
+                ? value : fallback;
         }
-
-        if (params.has('health')) {
-            healthFilter.value = params.get('health');
-        }
-
-        if (params.has('sort')) {
-            sortBy.value = params.get('sort');
-        }
+        selectValue(healthFilter, params.get('health'));
+        selectValue(categoryFilter, params.get('category'));
+        selectValue(sortBy, params.get('sort'), 'name-asc');
 
         filterProjects();
     }
@@ -238,6 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput?.addEventListener('input', debouncedFilter);
     healthFilter?.addEventListener('change', filterProjects);
+    categoryFilter?.addEventListener('change', filterProjects);
     sortBy?.addEventListener('change', filterProjects);
 
     clearSearchBtn?.addEventListener('click', function() {
@@ -249,6 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetAllFilters() {
         searchInput.value = '';
         healthFilter.value = '';
+        categoryFilter.value = '';
         sortBy.value = 'name-asc';
         clearSearchBtn.style.display = 'none';
         filterProjects();

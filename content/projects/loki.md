@@ -5,6 +5,8 @@ title = 'Loki'
 logo = "/images/logos/loki.svg"
 description = 'Log aggregation system by Grafana'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

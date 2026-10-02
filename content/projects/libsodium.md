@@ -5,6 +5,8 @@ title = 'libsodium'
 logo = "/images/logos/libsodium.webp"
 description = 'Modern cryptography library'
 
+category = "security"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

@@ -5,6 +5,8 @@ title = 'RabbitMQ'
 logo = "/images/logos/rabbitmq.svg"
 description = 'Message broker software'
 
+category = "messaging"
+
 [health]
   funding = "unknown"
   maintenance = "active"

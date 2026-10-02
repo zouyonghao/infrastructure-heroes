@@ -6,6 +6,8 @@ logo = "/images/logos/rails.svg"
 description = 'Full-stack Ruby web framework'
 maintainers = ["David Heinemeier Hansson"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

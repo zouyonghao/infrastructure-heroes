@@ -6,6 +6,8 @@ logo = "/images/logos/react.svg"
 description = 'JavaScript library for building UIs'
 maintainers = ["Jordan Walke", "Dan Abramov"]
 
+category = "frameworks"
+
 [health]
   funding = "unknown"
   maintenance = "active"

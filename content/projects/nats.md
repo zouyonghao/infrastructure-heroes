@@ -5,6 +5,8 @@ title = 'NATS'
 logo = "/images/logos/nats.webp"
 description = 'Cloud-native messaging system'
 
+category = "messaging"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'Neo4j'
 logo = "/images/logos/neo4j.svg"
 description = 'Graph database platform'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

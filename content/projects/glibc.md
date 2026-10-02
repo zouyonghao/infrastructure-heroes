@@ -5,6 +5,8 @@ logo = "/images/logos/glibc.png"
 description = 'The GNU C Library - foundation of Linux systems'
 maintainers = ["Carlos O'Donell"]
 
+category = "operating-systems"
+
 [health]
   funding = "unknown"
   maintenance = "inactive"

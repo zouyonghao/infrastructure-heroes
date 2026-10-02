@@ -5,6 +5,8 @@ title = 'Apache Spark'
 logo = "/images/logos/spark.svg"
 description = 'Unified analytics engine'
 
+category = "data-pipelines"
+
 [health]
   funding = "unknown"
   maintenance = "active"

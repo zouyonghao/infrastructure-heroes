@@ -5,6 +5,8 @@ title = 'InfluxDB'
 logo = "/images/logos/influxdb.webp"
 description = 'Time series database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

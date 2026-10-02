@@ -5,6 +5,8 @@ title = 'CockroachDB'
 logo = "/images/logos/cockroachdb.svg"
 description = 'Distributed SQL database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

@@ -5,6 +5,8 @@ title = 'Apache Tomcat'
 logo = "/images/logos/tomcat.svg"
 description = 'Java Servlet container'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

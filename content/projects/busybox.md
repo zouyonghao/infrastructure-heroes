@@ -5,6 +5,8 @@ title = 'BusyBox'
 logo = "/images/logos/busybox.webp"
 description = 'The Swiss Army Knife of Embedded Linux'
 
+category = "operating-systems"
+
 [health]
   funding = "unknown"
   maintenance = "inactive"

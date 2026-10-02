@@ -5,6 +5,8 @@ title = 'TiDB'
 logo = "/images/logos/tidb.svg"
 description = 'Distributed NewSQL database'
 
+category = "databases"
+
 [health]
   funding = "unknown"
   maintenance = "active"

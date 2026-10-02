@@ -6,6 +6,8 @@ logo = "/images/logos/rust.svg"
 description = 'Systems programming language'
 maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 
+category = "languages"
+
 [health]
   funding = "unknown"
   maintenance = "active"

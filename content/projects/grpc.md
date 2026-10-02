@@ -4,6 +4,8 @@ title = 'gRPC'
 logo = "/images/logos/grpc.svg"
 description = 'High-performance RPC framework'
 
+category = "networking"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -6,6 +6,8 @@ logo = "/images/logos/zlib.webp"
 description = 'Massively used compression library'
 maintainers = ["Mark Adler"]
 
+category = "formats-media"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'Rook'
 logo = "/images/logos/rook.svg"
 description = 'Cloud-native storage orchestrator'
 
+category = "storage"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'OpenTelemetry'
 logo = "/images/logos/opentelemetry.webp"
 description = 'Observability framework'
 
+category = "observability"
+
 [health]
   funding = "unknown"
   maintenance = "active"

@@ -5,6 +5,8 @@ title = 'pip'
 logo = "/images/logos/pip.svg"
 description = 'Python package installer'
 
+category = "developer-tools"
+
 [health]
   funding = "unknown"
   maintenance = "moderate"

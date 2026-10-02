@@ -5,6 +5,8 @@ title = 'Flux'
 logo = "/images/logos/flux.webp"
 description = 'GitOps tool for Kubernetes'
 
+category = "delivery"
+
 [health]
   funding = "unknown"
   maintenance = "active"
