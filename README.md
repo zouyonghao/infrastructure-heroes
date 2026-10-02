@@ -53,7 +53,7 @@ infrastructure-heroes/
 │   ├── projects/            # Project profiles
 │   └── maintainers/         # Maintainer profiles
 ├── data/
-│   ├── dependencies.json    # Dependency graph data
+│   ├── dependencies.yaml    # Dependency graph data
 │   └── historical/          # Historical health snapshots
 ├── layouts/
 │   ├── projects/            # Project templates
@@ -133,9 +133,9 @@ Projects are rated on a 0-100 scale based on four dimensions:
 
 | Score Range | Status | Color |
 |-------------|--------|-------|
-| 70-100 | Healthy | Green |
-| 40-69 | Warning | Yellow |
-| 0-39 | Critical | Red |
+| 80-100 | Healthy | Green |
+| 60-79 | Warning | Yellow |
+| 0-59 | Critical | Red |
 
 See [HEALTH_METRICS.md](HEALTH_METRICS.md) for detailed methodology.
 
@@ -183,6 +183,14 @@ Additionally, maintainers can have a `status` field:
 This helps track the human continuity behind critical infrastructure.
 
 ## Scripts
+
+Scripts require Python 3.11+ and the packages in [`requirements.txt`](requirements.txt):
+
+```bash
+pip install -r requirements.txt
+```
+
+See [`scripts/README.md`](scripts/README.md) for the full script reference.
 
 ### GitHub Metrics Fetcher
 
@@ -249,7 +257,9 @@ Contributions are welcome! Here's how you can help:
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages on push to the `master` branch via GitHub Actions.
+The site is automatically deployed to GitHub Pages by [`.github/workflows/hugo.yml`](.github/workflows/hugo.yml) on every push to `master`, and after each successful run of the automated metrics update (commits pushed by `GITHUB_TOKEN` do not trigger the `push` event, so the metrics workflow completion is used as the deploy trigger).
+
+Pull requests and topic branches are validated by [`.github/workflows/ci.yml`](.github/workflows/ci.yml) (Python unit tests plus a Hugo build) before merge.
 
 ## Automated Updates
 
@@ -261,7 +271,8 @@ Project metrics are automatically refreshed weekly via GitHub Actions:
   - Fetches latest GitHub metrics for all projects
   - Recalculates health scores using Methodology v1.0
   - Records historical snapshots for trend analysis
-  - Commits changes automatically
+  - Refreshes the Health Trends section of the Methodology page
+  - Commits changes automatically and triggers a site deployment
 
 ### Manual Trigger
 
@@ -289,11 +300,11 @@ Inspired by [xkcd #2347](https://xkcd.com/2347/), the site includes a **Dependen
 - **Foundation Projects**: Identify load-bearing infrastructure with no dependencies but depended on by everything
 - **At-Risk Pathways**: Highlight chains where high bus factor projects sit at the bottom
 
-Edit `data/dependencies.json` to add new dependency relationships.
+Edit `data/dependencies.yaml` to add new dependency relationships.
 
 ## License
 
-This project is open source. See the repository for license details.
+Source code (scripts, templates, stylesheets, workflows, configuration) is licensed under the [MIT License](LICENSE). Website content (project profiles, maintainer profiles, and documentation under `content/`) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
