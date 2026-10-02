@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Infrastructure Heroes - GitHub Metrics Fetcher
-自动从 GitHub API 获取项目指标，计算健康度评分
+Fetches project metrics from the GitHub API and computes health scores
 
 Usage:
     python fetch-github-metrics.py --repo owner/repo [--output metrics.json]
@@ -152,7 +152,7 @@ def retry_delay(status_code: Optional[int], headers, body: Optional[str], attemp
 
 
 class GitHubMetricsFetcher:
-    """GitHub 项目指标获取器 - Infrastructure Heroes Methodology v1.0"""
+    """GitHub project metrics fetcher - Infrastructure Heroes Methodology v1.0"""
 
     def __init__(self, token: Optional[str] = None):
         self.token = token or os.environ.get('GITHUB_TOKEN')
@@ -312,14 +312,14 @@ class GitHubMetricsFetcher:
 
     def fetch_repo_metrics(self, owner: str, repo: str) -> dict:
         """
-        获取仓库基本指标和扩展指标
+        Fetch basic and extended repository metrics.
 
         Raises :class:`FetchError` when a required endpoint fails so callers never
         persist partial metrics.
         """
         print(f"📊 Fetching metrics for {owner}/{repo}...")
 
-        # 基本信息
+        # Basic information
         repo_data, _ = self._api_request(f"/repos/{owner}/{repo}")
         if not isinstance(repo_data, dict):
             raise FetchError(f"Unexpected repository response for {owner}/{repo}")
@@ -341,12 +341,12 @@ class GitHubMetricsFetcher:
             "disabled": repo_data.get("disabled", False),
         }
 
-        # 计算时间维度指标
+        # Time-window metrics
         today = datetime.now()
         thirty_days_ago = today - timedelta(days=30)
         ninety_days_ago = today - timedelta(days=90)
 
-        # 采样最近提交（最多 2 页 / 200 条）用于作者数与巴士因子
+        # Sample the newest commits (up to 2 pages / 200) for author counts and bus factor
         commits, truncated = self.fetch_commit_sample(
             owner, repo, stop_before=ninety_days_ago
         )
@@ -357,7 +357,7 @@ class GitHubMetricsFetcher:
         recent_90d_commits = 0
         authors_30d = set()
         authors_90d = set()
-        all_commit_authors = []  # 用于计算巴士因子
+        all_commit_authors = []  # used for the bus-factor calculation
 
         for commit in commits:
             commit_time = self._commit_date(commit)
@@ -365,7 +365,7 @@ class GitHubMetricsFetcher:
                 continue
             author = commit.get("author", {}).get("login") if commit.get("author") else None
             if not author:
-                # 使用 commit 中的作者名称
+                # Fall back to the commit author name
                 author = commit.get("commit", {}).get("author", {}).get("name", "unknown")
 
             all_commit_authors.append(author)
@@ -379,7 +379,7 @@ class GitHubMetricsFetcher:
                 authors_90d.add(author)
 
         if truncated:
-            # 采样未覆盖到 90 天边界：用两次 per_page=1 请求精确统计窗口内提交数。
+            # The commit sample did not reach the 90-day boundary: get exact window counts with two per_page=1 requests.
             since_30d = thirty_days_ago.strftime('%Y-%m-%dT%H:%M:%SZ')
             since_90d = ninety_days_ago.strftime('%Y-%m-%dT%H:%M:%SZ')
             commits_30d = self._count_from_link(
@@ -397,7 +397,7 @@ class GitHubMetricsFetcher:
         metrics["unique_contributors_last_90_days"] = len(authors_90d)
         metrics["all_commit_authors"] = all_commit_authors
 
-        # 获取最近更新时间（pushed_at）
+        # Last push time (pushed_at)
         if metrics.get("pushed_at"):
             try:
                 pushed_time = datetime.fromisoformat(metrics["pushed_at"].replace("Z", "+00:00"))
@@ -407,7 +407,7 @@ class GitHubMetricsFetcher:
         else:
             metrics["days_since_last_push"] = 365
 
-        # 获取贡献者统计：仅需总数，用一次 per_page=1 请求读取 Link rel="last"
+        # Contributors: only the total is needed; read Link rel="last" from one per_page=1 request
         try:
             metrics["total_contributors"] = self._count_from_link(
                 f"/repos/{owner}/{repo}/contributors",
@@ -415,13 +415,13 @@ class GitHubMetricsFetcher:
             )
             metrics["contributors_unavailable"] = False
         except ContributorsUnavailable:
-            # GitHub 拒绝列出超大仓库的贡献者；这不是失败，也不应记为零。
+            # GitHub refuses to list contributors for very large repositories; this is neither a failure nor a zero.
             print("⚠️  GitHub will not list contributors for this repository "
                   "(list too large); keeping the existing value.")
             metrics["total_contributors"] = None
             metrics["contributors_unavailable"] = True
 
-        # 获取最近发布
+        # Recent releases
         releases = self._paginate(f"/repos/{owner}/{repo}/releases?per_page=5", max_pages=1)
         metrics["recent_releases"] = [
             {
@@ -432,7 +432,7 @@ class GitHubMetricsFetcher:
             for r in releases if isinstance(r, dict)
         ]
 
-        # 计算最近一次发布时间
+        # Time since the latest release
         if metrics["recent_releases"]:
             try:
                 last_release = datetime.fromisoformat(
@@ -452,7 +452,7 @@ class GitHubMetricsFetcher:
 
     def calculate_maintenance_score(self, metrics: dict) -> int:
         """
-        计算维护活跃度分数 (0-100) - Methodology v1.0
+        Compute the maintenance activity score (0-100) - Methodology v1.0
 
         Criteria:
         - Last commit recency (40%)
@@ -461,7 +461,7 @@ class GitHubMetricsFetcher:
         """
         score = 0
 
-        # 1. 最近提交时间 (40分)
+        # 1. Time since the last commit (40 points)
         days_since_push = metrics.get("days_since_last_push", 365)
         if days_since_push < 7:
             score += 40
@@ -476,7 +476,7 @@ class GitHubMetricsFetcher:
         else:
             score += 5
 
-        # 2. 发布频率 (30分)
+        # 2. Release frequency (30 points)
         days_since_release = metrics.get("days_since_last_release", 365)
         if days_since_release < 30:
             score += 30
@@ -489,7 +489,7 @@ class GitHubMetricsFetcher:
         else:
             score += 5
 
-        # 3. 活跃程度 (30分) - 基于最近30天提交数
+        # 3. Activity level (30 points) - based on commits in the last 30 days
         commits_30d = metrics.get("commits_last_30_days", 0)
         if commits_30d >= 50:
             score += 30
@@ -508,26 +508,26 @@ class GitHubMetricsFetcher:
 
     def calculate_contributors_score(self, metrics: dict) -> int:
         """
-        计算贡献者健康度分数 (0-100) - Methodology v1.0
+        Compute the contributor health score (0-100) - Methodology v1.0
 
         Criteria:
         - Active contributors in last 90 days (80%)
         - Contributor trend bonus (20%)
         """
-        # 基于最近90天活跃贡献者
+        # Based on active contributors in the last 90 days
         contributors_90d = metrics.get("unique_contributors_last_90_days", 0)
 
-        # 基础分数：每个贡献者8分，最高80分
+        # Base score: 8 points per contributor, capped at 80
         base_score = min(contributors_90d * 8, 80)
 
-        # 趋势奖励：如果有10+贡献者，加20分
+        # Trend bonus: +20 points when there are 10+ contributors
         trend_bonus = 20 if contributors_90d >= 10 else 0
 
         return min(base_score + trend_bonus, 100)
 
     def calculate_bus_factor_score(self, metrics: dict) -> int:
         """
-        计算巴士因子风险分数 (0-100) - Methodology v1.0
+        Compute the bus-factor risk score (0-100) - Methodology v1.0
 
         Higher score = lower risk
 
@@ -542,14 +542,14 @@ class GitHubMetricsFetcher:
         if not authors:
             return 50  # Unknown
 
-        # 统计每个作者的提交数
+        # Count commits per author
         author_counts = Counter(authors)
         total_commits = len(authors)
 
         if total_commits == 0:
             return 50
 
-        # 计算需要多少人覆盖50%的提交
+        # Number of people needed to cover 50% of commits
         sorted_authors = author_counts.most_common()
         cumulative = 0
         people_for_50_percent = 0
@@ -562,7 +562,7 @@ class GitHubMetricsFetcher:
 
         metrics["bus_factor_people"] = people_for_50_percent
 
-        # 根据巴士因子人数评分
+        # Score by bus-factor headcount
         if people_for_50_percent >= 5:
             return 100  # Low risk
         elif people_for_50_percent >= 3:
@@ -624,7 +624,7 @@ class GitHubMetricsFetcher:
 
     def calculate_funding_score(self, metrics: dict, funding_info: dict = None) -> Tuple[int, str]:
         """
-        估算资金状况分数 (0-100) - Methodology v1.0 Enhanced
+        Estimate the funding score (0-100) - Methodology v1.0 Enhanced
 
         Uses both popularity metrics and actual funding sources detected.
         Manual verification is always recommended.
@@ -636,11 +636,11 @@ class GitHubMetricsFetcher:
 
         # Base score from popularity (as before)
         if stars >= 10000 or contributors >= 100:
-            base_score = 70  # 大型项目通常有资助基础
+            base_score = 70  # large projects usually have a funding base
         elif stars >= 1000 or contributors >= 20:
-            base_score = 50  # 中型项目可能资助不稳定
+            base_score = 50  # mid-size projects may have unstable funding
         else:
-            base_score = 25  # 小型项目很可能缺乏资助
+            base_score = 25  # small projects likely lack funding
 
         # Boost score based on detected funding sources
         funding_boost = 0
@@ -682,21 +682,21 @@ class GitHubMetricsFetcher:
 
     def assess_health(self, metrics: dict) -> dict:
         """
-        基于方法论 v1.0 评估项目健康度
+        Assess project health using Methodology v1.0.
 
         Formula: (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
         """
         if not metrics:
             return {}
 
-        # 计算各维度分数
+        # Dimension scores
         maintenance_score = self.calculate_maintenance_score(metrics)
         contributors_score = self.calculate_contributors_score(metrics)
         bus_factor_score = self.calculate_bus_factor_score(metrics)
         funding_info = metrics.get("funding_info")
         funding_score, funding_status = self.calculate_funding_score(metrics, funding_info)
 
-        # 计算总体分数（加权平均）
+        # Overall score (weighted average)
         overall_score = int(
             funding_score * 0.25 +
             maintenance_score * 0.30 +
@@ -704,7 +704,7 @@ class GitHubMetricsFetcher:
             bus_factor_score * 0.20
         )
 
-        # 确定各维度状态
+        # Dimension status labels
         def get_maintenance_status(score):
             if score >= 70: return "active"
             elif score >= 40: return "moderate"
@@ -735,7 +735,7 @@ class GitHubMetricsFetcher:
             "recommendations": []
         }
 
-        # 生成建议
+        # Recommendations
         if maintenance_score < 40:
             assessment["recommendations"].append("⚠️ Low maintenance activity - consider contributing code or documentation")
 
@@ -752,7 +752,7 @@ class GitHubMetricsFetcher:
 
 
 def print_report(metrics: dict, assessment: dict):
-    """打印评估报告"""
+    """Print the assessment report."""
     print("\n" + "="*70)
     print(f"📋 Health Report: {metrics.get('full_name')}")
     print(f"   Methodology: v{assessment.get('methodology_version', '1.0')}")
@@ -891,7 +891,7 @@ def rewrite_health_and_metrics(frontmatter: str, health_values: Dict[str, object
 
 
 def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> bool:
-    """更新 Hugo 项目文件的 front matter（只替换 [health] 与 [metrics]）"""
+    """Update a Hugo project file's front matter (replacing only [health] and [metrics])."""
     path = Path(filepath)
     if not path.exists():
         print(f"❌ File not found: {filepath}")
@@ -997,14 +997,14 @@ Set GITHUB_TOKEN in the environment to raise the API rate limit.
         print("\n❌ Please specify a repository with --repo owner/repo")
         sys.exit(1)
 
-    # 解析 owner/repo
+    # Parse owner/repo
     try:
         owner, repo = args.repo.split("/")
     except ValueError:
         print("❌ Invalid repo format. Use: owner/repo")
         sys.exit(1)
 
-    # 创建获取器并获取指标
+    # Create the fetcher and fetch metrics
     fetcher = GitHubMetricsFetcher()
     try:
         metrics = fetcher.fetch_repo_metrics(owner, repo)
@@ -1016,15 +1016,15 @@ Set GITHUB_TOKEN in the environment to raise the API rate limit.
         print("❌ Failed to fetch metrics")
         sys.exit(1)
 
-    # 评估健康度
+    # Assess health
     assessment = fetcher.assess_health(metrics)
 
     print(f"🔢 GitHub API requests used: {fetcher.request_count}")
 
-    # 打印报告
+    # Print the report
     print_report(metrics, assessment)
 
-    # 保存 JSON
+    # Save JSON
     if args.output:
         output_data = {
             "metrics": metrics,
@@ -1035,7 +1035,7 @@ Set GITHUB_TOKEN in the environment to raise the API rate limit.
             json.dump(output_data, f, indent=2, default=str)
         print(f"\n💾 Metrics saved to: {args.output}")
 
-    # 更新 Hugo front matter
+    # Update Hugo front matter
     if args.frontmatter:
         if args.dry_run:
             print(f"\n🔍 Dry run - would update: {args.frontmatter}")

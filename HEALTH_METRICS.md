@@ -1,70 +1,70 @@
-# 项目健康度指标说明
+# Project Health Metrics
 
-本文档介绍了 "Infrastructure Heroes" 网站中项目健康度的评估标准和指标含义。
+This document describes the health assessment criteria and metric definitions used by the "Infrastructure Heroes" website.
 
-## 目的
+## Purpose
 
-帮助识别需要社区支持和关注的基础设施项目，提高软件供应链的稳定性。
-
----
-
-## 健康度指标
-
-### 总体评分 (Score)
-
-范围：0-100 分
-
-| 分数区间 | 状态 | 含义 |
-|---------|------|------|
-| 80-100 | 🟢 健康 | 项目状态良好 |
-| 60-79 | 🟡 需关注 | 项目存在潜在风险 |
-| 0-59 | 🔴 危急 | 项目急需支持 |
+To help identify infrastructure projects that need community support and attention, improving the stability of the software supply chain.
 
 ---
 
-### 四个核心维度
+## Health metrics
 
-#### 1. 💰 Funding（资金状况）
+### Overall score
 
-| 值 | 含义 | 描述 |
-|----|------|------|
-| `stable` | 稳定 | 项目有可持续的资金来源（公司赞助、基金会支持等） |
-| `at-risk` | 有风险 | 资金来源不稳定或即将到期 |
-| `critical` | 危急 | 急需资金支持 |
+Range: 0-100
 
-#### 2. 🔧 Maintenance（维护活跃度）
-
-| 值 | 含义 | 描述 |
-|----|------|------|
-| `active` | 活跃 | 定期发布更新，及时修复 bug 和安全漏洞 |
-| `moderate` | 一般 | 偶尔有更新，响应较慢 |
-| `inactive` | 不活跃 | 长时间没有维护活动 |
-
-#### 3. 👥 Contributors（贡献者状况）
-
-| 值 | 含义 | 描述 |
-|----|------|------|
-| `healthy` | 健康 | 有活跃且多样化的贡献者群体 |
-| `declining` | 下降中 | 贡献者数量在减少 |
-| `critical` | 危急 | 极少数活跃贡献者 |
-
-#### 4. 🚌 Bus Factor（巴士因子/关键人员风险）
-
-指如果核心维护者突然无法工作（比如被巴士撞了），项目会受到多大影响。
-
-| 值 | 含义 | 描述 |
-|----|------|------|
-| `low` | 低风险 | 知识分散在多人手中 |
-| `medium` | 中等风险 | 有一定程度的单点依赖 |
-| `high` | 高风险 | 严重依赖 1-2 个关键人员 |
+| Score range | Status | Meaning |
+|-------------|--------|---------|
+| 80-100 | 🟢 Healthy | The project is in good shape |
+| 60-79 | 🟡 Warning | The project has potential risks |
+| 0-59 | 🔴 Critical | The project urgently needs support |
 
 ---
 
-## 使用方法
+### The four core dimensions
 
-### 在项目中添加健康度
+#### 1. 💰 Funding
 
-在项目 Markdown 文件的 front matter 中添加 `health` 部分：
+| Value | Meaning | Description |
+|-------|---------|-------------|
+| `stable` | Stable | The project has sustainable funding (corporate sponsorship, foundation support, etc.) |
+| `at-risk` | At risk | Funding is unstable or expiring |
+| `critical` | Critical | The project urgently needs funding |
+
+#### 2. 🔧 Maintenance
+
+| Value | Meaning | Description |
+|-------|---------|-------------|
+| `active` | Active | Regular releases; bugs and security issues fixed promptly |
+| `moderate` | Moderate | Occasional updates, slower responses |
+| `inactive` | Inactive | No maintenance activity for a long time |
+
+#### 3. 👥 Contributors
+
+| Value | Meaning | Description |
+|-------|---------|-------------|
+| `healthy` | Healthy | An active and diverse contributor community |
+| `declining` | Declining | The number of contributors is shrinking |
+| `critical` | Critical | Very few active contributors |
+
+#### 4. 🚌 Bus Factor (key-person risk)
+
+How much a project would suffer if its core maintainer suddenly became unavailable.
+
+| Value | Meaning | Description |
+|-------|---------|-------------|
+| `low` | Low risk | Knowledge is spread across several people |
+| `medium` | Medium risk | Some degree of single-person dependency |
+| `high` | High risk | Heavy reliance on 1-2 key people |
+
+---
+
+## Usage
+
+### Adding health data to a project
+
+Add a `health` section to the front matter of the project Markdown file:
 
 ```markdown
 +++
@@ -76,35 +76,35 @@ logo = 'https://example.com/logo.png'
   maintenance = "active"  # active | moderate | inactive
   contributors = "healthy" # healthy | declining | critical
   bus_factor = "low"      # low | medium | high
-  score = 85              # 0-100 的总体评分
+  score = 85              # overall score, 0-100
 +++
 ```
 
-### 展示效果
+### Where it appears
 
-- **项目列表页**：每个项目卡片会显示健康度评分条和总体分数
-- **项目详情页**：展示完整的健康度仪表盘，包括各项指标说明
-
----
-
-## 评估建议
-
-1. **定期更新**：建议每季度更新一次健康度数据
-2. **数据来源**：
-   - GitHub/GitLab API 获取贡献者统计
-   - 项目财务公开信息
-   - 维护者访谈
-3. **社区参与**：邀请项目维护者自我评估
-4. **透明度**：说明评估依据，保持客观公正
+- **Project list page**: each project card shows a health score bar and overall score
+- **Project detail page**: a full health dashboard with per-dimension explanations
 
 ---
 
-## 如何帮助危急项目
+## Assessment guidelines
 
-当发现评分较低的项目时，社区可以：
+1. **Update regularly**: refresh health data every quarter
+2. **Data sources**:
+   - Contributor statistics from GitHub/GitLab APIs
+   - Public project funding information
+   - Maintainer interviews
+3. **Community participation**: invite maintainers to self-assess
+4. **Transparency**: explain the basis for assessments and stay objective
 
-- **代码贡献**：提交 PR，修复 bug
-- **文档贡献**：完善文档，降低入门门槛
-- **资金捐赠**：通过 Open Collective、GitHub Sponsors 等方式支持
-- **推广宣传**：提高项目知名度，吸引新贡献者
-- **企业赞助**：鼓励企业为依赖的关键项目提供支持
+---
+
+## How to help critical projects
+
+When you find a project with a low score, the community can:
+
+- **Contribute code**: submit PRs and fix bugs
+- **Contribute documentation**: improve docs and lower the barrier to entry
+- **Donate**: support through Open Collective, GitHub Sponsors, etc.
+- **Spread the word**: raise awareness and attract new contributors
+- **Corporate sponsorship**: encourage companies to fund the critical projects they depend on

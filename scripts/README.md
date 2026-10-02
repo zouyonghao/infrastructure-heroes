@@ -1,69 +1,70 @@
-# Infrastructure Heroes - 数据采集脚本
+# Infrastructure Heroes - Data Automation Scripts
 
-本目录包含站点项目数据的采集、评分与维护脚本。
+This directory contains the scripts that collect, score, and maintain the site's project data.
 
-## 快速开始
+## Quick start
 
-### 1. 安装依赖
+### 1. Install dependencies
 
-需要 **Python >= 3.11**（脚本使用标准库 `tomllib` 解析 TOML front matter）。
+Requires **Python >= 3.11** (the scripts use the standard-library `tomllib` to parse TOML front matter).
 
 ```bash
-pip install -r requirements.txt   # 仅 check_urls.py 需要 requests
+pip install -r requirements.txt   # requests (check_urls.py), Pillow (localize-images.py)
 ```
 
-其余脚本只依赖 Python 标准库。
+All other scripts use only the Python standard library.
 
-### 2. 环境变量
+### 2. Environment variables
 
 ```bash
 export GITHUB_TOKEN="ghp_your_token_here"
 ```
 
-GitHub API 未认证时每小时仅 60 次请求；设置 `GITHUB_TOKEN` 后可提高到 5000 次。脚本只从环境变量读取 Token，命令行不提供 `--token` 参数（避免 Token 出现在进程列表与 shell 历史中）。
+Unauthenticated GitHub API access is limited to 60 requests per hour; setting `GITHUB_TOKEN` raises it to 5,000. Scripts read the token only from the environment — there is deliberately no `--token` flag, so tokens cannot leak into process listings or shell history.
 
-## 脚本一览
+## Script overview
 
-| 脚本 | 用途 |
-|------|------|
-| `fetch-github-metrics.py` | 获取单个仓库指标、计算健康度、写入项目 front matter |
-| `batch-update-health.py` | 批量刷新所有项目的健康度 |
-| `update-historical-data.py` | 生成历史快照 `data/historical/YYYY-MM.json` |
-| `check_urls.py` | 检查 logo URL 是否可访问（HTTP 200） |
-| `add-github-links.py` | 按映射补全项目 `[links] github` |
-| `update_logos.py` | 补全空的 `logo` 字段 |
-| `link-maintainers-projects.py` | 在维护者与项目之间建立双向关联 |
+| Script | Purpose |
+|--------|---------|
+| `fetch-github-metrics.py` | Fetch one repository's metrics, compute health, write project front matter |
+| `batch-update-health.py` | Refresh health metrics for every project |
+| `update-historical-data.py` | Write monthly snapshots to `data/historical/YYYY-MM.json` |
+| `check_urls.py` | Check logo URLs for HTTP 200 |
+| `add-github-links.py` | Fill `[links] github` from the mapping file |
+| `update_logos.py` | Fill empty `logo` fields |
+| `link-maintainers-projects.py` | Create bidirectional maintainer ↔ project links |
+| `localize-images.py` | Download remote avatars and logos into `static/images/` |
 
-> 已删除 `generate_projects.py`：它存在语法错误、使用 51/85 个过期 slug，且其输出写入逻辑已失效。
+> `generate_projects.py` was removed: it had a syntax error, 51/85 stale slugs, and its output-writing logic was dead code.
 
 ## fetch-github-metrics.py
 
 ```bash
-# 打印健康度报告
+# Print a health report
 python scripts/fetch-github-metrics.py --repo curl/curl
 
-# 保存 JSON 报告
+# Save a JSON report
 python scripts/fetch-github-metrics.py --repo curl/curl --output curl-metrics.json
 
-# 更新 Hugo 项目 front matter
+# Update Hugo project front matter
 python scripts/fetch-github-metrics.py --repo curl/curl --frontmatter content/projects/curl.md
 
-# 只计算不写入
+# Compute without writing
 python scripts/fetch-github-metrics.py --repo curl/curl --frontmatter content/projects/curl.md --dry-run
 ```
 
-CLI 参数：`--repo owner/repo`、`--output/-o`、`--frontmatter/-f`、`--dry-run`。
+CLI options: `--repo owner/repo`, `--output/-o`, `--frontmatter/-f`, `--dry-run`.
 
-### 数据完整性与 API 处理
+### Data integrity and API handling
 
-- **重试**：5xx、429 以及带有 `Retry-After` / `X-RateLimit-Remaining: 0` / 限流信息的 403 会重试，最多 4 次，指数退避（单次最长 60 秒），优先遵循 `Retry-After`。
-- **请求预算**：贡献者总数只用一次 `per_page=1` 请求读取 `Link rel="last"` 页号得到精确值；提交只采样最新 2 页（200 条）用于作者数与巴士因子。
-- **精确计数回退**：若提交采样未覆盖到 90 天边界，再用两次 `per_page=1` 请求（`since=<30d>` 与 `since=<90d>&until=<30d>`）精确统计 30/90 天提交数；采样已覆盖边界时直接由采样得出，不发起额外请求。
-- **失败不写入**：任一必需接口失败会抛错并跳过该项目的写入，绝不把失败当作 0 写入。
-- **超大仓库贡献者**：GitHub 对超大仓库返回 403「contributor list is too large」时，标记贡献者不可用，保留 front matter 中已有的值（不记为 0，也不视为失败）。
-- **front matter 重写**：先用 `tomllib` 解析现有 front matter，仅替换顶层 `[health]` 与 `[metrics]` 两个表，其余字节原样保留；写入前再次用 `tomllib` 校验，解析失败则拒绝写入。
+- **Retries**: 5xx and 429 responses, plus 403 responses carrying `Retry-After` / `X-RateLimit-Remaining: 0` / rate-limit messages, are retried up to 4 times with exponential backoff (capped at 60 seconds), honouring `Retry-After` first.
+- **Request budget**: the total contributor count comes from a single `per_page=1` request reading the `Link rel="last"` page number; commits are sampled from the newest 2 pages (200 commits) for author counts and bus factor.
+- **Exact-count fallback**: if the commit sample does not reach the 90-day boundary, two more `per_page=1` requests (`since=<30d>` and `since=<90d>&until=<30d>`) produce exact 30/90-day commit counts; when the sample already covers the boundary no extra requests are made.
+- **Never write failures**: any required endpoint failing raises an error and skips writing that project — a failure is never persisted as 0.
+- **Very large repositories**: when GitHub returns 403 "contributor list is too large", contributors are marked unavailable and the existing front matter value is preserved (not zeroed, not treated as a failure).
+- **Front matter rewriting**: the existing front matter is parsed with `tomllib` first; only the top-level `[health]` and `[metrics]` tables are replaced and every other byte is preserved. The result is validated with `tomllib` again before writing; invalid output is refused.
 
-### 输出示例
+### Example output
 
 ```
 ============================================================
@@ -90,45 +91,45 @@ CLI 参数：`--repo owner/repo`、`--output/-o`、`--frontmatter/-f`、`--dry-r
 ============================================================
 ```
 
-### 健康度算法（Methodology v1.0）
+### Health scoring (Methodology v1.0)
 
 ```
 Health Score = (Funding × 0.25) + (Maintenance × 0.30)
              + (Contributors × 0.25) + (Bus Factor × 0.20)
 ```
 
-| 维度 | 评分依据 |
-|------|----------|
-| maintenance | 最近提交时间（40）+ 最近发布（30）+ 近 30 天提交数（30） |
-| contributors | 近 90 天活跃贡献者 × 8（上限 80）+ 达到 10 人再 +20 |
-| bus_factor | 覆盖 50% 近期提交所需人数：≥5 人 100；3–4 人 70；2 人 40；1 人 15 |
-| funding | 见下方启发式 |
+| Dimension | Scoring basis |
+|-----------|---------------|
+| maintenance | Time since the last commit (40) + latest release (30) + commits in the last 30 days (30) |
+| contributors | Active contributors in the last 90 days × 8 (capped at 80) + 20 more when there are 10+ |
+| bus_factor | People needed to cover 50% of recent commits: ≥5 → 100; 3–4 → 70; 2 → 40; 1 → 15 |
+| funding | See the heuristic below |
 
-维度状态阈值：maintenance ≥70 active / ≥40 moderate / 否则 inactive；contributors ≥70 healthy / ≥40 declining / 否则 critical；bus_factor ≥70 low / ≥40 medium / 否则 high。
+Dimension status thresholds: maintenance ≥70 active / ≥40 moderate / otherwise inactive; contributors ≥70 healthy / ≥40 declining / otherwise critical; bus_factor ≥70 low / ≥40 medium / otherwise high.
 
-### 资金状况启发式（自动计算）
+### Funding heuristic (computed automatically)
 
-脚本会读取 `.github/FUNDING.yml` 与仓库 topics，在“热度”基础分上叠加资助来源加分：
+The script reads `.github/FUNDING.yml` and repository topics, then adds funding-source points on top of a popularity-based base score:
 
-- **基础分**：stars ≥ 10000 或贡献者 ≥ 100 → 70；stars ≥ 1000 或贡献者 ≥ 20 → 50；否则 25。
-- **加分**：存在 FUNDING.yml +10；来源数量 ×5（上限 15）；各平台再加分（github_sponsors 10、open_collective 8、tidelift 8、patreon 5、ko-fi 3、liberapay 3、custom 2）。
-- **状态**：最终分 ≥80 stable；≥50 at-risk；否则 critical。
+- **Base score**: stars ≥ 10000 or contributors ≥ 100 → 70; stars ≥ 1000 or contributors ≥ 20 → 50; otherwise 25.
+- **Bonuses**: FUNDING.yml present +10; number of sources ×5 (capped at 15); per-platform points (github_sponsors 10, open_collective 8, tidelift 8, patreon 5, ko-fi 3, liberapay 3, custom 2).
+- **Status**: final score ≥80 stable; ≥50 at-risk; otherwise critical.
 
-> 资金分数仍是自动估算，建议人工复核；但并非“无法自动获取”。
+> The funding score remains an automatic estimate and should be reviewed manually — but it is not "impossible to obtain automatically".
 
 ## batch-update-health.py
 
 ```bash
-python scripts/batch-update-health.py                 # 全部项目
-python scripts/batch-update-health.py --limit 10      # 仅前 10 个（调试）
-python scripts/batch-update-health.py --filter rust   # 仅名称匹配者
+python scripts/batch-update-health.py                 # all projects
+python scripts/batch-update-health.py --limit 10      # first 10 only (debugging)
+python scripts/batch-update-health.py --filter rust   # only name matches
 python scripts/batch-update-health.py --dry-run --limit 5
 ```
 
-- 从项目 front matter 的 `[links] github` 读取仓库地址；没有链接的项目跳过。
-- 单个项目失败时跳过并记录，最后汇总失败列表。
-- **系统性失败**：超过一半的项目失败时以非零状态退出，便于 CI 告警；`--dry-run` 不会写入也不会失败退出。
-- 只读取 `GITHUB_TOKEN` 环境变量。
+- Reads each repository from the project's `[links] github` front matter; projects without a link are skipped.
+- A failing project is skipped and recorded, and the failure list is summarised at the end.
+- **Systemic failure**: when more than half of the projects fail, the script exits non-zero so CI alerts; `--dry-run` neither writes nor exits non-zero.
+- Reads `GITHUB_TOKEN` from the environment only.
 
 ## update-historical-data.py
 
@@ -136,7 +137,7 @@ python scripts/batch-update-health.py --dry-run --limit 5
 python scripts/update-historical-data.py
 ```
 
-读取所有项目的健康度，生成 `data/historical/YYYY-MM.json` 月度快照并更新 `summary.json`，供站点趋势图使用。
+Reads every project's health data, writes a monthly snapshot to `data/historical/YYYY-MM.json`, and updates `summary.json` for the site's trend charts.
 
 ## check_urls.py
 
@@ -144,7 +145,7 @@ python scripts/update-historical-data.py
 python scripts/check_urls.py
 ```
 
-按 `scripts/logo_urls.json` 中的 slug → URL 映射逐个请求，检查是否返回 HTTP 200。为避免 CDN 对默认 User-Agent 的 403 误判，使用浏览器 UA。需要 `requests`。
+Requests each slug → URL entry in `scripts/logo_urls.json` and checks for HTTP 200. Uses a browser User-Agent to avoid false 403s from CDNs that block the default one. Requires `requests`.
 
 ## add-github-links.py
 
@@ -152,7 +153,7 @@ python scripts/check_urls.py
 python scripts/add-github-links.py
 ```
 
-按 `scripts/project-github-mapping.json` 为缺少 `[links] github` 的项目补全该字段；仅当 `[links]` 已存在于 front matter 内部时跳过。路径均相对仓库根目录解析。
+Fills the `[links] github` field from `scripts/project-github-mapping.json` for projects that lack it; skips files whose front matter already contains `[links]`. All paths resolve relative to the repository root.
 
 ## update_logos.py
 
@@ -160,30 +161,50 @@ python scripts/add-github-links.py
 python scripts/update_logos.py
 ```
 
-按 `scripts/logo_urls.json` 补全项目的 `logo` 字段，只填充为空的 `logo = ''`，不会覆盖已有 Logo。
+Fills project `logo` fields from `scripts/logo_urls.json`. Only empty `logo = ''` values are filled; existing logos are never overwritten.
 
 ## link-maintainers-projects.py
 
 ```bash
-python scripts/link-maintainers-projects.py            # 默认 dry-run
-python scripts/link-maintainers-projects.py --apply    # 实际写入
-python scripts/link-maintainers-projects.py --clean    # 仅报告无法匹配的项目（不删除）
+python scripts/link-maintainers-projects.py            # dry run (default)
+python scripts/link-maintainers-projects.py --apply    # write changes
+python scripts/link-maintainers-projects.py --clean    # report unmatchable projects only (no deletions)
 ```
 
-在维护者文件与项目的顶层 `maintainers` 字段之间建立双向关联。默认只预览，`--apply` 才写入。
+Creates bidirectional links between maintainer profiles and the top-level `maintainers` field of projects. Preview by default; `--apply` writes.
 
-## 工作流集成
+## localize-images.py
 
-`.github/workflows/update-metrics.yml` 每周日 00:00 UTC 定时运行（也支持手动触发 `dry_run` 与 `limit` 输入），在 Python 3.11 上：
+```bash
+python scripts/localize-images.py                 # dry run (report only)
+python scripts/localize-images.py --apply         # download and rewrite front matter
+python scripts/localize-images.py --apply --only avatars
+python scripts/localize-images.py --apply --only logos
+```
 
-1. 使用 `GITHUB_TOKEN` 运行 `python scripts/batch-update-health.py --limit N`；
-2. 运行 `python scripts/update-historical-data.py`；
-3. 提交 `content/projects/` 与 `data/historical/` 的变更。
+Localizes remote images to remove third-party requests and pre-size them for display:
 
-手动触发时若 `dry_run=true`，则只执行 `batch-update-health.py --dry-run --limit N`，不提交。
+- maintainer avatars (`links.github`, except those with `avatar_style = "initials"`) are downloaded to
+  `static/images/maintainers/<slug>.webp` (240 px);
+- existing local avatars are re-encoded to the same specification;
+- project `logo` URLs are saved as `static/images/logos/<slug>.svg` (vector, kept verbatim)
+  or `<slug>.webp` (raster, resized to 192 px);
+- when a download fails the original remote URL is kept, so no data is broken.
 
-## 注意事项
+Requires `Pillow` (see `requirements.txt`).
 
-1. **GitHub API 限制**：未认证每小时 60 次；请设置 `GITHUB_TOKEN`。
-2. **数据完整性**：接口失败时脚本不会写入，避免把失败误记为 0；超大仓库的贡献者数量会保留旧值。
-3. **建议**：定期运行脚本（工作流已每周执行）以追踪项目健康度变化。
+## Workflow integration
+
+`.github/workflows/update-metrics.yml` runs every Sunday at 00:00 UTC (manual dispatch supports the `dry_run` and `limit` inputs) on Python 3.11:
+
+1. runs `python scripts/batch-update-health.py --limit N` with `GITHUB_TOKEN`;
+2. runs `python scripts/update-historical-data.py`;
+3. commits changes under `content/projects/` and `data/historical/`.
+
+For a manual run with `dry_run=true`, only `batch-update-health.py --dry-run --limit N` executes and nothing is committed.
+
+## Notes
+
+1. **GitHub API limits**: 60 requests/hour unauthenticated; set `GITHUB_TOKEN`.
+2. **Data integrity**: scripts never write on API failure, so failures cannot be recorded as 0; contributor counts for very large repositories keep their previous value.
+3. **Recommendation**: run the scripts regularly (the workflow already runs weekly) to track health changes.
