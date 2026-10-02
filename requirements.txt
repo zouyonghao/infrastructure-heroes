@@ -1,5 +1,5 @@
 # Infrastructure Heroes automation script dependencies
 # Requires Python >= 3.11 (scripts use tomllib to parse TOML front matter)
 
-requests>=2.31
+requests>=2.34.2
 Pillow>=10
