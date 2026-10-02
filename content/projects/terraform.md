@@ -2,7 +2,7 @@
 dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Terraform'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg'
+logo = "/images/logos/terraform.svg"
 description = 'Infrastructure as code software tool'
 maintainers = ["Mitchell Hashimoto"]
 

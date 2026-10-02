@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Jessie Frazelle"
 role = "Container Pioneer"
+avatar = "/images/maintainers/jessie-frazelle.webp"
+
 projects = ["Docker", "Kubernetes"]
 [links]
   github = "jessfraz"

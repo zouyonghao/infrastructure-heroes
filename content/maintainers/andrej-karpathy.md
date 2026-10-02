@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Andrej Karpathy"
 role = "AI Researcher and Educator"
+avatar = "/images/maintainers/andrej-karpathy.webp"
+
 projects = ["Tesla Autopilot", "OpenAI"]
 [links]
   github = "karpathy"

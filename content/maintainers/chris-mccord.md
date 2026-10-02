@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Chris McCord"
 role = "Phoenix Framework Creator"
+avatar = "/images/maintainers/chris-mccord.webp"
+
 projects = ["Phoenix", "LiveView"]
 [links]
   github = "chrismccord"

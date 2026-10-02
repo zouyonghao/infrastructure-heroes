@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "George Hotz"
 role = "Hacker and Entrepreneur"
+avatar = "/images/maintainers/george-hotz.webp"
+
 projects = ["comma.ai", "tinygrad"]
 [links]
   github = "geohot"

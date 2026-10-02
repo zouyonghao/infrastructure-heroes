@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "James Gosling"
 role = "Java Creator"
+avatar = "/images/maintainers/james-gosling.webp"
+avatar_credit = "Peter Campbell, CC BY-SA 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:James_Gosling_2008.jpg"
+
 projects = ["Java"]
 [links]
   twitter = "errcraft"

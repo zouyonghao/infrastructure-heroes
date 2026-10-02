@@ -2,7 +2,7 @@
 dependencies = ["Prometheus", "Grafana", "Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Loki'
-logo = 'https://grafana.com/static/img/logos/logo-loki.svg'
+logo = "/images/logos/loki.svg"
 description = 'Log aggregation system by Grafana'
 
 [health]

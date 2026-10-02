@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Elasticsearch'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg'
+logo = "/images/logos/elasticsearch.svg"
 description = 'Distributed search and analytics engine'
 
 [health]

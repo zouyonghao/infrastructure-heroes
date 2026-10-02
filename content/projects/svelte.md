@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Svelte'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/svelte/svelte-original.svg'
+logo = "/images/logos/svelte.svg"
 description = 'Cybernetically enhanced web apps'
 maintainers = ["Rich Harris"]
 

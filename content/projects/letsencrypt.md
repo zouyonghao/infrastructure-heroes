@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = "Let's Encrypt"
-logo = 'https://letsencrypt.org/images/le-logo-lockonly.svg'
+logo = "/images/logos/letsencrypt.svg"
 description = 'Free SSL/TLS certificate authority'
 
 [health]

@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Josh Bloch"
 role = "Java APIs Designer"
+avatar = "/images/maintainers/josh-bloch.webp"
+avatar_credit = "Billy Bob Bain, CC BY 2.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Joshua_Bloch_at_JavaOne_2005_(cropped).jpg"
+
 projects = ["Java Collections", "Effective Java"]
 [links]
   twitter = "joshbloch"

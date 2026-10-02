@@ -2,7 +2,7 @@
 dependencies = ["Python", "PostgreSQL", "Redis", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Airflow'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apacheairflow/apacheairflow-original.svg'
+logo = "/images/logos/airflow.svg"
 description = 'Workflow orchestration platform'
 
 [health]

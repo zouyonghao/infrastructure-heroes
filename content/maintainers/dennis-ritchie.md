@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Dennis Ritchie"
 role = "C and Unix Co-Creator"
+avatar = "/images/maintainers/dennis-ritchie.webp"
+avatar_credit = "Denise Panyik-Dale, CC BY 2.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Dennis_Ritchie_2011.jpg"
+
 projects = ["C", "Unix"]
 [links]
 +++

@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'PostgreSQL'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg'
+logo = "/images/logos/postgresql.svg"
 description = "The world's most advanced open source relational database"
 
 [health]

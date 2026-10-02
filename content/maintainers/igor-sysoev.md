@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Igor Sysoev"
 role = "Nginx Creator"
+avatar = "/images/maintainers/igor-sysoev.webp"
+
 projects = ["Nginx"]
 [links]
   github = "igorsysoev"

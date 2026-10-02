@@ -2,7 +2,7 @@
 dependencies = ["zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'libpng'
-logo = 'https://raw.githubusercontent.com/detain/svg-logos/master/svg/p/png-1.svg'
+logo = "/images/logos/libpng.svg"
 description = 'Official PNG reference library'
 
 [health]

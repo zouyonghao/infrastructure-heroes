@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Logstash'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logstash/logstash-original.svg'
+logo = "/images/logos/logstash.svg"
 description = 'Server-side data processing pipeline'
 
 [health]

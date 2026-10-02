@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Wes McKinney"
 role = "Pandas Creator"
+avatar = "/images/maintainers/wes-mckinney.webp"
+
 projects = ["pandas", "Apache Arrow"]
 [links]
   github = "wesm"

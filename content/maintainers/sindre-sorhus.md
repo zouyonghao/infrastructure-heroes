@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Sindre Sorhus"
 role = "Node.js Package Maintainer"
+avatar = "/images/maintainers/sindre-sorhus.webp"
+
 projects = ["Awesome Lists", "Got", "Chalk"]
 [links]
   github = "sindresorhus"

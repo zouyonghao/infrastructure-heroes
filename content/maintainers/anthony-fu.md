@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Anthony Fu"
 role = "Vue and Vite Core Team"
+avatar = "/images/maintainers/anthony-fu.webp"
+
 projects = ["Vite", "Vue", "Slidev", "UnoCSS"]
 [links]
   github = "antfu"

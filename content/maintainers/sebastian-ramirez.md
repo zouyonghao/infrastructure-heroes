@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Sebastian Ramirez"
 role = "FastAPI Creator"
+avatar = "/images/maintainers/sebastian-ramirez.webp"
+
 projects = ["FastAPI", "Typer", "SQLModel"]
 [links]
   github = "tiangolo"

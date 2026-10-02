@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'OpenTelemetry'
-logo = 'https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png'
+logo = "/images/logos/opentelemetry.webp"
 description = 'Observability framework'
 
 [health]

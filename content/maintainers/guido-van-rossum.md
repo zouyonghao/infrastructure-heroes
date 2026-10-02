@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Guido van Rossum"
 role = "Python Creator"
+avatar = "/images/maintainers/guido-van-rossum.webp"
+
 projects = ["Python"]
 [links]
   github = "gvanrossum"

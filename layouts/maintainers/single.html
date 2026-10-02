@@ -5,6 +5,9 @@
             <div class="maintainer-avatar-large">
                 {{ partial "maintainer-avatar.html" (dict "maintainer" . "size" 120) }}
             </div>
+            {{ with .Params.avatar_credit }}
+            <p class="avatar-credit">Photo: {{ . }}{{ with $.Params.avatar_credit_url }} · <a href="{{ . }}" target="_blank" rel="noopener">source</a>{{ end }}</p>
+            {{ end }}
             <h1>{{ .Title }}</h1>
             {{ if .Params.role }}
             <p class="maintainer-role-large">{{ .Params.role }}</p>

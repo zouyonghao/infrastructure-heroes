@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "John Papa"
 role = "Developer Advocate"
+avatar = "/images/maintainers/john-papa.webp"
+
 projects = ["Angular", "VS Code"]
 [links]
   github = "johnpapa"

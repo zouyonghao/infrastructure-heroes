@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "David Heinemeier Hansson"
 role = "Ruby on Rails Creator"
+avatar = "/images/maintainers/dhh.webp"
+
 projects = ["Ruby on Rails", "Basecamp"]
 [links]
   github = "dhh"

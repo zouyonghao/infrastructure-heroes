@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Julia Evans"
 role = "Systems Educator"
+avatar = "/images/maintainers/julia-evans.webp"
+
 projects = ["Zines", "jvns.ca"]
 [links]
   github = "jvns"

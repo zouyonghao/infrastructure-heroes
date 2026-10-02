@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Vue.js'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg'
+logo = "/images/logos/vuejs.svg"
 description = 'Progressive JavaScript framework'
 maintainers = ["Evan You"]
 

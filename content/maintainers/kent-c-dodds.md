@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Kent C. Dodds"
 role = "React Testing Expert"
+avatar = "/images/maintainers/kent-c-dodds.webp"
+
 projects = ["Testing Library", "EpicReact"]
 [links]
   github = "kentcdodds"

@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Apache Spark'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apachespark/apachespark-original.svg'
+logo = "/images/logos/spark.svg"
 description = 'Unified analytics engine'
 
 [health]

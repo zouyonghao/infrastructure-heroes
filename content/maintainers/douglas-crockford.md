@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Douglas Crockford"
 role = "JavaScript Pioneer"
+avatar = "/images/maintainers/douglas-crockford.webp"
+avatar_credit = "Robert Claypool, CC0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Douglas_Crockford,_February_2013.jpg"
+
 projects = ["JSON", "JSLint"]
 [links]
 +++

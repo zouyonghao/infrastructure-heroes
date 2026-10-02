@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Avdi Grimm"
 role = "Ruby Developer and Educator"
+avatar = "/images/maintainers/avdi-grimm.webp"
+
 projects = ["Ruby Tapas", "Graceful.Dev"]
 [links]
   github = "avdi"

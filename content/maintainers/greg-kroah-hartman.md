@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Greg Kroah-Hartman"
 role = "Linux Kernel Stable Maintainer"
+avatar = "/images/maintainers/greg-kroah-hartman.webp"
+
 projects = ["Linux Kernel"]
 [links]
   github = "gregkh"

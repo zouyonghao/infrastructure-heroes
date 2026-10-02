@@ -111,6 +111,12 @@ infrastructure-heroes/
    projects = ["Project Name"]
    status = "active"  # active | stepped-back | retired
    
+   # Optional: explicit avatar and photo credit (e.g. Wikimedia Commons)
+   # avatar = "/images/maintainers/maintainer-name.jpg"
+   # avatar_credit = "Jane Doe, CC BY-SA 4.0"
+   # avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Example.jpg"
+   # avatar_style = "initials"  # skip the GitHub avatar, use branded initials
+   
    [links]
      github = "username"
      twitter = "username"

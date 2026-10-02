@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Ken Thompson"
 role = "Unix and Go Co-Creator"
+avatar = "/images/maintainers/ken-thompson.webp"
+avatar_credit = "A.C.Diller, CC BY-SA 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Ken_Thompson,_2019.jpg"
+
 projects = ["Unix", "Go", "UTF-8"]
 status = 'retired'
 [links]

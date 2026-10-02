@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Rich Harris"
 role = "Svelte and Rollup Creator"
+avatar = "/images/maintainers/rich-harris.webp"
+
 projects = ["Svelte", "Rollup", "SvelteKit"]
 [links]
   github = "Rich-Harris"

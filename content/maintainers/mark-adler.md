@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Mark Adler"
 role = "zlib Co-Creator"
+avatar = "/images/maintainers/mark-adler.webp"
+
 projects = ["zlib", "gzip"]
 [links]
   github = "madler"

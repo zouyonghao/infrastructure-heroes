@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Mitchell Hashimoto"
 role = "HashiCorp Co-Founder"
+avatar = "/images/maintainers/mitchell-hashimoto.webp"
+
 projects = ["Vagrant", "Terraform", "Vault", "Consul"]
 [links]
   github = "mitchellh"

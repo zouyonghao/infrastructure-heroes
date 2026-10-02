@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "D. Richard Hipp"
 role = "SQLite Creator"
+avatar = "/images/maintainers/d-richard-hipp.webp"
+
 projects = ["SQLite", "Fossil"]
 [links]
   github = "drh"

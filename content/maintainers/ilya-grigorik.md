@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Ilya Grigorik"
 role = "Web Performance Expert"
+avatar = "/images/maintainers/ilya-grigorik.webp"
+
 projects = ["High Performance Browser Networking"]
 [links]
   github = "igrigorik"

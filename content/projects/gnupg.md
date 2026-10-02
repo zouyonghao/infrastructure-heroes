@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'GnuPG'
-logo = 'https://raw.githubusercontent.com/shgysk8zer0/logos/master/gnupg.svg'
+logo = "/images/logos/gnupg.svg"
 description = 'Free implementation of OpenPGP'
 
 maintainers = ["Werner Koch"]

@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Prettier'
-logo = 'https://prettier.io/icon.png'
+logo = "/images/logos/prettier.webp"
 description = 'Opinionated code formatter'
 
 [health]

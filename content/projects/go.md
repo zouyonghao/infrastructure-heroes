@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Go'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg'
+logo = "/images/logos/go.svg"
 description = 'Programming language by Google'
 maintainers = ["Rob Pike", "Ken Thompson"]
 

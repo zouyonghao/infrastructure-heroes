@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Daniel Stenberg"
 role = "curl Creator and Lead Maintainer"
+avatar = "/images/maintainers/daniel-stenberg.webp"
+
 projects = ["curl", "libcurl"]
 [links]
   github = "bagder"

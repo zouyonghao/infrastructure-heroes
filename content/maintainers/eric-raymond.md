@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Eric S. Raymond"
 role = "Open Source Advocate"
+avatar = "/images/maintainers/eric-raymond.webp"
+
 projects = ["fetchmail", "gpsd"]
 [links]
   github = "esr"

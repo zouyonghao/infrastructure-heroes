@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Junio C Hamano"
 role = "Git Maintainer"
+avatar = "/images/maintainers/junio-hamano.webp"
+
 projects = ["Git"]
 [links]
   github = "gitster"

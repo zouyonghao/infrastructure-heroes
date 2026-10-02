@@ -2,7 +2,7 @@
 dependencies = ["Python"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'pip'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg'
+logo = "/images/logos/pip.svg"
 description = 'Python package installer'
 
 [health]

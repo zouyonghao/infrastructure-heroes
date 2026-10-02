@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Redis'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg'
+logo = "/images/logos/redis.svg"
 description = 'In-memory data structure store'
 maintainers = ["Salvatore Sanfilippo"]
 

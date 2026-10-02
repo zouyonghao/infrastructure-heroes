@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Brian Kernighan"
 role = "Unix Pioneer and Author"
+avatar = "/images/maintainers/brian-kernighan.webp"
+avatar_credit = "Ben Lowe, CC BY 2.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Brian_Kernighan_in_2012_at_Bell_Labs_1(cropped).jpg"
+
 projects = ["Unix", "AWK"]
 [links]
 +++

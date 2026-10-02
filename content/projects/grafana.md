@@ -2,7 +2,7 @@
 dependencies = ["Node.js", "OpenSSL", "Linux Kernel", "Go"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Grafana'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg'
+logo = "/images/logos/grafana.svg"
 description = 'Analytics and monitoring visualization'
 
 [health]

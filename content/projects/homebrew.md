@@ -2,7 +2,7 @@
 dependencies = ["Ruby", "Git", "curl"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Homebrew'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/homebrew/homebrew-original.svg'
+logo = "/images/logos/homebrew.svg"
 description = 'Package manager for macOS and Linux'
 
 [health]

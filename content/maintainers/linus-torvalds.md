@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Linus Torvalds"
 role = "Linux Kernel Creator and Lead Maintainer"
+avatar = "/images/maintainers/linus-torvalds.webp"
+
 projects = ["Linux Kernel", "Git"]
 status = 'active'
 [links]

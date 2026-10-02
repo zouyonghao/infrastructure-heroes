@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'HAProxy'
-logo = 'https://www.vectorlogo.zone/logos/haproxy/haproxy-icon.svg'
+logo = "/images/logos/haproxy.svg"
 description = 'High-performance load balancer'
 
 [health]

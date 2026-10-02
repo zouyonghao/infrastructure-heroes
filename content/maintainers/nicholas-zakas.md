@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Filipe Fortes"
 role = "ESLint Maintainer"
+avatar = "/images/maintainers/nicholas-zakas.webp"
+
 projects = ["ESLint"]
 [links]
   github = "nzakas"

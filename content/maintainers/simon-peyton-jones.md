@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Simon Peyton Jones"
 role = "Haskell Lead Designer"
+avatar = "/images/maintainers/simon-peyton-jones.webp"
+avatar_credit = "Duncan.Hull, CC BY-SA 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Professor_Simon_Peyton_Jones_FRS_(cropped).jpg"
+
 projects = ["Haskell", "GHC"]
 [links]
 +++

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Ryan Dahl"
 role = "Node.js and Deno Creator"
+avatar = "/images/maintainers/ryan-dahl.webp"
+
 projects = ["Node.js", "Deno"]
 [links]
   github = "ry"

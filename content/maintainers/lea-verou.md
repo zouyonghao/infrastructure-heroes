@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Lea Verou"
 role = "CSS Expert"
+avatar = "/images/maintainers/lea-verou.webp"
+
 projects = ["CSS WG", "Mavo"]
 [links]
   github = "LeaVerou"

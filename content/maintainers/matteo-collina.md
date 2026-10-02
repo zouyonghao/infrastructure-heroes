@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Matteo Collina"
 role = "Node.js TSC"
+avatar = "/images/maintainers/matteo-collina.webp"
+
 projects = ["Node.js", "Fastify", "Pino"]
 [links]
   github = "mcollina"

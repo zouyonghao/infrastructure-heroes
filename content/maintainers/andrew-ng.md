@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Andrew Ng"
 role = "AI Pioneer"
+avatar = "/images/maintainers/andrew-ng.webp"
+avatar_credit = "TechCrunch, CC BY 2.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Andrew_Ng_at_TechCrunch_Disrupt_SF_2017.jpg"
+
 projects = ["Coursera", "deeplearning.ai"]
 [links]
   twitter = "AndrewYNg"

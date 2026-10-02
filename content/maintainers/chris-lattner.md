@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Chris Lattner"
 role = "LLVM and Swift Creator"
+avatar = "/images/maintainers/chris-lattner.webp"
+
 projects = ["LLVM", "Swift", "Clang", "Mojo"]
 [links]
   github = "lattner"

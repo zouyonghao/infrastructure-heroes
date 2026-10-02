@@ -8135,6 +8135,15 @@ article code,
 .maintainer-status {
   margin: var(--space-2) 0 0;
 }
+.avatar-credit {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+.avatar-credit a {
+  color: inherit;
+  text-decoration: underline;
+}
 .maintainer-card[hidden] {
   display: none !important;
 }

@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'npm'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg'
+logo = "/images/logos/npm.svg"
 description = 'JavaScript package manager'
 
 [health]

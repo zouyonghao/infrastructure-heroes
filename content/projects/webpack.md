@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'webpack'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg'
+logo = "/images/logos/webpack.svg"
 description = 'JavaScript module bundler'
 maintainers = ["Tobias Koppers"]
 

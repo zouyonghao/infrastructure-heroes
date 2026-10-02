@@ -3,6 +3,8 @@ date = '2026-02-13T00:00:00+08:00'
 draft = false
 title = "Thomas Gleixner"
 role = "Linux Kernel Core Maintainer"
+avatar = "/images/maintainers/thomas-gleixner.webp"
+
 projects = ["Linux Kernel"]
 [links]
   github = "tglx"

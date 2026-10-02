@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Matthias Felleisen"
 role = "Programming Languages Educator"
+avatar = "/images/maintainers/matthias-felleisen.webp"
+
 projects = ["Racket", "HtDP"]
 [links]
   github = "mfelleisen"

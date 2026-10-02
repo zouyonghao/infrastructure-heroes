@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Tobias Koppers"
 role = "webpack Creator"
+avatar = "/images/maintainers/tobias-koppers.webp"
+
 projects = ["webpack", "Turbopack"]
 [links]
   github = "sokra"

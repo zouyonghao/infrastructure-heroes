@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'MongoDB'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg'
+logo = "/images/logos/mongodb.svg"
 description = 'Document-oriented NoSQL database'
 
 [health]

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Titus Winters"
 role = "C++ Expert"
+avatar_style = "initials"
+
 projects = ["Abseil", "Software Engineering at Google"]
 [links]
   twitter = "TitusWinters"

@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'React'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg'
+logo = "/images/logos/react.svg"
 description = 'JavaScript library for building UIs'
 maintainers = ["Jordan Walke", "Dan Abramov"]
 

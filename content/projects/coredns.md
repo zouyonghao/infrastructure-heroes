@@ -2,7 +2,7 @@
 dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'CoreDNS'
-logo = 'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/coredns.svg'
+logo = "/images/logos/coredns.svg"
 description = 'Cloud-native DNS server'
 
 [health]

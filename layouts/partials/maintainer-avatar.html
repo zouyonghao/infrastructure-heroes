@@ -25,9 +25,10 @@
 */}}
 
 {{ $avatarUrl := "" }}
+{{ $forceInitials := eq ($maintainer.Params.avatar_style | default "") "initials" }}
 {{ if $maintainer.Params.avatar }}
   {{ $avatarUrl = $maintainer.Params.avatar }}
-{{ else if $githubUsername }}
+{{ else if and $githubUsername (not $forceInitials) }}
   {{ $avatarUrl = printf "https://avatars.githubusercontent.com/%s" $githubUsername }}
 {{ end }}
 
@@ -38,6 +39,7 @@
      width="{{ $size }}" 
      height="{{ $size }}"
      loading="lazy"
+     {{ with $maintainer.Params.avatar_credit }}title="Photo: {{ . }}"{{ end }}
      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
 <div class="avatar-fallback {{ $class }}" style="display: none;">
   <span class="avatar-initial">{{ substr $maintainer.Title 0 1 }}</span>

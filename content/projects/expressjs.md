@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Express.js'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg'
+logo = "/images/logos/expressjs.svg"
 description = 'Node.js web application framework'
 maintainers = ["TJ Holowaychuk"]
 

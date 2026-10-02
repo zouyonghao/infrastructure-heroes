@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Guillermo Rauch"
 role = "Vercel CEO and Next.js"
+avatar = "/images/maintainers/guillermo-rauch.webp"
+
 projects = ["Vercel", "Next.js", "Socket.io"]
 [links]
   github = "rauchg"

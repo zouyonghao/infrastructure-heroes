@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "John Carmack"
 role = "Graphics Pioneer"
+avatar = "/images/maintainers/john-carmack.webp"
+avatar_credit = "RoboSabs, CC0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:John_Carmack_2025.jpg"
+
 projects = ["Doom", "Quake", "VR"]
 [links]
   twitter = "ID_AA_Carmack"

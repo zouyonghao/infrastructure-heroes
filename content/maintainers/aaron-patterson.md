@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Aaron Patterson"
 role = "Rails Core Team"
+avatar = "/images/maintainers/aaron-patterson.webp"
+
 projects = ["Rails", "Ruby"]
 [links]
   github = "tenderlove"

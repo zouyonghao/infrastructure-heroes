@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Prometheus'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg'
+logo = "/images/logos/prometheus.svg"
 description = 'Monitoring and alerting toolkit'
 
 [health]

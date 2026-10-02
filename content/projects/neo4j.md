@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Neo4j'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original.svg'
+logo = "/images/logos/neo4j.svg"
 description = 'Graph database platform'
 
 [health]

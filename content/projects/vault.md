@@ -2,7 +2,7 @@
 dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Vault'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vault/vault-original.svg'
+logo = "/images/logos/vault.svg"
 description = 'Secrets management tool'
 maintainers = ["Mitchell Hashimoto"]
 

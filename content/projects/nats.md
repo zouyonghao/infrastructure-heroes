@@ -2,7 +2,7 @@
 dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'NATS'
-logo = 'https://avatars.githubusercontent.com/u/10203055?s=200&v=4'
+logo = "/images/logos/nats.webp"
 description = 'Cloud-native messaging system'
 
 [health]

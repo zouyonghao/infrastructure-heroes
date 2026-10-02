@@ -2,7 +2,7 @@
 dependencies = ["containerd", "etcd", "CoreDNS", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Kubernetes'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg'
+logo = "/images/logos/kubernetes.svg"
 description = 'Container orchestration platform'
 maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 

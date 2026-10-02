@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'MySQL'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
+logo = "/images/logos/mysql.svg"
 description = 'Popular relational database'
 
 [health]

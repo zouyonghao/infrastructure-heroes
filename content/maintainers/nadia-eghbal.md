@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Nadia Eghbal"
 role = "Open Source Researcher"
+avatar = "/images/maintainers/nadia-eghbal.webp"
+
 projects = ["Working in Public", "Roads and Bridges"]
 [links]
   github = "nayafia"

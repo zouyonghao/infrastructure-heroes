@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'ScyllaDB'
-logo = 'https://www.vectorlogo.zone/logos/scylladb/scylladb-icon.svg'
+logo = "/images/logos/scylladb.svg"
 description = 'High-performance NoSQL database'
 
 [health]

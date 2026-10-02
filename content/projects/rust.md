@@ -2,7 +2,7 @@
 dependencies = ["LLVM", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Rust'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg'
+logo = "/images/logos/rust.svg"
 description = 'Systems programming language'
 maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 

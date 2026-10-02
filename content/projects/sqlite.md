@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'SQLite'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg'
+logo = "/images/logos/sqlite.svg"
 description = 'Most widely deployed database engine in the world'
 maintainers = ["D. Richard Hipp"]
 

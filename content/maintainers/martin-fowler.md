@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Martin Fowler"
 role = "Software Architecture Author"
+avatar = "/images/maintainers/martin-fowler.webp"
+avatar_credit = "Webysther Nunes, CC BY-SA 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Webysther_20150414193208_-_Martin_Fowler.jpg"
+
 projects = ["Refactoring", "ThoughtWorks"]
 [links]
   twitter = "martinfowler"

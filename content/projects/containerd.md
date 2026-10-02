@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'containerd'
-logo = 'https://containerd.io/img/logos/icon/black/containerd-icon-black.svg'
+logo = "/images/logos/containerd.svg"
 description = 'Industry-standard container runtime'
 
 [health]

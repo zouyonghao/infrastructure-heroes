@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Ryan Florence"
 role = "Remix Co-Creator"
+avatar = "/images/maintainers/ryan-florence.webp"
+
 projects = ["Remix", "React Router"]
 [links]
   github = "ryanflorence"

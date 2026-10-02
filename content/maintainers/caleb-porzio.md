@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Caleb Porzio"
 role = "Livewire and Alpine.js Creator"
+avatar = "/images/maintainers/caleb-porzio.webp"
+
 projects = ["Livewire", "Alpine.js"]
 [links]
   github = "calebporzio"

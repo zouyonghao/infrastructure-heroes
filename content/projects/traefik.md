@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Linux Kernel", "Go"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Traefik'
-logo = 'https://www.vectorlogo.zone/logos/traefikio/traefikio-icon.svg'
+logo = "/images/logos/traefik.svg"
 description = 'Cloud-native application proxy'
 
 [health]

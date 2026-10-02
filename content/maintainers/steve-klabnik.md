@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Steve Klabnik"
 role = "Rust Documentation Lead"
+avatar = "/images/maintainers/steve-klabnik.webp"
+
 projects = ["Rust"]
 [links]
   github = "steveklabnik"

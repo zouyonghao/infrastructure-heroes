@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "James Halliday"
 role = "Node.js Pioneer"
+avatar_style = "initials"
+
 projects = ["Browserify", "Tape"]
 [links]
   github = "substack"

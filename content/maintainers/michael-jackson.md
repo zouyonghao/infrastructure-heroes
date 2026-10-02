@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Michael Jackson"
 role = "React Router Creator"
+avatar = "/images/maintainers/michael-jackson.webp"
+
 projects = ["React Router", "Remix"]
 [links]
   github = "mjackson"

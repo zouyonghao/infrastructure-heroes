@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Tim Berners-Lee"
 role = "World Wide Web Inventor"
+avatar = "/images/maintainers/tim-berners-lee.webp"
+avatar_credit = "Summit, CC BY 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Tim_Berners-Lee_at_the_2025_Web_Summit_(Cropped).jpg"
+
 projects = ["WWW", "HTTP", "HTML"]
 [links]
   twitter = "timberners_lee"

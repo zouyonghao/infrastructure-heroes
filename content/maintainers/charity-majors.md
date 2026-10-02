@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Charity Majors"
 role = "Observability Pioneer"
+avatar = "/images/maintainers/charity-majors.webp"
+
 projects = ["Honeycomb"]
 [links]
   github = "charity"

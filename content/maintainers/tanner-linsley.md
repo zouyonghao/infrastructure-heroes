@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Tanner Linsley"
 role = "TanStack Creator"
+avatar = "/images/maintainers/tanner-linsley.webp"
+
 projects = ["React Query", "TanStack Table", "TanStack Router"]
 [links]
   github = "tannerlinsley"

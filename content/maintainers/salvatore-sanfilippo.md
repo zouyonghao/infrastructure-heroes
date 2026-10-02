@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Salvatore Sanfilippo"
 role = "Redis Creator"
+avatar = "/images/maintainers/salvatore-sanfilippo.webp"
+avatar_credit = "dotconferences, CC BY 3.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Salvatore_Sanfilippo.png"
+
 projects = ["Redis"]
 status = 'stepped-back'
 aliases = ["/maintainers/antirez/"]

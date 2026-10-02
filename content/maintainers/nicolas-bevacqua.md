@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Nicolás Bevacqua"
 role = "JavaScript Educator"
+avatar = "/images/maintainers/nicolas-bevacqua.webp"
+
 projects = ["Ponyfoo", "Dragula"]
 [links]
   github = "bevacqua"

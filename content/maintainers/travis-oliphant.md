@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Travis Oliphant"
 role = "NumPy Creator"
+avatar = "/images/maintainers/travis-oliphant.webp"
+
 projects = ["NumPy", "SciPy", "Anaconda"]
 [links]
   github = "teoliphant"

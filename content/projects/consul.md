@@ -2,7 +2,7 @@
 dependencies = ["Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Consul'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/consul/consul-original.svg'
+logo = "/images/logos/consul.svg"
 description = 'Service mesh and discovery'
 maintainers = ["Mitchell Hashimoto"]
 

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Lex Fridman"
 role = "AI Researcher and Podcaster"
+avatar = "/images/maintainers/lex-fridman.webp"
+
 projects = ["Lex Fridman Podcast"]
 [links]
   github = "lexfridman"

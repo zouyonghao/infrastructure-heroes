@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Feross Aboukhadijeh"
 role = "JavaScript Security"
+avatar = "/images/maintainers/feross-aboukhadijeh.webp"
+
 projects = ["WebTorrent", "Socket"]
 [links]
   github = "feross"

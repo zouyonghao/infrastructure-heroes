@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Chris Wanstrath"
 role = "GitHub Co-Founder"
+avatar = "/images/maintainers/chris-wanstrath.webp"
+
 projects = ["GitHub"]
 [links]
   github = "defunkt"

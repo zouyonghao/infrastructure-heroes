@@ -2,7 +2,7 @@
 dependencies = ["Go", "MySQL", "Linux Kernel", "etcd"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Vitess'
-logo = 'https://vitess.io/img/logos/vitess.png'
+logo = "/images/logos/vitess.webp"
 description = 'Database clustering for MySQL'
 
 [health]

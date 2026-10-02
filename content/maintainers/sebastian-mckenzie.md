@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Sebastian McKenzie"
 role = "Babel and Rome Creator"
+avatar = "/images/maintainers/sebastian-mckenzie.webp"
+
 projects = ["Babel", "Rome", "Biome"]
 [links]
   github = "sebmck"

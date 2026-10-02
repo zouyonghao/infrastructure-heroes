@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Babel'
-logo = 'https://raw.githubusercontent.com/dochne/wappalyzer/main/src/images/icons/Babel.svg'
+logo = "/images/logos/babel.svg"
 description = 'JavaScript compiler'
 maintainers = ["Sebastian McKenzie"]
 

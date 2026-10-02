@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Werner Koch"
 role = "GnuPG Creator and Maintainer"
+avatar = "/images/maintainers/werner-koch.webp"
+avatar_credit = "Chlor at English Wikipedia, CC BY-SA 3.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Wernerkoch.jpg"
+
 projects = ["GnuPG", "Libgcrypt"]
 [links]
   github = "werner-koch"

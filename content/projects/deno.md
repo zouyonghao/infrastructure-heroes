@@ -2,7 +2,7 @@
 dependencies = ["Rust", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Deno'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/denojs-original.svg'
+logo = "/images/logos/deno.svg"
 description = 'Secure runtime for JavaScript/TypeScript'
 maintainers = ["Ryan Dahl"]
 

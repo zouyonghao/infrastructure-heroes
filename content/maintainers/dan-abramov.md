@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Dan Abramov"
 role = "React Core Team"
+avatar = "/images/maintainers/dan-abramov.webp"
+
 projects = ["React", "Redux"]
 [links]
   github = "gaearon"

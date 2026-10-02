@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Rob Pike"
 role = "Go Language Co-Creator"
+avatar = "/images/maintainers/rob-pike.webp"
+
 projects = ["Go", "Plan 9", "UTF-8"]
 [links]
   github = "robpike"

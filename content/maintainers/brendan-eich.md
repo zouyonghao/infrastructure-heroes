@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Brendan Eich"
 role = "JavaScript Creator"
+avatar = "/images/maintainers/brendan-eich.webp"
+
 projects = ["JavaScript", "Brave Browser"]
 [links]
   github = "BrendanEich"

@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'OpenSSL'
-logo = 'https://www.vectorlogo.zone/logos/openssl/openssl-icon.svg'
+logo = "/images/logos/openssl.svg"
 description = 'Cryptography and SSL/TLS Toolkit'
 
 [health]

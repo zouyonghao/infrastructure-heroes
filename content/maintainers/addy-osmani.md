@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Addy Osmani"
 role = "Web Performance Expert"
+avatar = "/images/maintainers/addy-osmani.webp"
+
 projects = ["Chrome DevTools", "Lighthouse"]
 [links]
   github = "addyosmani"

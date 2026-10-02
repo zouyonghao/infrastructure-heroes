@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Kyle Simpson"
 role = "JavaScript Educator"
+avatar = "/images/maintainers/kyle-simpson.webp"
+
 projects = ["You Don't Know JS"]
 [links]
   github = "getify"

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Misko Hevery"
 role = "Angular Creator"
+avatar = "/images/maintainers/misko-hevery.webp"
+
 projects = ["Angular", "AngularJS", "Qwik"]
 [links]
   github = "mhevery"

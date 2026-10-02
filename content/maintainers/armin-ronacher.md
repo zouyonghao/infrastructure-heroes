@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Armin Ronacher"
 role = "Flask and Rye Creator"
+avatar = "/images/maintainers/armin-ronacher.webp"
+
 projects = ["Flask", "Jinja", "Werkzeug", "Rye"]
 [links]
   github = "mitsuhiko"

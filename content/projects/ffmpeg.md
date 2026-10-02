@@ -2,7 +2,7 @@
 dependencies = ["zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'FFmpeg'
-logo = 'https://raw.githubusercontent.com/gilbarbara/logos/main/logos/ffmpeg-icon.svg'
+logo = "/images/logos/ffmpeg.svg"
 description = 'Complete multimedia framework'
 maintainers = ["Fabrice Bellard"]
 

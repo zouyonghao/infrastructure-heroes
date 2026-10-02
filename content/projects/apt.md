@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'APT'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-original.svg'
+logo = "/images/logos/apt.svg"
 description = 'Debian/Ubuntu package management'
 
 [health]

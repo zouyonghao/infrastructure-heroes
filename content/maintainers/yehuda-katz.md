@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Yehuda Katz"
 role = "Ember.js and Rust Contributor"
+avatar_style = "initials"
+
 projects = ["Ember.js", "jQuery", "Rust", "Cargo"]
 [links]
   github = "wycats"

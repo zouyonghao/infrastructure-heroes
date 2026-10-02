@@ -2,7 +2,7 @@
 dependencies = ["Node.js"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'ESLint'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg'
+logo = "/images/logos/eslint.svg"
 description = 'JavaScript linting utility'
 maintainers = ["Filipe Fortes"]
 

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Matt Klein"
 role = "Envoy Proxy Creator"
+avatar_style = "initials"
+
 projects = ["Envoy"]
 [links]
   github = "mattklein123"

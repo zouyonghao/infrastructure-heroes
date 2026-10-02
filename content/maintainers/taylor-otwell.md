@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Taylor Otwell"
 role = "Laravel Creator"
+avatar = "/images/maintainers/taylor-otwell.webp"
+
 projects = ["Laravel", "Forge", "Vapor"]
 [links]
   github = "taylorotwell"

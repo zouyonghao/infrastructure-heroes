@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Linux Kernel", "Go"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Caddy'
-logo = 'https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_caddy.svg'
+logo = "/images/logos/caddy.svg"
 description = 'Web server with automatic HTTPS'
 
 [health]

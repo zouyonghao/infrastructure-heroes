@@ -2,7 +2,7 @@
 dependencies = ["Node.js", "TypeScript"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Angular'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg'
+logo = "/images/logos/angular.svg"
 description = 'TypeScript-based web framework'
 maintainers = ["Misko Hevery", "John Papa"]
 

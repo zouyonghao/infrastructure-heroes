@@ -2,7 +2,7 @@
 dependencies = ["Python", "OpenSSH", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Ansible'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg'
+logo = "/images/logos/ansible.svg"
 description = 'IT automation and configuration management'
 maintainers = ["Jeff Geerling"]
 

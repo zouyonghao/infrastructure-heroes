@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Go", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'etcd'
-logo = 'https://avatars.githubusercontent.com/u/41972792?s=48&v=4'
+logo = "/images/logos/etcd.webp"
 description = 'Distributed key-value store'
 
 [health]

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Anders Hejlsberg"
 role = "TypeScript Lead Designer"
+avatar = "/images/maintainers/anders-hejlsberg.webp"
+
 projects = ["TypeScript", "C#", "Turbo Pascal"]
 [links]
   github = "AHejlsberg"

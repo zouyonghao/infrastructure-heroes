@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Brendan Gregg"
 role = "Performance Engineer"
+avatar = "/images/maintainers/brendan-gregg.webp"
+
 projects = ["BPF Tools", "DTrace"]
 [links]
   github = "brendangregg"

@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'BIND'
-logo = 'https://www.isc.org/images/bind9.png'
+logo = "/images/logos/bind.webp"
 description = 'Most widely used DNS server software'
 
 [health]

@@ -2,7 +2,7 @@
 dependencies = ["zlib", "libpng", "libjpeg-turbo", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'ImageMagick'
-logo = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/ImageMagick_logo.svg'
+logo = "/images/logos/imagemagick.svg"
 description = 'Image manipulation toolkit'
 
 [health]

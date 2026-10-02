@@ -3,6 +3,10 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Richard Stallman"
 role = "GNU Project Founder"
+avatar = "/images/maintainers/richard-stallman.webp"
+avatar_credit = "Patafisik, CC BY-SA 4.0"
+avatar_credit_url = "https://commons.wikimedia.org/wiki/File:Richard_Stallman_Bologna_2024_abc1_(3x4,_rule_of_thirdscropped).jpg"
+
 projects = ["GNU", "GCC", "Emacs"]
 [links]
 +++

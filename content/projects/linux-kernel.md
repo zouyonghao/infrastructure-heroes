@@ -1,7 +1,7 @@
 +++
 date = '2025-06-08T15:30:11+08:00'
 title = 'Linux Kernel'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg'
+logo = "/images/logos/linux-kernel.svg"
 description = 'The foundation of modern computing infrastructure'
 maintainers = ["Linus Torvalds"]
 

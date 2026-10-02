@@ -2,7 +2,7 @@
 dependencies = ["Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'GitHub Actions Runner'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg'
+logo = "/images/logos/actions-runner.svg"
 description = 'Self-hosted runner for GitHub Actions'
 
 [health]

@@ -3,6 +3,8 @@ date = '2025-06-08T15:30:49+08:00'
 draft = false
 title = "Yukihiro Matsumoto"
 role = "Ruby Creator"
+avatar = "/images/maintainers/yukihiro-matsumoto.webp"
+
 projects = ["Ruby"]
 [links]
   github = "matz"

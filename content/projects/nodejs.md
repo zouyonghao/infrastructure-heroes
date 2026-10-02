@@ -2,7 +2,7 @@
 dependencies = ["OpenSSL", "zlib", "Linux Kernel"]
 date = '2025-06-08T15:30:11+08:00'
 title = 'Node.js'
-logo = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg'
+logo = "/images/logos/nodejs.svg"
 description = 'JavaScript runtime built on V8'
 maintainers = ["Ryan Dahl", "Matteo Collina"]
 
