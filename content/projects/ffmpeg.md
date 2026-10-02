@@ -10,19 +10,18 @@ maintainers = ["Fabrice Bellard"]
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 73
+  bus_factor = "low"
+  score = 79
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 64554
-  forks = 14291
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 2
-
+  updated_at = "2026-10-02"
+  stars = 64692
+  forks = 14308
+  contributors = 310
+  commits_30d = 704
+  commits_90d = 1640
+  bus_factor_people = 3
 +++
 
 ### Overview

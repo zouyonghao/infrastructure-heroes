@@ -9,19 +9,18 @@ description = 'Kubernetes package manager'
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  score = 79
+  bus_factor = "low"
+  score = 85
 [links]
   github = "helm/helm"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 30281
-  forks = 7805
-  contributors = 100
-  commits_30d = 42
-  commits_90d = 100
-  bus_factor_people = 2
-
+  updated_at = "2026-10-02"
+  stars = 30297
+  forks = 7818
+  contributors = 371
+  commits_30d = 32
+  commits_90d = 259
+  bus_factor_people = 3
 +++
 
 ### Overview

@@ -11,18 +11,17 @@ maintainers = ["Ryan Dahl"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 80
+  score = 79
 [links]
   github = "denoland/deno"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 108526
-  forks = 6384
-  contributors = 100
-  commits_30d = 53
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 108557
+  forks = 6391
+  contributors = 431
+  commits_30d = 36
+  commits_90d = 449
   bus_factor_people = 2
-
 +++
 
 ### Overview

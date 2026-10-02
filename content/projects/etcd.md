@@ -14,14 +14,13 @@ description = 'Distributed key-value store'
 [links]
   github = "etcd-io/etcd"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 52309
-  forks = 10517
-  contributors = 100
-  commits_30d = 57
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 52320
+  forks = 10525
+  contributors = 374
+  commits_30d = 61
+  commits_90d = 267
   bus_factor_people = 3
-
 +++
 
 ### Overview

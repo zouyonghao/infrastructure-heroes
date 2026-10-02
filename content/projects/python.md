@@ -11,18 +11,17 @@ maintainers = ["Guido van Rossum"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 79
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 77292
-  forks = 36685
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 5
-
+  updated_at = "2026-10-02"
+  stars = 77386
+  forks = 37055
+  contributors = 356
+  commits_30d = 463
+  commits_90d = 1305
+  bus_factor_people = 4
 +++
 
 ### Overview

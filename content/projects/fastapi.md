@@ -9,20 +9,19 @@ maintainers = ["Sebastian Ramirez"]
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "declining"
+  contributors = "healthy"
   bus_factor = "medium"
-  score = 66
+  score = 79
 [links]
   github = "fastapi/fastapi"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 102645
-  forks = 9954
-  contributors = 100
-  commits_30d = 20
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 102758
+  forks = 9980
+  contributors = 456
+  commits_30d = 37
+  commits_90d = 289
   bus_factor_people = 2
-
 +++
 
 ### Overview

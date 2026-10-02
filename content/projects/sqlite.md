@@ -15,14 +15,13 @@ maintainers = ["D. Richard Hipp"]
 [links]
   github = "sqlite/sqlite"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 10550
-  forks = 1673
+  updated_at = "2026-10-02"
+  stars = 10581
+  forks = 1679
   contributors = 0
-  commits_30d = 98
-  commits_90d = 100
+  commits_30d = 110
+  commits_90d = 438
   bus_factor_people = 1
-
 +++
 
 ### Overview

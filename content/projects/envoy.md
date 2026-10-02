@@ -11,18 +11,17 @@ maintainers = ["Matt Klein"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 86
 [links]
   github = "envoyproxy/envoy"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 28999
-  forks = 5632
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 3
-
+  updated_at = "2026-10-02"
+  stars = 29026
+  forks = 5639
+  contributors = 379
+  commits_30d = 548
+  commits_90d = 1209
+  bus_factor_people = 4
 +++
 
 ### Overview

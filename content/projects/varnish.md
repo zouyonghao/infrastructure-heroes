@@ -14,14 +14,13 @@ description = 'HTTP accelerator and reverse proxy'
 [links]
   github = "varnishcache/varnish-cache"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 4045
-  forks = 393
+  updated_at = "2026-10-02"
+  stars = 4044
+  forks = 391
   contributors = 100
   commits_30d = 0
   commits_90d = 0
   bus_factor_people = 1
-
 +++
 
 ### Overview

@@ -11,18 +11,17 @@ maintainers = ["Jordan Walke", "Dan Abramov"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 91
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 250764
-  forks = 51406
-  contributors = 100
-  commits_30d = 50
-  commits_90d = 100
-  bus_factor_people = 4
-
+  updated_at = "2026-10-02"
+  stars = 250872
+  forks = 51420
+  contributors = 411
+  commits_30d = 43
+  commits_90d = 154
+  bus_factor_people = 5
 +++
 
 ### Overview

@@ -15,14 +15,13 @@ maintainers = ["Mitchell Hashimoto"]
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 36303
-  forks = 4763
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 36331
+  forks = 4773
+  contributors = 388
+  commits_30d = 343
+  commits_90d = 962
   bus_factor_people = 1
-
 +++
 
 ### Overview

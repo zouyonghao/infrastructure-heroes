@@ -11,18 +11,17 @@ maintainers = ["David Heinemeier Hansson"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 86
+  score = 92
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 58780
-  forks = 23699
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 4
-
+  updated_at = "2026-10-02"
+  stars = 58791
+  forks = 24007
+  contributors = 370
+  commits_30d = 307
+  commits_90d = 1177
+  bus_factor_people = 5
 +++
 
 ### Overview

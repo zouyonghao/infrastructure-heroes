@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-09-27T04:54:01.224273",
-  "total_snapshots": 33,
+  "generated_at": "2026-10-02T09:02:31.049444",
+  "total_snapshots": 34,
   "date_range": {
     "from": "2026-02-08",
-    "to": "2026-09-27"
+    "to": "2026-10-02"
   },
   "current_status": {
     "critical": 17,
-    "warning": 31,
-    "healthy": 60,
-    "avg_score": 75.00925925925925
+    "warning": 30,
+    "healthy": 61,
+    "avg_score": 76.12037037037037,
+    "total_projects": 108
   },
   "trends": {
     "avg_score_over_time": [
@@ -144,6 +145,10 @@
       {
         "date": "2026-09-27",
         "value": 75.00925925925925
+      },
+      {
+        "date": "2026-10-02",
+        "value": 76.12037037037037
       }
     ],
     "critical_count_over_time": [
@@ -278,7 +283,16 @@
       {
         "date": "2026-09-27",
         "value": 17
+      },
+      {
+        "date": "2026-10-02",
+        "value": 17
       }
-    ]
+    ],
+    "score_distribution": {
+      "healthy": 61,
+      "warning": 30,
+      "critical": 17
+    }
   }
 }

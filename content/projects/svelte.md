@@ -11,18 +11,17 @@ maintainers = ["Rich Harris"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 90
+  score = 96
 [links]
   github = "sveltejs/svelte"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 88200
-  forks = 6523
-  contributors = 100
-  commits_30d = 35
-  commits_90d = 100
-  bus_factor_people = 4
-
+  updated_at = "2026-10-02"
+  stars = 88237
+  forks = 6874
+  contributors = 413
+  commits_30d = 32
+  commits_90d = 159
+  bus_factor_people = 6
 +++
 
 ### Overview

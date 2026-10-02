@@ -10,19 +10,18 @@ maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
   funding = "at-risk"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
-  score = 75
+  bus_factor = "medium"
+  score = 80
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 23755
-  forks = 5651
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 1
-
+  updated_at = "2026-10-02"
+  stars = 23765
+  forks = 5652
+  contributors = 366
+  commits_30d = 1051
+  commits_90d = 2625
+  bus_factor_people = 2
 +++
 
 ### Overview

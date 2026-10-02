@@ -11,18 +11,17 @@ maintainers = ["Daniel Stenberg"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 88
+  score = 86
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 42943
-  forks = 7385
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 42986
+  forks = 7392
+  contributors = 410
+  commits_30d = 359
+  commits_90d = 790
   bus_factor_people = 2
-
 +++
 
 ### Overview

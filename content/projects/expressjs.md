@@ -8,21 +8,20 @@ maintainers = ["TJ Holowaychuk"]
 
 [health]
   funding = "at-risk"
-  maintenance = "moderate"
+  maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  score = 63
+  score = 73
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 69486
-  forks = 25073
-  contributors = 100
-  commits_30d = 7
-  commits_90d = 17
+  updated_at = "2026-10-02"
+  stars = 69503
+  forks = 25120
+  contributors = 330
+  commits_30d = 10
+  commits_90d = 20
   bus_factor_people = 2
-
 +++
 
 ### Overview

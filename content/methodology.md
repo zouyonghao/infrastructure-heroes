@@ -291,19 +291,19 @@ If you have questions about our methodology or want to discuss a specific projec
 
 ## 📈 Health Trends
 
-_Last updated: 2026-02-08_
+_Last updated: 2026-10-02_
 
 ### Current Status
 
 | Metric | Value |
 |--------|-------|
-| Total Projects | N/A |
-| 🟢 Healthy (80-100) | 67 |
-| 🟡 Warning (60-79) | 24 |
+| Total Projects | 108 |
+| 🟢 Healthy (80-100) | 61 |
+| 🟡 Warning (60-79) | 30 |
 | 🔴 Critical (0-59) | 17 |
-| Average Score | 78.5 |
+| Average Score | 76.1 |
 
 ### Historical Data Points
 
-1 snapshots recorded from 2026-02-08 to 2026-02-08
+34 snapshots recorded from 2026-02-08 to 2026-10-02
 

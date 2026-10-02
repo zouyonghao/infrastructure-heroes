@@ -11,18 +11,17 @@ maintainers = ["Mark Adler"]
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 48
+  score = 46
 [links]
   github = "madler/zlib"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 7100
-  forks = 2856
+  updated_at = "2026-10-02"
+  stars = 7109
+  forks = 2862
   contributors = 80
   commits_30d = 24
   commits_90d = 24
   bus_factor_people = 1
-
 +++
 
 ### Overview

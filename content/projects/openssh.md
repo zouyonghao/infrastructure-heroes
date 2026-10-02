@@ -11,18 +11,17 @@ maintainers = ["Theo de Raadt"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  score = 61
+  score = 68
 [links]
   github = "openssh/openssh-portable"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 4023
-  forks = 2171
-  contributors = 100
-  commits_30d = 76
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 4032
+  forks = 2173
+  contributors = 124
+  commits_30d = 87
+  commits_90d = 185
   bus_factor_people = 1
-
 +++
 
 ### Overview

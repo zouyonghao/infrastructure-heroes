@@ -15,14 +15,13 @@ maintainers = ["Chris Lattner"]
 [links]
   github = "llvm/llvm-project"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 40770
-  forks = 18826
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 11
-
+  updated_at = "2026-10-02"
+  stars = 40882
+  forks = 18916
+  contributors = 365
+  commits_30d = 4907
+  commits_90d = 13285
+  bus_factor_people = 24
 +++
 
 ### Overview

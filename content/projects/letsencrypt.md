@@ -7,20 +7,19 @@ description = 'Free SSL/TLS certificate authority'
 [health]
   funding = "stable"
   maintenance = "active"
-  contributors = "declining"
-  bus_factor = "high"
-  score = 66
+  contributors = "healthy"
+  bus_factor = "medium"
+  score = 70
 [links]
   github = "letsencrypt/letsencrypt"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 33251
+  updated_at = "2026-10-02"
+  stars = 33256
   forks = 3503
-  contributors = 100
-  commits_30d = 6
-  commits_90d = 24
-  bus_factor_people = 1
-
+  contributors = 383
+  commits_30d = 3
+  commits_90d = 26
+  bus_factor_people = 2
 +++
 
 ### Overview

@@ -14,14 +14,13 @@ description = 'High-performance object storage'
 [links]
   github = "minio/minio"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 61349
-  forks = 8031
-  contributors = 100
+  updated_at = "2026-10-02"
+  stars = 61344
+  forks = 8072
+  contributors = 410
   commits_30d = 0
   commits_90d = 0
   bus_factor_people = 6
-
 +++
 
 ### Overview

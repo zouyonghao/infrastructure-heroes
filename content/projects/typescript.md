@@ -11,18 +11,17 @@ maintainers = ["Anders Hejlsberg"]
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  score = 85
+  score = 86
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 111225
-  forks = 15078
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 111307
+  forks = 15408
+  contributors = 341
+  commits_30d = 157
+  commits_90d = 394
   bus_factor_people = 3
-
 +++
 
 ### Overview

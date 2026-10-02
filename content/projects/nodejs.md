@@ -15,14 +15,13 @@ maintainers = ["Ryan Dahl", "Matteo Collina"]
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 122127
-  forks = 38089
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 3
-
+  updated_at = "2026-10-02"
+  stars = 122234
+  forks = 38463
+  contributors = 420
+  commits_30d = 649
+  commits_90d = 1510
+  bus_factor_people = 4
 +++
 
 ### Overview

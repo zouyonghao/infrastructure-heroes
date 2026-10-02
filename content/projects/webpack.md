@@ -11,18 +11,17 @@ maintainers = ["Tobias Koppers"]
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 62
+  score = 66
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 65956
-  forks = 9545
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 65955
+  forks = 9539
+  contributors = 390
+  commits_30d = 388
+  commits_90d = 826
   bus_factor_people = 1
-
 +++
 
 ### Overview

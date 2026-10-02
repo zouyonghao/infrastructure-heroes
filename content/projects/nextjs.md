@@ -15,14 +15,13 @@ maintainers = ["Guillermo Rauch"]
 [links]
   github = "vercel/next.js"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 142676
-  forks = 33197
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
-  bus_factor_people = 5
-
+  updated_at = "2026-10-02"
+  stars = 143003
+  forks = 33577
+  contributors = 421
+  commits_30d = 508
+  commits_90d = 1406
+  bus_factor_people = 6
 +++
 
 ### Overview

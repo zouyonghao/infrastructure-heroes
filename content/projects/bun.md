@@ -11,18 +11,17 @@ maintainers = ["Jarred Sumner"]
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  score = 62
+  score = 66
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 96045
-  forks = 5065
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 96096
+  forks = 5084
+  contributors = 449
+  commits_30d = 538
+  commits_90d = 2333
   bus_factor_people = 1
-
 +++
 
 ### Overview

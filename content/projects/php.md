@@ -15,14 +15,13 @@ maintainers = ["Rasmus Lerdorf"]
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-09-27"
-  stars = 40403
-  forks = 8153
-  contributors = 100
-  commits_30d = 100
-  commits_90d = 100
+  updated_at = "2026-10-02"
+  stars = 40426
+  forks = 8155
+  contributors = 230
+  commits_30d = 796
+  commits_90d = 1991
   bus_factor_people = 3
-
 +++
 
 ### Overview
