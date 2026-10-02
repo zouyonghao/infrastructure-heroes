@@ -5,26 +5,27 @@ title = 'ImageMagick'
 logo = "/images/logos/imagemagick.svg"
 description = 'Image manipulation toolkit'
 
-category = "formats-media"
-
 [health]
+  score = 77
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 17573
+  stars = 17574
   forks = 1665
   contributors = 212
-  commits_30d = 203
-  commits_90d = 457
+  commits_30d = 207
+  commits_90d = 461
   bus_factor_people = 1
+  contributors_90d = 11
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'ClickHouse'
 logo = "/images/logos/clickhouse.svg"
 description = 'Column-oriented OLAP database'
 
-category = "databases"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "ClickHouse/ClickHouse"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 50194
-  forks = 9045
+  stars = 50201
+  forks = 9047
   contributors = 311
-  commits_30d = 12777
-  commits_90d = 41410
-  bus_factor_people = 4
+  commits_30d = 12937
+  commits_90d = 41656
+  bus_factor_people = 3
+  contributors_90d = 40
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

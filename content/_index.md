@@ -25,9 +25,9 @@ Discover and support the open source projects that power billions of devices. Ex
 <section class="section" id="projects">
 <div class="container-wide">
 <div class="section-header">
-<h2 class="section-title">Project Activity & Support</h2>
+<h2 class="section-title">Project Health Monitor</h2>
 <p class="section-subtitle">
-Explore repository activity, evidence gaps, and practical ways to support each project.
+Browse Healthy, Warning, and Critical projects, review the evidence, and find practical ways to help.
 <a href="/projects/" class="link-arrow">View all projects →</a>
 </p>
 </div>

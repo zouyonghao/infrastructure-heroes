@@ -5,26 +5,27 @@ title = 'Argo CD'
 logo = "/images/logos/argocd.svg"
 description = 'Declarative GitOps CD for Kubernetes'
 
-category = "delivery"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "argoproj/argo-cd"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 24314
-  forks = 7903
+  stars = 24317
+  forks = 7902
   contributors = 424
-  commits_30d = 235
-  commits_90d = 628
+  commits_30d = 236
+  commits_90d = 630
   bus_factor_people = 6
+  contributors_90d = 58
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

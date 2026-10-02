@@ -5,26 +5,27 @@ title = 'Jaeger'
 logo = "/images/logos/jaeger.svg"
 description = 'Distributed tracing system'
 
-category = "observability"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "jaegertracing/jaeger"
 [metrics]
   updated_at = "2026-10-02"
   stars = 23263
-  forks = 3140
+  forks = 3138
   contributors = 434
   commits_30d = 140
   commits_90d = 341
   bus_factor_people = 2
+  contributors_90d = 32
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

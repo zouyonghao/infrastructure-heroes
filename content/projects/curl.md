@@ -6,26 +6,27 @@ logo = "/images/logos/curl.svg"
 description = 'Command line tool and library for transferring data with URLs'
 maintainers = ["Daniel Stenberg"]
 
-category = "networking"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "curl/curl"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 42986
-  forks = 7392
+  stars = 42989
+  forks = 7394
   contributors = 410
-  commits_30d = 359
-  commits_90d = 790
+  commits_30d = 363
+  commits_90d = 795
   bus_factor_people = 2
+  contributors_90d = 18
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

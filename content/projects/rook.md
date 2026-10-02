@@ -5,26 +5,27 @@ title = 'Rook'
 logo = "/images/logos/rook.svg"
 description = 'Cloud-native storage orchestrator'
 
-category = "storage"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "rook/rook"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 13671
+  stars = 13672
   forks = 2868
   contributors = 378
-  commits_30d = 139
-  commits_90d = 587
+  commits_30d = 143
+  commits_90d = 591
   bus_factor_people = 2
+  contributors_90d = 27
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

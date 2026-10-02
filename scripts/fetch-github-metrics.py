@@ -7,7 +7,7 @@ Usage:
     python fetch-github-metrics.py --repo owner/repo [--output metrics.json]
     python fetch-github-metrics.py --repo owner/repo --frontmatter content/projects/project.md
 
-Methodology v2.0 publishes activity indicators, not an overall health rating.
+Methodology v2.1 publishes automated activity-based health estimates.
 Funding is unknown unless separately reviewed against public evidence.
 
 Authentication is read from the GITHUB_TOKEN environment variable only.
@@ -150,7 +150,7 @@ def retry_delay(status_code: Optional[int], headers, body: Optional[str], attemp
 
 
 class GitHubMetricsFetcher:
-    """GitHub project metrics fetcher - Infrastructure Heroes Methodology v2.0"""
+    """GitHub project metrics fetcher - Infrastructure Heroes Methodology v2.1"""
 
     def __init__(self, token: Optional[str] = None):
         self.token = token or os.environ.get('GITHUB_TOKEN')
@@ -453,7 +453,7 @@ class GitHubMetricsFetcher:
 
     def calculate_maintenance_score(self, metrics: dict) -> int:
         """
-        Compute the maintenance activity score (0-100) - Methodology v2.0
+        Compute the maintenance activity score (0-100) - Methodology v2.1
 
         Criteria:
         - Repository push recency (40 points)
@@ -509,7 +509,7 @@ class GitHubMetricsFetcher:
 
     def calculate_contributors_score(self, metrics: dict) -> int:
         """
-        Compute the contributor health score (0-100) - Methodology v2.0
+        Compute the contributor health score (0-100) - Methodology v2.1
 
         Criteria:
         - Active contributors in last 90 days (80%)
@@ -528,7 +528,7 @@ class GitHubMetricsFetcher:
 
     def calculate_bus_factor_score(self, metrics: dict) -> Optional[int]:
         """
-        Compute the bus-factor risk score (0-100) - Methodology v2.0
+        Compute the bus-factor risk score (0-100) - Methodology v2.1
 
         Higher score = lower risk
 
@@ -626,7 +626,7 @@ class GitHubMetricsFetcher:
 
     def assess_health(self, metrics: dict) -> dict:
         """
-        Describe automated activity indicators using Methodology v2.0.
+        Describe automated activity indicators using Methodology v2.1.
         """
         if not metrics:
             return {}
@@ -638,8 +638,15 @@ class GitHubMetricsFetcher:
         funding_info = metrics.get("funding_info")
         funding_score, funding_status = self.calculate_funding_score(metrics, funding_info)
 
-        # Withhold the composite: these proxies cannot establish overall health.
+        # An activity-based estimate; unknown funding contributes no points or weight.
         overall_score = None
+        if "days_since_last_push" in metrics and "unique_contributors_last_90_days" in metrics:
+            weighted = maintenance_score * 30 + contributors_score * 25
+            weight = 55
+            if bus_factor_score is not None:
+                weighted += bus_factor_score * 20
+                weight += 20
+            overall_score = round(weighted / weight)
 
         # Dimension status labels
         def get_maintenance_status(score):
@@ -669,7 +676,7 @@ class GitHubMetricsFetcher:
             "bus_factor": get_bus_factor_status(bus_factor_score),
             "bus_factor_score": bus_factor_score,
             "calculated_at": datetime.now().isoformat(),
-            "methodology_version": "2.0",
+            "methodology_version": "2.1",
             "recommendations": []
         }
 
@@ -721,7 +728,12 @@ def print_report(metrics: dict, assessment: dict):
     print(f"  │ 👥 Contributors  │ {assessment.get('contributors_score', 0):>3}/100 │ {assessment.get('contributors', 'unknown'):>12} │")
     print(f"  │ 🚌 Bus Factor    │ {str(assessment.get('bus_factor_score') or '—'):>3}/100 │ {assessment.get('bus_factor', 'unknown'):>12} │")
     print(f"  ├──────────────────┼────────┼──────────────┤")
-    print("  Overall health: not rated (insufficient evidence)")
+    score = assessment.get("overall_score")
+    if score is None:
+        print("  Overall health: not rated (insufficient evidence)")
+    else:
+        status = "Healthy" if score >= 80 else "Warning" if score >= 60 else "Critical"
+        print(f"  Health estimate: {score}/100 — {status}")
     print(f"  └──────────────────┴────────┴──────────────┘")
 
     # Show funding sources if detected
@@ -854,11 +866,12 @@ def update_hugo_frontmatter(filepath: str, assessment: dict, metrics: dict) -> b
         return False
 
     health_values = {
+        "score": assessment.get("overall_score"),
         "funding": "unknown",
         "maintenance": assessment.get('maintenance', 'unknown'),
         "contributors": assessment.get('contributors', 'unknown'),
         "bus_factor": assessment.get('bus_factor', 'unknown'),
-        "methodology_version": "2.0",
+        "methodology_version": "2.1",
         "assessment": "automated",
     }
 

@@ -5,26 +5,27 @@ title = 'Protocol Buffers'
 logo = "/images/logos/protobuf.svg"
 description = 'Language-neutral data serialization'
 
-category = "formats-media"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 72082
+  stars = 72085
   forks = 16304
   contributors = 367
-  commits_30d = 275
-  commits_90d = 793
+  commits_30d = 276
+  commits_90d = 794
   bus_factor_people = 2
+  contributors_90d = 28
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

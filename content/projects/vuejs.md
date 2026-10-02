@@ -6,26 +6,27 @@ logo = "/images/logos/vuejs.svg"
 description = 'Progressive JavaScript framework'
 maintainers = ["Evan You"]
 
-category = "frameworks"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "vuejs/core"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 54472
-  forks = 9221
+  stars = 54473
+  forks = 9222
   contributors = 436
   commits_30d = 29
   commits_90d = 96
   bus_factor_people = 2
+  contributors_90d = 35
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

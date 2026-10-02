@@ -6,26 +6,27 @@ logo = "/images/logos/nginx.svg"
 description = 'High-performance web server and reverse proxy'
 maintainers = ["Igor Sysoev"]
 
-category = "networking"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "nginx/nginx"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 31777
+  stars = 31779
   forks = 8309
   contributors = 110
   commits_30d = 30
   commits_90d = 103
   bus_factor_people = 3
+  contributors_90d = 22
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

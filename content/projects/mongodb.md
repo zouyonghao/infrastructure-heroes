@@ -5,26 +5,27 @@ title = 'MongoDB'
 logo = "/images/logos/mongodb.svg"
 description = 'Document-oriented NoSQL database'
 
-category = "databases"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "mongodb/mongo"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 28617
+  stars = 28615
   forks = 5815
   contributors = 335
-  commits_30d = 479
-  commits_90d = 2534
-  bus_factor_people = 18
+  commits_30d = 498
+  commits_90d = 2553
+  bus_factor_people = 17
+  contributors_90d = 86
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

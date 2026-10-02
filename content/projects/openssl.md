@@ -5,26 +5,27 @@ title = 'OpenSSL'
 logo = "/images/logos/openssl.svg"
 description = 'Cryptography and SSL/TLS Toolkit'
 
-category = "security"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "openssl/openssl"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 30876
+  stars = 30877
   forks = 11504
   contributors = 363
   commits_30d = 392
   commits_90d = 1129
   bus_factor_people = 7
+  contributors_90d = 41
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

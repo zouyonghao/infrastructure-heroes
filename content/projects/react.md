@@ -6,26 +6,27 @@ logo = "/images/logos/react.svg"
 description = 'JavaScript library for building UIs'
 maintainers = ["Jordan Walke", "Dan Abramov"]
 
-category = "frameworks"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "facebook/react"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 250872
-  forks = 51420
+  stars = 250860
+  forks = 51424
   contributors = 411
   commits_30d = 43
   commits_90d = 154
   bus_factor_people = 5
+  contributors_90d = 44
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

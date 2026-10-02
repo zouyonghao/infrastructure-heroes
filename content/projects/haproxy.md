@@ -5,26 +5,27 @@ title = 'HAProxy'
 logo = "/images/logos/haproxy.svg"
 description = 'High-performance load balancer'
 
-category = "networking"
-
 [health]
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "haproxy/haproxy"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 6899
+  stars = 6900
   forks = 975
   contributors = 302
-  commits_30d = 313
-  commits_90d = 804
+  commits_30d = 326
+  commits_90d = 817
   bus_factor_people = 2
+  contributors_90d = 13
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

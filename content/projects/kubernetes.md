@@ -6,26 +6,27 @@ logo = "/images/logos/kubernetes.svg"
 description = 'Container orchestration platform'
 maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 
-category = "containers"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 128176
-  forks = 45727
+  stars = 128163
+  forks = 45766
   contributors = 352
-  commits_30d = 860
-  commits_90d = 2485
+  commits_30d = 885
+  commits_90d = 2511
   bus_factor_people = 2
+  contributors_90d = 32
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

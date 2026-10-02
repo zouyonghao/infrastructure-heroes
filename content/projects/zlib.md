@@ -6,16 +6,14 @@ logo = "/images/logos/zlib.webp"
 description = 'Massively used compression library'
 maintainers = ["Mark Adler"]
 
-category = "formats-media"
-
 [health]
+  score = 45
   funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "madler/zlib"
 [metrics]
@@ -26,6 +24,9 @@ category = "formats-media"
   commits_30d = 24
   commits_90d = 24
   bus_factor_people = 1
+  contributors_90d = 5
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

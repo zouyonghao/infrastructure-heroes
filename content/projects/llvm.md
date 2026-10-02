@@ -6,26 +6,27 @@ logo = "/images/logos/llvm.svg"
 description = 'Compiler infrastructure and toolchain'
 maintainers = ["Chris Lattner"]
 
-category = "languages"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "llvm/llvm-project"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 40882
-  forks = 18916
+  stars = 40884
+  forks = 18923
   contributors = 365
-  commits_30d = 4907
-  commits_90d = 13285
-  bus_factor_people = 24
+  commits_30d = 5014
+  commits_90d = 13395
+  bus_factor_people = 20
+  contributors_90d = 99
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

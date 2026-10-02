@@ -5,26 +5,27 @@ title = 'npm'
 logo = "/images/logos/npm.svg"
 description = 'JavaScript package manager'
 
-category = "developer-tools"
-
 [health]
+  score = 78
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
-  methodology_version = "2.0"
+  bus_factor = "medium"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "npm/cli"
 [metrics]
   updated_at = "2026-10-02"
   stars = 10163
-  forks = 4801
+  forks = 4803
   contributors = 416
   commits_30d = 9
   commits_90d = 42
-  bus_factor_people = 3
+  bus_factor_people = 2
+  contributors_90d = 15
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

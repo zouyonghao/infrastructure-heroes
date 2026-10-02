@@ -5,16 +5,14 @@ title = 'GlusterFS'
 logo = "/images/logos/glusterfs.webp"
 description = 'Scalable network filesystem'
 
-category = "storage"
-
 [health]
+  score = 36
   funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
-  bus_factor = "low"
-  methodology_version = "2.0"
+  bus_factor = "high"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "gluster/glusterfs"
 [metrics]
@@ -24,7 +22,10 @@ category = "storage"
   contributors = 243
   commits_30d = 18
   commits_90d = 33
-  bus_factor_people = 3
+  bus_factor_people = 1
+  contributors_90d = 3
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

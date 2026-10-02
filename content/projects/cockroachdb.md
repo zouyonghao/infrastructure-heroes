@@ -5,26 +5,27 @@ title = 'CockroachDB'
 logo = "/images/logos/cockroachdb.svg"
 description = 'Distributed SQL database'
 
-category = "databases"
-
 [health]
+  score = 56
   funding = "unknown"
   maintenance = "moderate"
   contributors = "declining"
-  bus_factor = "low"
-  methodology_version = "2.0"
+  bus_factor = "medium"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 32540
-  forks = 4124
+  stars = 32538
+  forks = 4123
   contributors = 306
   commits_30d = 11
   commits_90d = 43
-  bus_factor_people = 3
+  bus_factor_people = 2
+  contributors_90d = 8
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

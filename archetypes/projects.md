@@ -5,14 +5,13 @@ title = '{{ replace .Name "-" " " | title }}'
 logo = ''
 description = ''
 maintainers = []
-category = "" # Choose a key from data/project_categories.json
 
 [health]
   funding = "unknown"      # stable | at-risk | critical | unknown
   maintenance = "unknown"  # active | moderate | inactive | unknown
   contributors = "unknown" # healthy | declining | critical | unknown
   bus_factor = "unknown"   # low | medium | high | unknown
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
 
 # Optional: Track project succession for continuity

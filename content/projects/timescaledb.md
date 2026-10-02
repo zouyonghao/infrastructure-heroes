@@ -5,26 +5,27 @@ title = 'TimescaleDB'
 logo = "/images/logos/timescaledb.svg"
 description = 'PostgreSQL for time-series data'
 
-category = "databases"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "timescale/timescaledb"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 23633
+  stars = 23634
   forks = 1166
   contributors = 120
-  commits_30d = 108
-  commits_90d = 335
+  commits_30d = 112
+  commits_90d = 339
   bus_factor_people = 3
+  contributors_90d = 18
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

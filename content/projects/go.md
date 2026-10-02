@@ -6,26 +6,27 @@ logo = "/images/logos/go.svg"
 description = 'Programming language by Google'
 maintainers = ["Rob Pike", "Ken Thompson"]
 
-category = "languages"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "golang/go"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 139129
-  forks = 20978
+  stars = 139120
+  forks = 21019
   contributors = 381
-  commits_30d = 375
-  commits_90d = 1028
+  commits_30d = 380
+  commits_90d = 1033
   bus_factor_people = 9
+  contributors_90d = 60
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'Apache Flink'
 logo = "/images/logos/flink.webp"
 description = 'Stream processing framework'
 
-category = "data-pipelines"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "apache/flink"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 26378
-  forks = 14049
+  stars = 26376
+  forks = 14047
   contributors = 285
-  commits_30d = 180
-  commits_90d = 463
-  bus_factor_people = 7
+  commits_30d = 183
+  commits_90d = 467
+  bus_factor_people = 8
+  contributors_90d = 51
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'pip'
 logo = "/images/logos/pip.svg"
 description = 'Python package installer'
 
-category = "developer-tools"
-
 [health]
+  score = 68
   funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "pypa/pip"
 [metrics]
   updated_at = "2026-10-02"
   stars = 10292
-  forks = 3392
+  forks = 3393
   contributors = 396
   commits_30d = 14
   commits_90d = 136
   bus_factor_people = 2
+  contributors_90d = 24
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

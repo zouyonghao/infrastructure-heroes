@@ -6,26 +6,27 @@ logo = "/images/logos/eslint.svg"
 description = 'JavaScript linting utility'
 maintainers = ["Filipe Fortes"]
 
-category = "developer-tools"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "eslint/eslint"
 [metrics]
   updated_at = "2026-10-02"
   stars = 27531
-  forks = 5201
+  forks = 5202
   contributors = 412
   commits_30d = 54
   commits_90d = 186
-  bus_factor_people = 7
+  bus_factor_people = 8
+  contributors_90d = 52
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

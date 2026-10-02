@@ -6,26 +6,27 @@ logo = "/images/logos/nodejs.svg"
 description = 'JavaScript runtime built on V8'
 maintainers = ["Ryan Dahl", "Matteo Collina"]
 
-category = "languages"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "nodejs/node"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 122234
-  forks = 38463
+  stars = 122223
+  forks = 38504
   contributors = 420
-  commits_30d = 649
-  commits_90d = 1510
+  commits_30d = 651
+  commits_90d = 1512
   bus_factor_people = 4
+  contributors_90d = 53
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

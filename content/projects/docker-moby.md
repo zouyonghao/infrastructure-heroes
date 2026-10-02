@@ -5,16 +5,14 @@ title = 'Moby (Docker Engine)'
 logo = "/images/logos/docker-moby.svg"
 description = 'Container runtime and toolkit'
 
-category = "containers"
-
 [health]
+  score = 77
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "moby/moby"
 [metrics]
@@ -25,6 +23,9 @@ category = "containers"
   commits_30d = 478
   commits_90d = 1226
   bus_factor_people = 1
+  contributors_90d = 12
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

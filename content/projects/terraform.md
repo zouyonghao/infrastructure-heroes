@@ -6,26 +6,27 @@ logo = "/images/logos/terraform.svg"
 description = 'Infrastructure as code software tool'
 maintainers = ["Mitchell Hashimoto"]
 
-category = "delivery"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "hashicorp/terraform"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 49807
-  forks = 10636
+  stars = 49812
+  forks = 10638
   contributors = 350
-  commits_30d = 118
-  commits_90d = 374
+  commits_30d = 140
+  commits_90d = 396
   bus_factor_people = 2
+  contributors_90d = 20
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

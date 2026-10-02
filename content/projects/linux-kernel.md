@@ -5,26 +5,27 @@ logo = "/images/logos/linux-kernel.svg"
 description = 'The foundation of modern computing infrastructure'
 maintainers = ["Linus Torvalds"]
 
-category = "operating-systems"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "torvalds/linux"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 250808
-  forks = 66401
+  stars = 250836
+  forks = 66465
   contributors = 0
-  commits_30d = 2276
+  commits_30d = 2273
   commits_90d = 19420
   bus_factor_people = 9
+  contributors_90d = 89
+  commits_sample_truncated = true
+  contributors_unavailable = true
 +++
 
 ### Overview

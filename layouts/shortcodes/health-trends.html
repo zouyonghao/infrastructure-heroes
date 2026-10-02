@@ -6,9 +6,9 @@
     {{ $summary := $summaryContent | transform.Unmarshal }}
     
     <div class="health-trends-section">
-        <h3>Archived v1.0 estimates</h3>
+        <h3>Health estimates · v{{ $summary.score_methodology_version | default "1.0" }}</h3>
         
-        <p>These retired estimates used popularity and donation links as funding proxies. They do not describe current project health. New collections retain activity data without composite ratings.</p>
+        <p>Charts show one scoring methodology at a time. Scores are automated estimates; changes in methodology are not changes in project health.</p>
         {{ with $summary.last_scored_date }}<p>Last scored snapshot: <time datetime="{{ . }}">{{ . }}</time>.</p>{{ end }}
         <div class="trends-summary">
             <div class="trend-stat">
@@ -32,10 +32,10 @@
             {{ $previousValue := 0 }}
             {{ if ge $lastIndex 1 }}{{ $previousValue = (index $avgScores (sub $lastIndex 1)).value | default 0 }}{{ end }}
             <div class="trend-chart">
-                <h4>Archived Average Score</h4>
+                <h4>Average Health Estimate</h4>
                 <div class="sparkline" data-values="{{ range $avgScores }}{{ .value }},{{ end }}" data-type="line"></div>
                 <div class="trend-current">
-                    Last archived estimate: <strong>{{ $currentValue | math.Round }} / 100</strong>
+                    Latest estimate: <strong>{{ $currentValue | math.Round }} / 100</strong>
                     <span class="trend-indicator" data-current="{{ $currentValue }}" data-previous="{{ $previousValue }}"></span>
                 </div>
             </div>
@@ -48,10 +48,10 @@
             {{ $previousCount := 0 }}
             {{ if ge $lastIndex 1 }}{{ $previousCount = (index $criticalCounts (sub $lastIndex 1)).value | default 0 }}{{ end }}
             <div class="trend-chart">
-                <h4>Projects formerly labeled critical</h4>
+                <h4>Projects labeled Critical</h4>
                 <div class="sparkline critical" data-values="{{ range $criticalCounts }}{{ .value }},{{ end }}"></div>
                 <div class="trend-current">
-                    Last archived estimate: <strong class="text-danger">{{ $currentCount }}</strong> projects
+                    Latest estimate: <strong class="text-danger">{{ $currentCount }}</strong> projects
                     {{ if ne $currentCount $previousCount }}
                     <span class="trend-indicator" data-current="{{ $currentCount }}" data-previous="{{ $previousCount }}"></span>
                     {{ end }}

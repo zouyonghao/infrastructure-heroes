@@ -11,9 +11,6 @@
             </div>
             {{ end }}
             <h1>{{ .Title }}</h1>
-            {{ with index site.Data.project_categories (.Params.category | default "") }}
-            <a class="project-category" href="/projects/#category={{ $.Params.category }}">{{ .name }}</a>
-            {{ end }}
             {{ if .Params.description }}
             <p class="section-subtitle">{{ .Params.description }}</p>
             {{ end }}
@@ -21,9 +18,10 @@
 
         {{ if .Params.health }}
         <div class="health-dashboard">
+            {{ partial "health-score.html" .Params.health }}
             <div class="assessment-note">
-                <strong>Automated activity indicators</strong>
-                <p>Overall health is not rated. Funding has not been independently assessed.
+                <strong>Automated health estimate</strong>
+                <p>The score summarizes repository activity. Funding is unknown and excluded from the score.
                 These repository signals do not establish financial stability, security, or maintainer availability.
                 <a href="/methodology/">How to interpret this data</a>.</p>
             </div>

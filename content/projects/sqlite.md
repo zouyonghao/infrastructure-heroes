@@ -6,26 +6,27 @@ logo = "/images/logos/sqlite.svg"
 description = 'Most widely deployed database engine in the world'
 maintainers = ["D. Richard Hipp"]
 
-category = "databases"
-
 [health]
+  score = 45
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "sqlite/sqlite"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 10581
+  stars = 10580
   forks = 1679
   contributors = 0
-  commits_30d = 110
+  commits_30d = 111
   commits_90d = 438
   bus_factor_people = 1
+  contributors_90d = 4
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

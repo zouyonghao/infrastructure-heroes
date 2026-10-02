@@ -6,26 +6,27 @@ logo = "/images/logos/typescript.svg"
 description = 'Typed superset of JavaScript'
 maintainers = ["Anders Hejlsberg"]
 
-category = "languages"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "microsoft/TypeScript"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 111307
-  forks = 15408
+  stars = 111308
+  forks = 15442
   contributors = 341
   commits_30d = 157
   commits_90d = 394
   bus_factor_people = 3
+  contributors_90d = 38
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

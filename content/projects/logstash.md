@@ -5,16 +5,14 @@ title = 'Logstash'
 logo = "/images/logos/logstash.svg"
 description = 'Server-side data processing pipeline'
 
-category = "observability"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "elastic/logstash"
 [metrics]
@@ -24,7 +22,10 @@ category = "observability"
   contributors = 344
   commits_30d = 27
   commits_90d = 70
-  bus_factor_people = 5
+  bus_factor_people = 4
+  contributors_90d = 20
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -11,30 +11,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvidenceDataTest(unittest.TestCase):
-    def test_every_project_has_a_defined_primary_category(self):
-        categories = json.loads((ROOT / "data/project_categories.json").read_text())
-        used = set()
+    def test_current_projects_use_activity_estimates_and_unknown_funding(self):
         for path in (ROOT / "content/projects").glob("*.md"):
             if path.name == "_index.md":
                 continue
             with self.subTest(project=path.stem):
                 data = tomllib.loads(path.read_text().split("+++")[1])
-                self.assertIn(data.get("category"), categories)
-                used.add(data["category"])
-        self.assertEqual(used, set(categories), "Remove empty categories from the directory")
-        for category in categories.values():
-            self.assertTrue(category["name"])
-            self.assertTrue(category["description"])
-
-    def test_current_projects_do_not_publish_retired_composite_scores(self):
-        for path in (ROOT / "content/projects").glob("*.md"):
-            if path.name == "_index.md":
-                continue
-            with self.subTest(project=path.stem):
-                data = tomllib.loads(path.read_text().split("+++")[1])
-                self.assertNotIn("score", data["health"])
+                if "score" in data["health"]:
+                    self.assertGreaterEqual(data["health"]["score"], 0)
+                    self.assertLessEqual(data["health"]["score"], 100)
                 self.assertEqual(data["health"]["funding"], "unknown")
-                self.assertEqual(data["health"]["methodology_version"], "2.0")
+                self.assertEqual(data["health"]["methodology_version"], "2.1")
 
     def test_checked_support_has_project_sources_date_and_concrete_actions(self):
         data = json.loads((ROOT / "data/project_support.json").read_text())

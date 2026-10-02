@@ -1,0 +1,7 @@
+{{ $status := partial "health-status.html" . }}
+<div class="health-score-display">
+    <div class="health-score-circle {{ $status }}">
+        <span class="score-number">{{ if isset . "score" }}{{ .score }}{{ else }}—{{ end }}</span>
+    </div>
+    <span class="health-score-label">{{ $status | title }}{{ if isset . "score" }} · {{ .score }}/100{{ end }}</span>
+</div>

@@ -7,7 +7,7 @@ This script:
 1. Reads all project files
 2. Extracts GitHub repo from [links] section
 3. Fetches metrics from GitHub API
-4. Describes activity indicators using Methodology v2.0
+4. Describes activity indicators using Methodology v2.1
 5. Updates project frontmatter
 
 Requirements:

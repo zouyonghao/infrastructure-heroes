@@ -6,26 +6,27 @@ logo = "/images/logos/ffmpeg.svg"
 description = 'Complete multimedia framework'
 maintainers = ["Fabrice Bellard"]
 
-category = "formats-media"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 64692
+  stars = 64698
   forks = 14308
   contributors = 310
-  commits_30d = 704
-  commits_90d = 1640
+  commits_30d = 727
+  commits_90d = 1663
   bus_factor_people = 3
+  contributors_90d = 24
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

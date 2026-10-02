@@ -5,9 +5,26 @@ description = "What our activity indicators measure, what remains unknown, and h
 
 ## What the site can tell you
 
-Infrastructure Heroes publishes repository activity indicators and sourced ways to support projects. **We do not currently publish an overall health rating.** Financial sustainability, security, and maintainer capacity cannot be established from stars, commit counts, or donation links.
+Infrastructure Heroes uses **Healthy (80–100), Warning (60–79), and Critical (0–59)** to summarize automated repository activity estimates. Use these categories to decide what to investigate. They do not establish financial sustainability, security, or maintainer capacity. Mature projects can need few changes.
 
-This is methodology **v2.0**, introduced on October 2, 2026. Earlier composite scores are retained as historical estimates, not current assessments. Changing the methodology does not mean the projects themselves became less healthy.
+This is methodology **v2.1**, introduced on October 2, 2026. Funding remains unknown and is excluded from the score. Support-link checks are separate from health status.
+
+## Score and categories
+
+The score combines the maintenance, contributor, and commit-concentration points described below:
+
+`score = round((maintenance × 30 + contributors × 25 + concentration × 20) / 75)`
+
+When no recent author evidence is available, concentration is unknown and omitted; the remaining weights are normalized by dividing by 55. Missing required activity data leaves the project **Unrated**, rather than treating it as critical. An observed absence of recent commits can still produce a low activity score.
+
+| Score | Status |
+|---|---|
+| 80–100 | Healthy |
+| 60–79 | Warning |
+| 0–59 | Critical |
+| Insufficient activity data | Unrated |
+
+These thresholds preserve the familiar navigation categories. Scores from different methodology versions are not directly comparable. Historical charts show a single scoring version at a time.
 
 ## Funding
 
@@ -59,8 +76,6 @@ For projects without checked entries, the site says so and links to their reposi
 
 We focus on reusable software infrastructure: libraries, runtimes, operating-system components, protocols, build tools, deployment tools, and services that other software depends on. A project's inclusion should explain that dependency role.
 
-[Categories](/categories/) group projects by the primary capability they provide. They are not dependency layers or rankings. A tool that runs on Kubernetes may belong under storage, observability, or delivery, depending on its purpose. Dependency relationships are documented separately on project pages.
-
 People profiles should document a concrete role in creating, maintaining, or contributing to that infrastructure. Being a technology celebrity, company founder, author, or educator alone is not enough. Profiles without a documented infrastructure connection are held as drafts for review.
 
 A creator, current maintainer, former maintainer, and contributor are different roles. Use the specific role supported by project documentation; do not treat a project's linked profiles as its complete current team. Existing profiles remain subject to source review. New or revised claims about current roles need a primary source and review date. Quotations require a traceable source.
@@ -73,7 +88,7 @@ There is no claim that all profiles receive quarterly human review. Automated co
 
 ## Historical estimates
 
-Methodology v1.0 combined funding, maintenance, contributor, and commit-concentration estimates with weights of 25%, 30%, 25%, and 20%. Its funding heuristic used popularity and donation-link detection. Those numbers and their old categories are archived for transparency and must not be used as current funding or health assessments.
+Methodology v1.0 combined funding, maintenance, contributor, and commit-concentration estimates with weights of 25%, 30%, 25%, and 20%. Its funding heuristic used popularity and donation-link detection. Those scores remain archived for transparency. Version 2.0 temporarily withheld composite scores; version 2.1 restores the familiar categories using activity estimates and excluding unknown funding.
 
 {{< health-trends >}}
 
@@ -83,9 +98,9 @@ Methodology v1.0 combined funding, maintenance, contributor, and commit-concentr
 
 _Last collection: 2026-10-02_
 
-Projects collected: 108. Projects without an overall rating: 108.
+Projects collected: 108. Projects without an overall rating: 0.
 
-35 snapshots recorded from 2026-02-08 to 2026-10-02.
+36 snapshots recorded from 2026-02-08 to 2026-10-02.
 
-Earlier numeric scores are archived v1.0 estimates, not current health assessments. See the historical estimates section above.
+Charts use methodology v2.1. Earlier scoring versions remain archived and are not mixed into the current trend.
 

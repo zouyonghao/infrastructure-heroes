@@ -91,9 +91,9 @@ CLI options: `--repo owner/repo`, `--output/-o`, `--frontmatter/-f`, `--dry-run`
 ============================================================
 ```
 
-### Activity indicators (Methodology v2.0)
+### Activity indicators (Methodology v2.1)
 
-See [the methodology](../content/methodology.md) for exact thresholds. Funding and overall scores are no longer inferred from GitHub popularity or donation links. The JSON report uses `null` for unavailable scores; project front matter omits the overall `score` field.
+See [the methodology](../content/methodology.md) for exact thresholds. The overall score summarizes activity, using Healthy (80–100), Warning (60–79), and Critical (0–59). Funding remains unknown and is excluded. Missing required evidence yields `null` in JSON and omits `score` in front matter.
 
 New collections persist `contributors_90d`, `commits_sample_truncated`, and `contributors_unavailable`. Author counts describe at most 200 recent commits. Commit concentration uses only sampled commits within 90 days. No recent author evidence means unknown.
 

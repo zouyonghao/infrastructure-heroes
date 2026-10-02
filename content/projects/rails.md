@@ -6,26 +6,27 @@ logo = "/images/logos/rails.svg"
 description = 'Full-stack Ruby web framework'
 maintainers = ["David Heinemeier Hansson"]
 
-category = "frameworks"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "rails/rails"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 58791
-  forks = 24007
+  stars = 58794
+  forks = 24044
   contributors = 370
-  commits_30d = 307
-  commits_90d = 1177
+  commits_30d = 309
+  commits_90d = 1179
   bus_factor_people = 5
+  contributors_90d = 49
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

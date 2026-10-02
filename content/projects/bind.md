@@ -5,16 +5,14 @@ title = 'BIND'
 logo = "/images/logos/bind.webp"
 description = 'Most widely used DNS server software'
 
-category = "networking"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "isc-projects/bind9"
 [metrics]
@@ -25,6 +23,9 @@ category = "networking"
   commits_30d = 304
   commits_90d = 1035
   bus_factor_people = 3
+  contributors_90d = 13
+  commits_sample_truncated = true
+  contributors_unavailable = false
 [successor]
   project = "CoreDNS"
   relation = "alternative"

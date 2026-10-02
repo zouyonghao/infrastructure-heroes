@@ -6,26 +6,27 @@ logo = "/images/logos/envoy.svg"
 description = 'Cloud-native edge/service proxy'
 maintainers = ["Matt Klein"]
 
-category = "networking"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "envoyproxy/envoy"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 29026
+  stars = 29031
   forks = 5639
   contributors = 379
-  commits_30d = 548
-  commits_90d = 1209
+  commits_30d = 552
+  commits_90d = 1214
   bus_factor_people = 4
+  contributors_90d = 48
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

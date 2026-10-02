@@ -208,6 +208,20 @@ class UpdateSummaryStatsTest(unittest.TestCase):
         )
         self.assertEqual(summary["date_range"], {"from": "2026-01-05", "to": "2026-02-05"})
 
+    def test_different_score_versions_are_not_joined_into_one_trend(self):
+        self._write_month("2026-10.json", [
+            {"date": "2026-10-02", "methodology_version": "1.0",
+             "summary": {"avg_score": 90, "critical": 0}},
+            {"date": "2026-10-02", "methodology_version": "2.1",
+             "summary": {"avg_score": 70, "critical": 1}},
+        ])
+        hist.update_summary_stats(self.data)
+        summary = self.load_summary()
+        self.assertEqual(summary["score_methodology_version"], "2.1")
+        self.assertEqual(summary["trends"]["avg_score_over_time"],
+                         [{"date": "2026-10-02", "value": 70}])
+        self.assertEqual(summary["total_snapshots"], 2)
+
     def test_legacy_dict_month_file(self):
         self._write_month(
             "2025-12.json",

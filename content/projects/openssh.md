@@ -6,16 +6,14 @@ logo = "/images/logos/openssh.webp"
 description = 'Secure Shell connectivity tools'
 maintainers = ["Theo de Raadt"]
 
-category = "security"
-
 [health]
+  score = 67
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "openssh/openssh-portable"
 [metrics]
@@ -23,9 +21,12 @@ category = "security"
   stars = 4032
   forks = 2173
   contributors = 124
-  commits_30d = 87
+  commits_30d = 83
   commits_90d = 185
   bus_factor_people = 1
+  contributors_90d = 11
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

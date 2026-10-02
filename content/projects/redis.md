@@ -6,16 +6,14 @@ logo = "/images/logos/redis.svg"
 description = 'In-memory data structure store'
 maintainers = ["Salvatore Sanfilippo"]
 
-category = "databases"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "redis/redis"
 [metrics]
@@ -26,6 +24,9 @@ category = "databases"
   commits_30d = 47
   commits_90d = 162
   bus_factor_people = 8
+  contributors_90d = 56
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

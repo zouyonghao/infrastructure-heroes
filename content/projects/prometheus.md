@@ -5,26 +5,27 @@ title = 'Prometheus'
 logo = "/images/logos/prometheus.svg"
 description = 'Monitoring and alerting toolkit'
 
-category = "observability"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "prometheus/prometheus"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 66349
-  forks = 10884
+  stars = 66336
+  forks = 10883
   contributors = 351
-  commits_30d = 244
-  commits_90d = 724
+  commits_30d = 254
+  commits_90d = 734
   bus_factor_people = 3
+  contributors_90d = 42
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

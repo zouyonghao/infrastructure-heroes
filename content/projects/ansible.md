@@ -6,26 +6,27 @@ logo = "/images/logos/ansible.svg"
 description = 'IT automation and configuration management'
 maintainers = ["Jeff Geerling"]
 
-category = "delivery"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "ansible/ansible"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 70825
+  stars = 70827
   forks = 24337
   contributors = 373
   commits_30d = 36
   commits_90d = 83
   bus_factor_people = 5
+  contributors_90d = 28
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

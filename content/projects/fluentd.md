@@ -5,16 +5,14 @@ title = 'Fluentd'
 logo = "/images/logos/fluentd.webp"
 description = 'Data collector for unified logging'
 
-category = "observability"
-
 [health]
+  score = 73
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "fluent/fluentd"
 [metrics]
@@ -25,6 +23,9 @@ category = "observability"
   commits_30d = 16
   commits_90d = 52
   bus_factor_people = 1
+  contributors_90d = 14
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

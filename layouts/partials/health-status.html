@@ -1,0 +1,7 @@
+{{- $status := "unrated" -}}
+{{- if isset . "score" -}}
+  {{- if ge .score 80 -}}{{- $status = "healthy" -}}
+  {{- else if ge .score 60 -}}{{- $status = "warning" -}}
+  {{- else -}}{{- $status = "critical" -}}{{- end -}}
+{{- end -}}
+{{- return $status -}}

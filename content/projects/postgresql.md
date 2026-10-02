@@ -5,26 +5,27 @@ title = 'PostgreSQL'
 logo = "/images/logos/postgresql.svg"
 description = "The world's most advanced open source relational database"
 
-category = "databases"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "postgres/postgres"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 22262
-  forks = 5926
+  stars = 22263
+  forks = 5927
   contributors = 42
-  commits_30d = 262
-  commits_90d = 862
+  commits_30d = 264
+  commits_90d = 864
   bus_factor_people = 6
+  contributors_90d = 22
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'Apache ZooKeeper'
 logo = "/images/logos/zookeeper.svg"
 description = 'Distributed coordination service'
 
-category = "messaging"
-
 [health]
+  score = 80
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "apache/zookeeper"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 12817
+  stars = 12816
   forks = 7320
   contributors = 262
   commits_30d = 23
   commits_90d = 43
   bus_factor_people = 3
+  contributors_90d = 17
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

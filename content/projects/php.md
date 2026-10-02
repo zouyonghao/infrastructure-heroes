@@ -6,26 +6,27 @@ logo = "/images/logos/php.svg"
 description = 'Server-side scripting language'
 maintainers = ["Rasmus Lerdorf"]
 
-category = "languages"
-
 [health]
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "php/php-src"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 40426
-  forks = 8155
+  stars = 40427
+  forks = 8157
   contributors = 230
-  commits_30d = 796
-  commits_90d = 1991
+  commits_30d = 813
+  commits_90d = 2008
   bus_factor_people = 3
+  contributors_90d = 20
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

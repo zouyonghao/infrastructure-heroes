@@ -6,26 +6,27 @@ logo = "/images/logos/svelte.svg"
 description = 'Cybernetically enhanced web apps'
 maintainers = ["Rich Harris"]
 
-category = "frameworks"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "sveltejs/svelte"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 88237
-  forks = 6874
+  stars = 88227
+  forks = 6913
   contributors = 413
   commits_30d = 32
   commits_90d = 159
   bus_factor_people = 6
+  contributors_90d = 65
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

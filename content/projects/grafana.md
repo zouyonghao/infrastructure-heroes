@@ -5,26 +5,27 @@ title = 'Grafana'
 logo = "/images/logos/grafana.svg"
 description = 'Analytics and monitoring visualization'
 
-category = "observability"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "grafana/grafana"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 77050
-  forks = 14808
+  stars = 77036
+  forks = 14809
   contributors = 373
-  commits_30d = 1173
-  commits_90d = 3312
+  commits_30d = 1195
+  commits_90d = 3334
   bus_factor_people = 11
+  contributors_90d = 74
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

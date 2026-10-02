@@ -5,16 +5,14 @@ title = 'Apache HTTP Server'
 logo = "/images/logos/apache-httpd.svg"
 description = 'Most widely used web server software'
 
-category = "networking"
-
 [health]
+  score = 58
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "apache/httpd"
 [metrics]
@@ -22,9 +20,12 @@ category = "networking"
   stars = 4035
   forks = 1358
   contributors = 53
-  commits_30d = 119
-  commits_90d = 309
+  commits_30d = 120
+  commits_90d = 310
   bus_factor_people = 1
+  contributors_90d = 9
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

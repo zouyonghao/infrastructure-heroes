@@ -6,26 +6,27 @@ logo = "/images/logos/bun.svg"
 description = 'Fast JavaScript runtime and toolkit'
 maintainers = ["Jarred Sumner"]
 
-category = "languages"
-
 [health]
+  score = 65
   funding = "unknown"
   maintenance = "active"
   contributors = "declining"
   bus_factor = "high"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "oven-sh/bun"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 96096
+  stars = 96098
   forks = 5084
   contributors = 449
-  commits_30d = 538
+  commits_30d = 537
   commits_90d = 2333
   bus_factor_people = 1
+  contributors_90d = 8
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

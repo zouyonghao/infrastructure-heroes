@@ -5,26 +5,27 @@ title = 'Django'
 logo = "/images/logos/django.svg"
 description = 'Python web framework'
 
-category = "frameworks"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "django/django"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 91241
-  forks = 35933
+  stars = 91221
+  forks = 35976
   contributors = 393
-  commits_30d = 66
-  commits_90d = 216
+  commits_30d = 67
+  commits_90d = 217
   bus_factor_people = 5
+  contributors_90d = 69
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

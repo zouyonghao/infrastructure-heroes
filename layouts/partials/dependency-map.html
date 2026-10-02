@@ -43,7 +43,7 @@
           {{ $depProject := where $allProjects ".Title" $depName }}
           {{ if $depProject }}
             {{ with index $depProject 0 }}
-            <a href="{{ .RelPermalink }}" class="dep-item unknown">
+            <a href="{{ .RelPermalink }}" class="dep-item {{ partial "health-status.html" .Params.health }}">
               <div class="dep-item-logo">
                 {{ if .Params.logo }}
                 <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">
@@ -74,7 +74,7 @@
     
     {{/* Current Project */}}
     <div class="dep-column current">
-      <div class="dep-current-card unknown">
+      <div class="dep-current-card {{ partial "health-status.html" .Params.health }}">
         <div class="dep-current-logo">
           {{ if .Params.logo }}
           <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">
@@ -84,9 +84,12 @@
         </div>
         <div class="dep-current-name">{{ .Title }}</div>
         <div class="dep-current-tier">
-          {{ with index site.Data.project_categories (.Params.category | default "") }}
-          {{ .name }}
+          {{/* Tier is driven by data/dependencies.yaml (case-insensitive title match) */}}
+          {{ $tier := "unknown" }}
+          {{ range $name, $info := site.Data.dependencies }}
+            {{ if eq (lower $name) (lower $title) }}{{ $tier = $info.tier | default "unknown" }}{{ end }}
           {{ end }}
+          {{ $tier }}
         </div>
       </div>
     </div>
@@ -101,7 +104,7 @@
       </div>
       <div class="dep-list">
         {{ range $usedBy }}
-        <a href="{{ .RelPermalink }}" class="dep-item unknown">
+        <a href="{{ .RelPermalink }}" class="dep-item {{ partial "health-status.html" .Params.health }}">
           <div class="dep-item-logo">
             {{ if .Params.logo }}
             <img src="{{ .Params.logo }}" alt="{{ .Title }}" loading="lazy">

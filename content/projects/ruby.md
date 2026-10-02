@@ -6,26 +6,27 @@ logo = "/images/logos/ruby.svg"
 description = 'Dynamic programming language'
 maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 
-category = "languages"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "ruby/ruby"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 23765
+  stars = 23766
   forks = 5652
   contributors = 366
-  commits_30d = 1051
-  commits_90d = 2625
+  commits_30d = 1055
+  commits_90d = 2629
   bus_factor_people = 2
+  contributors_90d = 34
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

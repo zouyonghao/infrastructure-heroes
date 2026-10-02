@@ -6,26 +6,27 @@ logo = "/images/logos/fastapi.svg"
 description = 'Modern Python web framework'
 maintainers = ["Sebastian Ramirez"]
 
-category = "frameworks"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "fastapi/fastapi"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 102758
-  forks = 9980
+  stars = 102767
+  forks = 9984
   contributors = 456
-  commits_30d = 37
-  commits_90d = 289
+  commits_30d = 63
+  commits_90d = 315
   bus_factor_people = 2
+  contributors_90d = 10
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

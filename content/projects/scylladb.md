@@ -5,16 +5,14 @@ title = 'ScyllaDB'
 logo = "/images/logos/scylladb.svg"
 description = 'High-performance NoSQL database'
 
-category = "databases"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "scylladb/scylladb"
 [metrics]
@@ -22,9 +20,12 @@ category = "databases"
   stars = 15782
   forks = 1523
   contributors = 186
-  commits_30d = 1063
-  commits_90d = 2137
+  commits_30d = 1066
+  commits_90d = 2140
   bus_factor_people = 4
+  contributors_90d = 34
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

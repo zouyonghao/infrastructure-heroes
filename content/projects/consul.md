@@ -6,26 +6,27 @@ logo = "/images/logos/consul.svg"
 description = 'Service mesh and discovery'
 maintainers = ["Mitchell Hashimoto"]
 
-category = "networking"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "hashicorp/consul"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 30089
+  stars = 30090
   forks = 4621
   contributors = 353
   commits_30d = 33
   commits_90d = 73
   bus_factor_people = 5
+  contributors_90d = 19
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

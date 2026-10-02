@@ -5,16 +5,14 @@ title = 'APT'
 logo = "/images/logos/apt.svg"
 description = 'Debian/Ubuntu package management'
 
-category = "developer-tools"
-
 [health]
+  score = 5
   funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
-  bus_factor = "high"
-  methodology_version = "2.0"
+  bus_factor = "unknown"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "Debian/apt"
 [metrics]
@@ -24,7 +22,10 @@ category = "developer-tools"
   contributors = 200
   commits_30d = 0
   commits_90d = 0
-  bus_factor_people = 1
+  bus_factor_people = 0
+  contributors_90d = 0
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'Homebrew'
 logo = "/images/logos/homebrew.svg"
 description = 'Package manager for macOS and Linux'
 
-category = "developer-tools"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "Homebrew/brew"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 49864
-  forks = 11381
+  stars = 49869
+  forks = 11383
   contributors = 373
-  commits_30d = 760
-  commits_90d = 2350
+  commits_30d = 767
+  commits_90d = 2357
   bus_factor_people = 2
+  contributors_90d = 35
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

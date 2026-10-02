@@ -5,26 +5,27 @@ title = 'TiDB'
 logo = "/images/logos/tidb.svg"
 description = 'Distributed NewSQL database'
 
-category = "databases"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "pingcap/tidb"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 40622
-  forks = 6254
+  stars = 40620
+  forks = 6252
   contributors = 389
   commits_30d = 148
   commits_90d = 382
   bus_factor_people = 5
+  contributors_90d = 42
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -119,7 +119,7 @@ def create_snapshot(
     summary["total_projects"] = total
 
     snapshot = {
-        "methodology_version": "2.0",
+        "methodology_version": "2.1",
         "date": today.strftime("%Y-%m-%d"),
         "month": today.strftime("%Y-%m"),
         "total_projects": total,
@@ -176,6 +176,9 @@ def update_summary_stats(data_dir: Path):
     current_summary = all_snapshots[-1].get("summary", {})
     scored_snapshots = [s for s in all_snapshots
                         if s["summary"].get("avg_score") is not None]
+    score_version = scored_snapshots[-1].get("methodology_version", "1.0") if scored_snapshots else None
+    scored_snapshots = [s for s in scored_snapshots
+                        if s.get("methodology_version", "1.0") == score_version]
     last_scored = scored_snapshots[-1]["summary"] if scored_snapshots else {}
 
     # Calculate trends
@@ -187,6 +190,7 @@ def update_summary_stats(data_dir: Path):
             "to": all_snapshots[-1]["date"],
         },
         "current_status": current_summary,
+        "score_methodology_version": score_version,
         "last_scored_date": scored_snapshots[-1]["date"] if scored_snapshots else None,
         "trends": {
             "avg_score_over_time": [
@@ -243,7 +247,7 @@ Projects collected: {summary['current_status'].get('total_projects', 'N/A')}. Pr
 
 {summary['total_snapshots']} snapshots recorded from {summary['date_range']['from']} to {summary['date_range']['to']}.
 
-Earlier numeric scores are archived v1.0 estimates, not current health assessments. See the historical estimates section above.
+Charts use methodology v{summary.get("score_methodology_version", "1.0")}. Earlier scoring versions remain archived and are not mixed into the current trend.
 
 """
 

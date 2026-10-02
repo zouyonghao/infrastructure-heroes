@@ -172,12 +172,28 @@ class HealthScoreTest(unittest.TestCase):
                 self.assertEqual(self.fetcher.calculate_funding_score(metrics, funding),
                                  (None, "unknown"))
 
+    def test_activity_score_excludes_unknown_funding(self):
+        metrics = {"days_since_last_push": 0, "days_since_last_release": 0,
+                   "commits_last_30_days": 50, "unique_contributors_last_90_days": 10,
+                   "all_commit_authors": list("abcdefghij")}
+        self.assertEqual(self.fetcher.assess_health(metrics)["overall_score"], 100)
+        metrics.update(stars=1000000, funding_info={"has_funding_file": True})
+        self.assertEqual(self.fetcher.assess_health(metrics)["overall_score"], 100)
+
+    def test_no_recent_authors_omits_concentration_weight(self):
+        metrics = {"days_since_last_push": 400, "days_since_last_release": 400,
+                   "commits_last_30_days": 0, "unique_contributors_last_90_days": 0,
+                   "all_commit_authors": []}
+        assessment = self.fetcher.assess_health(metrics)
+        self.assertEqual(assessment["overall_score"], 5)
+        self.assertEqual(assessment["bus_factor"], "unknown")
+
     def test_missing_evidence_is_not_a_composite_or_concentration_score(self):
         assessment = self.fetcher.assess_health({"stars": 1000000})
         self.assertIsNone(assessment["overall_score"])
         self.assertIsNone(assessment["funding_score"])
         self.assertEqual(assessment["bus_factor"], "unknown")
-        self.assertEqual(assessment["methodology_version"], "2.0")
+        self.assertEqual(assessment["methodology_version"], "2.1")
         # The CLI must also handle unknown values without formatting None as a number.
         import contextlib
         import io
@@ -193,7 +209,6 @@ class FrontmatterRewriteTest(unittest.TestCase):
         "title = 'Demo'\n"
         "description = 'D'\n"
         "maintainers = [\"Alice\"]\n"
-        "category = \"networking\"\n"
         "\n"
         "[health]\n"
         "  funding = \"old\"\n"
@@ -246,7 +261,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.assertEqual(data["health"], {
             "funding": "unknown", "maintenance": "active",
             "contributors": "healthy", "bus_factor": "low",
-            "methodology_version": "2.0", "assessment": "automated",
+            "methodology_version": "2.1", "assessment": "automated", "score": 88,
         })
         self.assertEqual(data["metrics"]["stars"], 100)
         self.assertEqual(data["metrics"]["commits_30d"], 3)
@@ -260,7 +275,6 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.assertEqual(data["date"], "2025-06-08T15:30:11+08:00")
         self.assertEqual(data["title"], "Demo")
         self.assertEqual(data["maintainers"], ["Alice"])
-        self.assertEqual(data["category"], "networking")
         self.assertEqual(data["links"], {"github": "o/r"})
         # Body is byte-identical.
         self.assertIn("\n+++\n\nBody line 1\nBody line 2\n", text)
@@ -281,7 +295,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.assertTrue(data["metrics"]["contributors_unavailable"])
         self.assertEqual(data["metrics"]["contributors_90d"], 7)
         self.assertEqual(data["review"]["source"], "https://example.org/report")
-        self.assertNotIn("score", data["health"])
+        self.assertEqual(data["health"]["score"], 88)
 
     def test_metrics_last_section_round_trips(self):
         # The sample already has [metrics] as the final table; a second update
@@ -305,7 +319,7 @@ class FrontmatterRewriteTest(unittest.TestCase):
         self.path.write_text("+++\ntitle = 'T'\n+++\n\nBody\n", encoding="utf-8")
         self.assertTrue(self.update())
         data, text = self.parsed()
-        self.assertNotIn("score", data["health"])
+        self.assertEqual(data["health"]["score"], 88)
         self.assertEqual(data["metrics"]["stars"], 100)
         self.assertEqual(text.count("[health]"), 1)
         self.assertEqual(text.count("[metrics]"), 1)

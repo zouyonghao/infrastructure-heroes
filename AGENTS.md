@@ -31,13 +31,12 @@ infrastructure-heroes/
 │   ├── _index.md           # Homepage
 │   ├── about.md            # About page
 │   ├── thanks.md           # Thank wall page
-│   ├── categories.md       # Projects grouped by primary purpose
+│   ├── dependencies.md     # Dependency visualization page
 │   ├── methodology.md      # Health scoring methodology
 │   ├── projects/           # Project profiles (*.md)
 │   └── maintainers/        # Maintainer profiles (*.md)
 ├── data/                    # Data files
-│   ├── dependencies.yaml   # Dependency graph data (no category tiers)
-│   ├── project_categories.json # Category names and scope descriptions
+│   ├── dependencies.yaml   # Dependency graph data
 │   └── historical/         # Health score snapshots (JSON)
 ├── layouts/                 # Hugo templates
 │   ├── _default/           # Base templates
@@ -108,14 +107,15 @@ logo = 'https://example.com/logo.svg'
 description = 'Brief description'
 date = '2025-01-01T00:00:00+08:00'
 maintainers = ["Maintainer Name"]  # Links to maintainer profiles
-category = "networking"   # Key from data/project_categories.json
 
 [health]
-  funding = "stable"        # stable | at-risk | critical | unknown
+  funding = "unknown"       # not inferred from repository activity
   maintenance = "active"    # active | moderate | inactive | unknown
   contributors = "healthy"  # healthy | declining | critical | unknown
   bus_factor = "low"        # low | medium | high | unknown
-  score = 85               # 0-100 calculated score
+  score = 85               # automated activity estimate; omit if unrated
+  methodology_version = "2.1"
+  assessment = "automated"
 
 [links]
   github = "owner/repo"
@@ -180,10 +180,10 @@ python scripts/update-historical-data.py
 
 ## Health Score Methodology
 
-Projects are scored on a 0-100 scale based on four weighted dimensions:
+Projects have automated activity estimates on a 0-100 scale. Funding remains unknown and is excluded:
 
 ```
-Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25) + (Bus Factor × 0.20)
+Health Score = round((Maintenance × 30 + Contributors × 25 + Commit Concentration × 20) / 75)
 ```
 
 | Dimension | Values | Description |
@@ -199,7 +199,7 @@ Health Score = (Funding × 0.25) + (Maintenance × 0.30) + (Contributors × 0.25
 | 60-79 | 🟡 Warning | Yellow |
 | 0-59 | 🔴 Critical | Red |
 
-See `HEALTH_METRICS.md` (in Chinese) for detailed methodology.
+Unknown concentration is omitted and the remaining weights divide by 55. Missing required activity data leaves the score unset (Unrated). See `content/methodology.md` for the authoritative methodology.
 
 ## Code Style Guidelines
 
@@ -319,9 +319,8 @@ Edit `data/dependencies.yaml` and add:
 ```yaml
 Project Name:
   depends_on: ["Dependency1", "Dependency2"]
+  tier: foundation|system|runtime|web|data|containers|cicd|apps|tools|external
 ```
-
-Choose the project's top-level `category` in `content/projects/*.md` separately, using a key from `data/project_categories.json`. Categories describe primary purpose, not dependency layers. The per-project dependency view reads the project's `dependencies` front matter; update that when changing a displayed relationship.
 
 ### Create Custom Shortcode
 Add HTML file to `layouts/shortcodes/`, use in content:

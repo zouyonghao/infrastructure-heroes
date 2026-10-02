@@ -5,16 +5,14 @@ logo = "/images/logos/glibc.png"
 description = 'The GNU C Library - foundation of Linux systems'
 maintainers = ["Carlos O'Donell"]
 
-category = "operating-systems"
-
 [health]
+  score = 5
   funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
-  bus_factor = "medium"
-  methodology_version = "2.0"
+  bus_factor = "unknown"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "bminor/glibc"
 [metrics]
@@ -24,7 +22,10 @@ category = "operating-systems"
   contributors = 282
   commits_30d = 0
   commits_90d = 0
-  bus_factor_people = 2
+  bus_factor_people = 0
+  contributors_90d = 0
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

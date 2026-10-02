@@ -1,13 +1,15 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
 {{ $limit := .Get "limit" | default 0 }}
-{{ $sortedProjects := $projects.ByTitle }}
+{{ $rated := where $projects "Params.health.score" "!=" nil }}
+{{ $unrated := where $projects "Params.health.score" "==" nil }}
+{{ $sortedProjects := ($rated.ByParam "health.score").Reverse | append $unrated }}
 
 {{ if gt $limit 0 }}
     {{ $sortedProjects = first $limit $sortedProjects }}
 {{ end }}
 <div class="projects-grid">
     {{ range $sortedProjects }}
-    <div class="project-card" data-category="{{ .Params.category }}" data-health="{{ if index site.Data.project_support .File.ContentBaseName }}support{{ else }}unreviewed{{ end }}">
+    <div class="project-card" data-health="{{ partial "health-status.html" .Params.health }}" data-score="{{ if isset .Params.health "score" }}{{ .Params.health.score }}{{ end }}">
         <div class="project-header">
             {{ if .Params.logo }}
             <div class="project-logo">
@@ -19,10 +21,6 @@
             {{ end }}
             <div class="project-info">
                 <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                {{ $project := . }}
-                {{ with index site.Data.project_categories (.Params.category | default "") }}
-                <a class="project-category" href="/projects/#category={{ $project.Params.category }}">{{ .name }}</a>
-                {{ end }}
                 {{ if .Params.description }}
                 <p class="project-description">{{ .Params.description }}</p>
                 {{ end }}
@@ -31,7 +29,8 @@
 
         {{ if .Params.health }}
         <div class="health-indicator">
-            <p class="assessment-label">Automated indicators · <a href="/methodology/">About this data</a></p>
+            {{ partial "health-score.html" .Params.health }}
+            <p class="assessment-label">Automated estimate · <a href="/methodology/">How it’s calculated</a></p>
             <div class="health-metrics">
                 <div class="health-metric unknown">
                     <span class="metric-label">Funding</span>

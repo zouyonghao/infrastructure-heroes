@@ -5,26 +5,27 @@ title = 'Prettier'
 logo = "/images/logos/prettier.webp"
 description = 'Opinionated code formatter'
 
-category = "developer-tools"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "prettier/prettier"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 52318
-  forks = 5030
+  stars = 52316
+  forks = 5032
   contributors = 432
   commits_30d = 141
   commits_90d = 426
   bus_factor_people = 2
+  contributors_90d = 22
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

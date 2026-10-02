@@ -6,26 +6,27 @@ logo = "/images/logos/angular.svg"
 description = 'TypeScript-based web framework'
 maintainers = ["Misko Hevery", "John Papa"]
 
-category = "frameworks"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "angular/angular"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 101026
-  forks = 29059
+  stars = 101010
+  forks = 29104
   contributors = 375
-  commits_30d = 355
-  commits_90d = 872
+  commits_30d = 361
+  commits_90d = 878
   bus_factor_people = 5
+  contributors_90d = 39
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

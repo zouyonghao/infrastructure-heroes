@@ -4,26 +4,27 @@ title = 'Spring Framework'
 logo = "/images/logos/spring.svg"
 description = 'Java application framework'
 
-category = "frameworks"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
   updated_at = "2026-10-02"
   stars = 60267
-  forks = 38764
-  contributors = 360
-  commits_30d = 207
-  commits_90d = 474
+  forks = 38762
+  contributors = 361
+  commits_30d = 217
+  commits_90d = 484
   bus_factor_people = 2
+  contributors_90d = 30
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

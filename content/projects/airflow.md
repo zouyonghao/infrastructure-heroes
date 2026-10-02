@@ -5,26 +5,27 @@ title = 'Apache Airflow'
 logo = "/images/logos/airflow.svg"
 description = 'Workflow orchestration platform'
 
-category = "data-pipelines"
-
 [health]
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "apache/airflow"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 47032
-  forks = 17939
+  stars = 47033
+  forks = 17940
   contributors = 411
-  commits_30d = 868
-  commits_90d = 2176
-  bus_factor_people = 8
+  commits_30d = 883
+  commits_90d = 2191
+  bus_factor_people = 9
+  contributors_90d = 72
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -6,16 +6,14 @@ logo = "/images/logos/babel.svg"
 description = 'JavaScript compiler'
 maintainers = ["Sebastian McKenzie"]
 
-category = "developer-tools"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  methodology_version = "2.0"
+  bus_factor = "low"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "babel/babel"
 [metrics]
@@ -25,7 +23,10 @@ category = "developer-tools"
   contributors = 413
   commits_30d = 35
   commits_90d = 78
-  bus_factor_people = 2
+  bus_factor_people = 3
+  contributors_90d = 20
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

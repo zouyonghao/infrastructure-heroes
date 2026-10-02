@@ -5,26 +5,27 @@ title = 'Caddy'
 logo = "/images/logos/caddy.svg"
 description = 'Web server with automatic HTTPS'
 
-category = "networking"
-
 [health]
+  score = 98
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "caddyserver/caddy"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 76226
-  forks = 5024
+  stars = 76230
+  forks = 5022
   contributors = 425
-  commits_30d = 44
-  commits_90d = 96
-  bus_factor_people = 9
+  commits_30d = 45
+  commits_90d = 97
+  bus_factor_people = 10
+  contributors_90d = 49
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

@@ -5,26 +5,27 @@ title = 'Ceph'
 logo = "/images/logos/ceph.svg"
 description = 'Distributed storage system'
 
-category = "storage"
-
 [health]
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "ceph/ceph"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 17087
-  forks = 6513
+  stars = 17090
+  forks = 6517
   contributors = 287
-  commits_30d = 870
-  commits_90d = 2962
-  bus_factor_people = 9
+  commits_30d = 888
+  commits_90d = 2994
+  bus_factor_people = 8
+  contributors_90d = 50
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

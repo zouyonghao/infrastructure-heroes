@@ -6,26 +6,27 @@ logo = "/images/logos/git.svg"
 description = 'Distributed version control system'
 maintainers = ["Linus Torvalds", "Junio C Hamano"]
 
-category = "developer-tools"
-
 [health]
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "git/git"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 63503
-  forks = 28464
+  stars = 63511
+  forks = 28466
   contributors = 426
   commits_30d = 196
   commits_90d = 854
   bus_factor_people = 2
+  contributors_90d = 34
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

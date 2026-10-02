@@ -6,26 +6,27 @@ logo = "/images/logos/expressjs.svg"
 description = 'Node.js web application framework'
 maintainers = ["TJ Holowaychuk"]
 
-category = "frameworks"
-
 [health]
+  score = 67
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
-  methodology_version = "2.0"
+  bus_factor = "high"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "expressjs/express"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 69503
-  forks = 25120
+  stars = 69504
+  forks = 25129
   contributors = 330
   commits_30d = 10
   commits_90d = 20
-  bus_factor_people = 2
+  bus_factor_people = 1
+  contributors_90d = 11
+  commits_sample_truncated = false
+  contributors_unavailable = false
 +++
 
 ### Overview

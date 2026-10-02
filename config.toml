@@ -35,9 +35,9 @@ enableRobotsTXT = true
     weight = 3
     
   [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories/"
+    identifier = "dependencies"
+    name = "Dependencies"
+    url = "/dependencies/"
     weight = 4
     
   [[menu.main]]

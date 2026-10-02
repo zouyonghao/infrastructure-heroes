@@ -6,26 +6,27 @@ logo = "/images/logos/deno.svg"
 description = 'Secure runtime for JavaScript/TypeScript'
 maintainers = ["Ryan Dahl"]
 
-category = "languages"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "denoland/deno"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 108557
-  forks = 6391
+  stars = 108542
+  forks = 6393
   contributors = 431
   commits_30d = 36
   commits_90d = 449
   bus_factor_people = 2
+  contributors_90d = 40
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

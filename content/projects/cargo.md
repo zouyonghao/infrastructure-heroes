@@ -6,26 +6,27 @@ logo = "/images/logos/cargo.svg"
 description = 'Rust package manager and build tool'
 maintainers = ["Yehuda Katz"]
 
-category = "developer-tools"
-
 [health]
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "rust-lang/cargo"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 15538
+  stars = 15539
   forks = 3061
   contributors = 414
-  commits_30d = 191
-  commits_90d = 658
+  commits_30d = 197
+  commits_90d = 663
   bus_factor_people = 2
+  contributors_90d = 18
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

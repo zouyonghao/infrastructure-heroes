@@ -5,26 +5,27 @@ title = 'NATS'
 logo = "/images/logos/nats.webp"
 description = 'Cloud-native messaging system'
 
-category = "messaging"
-
 [health]
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "nats-io/nats-server"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 20825
+  stars = 20827
   forks = 1983
   contributors = 214
-  commits_30d = 309
-  commits_90d = 593
+  commits_30d = 314
+  commits_90d = 599
   bus_factor_people = 2
+  contributors_90d = 17
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview

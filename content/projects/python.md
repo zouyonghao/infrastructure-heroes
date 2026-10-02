@@ -6,26 +6,27 @@ logo = "/images/logos/python.svg"
 description = 'Popular programming language'
 maintainers = ["Guido van Rossum"]
 
-category = "languages"
-
 [health]
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
   bus_factor = "low"
-  methodology_version = "2.0"
+  methodology_version = "2.1"
   assessment = "automated"
-
 [links]
   github = "python/cpython"
 [metrics]
   updated_at = "2026-10-02"
-  stars = 77386
-  forks = 37055
+  stars = 77382
+  forks = 37095
   contributors = 356
-  commits_30d = 463
-  commits_90d = 1305
+  commits_30d = 470
+  commits_90d = 1312
   bus_factor_people = 4
+  contributors_90d = 63
+  commits_sample_truncated = true
+  contributors_unavailable = false
 +++
 
 ### Overview
