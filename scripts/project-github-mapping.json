@@ -38,7 +38,7 @@
   "git": "git/git",
   "glibc": "bminor/glibc",
   "glusterfs": "gluster/glusterfs",
-  "gnupg": "gnupg/gnupg",
+  "gnupg": "gpg/gnupg",
   "go": "golang/go",
   "grafana": "grafana/grafana",
   "grpc": "grpc/grpc",

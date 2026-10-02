@@ -5,15 +5,24 @@ title = 'GnuPG'
 logo = 'https://raw.githubusercontent.com/shgysk8zer0/logos/master/gnupg.svg'
 description = 'Free implementation of OpenPGP'
 
+maintainers = ["Werner Koch"]
 [health]
   funding = "at-risk"
   maintenance = "active"
-  contributors = "at-risk"
-  bus_factor = "critical"
-  score = 45
+  contributors = "declining"
+  bus_factor = "high"
+  score = 46
 [links]
-  github = "gnupg/gnupg"
-maintainers = ["Werner Koch"]
+  github = "gpg/gnupg"
+
+[metrics]
+  updated_at = "2026-10-02"
+  stars = 988
+  forks = 218
+  contributors = 72
+  commits_30d = 41
+  commits_90d = 102
+  bus_factor_people = 1
 +++
 
 ### Overview
