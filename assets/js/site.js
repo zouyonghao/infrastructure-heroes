@@ -91,24 +91,59 @@
     var rotator = document.querySelector('[data-maintainer-rotator]');
     if (!rotator) return;
 
-    var items = rotator.querySelectorAll('.rotator-item');
-    if (items.length < 2) return;
+    var all = Array.prototype.slice.call(rotator.querySelectorAll('.rotator-item'));
+    if (all.length < 2) return;
 
-    // Static first pair when the user prefers reduced motion.
+    // Static server-rendered pair when the user prefers reduced motion.
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    var interval = parseInt(rotator.getAttribute('data-interval'), 10) || 4200;
+    var size = parseInt(rotator.getAttribute('data-rotation-size'), 10) || 12;
+    var queue = [];
     var index = 0;
     var timer = null;
-    var interval = parseInt(rotator.getAttribute('data-interval'), 10) || 4200;
 
-    function show(next) {
-      items[index].classList.remove('is-active');
-      index = (next + items.length) % items.length;
-      items[index].classList.add('is-active');
+    function activate(element) {
+      all.forEach(function (item) { item.classList.remove('is-active'); });
+      element.classList.add('is-active');
+    }
+
+    function shuffled(list) {
+      var copy = list.slice();
+      for (var i = copy.length - 1; i > 0; i -= 1) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var swap = copy[i];
+        copy[i] = copy[j];
+        copy[j] = swap;
+      }
+      return copy;
+    }
+
+    // Pick a fresh random selection; never open with the pair just shown.
+    function reselect(previous) {
+      var pool = shuffled(all);
+      if (previous && pool.length > 1 && pool[0] === previous) {
+        var swap = pool[0];
+        pool[0] = pool[pool.length - 1];
+        pool[pool.length - 1] = swap;
+      }
+      queue = pool.slice(0, Math.min(size, pool.length));
+      index = 0;
+      activate(queue[0]);
+    }
+
+    function advance() {
+      var shown = queue[index];
+      index += 1;
+      if (index >= queue.length) {
+        reselect(shown);
+        return;
+      }
+      activate(queue[index]);
     }
 
     function start() {
-      if (!timer) timer = setInterval(function () { show(index + 1); }, interval);
+      if (!timer) timer = setInterval(advance, interval);
     }
 
     function stop() {
@@ -129,6 +164,8 @@
       if (document.hidden) stop();
       else start();
     });
+
+    reselect(null);
 
     // Only cycle while the section is on screen.
     if ('IntersectionObserver' in window) {

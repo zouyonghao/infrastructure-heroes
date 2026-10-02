@@ -3,10 +3,12 @@
   Rotates through "[Project] is maintained by [Maintainer]" pairs.
 
   - Server-rendered: works without JavaScript (shows the first pair).
-  - Prefers one-maintainer projects, worst health score first, one pair per
-    maintainer, limited to 12 so the page stays light.
-  - assets/js/site.js cycles the pairs; respects prefers-reduced-motion and
-    pauses on hover/focus/tab-hidden.
+  - Pairs: one-maintainer projects, one per maintainer, excluding
+    stepped-back/retired maintainers; ordered worst health score first as
+    the no-JS fallback.
+  - assets/js/site.js randomly selects `data-rotation-size` pairs and
+    cycles them in random order, re-picking on each cycle; respects
+    prefers-reduced-motion and pauses on hover/focus/tab-hidden.
 */}}
 {{ $maintainerPages := dict }}
 {{ range where .Site.RegularPages "Section" "maintainers" }}
@@ -33,13 +35,12 @@
     {{ $pairs = $pairs | append (dict "project" . "name" $name "maintainer" $maintainerPage) }}
     {{ $seen = $seen | append $name }}
   {{ end }}
-  {{ if ge (len $pairs) 12 }}{{ break }}{{ end }}
 {{ end }}
 
 <section class="maintainer-rotator-section">
   <div class="container-narrow">
     <p class="rotator-eyebrow">Behind every project is a person</p>
-    <div class="maintainer-rotator" data-maintainer-rotator data-interval="4200">
+    <div class="maintainer-rotator" data-maintainer-rotator data-interval="4200" data-rotation-size="12">
       <ul class="rotator-track">
         {{ range $i, $pair := $pairs }}
         <li class="rotator-item{{ if eq $i 0 }} is-active{{ end }}">
