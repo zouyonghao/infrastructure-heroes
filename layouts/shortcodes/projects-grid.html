@@ -11,14 +11,14 @@
         <div class="project-header">
             {{ if .Params.logo }}
             <div class="project-logo">
-                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="{{ .Params.logo }}" alt="{{ .Title }} logo" width="48" height="48" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="logo-fallback" style="display: none;">
                     <span>{{ substr .Title 0 1 }}</span>
                 </div>
             </div>
             {{ end }}
             <div class="project-info">
-                <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                 {{ if .Params.description }}
                 <p class="project-description">{{ .Params.description }}</p>
                 {{ end }}

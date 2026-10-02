@@ -18,14 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const sparklines = document.querySelectorAll('.sparkline');
     const trendIndicators = document.querySelectorAll('.trend-indicator');
 
-    // Initialize sparklines
+    // Initialize sparklines (one broken chart must not stop the rest)
     sparklines.forEach(function(container) {
-        renderSparkline(container, HEALTH_COLORS);
+        try {
+            renderSparkline(container, HEALTH_COLORS);
+        } catch (err) {
+            console.error('Failed to render sparkline', container, err);
+        }
     });
 
     // Initialize trend indicators
     trendIndicators.forEach(function(container) {
-        renderTrendIndicator(container);
+        try {
+            renderTrendIndicator(container);
+        } catch (err) {
+            console.error('Failed to render trend indicator', container, err);
+        }
     });
 
     /**
@@ -44,14 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Get optional parameters
         const isCritical = container.classList.contains('critical');
-        const showLine = container.getAttribute('data-type') === 'line';
-        const showLabels = container.getAttribute('data-labels');
+        const showLine = container.getAttribute('data-type') === 'line' && values.length > 1;
         const color = isCritical ? colors.critical : colors.default;
 
         // Calculate min and max for normalization
         const min = Math.min(...values);
         const max = Math.max(...values);
         const range = max - min || 1;
+
+        // Expose the chart to assistive tech as a single image.
+        container.setAttribute('role', 'img');
+        container.setAttribute(
+            'aria-label',
+            `Trend across ${values.length} data points, from ${values[0].toFixed(1)} to ${values[values.length - 1].toFixed(1)}`
+        );
 
         // Clear container
         container.innerHTML = '';
@@ -117,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create SVG element
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
         svg.setAttribute('width', '100%');
         svg.setAttribute('height', '100%');
         svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
@@ -232,6 +248,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         container.className = `trend-indicator trend-${trend}`;
+        container.setAttribute('role', 'img');
+        container.setAttribute(
+            'aria-label',
+            `Score ${current.toFixed(1)}, trend ${trend}, ${diff > 0 ? '+' : ''}${diff.toFixed(1)} (${percentDiff > 0 ? '+' : ''}${percentDiff.toFixed(1)}%)`
+        );
         container.innerHTML = `
             <span class="trend-icon" style="color: ${color}">${icon}</span>
             <span class="trend-value">${current.toFixed(1)}</span>
@@ -288,9 +309,13 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(function() {
             sparklines.forEach(function(container) {
-                container.innerHTML = '';
-                renderSparkline(container, HEALTH_COLORS);
+                try {
+                    container.innerHTML = '';
+                    renderSparkline(container, HEALTH_COLORS);
+                } catch (err) {
+                    console.error('Failed to re-render sparkline on resize', container, err);
+                }
             });
-        }, 250);
+        }, 150);
     });
 });

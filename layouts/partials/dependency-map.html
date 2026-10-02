@@ -12,7 +12,6 @@
 {{/* Find projects that depend on this one (reverse dependencies) */}}
 {{ $usedBy := slice }}
 {{ range $allProjects }}
-  {{ $otherTitle := .Title }}
   {{ $otherDeps := slice }}
   {{ with .Params.dependencies }}
     {{ range . }}
@@ -24,8 +23,8 @@
   {{ end }}
 {{ end }}
 
-<div class="project-dependencies-section">
-  <h3>Dependencies</h3>
+<div class="project-dependencies-section" role="region" aria-label="Dependencies">
+  <h2 class="dependency-section-title">Dependencies</h2>
   
   {{/* Dependency Graph Visualization */}}
   <div class="dependency-graph">
@@ -88,19 +87,10 @@
         </div>
         <div class="dep-current-name">{{ .Title }}</div>
         <div class="dep-current-tier">
+          {{/* Tier is driven by data/dependencies.yaml (case-insensitive title match) */}}
           {{ $tier := "unknown" }}
-          {{ $foundation := slice "OpenSSL" "zlib" "libpng" "libjpeg-turbo" "libsodium" "glibc" "Linux Kernel" }}
-          {{ $system := slice "systemd" "OpenSSH" "Git" "GnuPG" "BusyBox" "curl" "Nginx" "Apache HTTP Server" }}
-          {{ $runtime := slice "Python" "Node.js" "Go" "Rust" "Java" "PHP" "Ruby" }}
-          {{ $data := slice "PostgreSQL" "MySQL" "Redis" "MongoDB" "Elasticsearch" "Kafka" "SQLite" }}
-          {{ $containers := slice "Kubernetes" "Moby (Docker Engine)" "containerd" "Helm" "Istio" "Envoy" "Prometheus" "Grafana" }}
-          {{ $apps := slice "React" "Angular" "Vue.js" "Next.js" "Express.js" "Django" "Flask" "FastAPI" }}
-          {{ if in $foundation $title }}{{ $tier = "foundation" }}
-          {{ else if in $system $title }}{{ $tier = "system" }}
-          {{ else if in $runtime $title }}{{ $tier = "runtime" }}
-          {{ else if in $data $title }}{{ $tier = "data" }}
-          {{ else if in $containers $title }}{{ $tier = "containers" }}
-          {{ else if in $apps $title }}{{ $tier = "apps" }}
+          {{ range $name, $info := site.Data.dependencies }}
+            {{ if eq (lower $name) (lower $title) }}{{ $tier = $info.tier | default "unknown" }}{{ end }}
           {{ end }}
           {{ $tier }}
         </div>
@@ -142,7 +132,7 @@
   {{/* Dependency Chain Visualization */}}
   {{ if or (gt (len $dependencies) 0) (gt (len $usedBy) 0) }}
   <div class="dependency-chain">
-    <h4>Dependency Chain</h4>
+    <h3>Dependency Chain</h3>
     <div class="chain-visual">
       {{ if gt (len $dependencies) 0 }}
       <div class="chain-section upstream-chain">
@@ -183,7 +173,7 @@
   
   {{/* Impact Analysis */}}
   <div class="dependency-impact">
-    <h4>Impact Analysis</h4>
+    <h3>Impact Analysis</h3>
     <div class="impact-stats">
       <div class="impact-stat">
         <span class="impact-number">{{ len $dependencies }}</span>

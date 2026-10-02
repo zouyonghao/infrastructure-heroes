@@ -2,6 +2,7 @@ baseURL = "https://infrastructure-heroes.org/"
 languageCode = "en-us"
 title = "Infrastructure Heroes"
 theme = "ananke"
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -11,7 +12,8 @@ theme = "ananke"
   description = "The unsung heroes of software infrastructure"
   github = "zouyonghao"
   github_repo = "infrastructure-heroes"
-  custom_css = ["css/custom.css"]
+  custom_css = ["custom.css"]
+  images = ["images/social-card.png"]
 
 [menu]
   [[menu.main]]

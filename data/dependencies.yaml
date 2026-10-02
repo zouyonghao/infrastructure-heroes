@@ -85,10 +85,6 @@ BusyBox:
   depends_on: ["Linux Kernel"]
   tier: system
   
-APT:
-  depends_on: ["Linux Kernel", "glibc"]
-  tier: system
-  
 BIND:
   depends_on: ["OpenSSL", "Linux Kernel"]
   tier: system
@@ -118,6 +114,14 @@ CoreDNS:
   tier: system
   
 Certbot:
+  depends_on: ["OpenSSL", "Python", "Linux Kernel"]
+  tier: system
+
+gRPC:
+  depends_on: ["Protocol Buffers", "OpenSSL", "Linux Kernel"]
+  tier: system
+
+Let's Encrypt:
   depends_on: ["OpenSSL", "Python", "Linux Kernel"]
   tier: system
 
@@ -227,6 +231,10 @@ Apache Tomcat:
 
 PostgreSQL:
   depends_on: ["OpenSSL", "zlib", "Linux Kernel"]
+  tier: data
+
+Cassandra:
+  depends_on: ["Java", "Linux Kernel"]
   tier: data
   
 MySQL:
