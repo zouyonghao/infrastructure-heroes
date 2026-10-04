@@ -45,7 +45,7 @@
                     <span class="metric-value">{{ partial "indicator-label.html" (dict "dimension" "contributors" "value" .Params.health.contributors) }}</span>
                 </div>
                 <div class="health-metric {{ if or (not .Params.health.bus_factor) (eq .Params.health.bus_factor "unknown") }}unknown{{ else if eq .Params.health.bus_factor "low" }}good{{ else if eq .Params.health.bus_factor "medium" }}medium{{ else }}bad{{ end }}">
-                    <span class="metric-label">Commit concentration</span>
+                    <span class="metric-label">Bus Factor</span>
                     <span class="metric-value">{{ partial "indicator-label.html" (dict "dimension" "bus_factor" "value" .Params.health.bus_factor) }}</span>
                 </div>
             </div>

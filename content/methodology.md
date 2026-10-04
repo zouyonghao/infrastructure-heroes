@@ -54,11 +54,11 @@ We sample up to the newest 200 commits and count distinct author identities obse
 
 This does not measure growth, decline, company diversity, review work, or community health. Author identities can include bots or duplicate names. The separate all-time contributor count is not an active-maintainer count.
 
-### Commit concentration
+### Bus Factor
 
-We count how many authors account for half the sampled commits within 90 days. One author displays as **high** concentration, two as **moderate**, and three or more as **lower**. No recent author evidence means **unknown**.
+We count how many authors account for half the sampled commits within 90 days. One author displays as **High risk**, two as **Medium risk**, and three or more as **Low risk**. No recent author evidence means **unknown**.
 
-The field is historically named `bus_factor`, but it is only a commit-concentration proxy. It does not establish how many people understand the software, hold release credentials, or can maintain it. A higher actual bus factor means more people can sustain a project and generally lower key-person risk.
+The Bus Factor indicator (`bus_factor`) estimates key-person risk using commit concentration. It does not establish how many people understand the software, hold release credentials, or can maintain it. A higher actual bus factor means more people can sustain a project and generally lower key-person risk.
 
 ### Sampling and missing data
 

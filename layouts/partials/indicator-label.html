@@ -1,2 +1,2 @@
-{{- $labels := dict "contributors" (dict "healthy" "Many observed" "declining" "Some observed" "critical" "Few observed" "unknown" "Unknown") "bus_factor" (dict "low" "Lower" "medium" "Moderate" "high" "High" "unknown" "Unknown") -}}
+{{- $labels := dict "contributors" (dict "healthy" "Many observed" "declining" "Some observed" "critical" "Few observed" "unknown" "Unknown") "bus_factor" (dict "low" "Low risk" "medium" "Medium risk" "high" "High risk" "unknown" "Unknown") -}}
 {{- return (index (index $labels .dimension) .value | default "Unknown") -}}

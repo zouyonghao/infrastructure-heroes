@@ -11,7 +11,7 @@ Infrastructure Heroes helps the community identify and support critical infrastr
 - **Funding** - Evidence gaps and attributed public statements
 - **Maintenance** - Development activity and release frequency
 - **Contributors** - Authors observed in a recent commit sample
-- **Commit concentration** - Distribution of sampled commits across authors
+- **Bus Factor** - Estimated key-person risk from the distribution of sampled commits
 
 ## Getting Started
 

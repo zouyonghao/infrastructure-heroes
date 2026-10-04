@@ -76,7 +76,7 @@
                             <line x1="12" y1="17" x2="12.01" y2="17"></line>
                         </svg>
                     </div>
-                    <div class="dimension-name">Commit concentration</div>
+                    <div class="dimension-name">Bus Factor</div>
                     <div class="dimension-value {{ if or (not .Params.health.bus_factor) (eq .Params.health.bus_factor "unknown") }}unknown{{ else if eq .Params.health.bus_factor "low" }}healthy{{ else if eq .Params.health.bus_factor "medium" }}warning{{ else }}critical{{ end }}">
                         {{ partial "indicator-label.html" (dict "dimension" "bus_factor" "value" .Params.health.bus_factor) }}
                     </div>

@@ -16,7 +16,7 @@ Project front matter uses TOML:
   assessment = "automated"
 ```
 
-The automation fills the activity fields. `contributors` retains legacy internal values (`healthy`, `declining`, `critical`), displayed as observed author-count bands. `bus_factor` retains legacy values (`low`, `medium`, `high`), displayed as commit concentration. Neither describes a verified human-maintainer assessment. Automation writes `score` when sufficient activity data exists. Funding contributes neither points nor weight.
+The automation fills the activity fields. `contributors` retains legacy internal values (`healthy`, `declining`, `critical`), displayed as observed author-count bands. `bus_factor` retains legacy values (`low`, `medium`, `high`), displayed as Bus Factor risk. Neither describes a verified human-maintainer assessment. Automation writes `score` when sufficient activity data exists. Funding contributes neither points nor weight.
 
 Checked support information lives in `data/project_support.json`, keyed by project filename without `.md`. Each entry requires `checked_at`, `context`, `actions` (label, URL, description), and `sources` (label, URL). Use official project sources and distinguish public participation routes from confirmed requests. Automation leaves these editorial records untouched.
 
