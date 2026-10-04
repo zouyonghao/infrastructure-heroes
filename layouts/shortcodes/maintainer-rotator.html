@@ -1,6 +1,6 @@
 {{/*
   Maintainer Rotator
-  Rotates through "[Project] has contributions from [Maintainer]" pairs.
+  Rotates through "[Project] is maintained by [Maintainer]" pairs.
 
   - Server-rendered: works without JavaScript (shows the first pair).
   - Pairs: one-maintainer projects, one per maintainer, excluding
@@ -51,7 +51,7 @@
           {{ end }}
           <p class="rotator-line">
             <a class="rotator-project" href="{{ $pair.project.RelPermalink }}">{{ $pair.project.Title }}</a>
-            <span class="rotator-verb">has contributions from</span>
+            <span class="rotator-verb">is maintained by</span>
             {{ with $pair.maintainer }}
               <a class="rotator-maintainer" href="{{ .RelPermalink }}">{{ $pair.name }}</a>
             {{ else }}
