@@ -17,12 +17,12 @@ maintainers = ["Rasmus Lerdorf"]
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 40427
-  forks = 8157
+  updated_at = "2026-10-04"
+  stars = 40432
+  forks = 8158
   contributors = 230
-  commits_30d = 813
-  commits_90d = 2008
+  commits_30d = 818
+  commits_90d = 2017
   bus_factor_people = 3
   contributors_90d = 20
   commits_sample_truncated = true

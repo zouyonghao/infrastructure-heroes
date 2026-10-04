@@ -17,14 +17,14 @@ maintainers = ["Fabrice Bellard"]
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 64698
-  forks = 14308
+  updated_at = "2026-10-04"
+  stars = 64739
+  forks = 14314
   contributors = 310
-  commits_30d = 727
-  commits_90d = 1663
+  commits_30d = 766
+  commits_90d = 1693
   bus_factor_people = 3
-  contributors_90d = 24
+  contributors_90d = 22
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

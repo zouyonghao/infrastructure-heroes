@@ -16,14 +16,14 @@ description = 'High-performance NoSQL database'
 [links]
   github = "scylladb/scylladb"
 [metrics]
-  updated_at = "2026-10-02"
+  updated_at = "2026-10-04"
   stars = 15782
-  forks = 1523
+  forks = 1524
   contributors = 186
-  commits_30d = 1066
-  commits_90d = 2140
+  commits_30d = 1109
+  commits_90d = 2261
   bus_factor_people = 4
-  contributors_90d = 34
+  contributors_90d = 35
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

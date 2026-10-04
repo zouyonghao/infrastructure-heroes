@@ -7,7 +7,7 @@ description = 'JavaScript runtime built on V8'
 maintainers = ["Ryan Dahl", "Matteo Collina"]
 
 [health]
-  score = 92
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Ryan Dahl", "Matteo Collina"]
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 122223
-  forks = 38504
+  updated_at = "2026-10-04"
+  stars = 122268
+  forks = 38689
   contributors = 420
-  commits_30d = 651
-  commits_90d = 1512
-  bus_factor_people = 4
-  contributors_90d = 53
+  commits_30d = 617
+  commits_90d = 1532
+  bus_factor_people = 5
+  contributors_90d = 55
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

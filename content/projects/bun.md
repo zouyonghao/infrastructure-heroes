@@ -7,7 +7,7 @@ description = 'Fast JavaScript runtime and toolkit'
 maintainers = ["Jarred Sumner"]
 
 [health]
-  score = 65
+  score = 63
   funding = "unknown"
   maintenance = "active"
   contributors = "declining"
@@ -17,14 +17,14 @@ maintainers = ["Jarred Sumner"]
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 96098
-  forks = 5084
+  updated_at = "2026-10-04"
+  stars = 96114
+  forks = 5088
   contributors = 449
-  commits_30d = 537
-  commits_90d = 2333
+  commits_30d = 503
+  commits_90d = 2329
   bus_factor_people = 1
-  contributors_90d = 8
+  contributors_90d = 7
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

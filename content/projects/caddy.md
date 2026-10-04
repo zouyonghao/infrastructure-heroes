@@ -6,7 +6,7 @@ logo = "/images/logos/caddy.svg"
 description = 'Web server with automatic HTTPS'
 
 [health]
-  score = 98
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Web server with automatic HTTPS'
 [links]
   github = "caddyserver/caddy"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 76230
-  forks = 5022
-  contributors = 425
-  commits_30d = 45
-  commits_90d = 97
+  updated_at = "2026-10-04"
+  stars = 76264
+  forks = 5029
+  contributors = 427
+  commits_30d = 51
+  commits_90d = 108
   bus_factor_people = 10
-  contributors_90d = 49
+  contributors_90d = 51
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

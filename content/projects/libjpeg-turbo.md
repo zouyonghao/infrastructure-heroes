@@ -6,9 +6,9 @@ logo = "/images/logos/libjpeg-turbo.svg"
 description = 'JPEG image codec with SIMD acceleration'
 
 [health]
-  score = 35
+  score = 33
   funding = "unknown"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
   methodology_version = "2.1"
@@ -16,7 +16,7 @@ description = 'JPEG image codec with SIMD acceleration'
 [links]
   github = "libjpeg-turbo/libjpeg-turbo"
 [metrics]
-  updated_at = "2026-10-02"
+  updated_at = "2026-10-04"
   stars = 4441
   forks = 1185
   contributors = 45

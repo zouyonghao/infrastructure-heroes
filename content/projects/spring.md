@@ -15,14 +15,14 @@ description = 'Java application framework'
 [links]
   github = "spring-projects/spring-framework"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 60267
-  forks = 38762
-  contributors = 361
-  commits_30d = 217
-  commits_90d = 484
+  updated_at = "2026-10-04"
+  stars = 60266
+  forks = 38761
+  contributors = 360
+  commits_30d = 204
+  commits_90d = 492
   bus_factor_people = 2
-  contributors_90d = 30
+  contributors_90d = 29
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

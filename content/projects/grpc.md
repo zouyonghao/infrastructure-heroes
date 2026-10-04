@@ -15,12 +15,12 @@ description = 'High-performance RPC framework'
 [links]
   github = "grpc/grpc"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 45358
-  forks = 11378
+  updated_at = "2026-10-04"
+  stars = 45361
+  forks = 11382
   contributors = 307
-  commits_30d = 121
-  commits_90d = 362
+  commits_30d = 115
+  commits_90d = 361
   bus_factor_people = 7
   contributors_90d = 42
   commits_sample_truncated = true

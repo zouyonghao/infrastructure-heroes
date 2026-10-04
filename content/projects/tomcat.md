@@ -6,23 +6,23 @@ logo = "/images/logos/tomcat.svg"
 description = 'Java Servlet container'
 
 [health]
-  score = 47
+  score = 54
   funding = "unknown"
   maintenance = "active"
   contributors = "declining"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "apache/tomcat"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 8255
-  forks = 5405
+  updated_at = "2026-10-04"
+  stars = 8258
+  forks = 5402
   contributors = 162
-  commits_30d = 256
-  commits_90d = 447
-  bus_factor_people = 1
+  commits_30d = 245
+  commits_90d = 465
+  bus_factor_people = 2
   contributors_90d = 5
   commits_sample_truncated = true
   contributors_unavailable = false

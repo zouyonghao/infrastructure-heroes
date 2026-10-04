@@ -17,12 +17,12 @@ maintainers = ["Tobias Koppers"]
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 65956
-  forks = 9539
+  updated_at = "2026-10-04"
+  stars = 65965
+  forks = 9536
   contributors = 390
-  commits_30d = 391
-  commits_90d = 830
+  commits_30d = 385
+  commits_90d = 834
   bus_factor_people = 1
   contributors_90d = 8
   commits_sample_truncated = true

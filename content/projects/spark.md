@@ -16,14 +16,14 @@ description = 'Unified analytics engine'
 [links]
   github = "apache/spark"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 44108
-  forks = 29399
+  updated_at = "2026-10-04"
+  stars = 44114
+  forks = 29403
   contributors = 331
-  commits_30d = 455
-  commits_90d = 1490
-  bus_factor_people = 9
-  contributors_90d = 66
+  commits_30d = 424
+  commits_90d = 1483
+  bus_factor_people = 10
+  contributors_90d = 67
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -17,11 +17,11 @@ maintainers = ["Mitchell Hashimoto"]
 [links]
   github = "hashicorp/terraform"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 49812
+  updated_at = "2026-10-04"
+  stars = 49824
   forks = 10638
   contributors = 350
-  commits_30d = 140
+  commits_30d = 131
   commits_90d = 396
   bus_factor_people = 2
   contributors_90d = 20

@@ -17,14 +17,14 @@ maintainers = ["Misko Hevery", "John Papa"]
 [links]
   github = "angular/angular"
 [metrics]
-  updated_at = "2026-10-02"
-  stars = 101010
-  forks = 29104
+  updated_at = "2026-10-04"
+  stars = 101015
+  forks = 29273
   contributors = 375
-  commits_30d = 361
-  commits_90d = 878
+  commits_30d = 349
+  commits_90d = 884
   bus_factor_people = 5
-  contributors_90d = 39
+  contributors_90d = 40
   commits_sample_truncated = true
   contributors_unavailable = false
 +++
