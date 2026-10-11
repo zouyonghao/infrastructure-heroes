@@ -7,7 +7,7 @@ description = 'Popular programming language'
 maintainers = ["Guido van Rossum"]
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Guido van Rossum"]
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 77444
-  forks = 37260
+  updated_at = "2026-10-11"
+  stars = 77611
+  forks = 37913
   contributors = 357
-  commits_30d = 458
-  commits_90d = 1290
-  bus_factor_people = 4
-  contributors_90d = 63
+  commits_30d = 469
+  commits_90d = 1269
+  bus_factor_people = 5
+  contributors_90d = 61
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

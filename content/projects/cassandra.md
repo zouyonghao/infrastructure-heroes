@@ -5,7 +5,7 @@ logo = "/images/logos/cassandra.svg"
 description = 'Distributed NoSQL database'
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -15,14 +15,14 @@ description = 'Distributed NoSQL database'
 [links]
   github = "apache/cassandra"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 10112
-  forks = 4119
+  updated_at = "2026-10-11"
+  stars = 10118
+  forks = 4117
   contributors = 271
-  commits_30d = 122
-  commits_90d = 381
-  bus_factor_people = 4
-  contributors_90d = 34
+  commits_30d = 103
+  commits_90d = 378
+  bus_factor_people = 5
+  contributors_90d = 36
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

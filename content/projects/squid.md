@@ -6,23 +6,23 @@ logo = "/images/logos/squid.webp"
 description = 'Caching proxy for the web'
 
 [health]
-  score = 86
+  score = 78
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "squid-cache/squid"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 3116
-  forks = 667
-  contributors = 190
-  commits_30d = 13
-  commits_90d = 29
-  bus_factor_people = 3
+  updated_at = "2026-10-11"
+  stars = 3121
+  forks = 670
+  contributors = 191
+  commits_30d = 16
+  commits_90d = 30
+  bus_factor_people = 2
   contributors_90d = 12
   commits_sample_truncated = false
   contributors_unavailable = false

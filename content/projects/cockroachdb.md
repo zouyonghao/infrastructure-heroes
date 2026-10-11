@@ -6,7 +6,7 @@ logo = "/images/logos/cockroachdb.svg"
 description = 'Distributed SQL database'
 
 [health]
-  score = 58
+  score = 53
   funding = "unknown"
   maintenance = "moderate"
   contributors = "declining"
@@ -16,14 +16,14 @@ description = 'Distributed SQL database'
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 32543
-  forks = 4128
+  updated_at = "2026-10-11"
+  stars = 32558
+  forks = 4127
   contributors = 306
   commits_30d = 11
-  commits_90d = 43
+  commits_90d = 41
   bus_factor_people = 2
-  contributors_90d = 8
+  contributors_90d = 7
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

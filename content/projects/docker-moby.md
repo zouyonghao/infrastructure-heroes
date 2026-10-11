@@ -6,23 +6,23 @@ logo = "/images/logos/docker-moby.svg"
 description = 'Container runtime and toolkit'
 
 [health]
-  score = 77
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "moby/moby"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 72144
-  forks = 19235
+  updated_at = "2026-10-11"
+  stars = 72167
+  forks = 19236
   contributors = 394
-  commits_30d = 407
-  commits_90d = 1226
-  bus_factor_people = 1
+  commits_30d = 447
+  commits_90d = 1212
+  bus_factor_people = 2
   contributors_90d = 12
   commits_sample_truncated = true
   contributors_unavailable = false

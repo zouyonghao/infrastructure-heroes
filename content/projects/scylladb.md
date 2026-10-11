@@ -6,7 +6,7 @@ logo = "/images/logos/scylladb.svg"
 description = 'High-performance NoSQL database'
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'High-performance NoSQL database'
 [links]
   github = "scylladb/scylladb"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 15782
-  forks = 1524
+  updated_at = "2026-10-11"
+  stars = 15787
+  forks = 1528
   contributors = 186
-  commits_30d = 1109
-  commits_90d = 2261
-  bus_factor_people = 4
-  contributors_90d = 35
+  commits_30d = 1008
+  commits_90d = 2262
+  bus_factor_people = 5
+  contributors_90d = 37
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

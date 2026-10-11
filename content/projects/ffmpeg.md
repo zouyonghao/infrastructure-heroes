@@ -7,24 +7,24 @@ description = 'Complete multimedia framework'
 maintainers = ["Fabrice Bellard"]
 
 [health]
-  score = 82
+  score = 67
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "FFmpeg/FFmpeg"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 64739
-  forks = 14314
-  contributors = 310
-  commits_30d = 766
-  commits_90d = 1693
-  bus_factor_people = 3
-  contributors_90d = 22
+  updated_at = "2026-10-11"
+  stars = 64969
+  forks = 14341
+  contributors = 312
+  commits_30d = 870
+  commits_90d = 1802
+  bus_factor_people = 1
+  contributors_90d = 26
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -6,9 +6,9 @@ logo = "/images/logos/libpng.svg"
 description = 'Official PNG reference library'
 
 [health]
-  score = 40
+  score = 38
   funding = "unknown"
-  maintenance = "active"
+  maintenance = "moderate"
   contributors = "critical"
   bus_factor = "high"
   methodology_version = "2.1"
@@ -16,12 +16,12 @@ description = 'Official PNG reference library'
 [links]
   github = "glennrp/libpng"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 1658
-  forks = 819
+  updated_at = "2026-10-11"
+  stars = 1664
+  forks = 826
   contributors = 99
-  commits_30d = 20
-  commits_90d = 20
+  commits_30d = 17
+  commits_90d = 21
   bus_factor_people = 1
   contributors_90d = 3
   commits_sample_truncated = false

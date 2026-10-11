@@ -7,7 +7,7 @@ description = 'Secrets management tool'
 maintainers = ["Mitchell Hashimoto"]
 
 [health]
-  score = 49
+  score = 52
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
@@ -17,14 +17,14 @@ maintainers = ["Mitchell Hashimoto"]
 [links]
   github = "hashicorp/vault"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 36336
-  forks = 4776
+  updated_at = "2026-10-11"
+  stars = 36381
+  forks = 4785
   contributors = 388
-  commits_30d = 336
-  commits_90d = 983
+  commits_30d = 364
+  commits_90d = 985
   bus_factor_people = 1
-  contributors_90d = 2
+  contributors_90d = 3
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

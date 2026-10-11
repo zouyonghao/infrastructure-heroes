@@ -17,14 +17,14 @@ maintainers = ["David Heinemeier Hansson"]
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 58798
-  forks = 24239
+  updated_at = "2026-10-11"
+  stars = 58819
+  forks = 24890
   contributors = 370
-  commits_30d = 292
-  commits_90d = 1157
+  commits_30d = 302
+  commits_90d = 1152
   bus_factor_people = 5
-  contributors_90d = 49
+  contributors_90d = 55
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

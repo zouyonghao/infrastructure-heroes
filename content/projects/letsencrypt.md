@@ -5,24 +5,24 @@ logo = "/images/logos/letsencrypt.svg"
 description = 'Free SSL/TLS certificate authority'
 
 [health]
-  score = 65
+  score = 62
   funding = "unknown"
   maintenance = "active"
-  contributors = "healthy"
+  contributors = "declining"
   bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "letsencrypt/letsencrypt"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 33256
-  forks = 3504
+  updated_at = "2026-10-11"
+  stars = 33262
+  forks = 3506
   contributors = 383
   commits_30d = 3
   commits_90d = 26
   bus_factor_people = 2
-  contributors_90d = 9
+  contributors_90d = 8
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

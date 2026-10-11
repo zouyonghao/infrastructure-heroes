@@ -17,14 +17,14 @@ maintainers = ["Anders Hejlsberg"]
 [links]
   github = "microsoft/TypeScript"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 111330
-  forks = 15643
+  updated_at = "2026-10-11"
+  stars = 111383
+  forks = 16356
   contributors = 341
-  commits_30d = 162
-  commits_90d = 405
+  commits_30d = 169
+  commits_90d = 416
   bus_factor_people = 4
-  contributors_90d = 38
+  contributors_90d = 39
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

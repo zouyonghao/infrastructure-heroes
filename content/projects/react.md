@@ -7,7 +7,7 @@ description = 'JavaScript library for building UIs'
 maintainers = ["Jordan Walke", "Dan Abramov"]
 
 [health]
-  score = 98
+  score = 88
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Jordan Walke", "Dan Abramov"]
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 250874
-  forks = 51430
+  updated_at = "2026-10-11"
+  stars = 250827
+  forks = 51458
   contributors = 411
-  commits_30d = 34
-  commits_90d = 155
-  bus_factor_people = 5
-  contributors_90d = 44
+  commits_30d = 31
+  commits_90d = 145
+  bus_factor_people = 4
+  contributors_90d = 42
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

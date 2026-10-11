@@ -7,7 +7,7 @@ description = 'High-performance web server and reverse proxy'
 maintainers = ["Igor Sysoev"]
 
 [health]
-  score = 90
+  score = 88
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,12 +17,12 @@ maintainers = ["Igor Sysoev"]
 [links]
   github = "nginx/nginx"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 31787
-  forks = 8311
-  contributors = 110
-  commits_30d = 29
-  commits_90d = 103
+  updated_at = "2026-10-11"
+  stars = 31845
+  forks = 8314
+  contributors = 111
+  commits_30d = 24
+  commits_90d = 101
   bus_factor_people = 3
   contributors_90d = 22
   commits_sample_truncated = false

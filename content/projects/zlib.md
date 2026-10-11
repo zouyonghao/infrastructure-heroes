@@ -17,9 +17,9 @@ maintainers = ["Mark Adler"]
 [links]
   github = "madler/zlib"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 7120
-  forks = 2864
+  updated_at = "2026-10-11"
+  stars = 7127
+  forks = 2870
   contributors = 80
   commits_30d = 24
   commits_90d = 24

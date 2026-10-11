@@ -6,7 +6,7 @@ logo = "/images/logos/influxdb.webp"
 description = 'Time series database'
 
 [health]
-  score = 53
+  score = 51
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
@@ -16,9 +16,9 @@ description = 'Time series database'
 [links]
   github = "influxdata/influxdb"
 [metrics]
-  updated_at = "2026-10-04"
-  stars = 31759
-  forks = 3716
+  updated_at = "2026-10-11"
+  stars = 31757
+  forks = 3722
   contributors = 314
   commits_30d = 1
   commits_90d = 7
