@@ -16,14 +16,14 @@ description = 'Distributed search and analytics engine'
 [links]
   github = "elastic/elasticsearch"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 78223
-  forks = 26116
-  contributors = 353
-  commits_30d = 1355
-  commits_90d = 4120
-  bus_factor_people = 10
-  contributors_90d = 76
+  updated_at = "2026-10-18"
+  stars = 78300
+  forks = 26121
+  contributors = 352
+  commits_30d = 1382
+  commits_90d = 4148
+  bus_factor_people = 12
+  contributors_90d = 70
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

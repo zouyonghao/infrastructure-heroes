@@ -17,14 +17,14 @@ maintainers = ["Jeff Geerling"]
 [links]
   github = "ansible/ansible"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 70954
-  forks = 24350
+  updated_at = "2026-10-18"
+  stars = 71008
+  forks = 24360
   contributors = 373
-  commits_30d = 32
+  commits_30d = 26
   commits_90d = 88
   bus_factor_people = 5
-  contributors_90d = 29
+  contributors_90d = 28
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

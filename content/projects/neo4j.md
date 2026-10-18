@@ -6,7 +6,7 @@ logo = "/images/logos/neo4j.svg"
 description = 'Graph database platform'
 
 [health]
-  score = 86
+  score = 76
   funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
@@ -16,12 +16,12 @@ description = 'Graph database platform'
 [links]
   github = "neo4j/neo4j"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 17293
-  forks = 2703
+  updated_at = "2026-10-18"
+  stars = 17337
+  forks = 2704
   contributors = 255
-  commits_30d = 10
-  commits_90d = 443
+  commits_30d = 0
+  commits_90d = 381
   bus_factor_people = 10
   contributors_90d = 55
   commits_sample_truncated = true

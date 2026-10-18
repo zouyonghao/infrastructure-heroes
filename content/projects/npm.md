@@ -6,23 +6,23 @@ logo = "/images/logos/npm.svg"
 description = 'JavaScript package manager'
 
 [health]
-  score = 86
+  score = 80
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "npm/cli"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 10190
-  forks = 4848
+  updated_at = "2026-10-18"
+  stars = 10193
+  forks = 4873
   contributors = 416
-  commits_30d = 9
-  commits_90d = 32
-  bus_factor_people = 3
+  commits_30d = 14
+  commits_90d = 38
+  bus_factor_people = 2
   contributors_90d = 14
   commits_sample_truncated = false
   contributors_unavailable = false

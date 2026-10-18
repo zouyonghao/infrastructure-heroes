@@ -16,14 +16,14 @@ description = "The world's most advanced open source relational database"
 [links]
   github = "postgres/postgres"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 22332
-  forks = 5941
+  updated_at = "2026-10-18"
+  stars = 22455
+  forks = 5965
   contributors = 42
-  commits_30d = 284
-  commits_90d = 869
-  bus_factor_people = 6
-  contributors_90d = 24
+  commits_30d = 265
+  commits_90d = 864
+  bus_factor_people = 5
+  contributors_90d = 21
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

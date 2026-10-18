@@ -17,14 +17,14 @@ maintainers = ["Filipe Fortes"]
 [links]
   github = "eslint/eslint"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 27625
+  updated_at = "2026-10-18"
+  stars = 27568
   forks = 5208
   contributors = 412
-  commits_30d = 46
-  commits_90d = 175
-  bus_factor_people = 9
-  contributors_90d = 51
+  commits_30d = 47
+  commits_90d = 160
+  bus_factor_people = 7
+  contributors_90d = 48
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

@@ -6,23 +6,23 @@ logo = "/images/logos/influxdb.webp"
 description = 'Time series database'
 
 [health]
-  score = 51
+  score = 47
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
-  bus_factor = "medium"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "influxdata/influxdb"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 31757
+  updated_at = "2026-10-18"
+  stars = 31769
   forks = 3722
   contributors = 314
   commits_30d = 1
-  commits_90d = 7
-  bus_factor_people = 2
+  commits_90d = 6
+  bus_factor_people = 1
   contributors_90d = 4
   commits_sample_truncated = false
   contributors_unavailable = false

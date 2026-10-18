@@ -6,7 +6,7 @@ logo = "/images/logos/rabbitmq.svg"
 description = 'Message broker software'
 
 [health]
-  score = 77
+  score = 75
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Message broker software'
 [links]
   github = "rabbitmq/rabbitmq-server"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 13911
+  updated_at = "2026-10-18"
+  stars = 13929
   forks = 4029
   contributors = 286
-  commits_30d = 371
-  commits_90d = 1011
+  commits_30d = 272
+  commits_90d = 1012
   bus_factor_people = 1
-  contributors_90d = 14
+  contributors_90d = 13
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

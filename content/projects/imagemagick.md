@@ -16,14 +16,14 @@ description = 'Image manipulation toolkit'
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 17640
-  forks = 1670
-  contributors = 212
-  commits_30d = 185
-  commits_90d = 465
+  updated_at = "2026-10-18"
+  stars = 17674
+  forks = 1677
+  contributors = 214
+  commits_30d = 200
+  commits_90d = 488
   bus_factor_people = 1
-  contributors_90d = 13
+  contributors_90d = 14
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

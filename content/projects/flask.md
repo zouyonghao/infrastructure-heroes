@@ -7,7 +7,7 @@ description = 'Lightweight Python web framework'
 maintainers = ["Armin Ronacher"]
 
 [health]
-  score = 38
+  score = 36
   funding = "unknown"
   maintenance = "moderate"
   contributors = "critical"
@@ -17,9 +17,9 @@ maintainers = ["Armin Ronacher"]
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 74995
-  forks = 17067
+  updated_at = "2026-10-18"
+  stars = 74923
+  forks = 17078
   contributors = 399
   commits_30d = 5
   commits_90d = 22

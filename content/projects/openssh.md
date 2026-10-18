@@ -17,14 +17,14 @@ maintainers = ["Theo de Raadt"]
 [links]
   github = "openssh/openssh-portable"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 4040
-  forks = 2183
+  updated_at = "2026-10-18"
+  stars = 4045
+  forks = 2189
   contributors = 127
-  commits_30d = 125
-  commits_90d = 212
+  commits_30d = 84
+  commits_90d = 231
   bus_factor_people = 2
-  contributors_90d = 15
+  contributors_90d = 13
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

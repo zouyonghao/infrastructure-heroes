@@ -6,9 +6,9 @@ logo = "/images/logos/pip.svg"
 description = 'Python package installer'
 
 [health]
-  score = 66
+  score = 72
   funding = "unknown"
-  maintenance = "moderate"
+  maintenance = "active"
   contributors = "healthy"
   bus_factor = "medium"
   methodology_version = "2.1"
@@ -16,14 +16,14 @@ description = 'Python package installer'
 [links]
   github = "pypa/pip"
 [metrics]
-  updated_at = "2026-10-11"
-  stars = 10294
-  forks = 3402
+  updated_at = "2026-10-18"
+  stars = 10293
+  forks = 3414
   contributors = 397
-  commits_30d = 4
-  commits_90d = 107
+  commits_30d = 30
+  commits_90d = 138
   bus_factor_people = 2
-  contributors_90d = 21
+  contributors_90d = 18
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

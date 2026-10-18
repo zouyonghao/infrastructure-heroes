@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-11T05:18:38.648450",
-  "total_snapshots": 38,
+  "generated_at": "2026-10-18T04:06:03.831461",
+  "total_snapshots": 39,
   "date_range": {
     "from": "2026-02-08",
-    "to": "2026-10-11"
+    "to": "2026-10-18"
   },
   "current_status": {
-    "critical": 19,
+    "critical": 18,
     "warning": 22,
-    "healthy": 67,
-    "avg_score": 76.62962962962963,
+    "healthy": 68,
+    "avg_score": 76.68518518518519,
     "unrated": 0,
     "total_projects": 108
   },
   "score_methodology_version": "2.1",
-  "last_scored_date": "2026-10-11",
+  "last_scored_date": "2026-10-18",
   "trends": {
     "avg_score_over_time": [
       {
@@ -28,6 +28,10 @@
       {
         "date": "2026-10-11",
         "value": 76.62962962962963
+      },
+      {
+        "date": "2026-10-18",
+        "value": 76.68518518518519
       }
     ],
     "critical_count_over_time": [
@@ -42,12 +46,16 @@
       {
         "date": "2026-10-11",
         "value": 19
+      },
+      {
+        "date": "2026-10-18",
+        "value": 18
       }
     ],
     "score_distribution": {
-      "healthy": 67,
+      "healthy": 68,
       "warning": 22,
-      "critical": 19
+      "critical": 18
     }
   }
 }
