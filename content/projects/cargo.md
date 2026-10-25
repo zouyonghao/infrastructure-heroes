@@ -7,23 +7,23 @@ description = 'Rust package manager and build tool'
 maintainers = ["Yehuda Katz"]
 
 [health]
-  score = 82
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "rust-lang/cargo"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 15601
-  forks = 3077
-  contributors = 414
-  commits_30d = 233
-  commits_90d = 642
-  bus_factor_people = 3
+  updated_at = "2026-10-25"
+  stars = 15630
+  forks = 3089
+  contributors = 413
+  commits_30d = 264
+  commits_90d = 698
+  bus_factor_people = 2
   contributors_90d = 17
   commits_sample_truncated = true
   contributors_unavailable = false

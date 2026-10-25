@@ -16,14 +16,14 @@ description = 'Caching proxy for the web'
 [links]
   github = "squid-cache/squid"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 3123
-  forks = 670
-  contributors = 191
-  commits_30d = 15
-  commits_90d = 32
+  updated_at = "2026-10-25"
+  stars = 3128
+  forks = 669
+  contributors = 192
+  commits_30d = 18
+  commits_90d = 38
   bus_factor_people = 2
-  contributors_90d = 12
+  contributors_90d = 13
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

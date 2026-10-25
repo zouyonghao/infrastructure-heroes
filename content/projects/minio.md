@@ -6,7 +6,7 @@ logo = "/images/logos/minio.svg"
 description = 'High-performance object storage'
 
 [health]
-  score = 8
+  score = 5
   funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
@@ -16,9 +16,9 @@ description = 'High-performance object storage'
 [links]
   github = "minio/minio"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 61319
-  forks = 8181
+  updated_at = "2026-10-25"
+  stars = 61301
+  forks = 8224
   contributors = 410
   commits_30d = 0
   commits_90d = 0

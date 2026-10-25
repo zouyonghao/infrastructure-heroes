@@ -7,7 +7,7 @@ description = 'Server-side scripting language'
 maintainers = ["Rasmus Lerdorf"]
 
 [health]
-  score = 100
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Rasmus Lerdorf"]
 [links]
   github = "php/php-src"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 40449
-  forks = 8178
+  updated_at = "2026-10-25"
+  stars = 41648
+  forks = 8388
   contributors = 230
-  commits_30d = 1082
-  commits_90d = 2168
-  bus_factor_people = 5
-  contributors_90d = 33
+  commits_30d = 1164
+  commits_90d = 2392
+  bus_factor_people = 4
+  contributors_90d = 29
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

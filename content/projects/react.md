@@ -17,14 +17,14 @@ maintainers = ["Jordan Walke", "Dan Abramov"]
 [links]
   github = "facebook/react"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 251231
-  forks = 51517
+  updated_at = "2026-10-25"
+  stars = 251756
+  forks = 51563
   contributors = 411
-  commits_30d = 28
-  commits_90d = 142
-  bus_factor_people = 5
-  contributors_90d = 45
+  commits_30d = 32
+  commits_90d = 137
+  bus_factor_people = 6
+  contributors_90d = 43
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

@@ -17,14 +17,14 @@ maintainers = ["Matt Klein"]
 [links]
   github = "envoyproxy/envoy"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 29083
-  forks = 5663
+  updated_at = "2026-10-25"
+  stars = 29129
+  forks = 5682
   contributors = 379
-  commits_30d = 508
-  commits_90d = 1266
+  commits_30d = 519
+  commits_90d = 1322
   bus_factor_people = 6
-  contributors_90d = 59
+  contributors_90d = 73
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

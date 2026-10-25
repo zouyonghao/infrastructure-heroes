@@ -17,12 +17,12 @@ maintainers = ["Jarred Sumner"]
 [links]
   github = "oven-sh/bun"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 96278
-  forks = 5126
-  contributors = 449
-  commits_30d = 336
-  commits_90d = 2106
+  updated_at = "2026-10-25"
+  stars = 96387
+  forks = 5123
+  contributors = 448
+  commits_30d = 311
+  commits_90d = 1981
   bus_factor_people = 2
   contributors_90d = 6
   commits_sample_truncated = true

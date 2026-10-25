@@ -7,24 +7,24 @@ description = 'JavaScript compiler'
 maintainers = ["Sebastian McKenzie"]
 
 [health]
-  score = 90
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 44058
-  forks = 5996
+  updated_at = "2026-10-25"
+  stars = 44048
+  forks = 5955
   contributors = 413
-  commits_30d = 43
-  commits_90d = 93
-  bus_factor_people = 3
-  contributors_90d = 21
+  commits_30d = 63
+  commits_90d = 111
+  bus_factor_people = 2
+  contributors_90d = 22
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

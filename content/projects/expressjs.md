@@ -17,14 +17,14 @@ maintainers = ["TJ Holowaychuk"]
 [links]
   github = "expressjs/express"
 [metrics]
-  updated_at = "2026-10-18"
+  updated_at = "2026-10-25"
   stars = 69577
-  forks = 25263
+  forks = 25264
   contributors = 334
-  commits_30d = 12
-  commits_90d = 25
+  commits_30d = 13
+  commits_90d = 26
   bus_factor_people = 3
-  contributors_90d = 15
+  contributors_90d = 16
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

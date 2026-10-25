@@ -6,7 +6,7 @@ logo = "/images/logos/zookeeper.svg"
 description = 'Distributed coordination service'
 
 [health]
-  score = 68
+  score = 70
   funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Distributed coordination service'
 [links]
   github = "apache/zookeeper"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 12817
-  forks = 7324
+  updated_at = "2026-10-25"
+  stars = 12818
+  forks = 7326
   contributors = 264
-  commits_30d = 17
-  commits_90d = 38
+  commits_30d = 18
+  commits_90d = 42
   bus_factor_people = 2
-  contributors_90d = 14
+  contributors_90d = 16
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

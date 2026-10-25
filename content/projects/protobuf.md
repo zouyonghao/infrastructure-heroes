@@ -6,24 +6,24 @@ logo = "/images/logos/protobuf.svg"
 description = 'Language-neutral data serialization'
 
 [health]
-  score = 84
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "protocolbuffers/protobuf"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 72114
-  forks = 16317
+  updated_at = "2026-10-25"
+  stars = 72130
+  forks = 16328
   contributors = 368
-  commits_30d = 396
-  commits_90d = 854
-  bus_factor_people = 2
-  contributors_90d = 34
+  commits_30d = 403
+  commits_90d = 878
+  bus_factor_people = 3
+  contributors_90d = 37
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -6,24 +6,24 @@ description = 'The foundation of modern computing infrastructure'
 maintainers = ["Linus Torvalds"]
 
 [health]
-  score = 90
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "torvalds/linux"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 252303
-  forks = 68207
+  updated_at = "2026-10-25"
+  stars = 253381
+  forks = 67816
   contributors = 0
-  commits_30d = 1598
-  commits_90d = 15935
-  bus_factor_people = 11
-  contributors_90d = 89
+  commits_30d = 8189
+  commits_90d = 27216
+  bus_factor_people = 2
+  contributors_90d = 32
   commits_sample_truncated = true
   contributors_unavailable = true
 +++

@@ -7,7 +7,7 @@ description = 'JavaScript module bundler'
 maintainers = ["Tobias Koppers"]
 
 [health]
-  score = 68
+  score = 77
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Tobias Koppers"]
 [links]
   github = "webpack/webpack"
 [metrics]
-  updated_at = "2026-10-18"
-  stars = 65979
-  forks = 9533
+  updated_at = "2026-10-25"
+  stars = 65972
+  forks = 9472
   contributors = 390
-  commits_30d = 514
-  commits_90d = 1032
+  commits_30d = 504
+  commits_90d = 1102
   bus_factor_people = 1
-  contributors_90d = 9
+  contributors_90d = 11
   commits_sample_truncated = true
   contributors_unavailable = false
 +++
