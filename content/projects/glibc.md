@@ -16,9 +16,9 @@ maintainers = ["Carlos O'Donell"]
 [links]
   github = "bminor/glibc"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 1892
-  forks = 489
+  updated_at = "2026-11-01"
+  stars = 1893
+  forks = 488
   contributors = 283
   commits_30d = 0
   commits_90d = 0

@@ -18,12 +18,12 @@ maintainers = ["Werner Koch"]
   github = "gpg/gnupg"
 
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 993
-  forks = 218
+  updated_at = "2026-11-01"
+  stars = 995
+  forks = 217
   contributors = 73
-  commits_30d = 29
-  commits_90d = 92
+  commits_30d = 24
+  commits_90d = 86
   bus_factor_people = 1
   contributors_90d = 4
   commits_sample_truncated = false

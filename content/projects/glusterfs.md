@@ -6,7 +6,7 @@ logo = "/images/logos/glusterfs.webp"
 description = 'Scalable network filesystem'
 
 [health]
-  score = 41
+  score = 39
   funding = "unknown"
   maintenance = "moderate"
   contributors = "declining"
@@ -16,9 +16,9 @@ description = 'Scalable network filesystem'
 [links]
   github = "gluster/glusterfs"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 5263
-  forks = 1106
+  updated_at = "2026-11-01"
+  stars = 5266
+  forks = 1108
   contributors = 243
   commits_30d = 7
   commits_90d = 40

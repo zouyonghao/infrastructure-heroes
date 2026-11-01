@@ -17,14 +17,14 @@ maintainers = ["Daniel Stenberg"]
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 43239
-  forks = 7461
-  contributors = 410
-  commits_30d = 395
-  commits_90d = 975
+  updated_at = "2026-11-01"
+  stars = 43334
+  forks = 7472
+  contributors = 409
+  commits_30d = 356
+  commits_90d = 979
   bus_factor_people = 2
-  contributors_90d = 35
+  contributors_90d = 38
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -17,12 +17,12 @@ maintainers = ["Sebastian Ramirez"]
 [links]
   github = "fastapi/fastapi"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 104100
-  forks = 10116
+  updated_at = "2026-11-01"
+  stars = 104508
+  forks = 10158
   contributors = 456
-  commits_30d = 232
-  commits_90d = 407
+  commits_30d = 209
+  commits_90d = 350
   bus_factor_people = 2
   contributors_90d = 7
   commits_sample_truncated = true

@@ -16,12 +16,12 @@ description = 'Distributed NewSQL database'
 [links]
   github = "pingcap/tidb"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 40674
-  forks = 6278
+  updated_at = "2026-11-01"
+  stars = 40696
+  forks = 6284
   contributors = 392
-  commits_30d = 99
-  commits_90d = 395
+  commits_30d = 133
+  commits_90d = 403
   bus_factor_people = 5
   contributors_90d = 46
   commits_sample_truncated = true

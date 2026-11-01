@@ -7,7 +7,7 @@ description = 'In-memory data structure store'
 maintainers = ["Salvatore Sanfilippo"]
 
 [health]
-  score = 98
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Salvatore Sanfilippo"]
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 77092
-  forks = 24892
-  contributors = 380
-  commits_30d = 70
-  commits_90d = 175
+  updated_at = "2026-11-01"
+  stars = 77127
+  forks = 25014
+  contributors = 381
+  commits_30d = 74
+  commits_90d = 176
   bus_factor_people = 9
-  contributors_90d = 55
+  contributors_90d = 57
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

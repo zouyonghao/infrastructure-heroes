@@ -6,7 +6,7 @@ logo = "/images/logos/libsodium.webp"
 description = 'Modern cryptography library'
 
 [health]
-  score = 35
+  score = 39
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
@@ -16,14 +16,14 @@ description = 'Modern cryptography library'
 [links]
   github = "jedisct1/libsodium"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 14014
-  forks = 1888
-  contributors = 128
-  commits_30d = 24
-  commits_90d = 39
+  updated_at = "2026-11-01"
+  stars = 14034
+  forks = 1889
+  contributors = 129
+  commits_30d = 33
+  commits_90d = 48
   bus_factor_people = 1
-  contributors_90d = 1
+  contributors_90d = 2
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

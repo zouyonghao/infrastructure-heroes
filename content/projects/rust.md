@@ -7,23 +7,23 @@ description = 'Systems programming language'
 maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 
 [health]
-  score = 92
+  score = 77
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "rust-lang/rust"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 120760
-  forks = 18395
+  updated_at = "2026-11-01"
+  stars = 120939
+  forks = 17347
   contributors = 442
-  commits_30d = 2684
-  commits_90d = 9832
-  bus_factor_people = 4
+  commits_30d = 2853
+  commits_90d = 9783
+  bus_factor_people = 1
   contributors_90d = 47
   commits_sample_truncated = true
   contributors_unavailable = false

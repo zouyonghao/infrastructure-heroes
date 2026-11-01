@@ -6,24 +6,24 @@ logo = "/images/logos/coredns.svg"
 description = 'Cloud-native DNS server'
 
 [health]
-  score = 84
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "coredns/coredns"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 14396
-  forks = 2547
-  contributors = 431
-  commits_30d = 71
-  commits_90d = 245
-  bus_factor_people = 2
-  contributors_90d = 34
+  updated_at = "2026-11-01"
+  stars = 14402
+  forks = 2548
+  contributors = 430
+  commits_30d = 75
+  commits_90d = 237
+  bus_factor_people = 3
+  contributors_90d = 31
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

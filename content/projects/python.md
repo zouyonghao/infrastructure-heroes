@@ -17,13 +17,13 @@ maintainers = ["Guido van Rossum"]
 [links]
   github = "python/cpython"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 77761
-  forks = 38088
+  updated_at = "2026-11-01"
+  stars = 77765
+  forks = 37138
   contributors = 356
-  commits_30d = 631
-  commits_90d = 1445
-  bus_factor_people = 13
+  commits_30d = 643
+  commits_90d = 1492
+  bus_factor_people = 12
   contributors_90d = 84
   commits_sample_truncated = true
   contributors_unavailable = false

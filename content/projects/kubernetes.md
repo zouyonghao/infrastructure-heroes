@@ -17,14 +17,14 @@ maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 128617
-  forks = 46845
-  contributors = 353
-  commits_30d = 971
-  commits_90d = 2135
+  updated_at = "2026-11-01"
+  stars = 128799
+  forks = 45721
+  contributors = 354
+  commits_30d = 1108
+  commits_90d = 2428
   bus_factor_people = 2
-  contributors_90d = 42
+  contributors_90d = 38
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

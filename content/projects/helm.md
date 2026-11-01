@@ -6,23 +6,23 @@ logo = "/images/logos/helm.svg"
 description = 'Kubernetes package manager'
 
 [health]
-  score = 82
+  score = 75
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "helm/helm"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 30367
-  forks = 7862
+  updated_at = "2026-11-01"
+  stars = 30385
+  forks = 7969
   contributors = 369
-  commits_30d = 22
-  commits_90d = 116
-  bus_factor_people = 2
+  commits_30d = 26
+  commits_90d = 100
+  bus_factor_people = 1
   contributors_90d = 23
   commits_sample_truncated = false
   contributors_unavailable = false

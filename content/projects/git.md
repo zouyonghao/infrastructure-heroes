@@ -7,24 +7,24 @@ description = 'Distributed version control system'
 maintainers = ["Linus Torvalds", "Junio C Hamano"]
 
 [health]
-  score = 74
+  score = 67
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 63992
-  forks = 28584
+  updated_at = "2026-11-01"
+  stars = 64104
+  forks = 28717
   contributors = 426
   commits_30d = 179
-  commits_90d = 721
-  bus_factor_people = 2
-  contributors_90d = 46
+  commits_90d = 740
+  bus_factor_people = 1
+  contributors_90d = 31
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

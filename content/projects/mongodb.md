@@ -16,14 +16,14 @@ description = 'Document-oriented NoSQL database'
 [links]
   github = "mongodb/mongo"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 28661
-  forks = 5823
+  updated_at = "2026-11-01"
+  stars = 28668
+  forks = 5923
   contributors = 338
-  commits_30d = 667
-  commits_90d = 2082
+  commits_30d = 717
+  commits_90d = 2029
   bus_factor_people = 16
-  contributors_90d = 84
+  contributors_90d = 80
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

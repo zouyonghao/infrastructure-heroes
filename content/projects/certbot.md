@@ -6,7 +6,7 @@ logo = "/images/logos/certbot.svg"
 description = "ACME client for Let's Encrypt"
 
 [health]
-  score = 78
+  score = 80
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,12 +16,12 @@ description = "ACME client for Let's Encrypt"
 [links]
   github = "certbot/certbot"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 33296
-  forks = 3507
+  updated_at = "2026-11-01"
+  stars = 33306
+  forks = 3506
   contributors = 384
-  commits_30d = 11
-  commits_90d = 25
+  commits_30d = 16
+  commits_90d = 32
   bus_factor_people = 2
   contributors_90d = 10
   commits_sample_truncated = false

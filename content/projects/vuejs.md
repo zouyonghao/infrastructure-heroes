@@ -17,14 +17,14 @@ maintainers = ["Evan You"]
 [links]
   github = "vuejs/core"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 54819
+  updated_at = "2026-11-01"
+  stars = 55011
   forks = 9268
-  contributors = 436
-  commits_30d = 36
-  commits_90d = 107
+  contributors = 435
+  commits_30d = 39
+  commits_90d = 110
   bus_factor_people = 3
-  contributors_90d = 40
+  contributors_90d = 42
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

@@ -6,7 +6,7 @@ logo = "/images/logos/squid.webp"
 description = 'Caching proxy for the web'
 
 [health]
-  score = 78
+  score = 80
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,11 +16,11 @@ description = 'Caching proxy for the web'
 [links]
   github = "squid-cache/squid"
 [metrics]
-  updated_at = "2026-10-25"
-  stars = 3128
-  forks = 669
+  updated_at = "2026-11-01"
+  stars = 3134
+  forks = 670
   contributors = 192
-  commits_30d = 18
+  commits_30d = 16
   commits_90d = 38
   bus_factor_people = 2
   contributors_90d = 13
