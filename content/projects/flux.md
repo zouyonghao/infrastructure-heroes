@@ -6,23 +6,23 @@ logo = "/images/logos/flux.webp"
 description = 'GitOps tool for Kubernetes'
 
 [health]
-  score = 77
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "fluxcd/flux2"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 8490
-  forks = 812
+  updated_at = "2026-11-08"
+  stars = 8500
+  forks = 813
   contributors = 205
-  commits_30d = 124
-  commits_90d = 146
-  bus_factor_people = 1
+  commits_30d = 115
+  commits_90d = 144
+  bus_factor_people = 2
   contributors_90d = 20
   commits_sample_truncated = false
   contributors_unavailable = false

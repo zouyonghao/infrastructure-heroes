@@ -7,7 +7,7 @@ description = 'Full-stack Ruby web framework'
 maintainers = ["David Heinemeier Hansson"]
 
 [health]
-  score = 90
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["David Heinemeier Hansson"]
 [links]
   github = "rails/rails"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 58853
-  forks = 23847
-  contributors = 370
-  commits_30d = 859
-  commits_90d = 1572
-  bus_factor_people = 4
-  contributors_90d = 38
+  updated_at = "2026-11-08"
+  stars = 59082
+  forks = 23835
+  contributors = 371
+  commits_30d = 1057
+  commits_90d = 1712
+  bus_factor_people = 3
+  contributors_90d = 28
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

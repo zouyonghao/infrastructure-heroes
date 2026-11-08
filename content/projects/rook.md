@@ -6,24 +6,24 @@ logo = "/images/logos/rook.svg"
 description = 'Cloud-native storage orchestrator'
 
 [health]
-  score = 84
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "rook/rook"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 13700
-  forks = 2873
+  updated_at = "2026-11-08"
+  stars = 13703
+  forks = 2877
   contributors = 378
-  commits_30d = 113
-  commits_90d = 471
-  bus_factor_people = 2
-  contributors_90d = 30
+  commits_30d = 169
+  commits_90d = 516
+  bus_factor_people = 3
+  contributors_90d = 25
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -17,14 +17,14 @@ maintainers = ["Linus Torvalds", "Junio C Hamano"]
 [links]
   github = "git/git"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 64104
-  forks = 28717
+  updated_at = "2026-11-08"
+  stars = 64191
+  forks = 28727
   contributors = 426
-  commits_30d = 179
-  commits_90d = 740
+  commits_30d = 195
+  commits_90d = 769
   bus_factor_people = 1
-  contributors_90d = 31
+  contributors_90d = 33
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

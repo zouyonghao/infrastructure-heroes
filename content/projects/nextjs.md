@@ -7,7 +7,7 @@ description = 'React framework for production'
 maintainers = ["Guillermo Rauch"]
 
 [health]
-  score = 92
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Guillermo Rauch"]
 [links]
   github = "vercel/next.js"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 143448
-  forks = 33585
-  contributors = 421
-  commits_30d = 547
-  commits_90d = 1548
-  bus_factor_people = 4
-  contributors_90d = 28
+  updated_at = "2026-11-08"
+  stars = 143399
+  forks = 33555
+  contributors = 420
+  commits_30d = 550
+  commits_90d = 1566
+  bus_factor_people = 5
+  contributors_90d = 32
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

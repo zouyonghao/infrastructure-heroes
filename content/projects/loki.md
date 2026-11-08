@@ -16,14 +16,14 @@ description = 'Log aggregation system by Grafana'
 [links]
   github = "grafana/loki"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 29102
-  forks = 4166
+  updated_at = "2026-11-08"
+  stars = 29135
+  forks = 4180
   contributors = 447
-  commits_30d = 598
-  commits_90d = 1356
+  commits_30d = 594
+  commits_90d = 1420
   bus_factor_people = 2
-  contributors_90d = 26
+  contributors_90d = 25
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

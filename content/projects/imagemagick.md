@@ -6,24 +6,24 @@ logo = "/images/logos/imagemagick.svg"
 description = 'Image manipulation toolkit'
 
 [health]
-  score = 77
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "ImageMagick/ImageMagick"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 17776
-  forks = 1689
-  contributors = 218
-  commits_30d = 194
-  commits_90d = 502
-  bus_factor_people = 1
-  contributors_90d = 13
+  updated_at = "2026-11-08"
+  stars = 17815
+  forks = 1699
+  contributors = 221
+  commits_30d = 212
+  commits_90d = 544
+  bus_factor_people = 2
+  contributors_90d = 12
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

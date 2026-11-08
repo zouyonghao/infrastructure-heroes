@@ -16,12 +16,12 @@ description = 'Most widely used DNS server software'
 [links]
   github = "isc-projects/bind9"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 787
+  updated_at = "2026-11-08"
+  stars = 790
   forks = 185
   contributors = 60
-  commits_30d = 287
-  commits_90d = 1020
+  commits_30d = 226
+  commits_90d = 986
   bus_factor_people = 4
   contributors_90d = 17
   commits_sample_truncated = true

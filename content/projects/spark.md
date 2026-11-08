@@ -6,24 +6,24 @@ logo = "/images/logos/spark.svg"
 description = 'Unified analytics engine'
 
 [health]
-  score = 90
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "apache/spark"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 44379
-  forks = 29591
+  updated_at = "2026-11-08"
+  stars = 44435
+  forks = 29588
   contributors = 331
-  commits_30d = 427
-  commits_90d = 1429
-  bus_factor_people = 6
-  contributors_90d = 63
+  commits_30d = 529
+  commits_90d = 1436
+  bus_factor_people = 2
+  contributors_90d = 54
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

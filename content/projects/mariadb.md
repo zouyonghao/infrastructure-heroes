@@ -6,7 +6,7 @@ logo = "/images/logos/mariadb.svg"
 description = 'Community-developed MySQL fork'
 
 [health]
-  score = 98
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Community-developed MySQL fork'
 [links]
   github = "MariaDB/server"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 8498
-  forks = 2266
+  updated_at = "2026-11-08"
+  stars = 8548
+  forks = 2268
   contributors = 83
-  commits_30d = 102
-  commits_90d = 533
-  bus_factor_people = 6
-  contributors_90d = 44
+  commits_30d = 398
+  commits_90d = 877
+  bus_factor_people = 3
+  contributors_90d = 31
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

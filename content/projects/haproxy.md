@@ -6,24 +6,24 @@ logo = "/images/logos/haproxy.svg"
 description = 'High-performance load balancer'
 
 [health]
-  score = 74
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "haproxy/haproxy"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 6963
-  forks = 986
-  contributors = 303
-  commits_30d = 435
-  commits_90d = 1000
-  bus_factor_people = 2
-  contributors_90d = 18
+  updated_at = "2026-11-08"
+  stars = 6982
+  forks = 988
+  contributors = 304
+  commits_30d = 488
+  commits_90d = 1040
+  bus_factor_people = 3
+  contributors_90d = 20
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

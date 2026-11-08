@@ -6,7 +6,7 @@ logo = "/images/logos/airflow.svg"
 description = 'Workflow orchestration platform'
 
 [health]
-  score = 98
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Workflow orchestration platform'
 [links]
   github = "apache/airflow"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 47335
-  forks = 18264
-  contributors = 411
-  commits_30d = 1099
-  commits_90d = 2526
-  bus_factor_people = 5
-  contributors_90d = 57
+  updated_at = "2026-11-08"
+  stars = 47418
+  forks = 18320
+  contributors = 412
+  commits_30d = 1106
+  commits_90d = 2674
+  bus_factor_people = 16
+  contributors_90d = 92
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

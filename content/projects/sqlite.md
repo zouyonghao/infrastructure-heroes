@@ -7,23 +7,23 @@ description = 'Most widely deployed database engine in the world'
 maintainers = ["D. Richard Hipp"]
 
 [health]
-  score = 45
+  score = 51
   funding = "unknown"
   maintenance = "active"
   contributors = "critical"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "sqlite/sqlite"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 10872
-  forks = 1711
+  updated_at = "2026-11-08"
+  stars = 10936
+  forks = 1715
   contributors = 0
-  commits_30d = 435
-  commits_90d = 747
-  bus_factor_people = 1
+  commits_30d = 498
+  commits_90d = 846
+  bus_factor_people = 2
   contributors_90d = 4
   commits_sample_truncated = true
   contributors_unavailable = false

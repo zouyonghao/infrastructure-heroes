@@ -16,14 +16,14 @@ description = 'Opinionated code formatter'
 [links]
   github = "prettier/prettier"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 52393
-  forks = 5019
+  updated_at = "2026-11-08"
+  stars = 52407
+  forks = 5027
   contributors = 432
-  commits_30d = 104
-  commits_90d = 346
+  commits_30d = 117
+  commits_90d = 361
   bus_factor_people = 2
-  contributors_90d = 31
+  contributors_90d = 27
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

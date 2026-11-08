@@ -6,7 +6,7 @@ logo = "/images/logos/mysql.svg"
 description = 'Popular relational database'
 
 [health]
-  score = 82
+  score = 80
   funding = "unknown"
   maintenance = "moderate"
   contributors = "healthy"
@@ -16,12 +16,12 @@ description = 'Popular relational database'
 [links]
   github = "mysql/mysql-server"
 [metrics]
-  updated_at = "2026-11-01"
-  stars = 12492
-  forks = 4502
+  updated_at = "2026-11-08"
+  stars = 12498
+  forks = 4495
   contributors = 128
-  commits_30d = 4
-  commits_90d = 604
+  commits_30d = 3
+  commits_90d = 562
   bus_factor_people = 5
   contributors_90d = 25
   commits_sample_truncated = true
