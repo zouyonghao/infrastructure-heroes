@@ -6,24 +6,24 @@ logo = "/images/logos/fluentd.webp"
 description = 'Data collector for unified logging'
 
 [health]
-  score = 75
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "fluent/fluentd"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 13611
-  forks = 1408
-  contributors = 255
-  commits_30d = 37
-  commits_90d = 72
-  bus_factor_people = 1
-  contributors_90d = 14
+  updated_at = "2026-11-15"
+  stars = 13615
+  forks = 1411
+  contributors = 257
+  commits_30d = 34
+  commits_90d = 77
+  bus_factor_people = 2
+  contributors_90d = 16
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

@@ -6,7 +6,7 @@ logo = "/images/logos/traefik.svg"
 description = 'Cloud-native application proxy'
 
 [health]
-  score = 100
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Cloud-native application proxy'
 [links]
   github = "traefik/traefik"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 65492
-  forks = 6311
+  updated_at = "2026-11-15"
+  stars = 65550
+  forks = 6313
   contributors = 415
-  commits_30d = 74
-  commits_90d = 260
-  bus_factor_people = 5
-  contributors_90d = 52
+  commits_30d = 110
+  commits_90d = 302
+  bus_factor_people = 4
+  contributors_90d = 56
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -7,24 +7,24 @@ description = 'Container orchestration platform'
 maintainers = ["Jessie Frazelle", "Kelsey Hightower"]
 
 [health]
-  score = 84
+  score = 92
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "kubernetes/kubernetes"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 128909
-  forks = 45757
+  updated_at = "2026-11-15"
+  stars = 129077
+  forks = 45108
   contributors = 354
-  commits_30d = 1320
-  commits_90d = 2850
-  bus_factor_people = 2
-  contributors_90d = 36
+  commits_30d = 1406
+  commits_90d = 3165
+  bus_factor_people = 3
+  contributors_90d = 35
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

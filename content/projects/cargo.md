@@ -17,14 +17,14 @@ maintainers = ["Yehuda Katz"]
 [links]
   github = "rust-lang/cargo"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 15685
-  forks = 3117
-  contributors = 414
-  commits_30d = 224
-  commits_90d = 653
+  updated_at = "2026-11-15"
+  stars = 15718
+  forks = 3142
+  contributors = 415
+  commits_30d = 321
+  commits_90d = 749
   bus_factor_people = 2
-  contributors_90d = 26
+  contributors_90d = 18
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

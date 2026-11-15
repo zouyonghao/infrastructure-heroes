@@ -6,24 +6,24 @@ logo = "/images/logos/containerd.svg"
 description = 'Industry-standard container runtime'
 
 [health]
-  score = 84
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "containerd/containerd"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 21464
-  forks = 4196
+  updated_at = "2026-11-15"
+  stars = 21483
+  forks = 4206
   contributors = 420
-  commits_30d = 141
-  commits_90d = 484
-  bus_factor_people = 2
-  contributors_90d = 27
+  commits_30d = 131
+  commits_90d = 500
+  bus_factor_people = 3
+  contributors_90d = 30
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

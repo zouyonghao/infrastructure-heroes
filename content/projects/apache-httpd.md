@@ -16,14 +16,14 @@ description = 'Most widely used web server software'
 [links]
   github = "apache/httpd"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 4041
-  forks = 1336
-  contributors = 58
-  commits_30d = 186
-  commits_90d = 429
+  updated_at = "2026-11-15"
+  stars = 4054
+  forks = 1340
+  contributors = 65
+  commits_30d = 222
+  commits_90d = 466
   bus_factor_people = 2
-  contributors_90d = 13
+  contributors_90d = 20
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

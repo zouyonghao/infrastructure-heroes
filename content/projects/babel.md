@@ -17,15 +17,15 @@ maintainers = ["Sebastian McKenzie"]
 [links]
   github = "babel/babel"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 44055
-  forks = 5976
+  updated_at = "2026-11-15"
+  stars = 44062
+  forks = 5979
   contributors = 413
-  commits_30d = 99
-  commits_90d = 171
+  commits_30d = 129
+  commits_90d = 205
   bus_factor_people = 2
-  contributors_90d = 24
-  commits_sample_truncated = false
+  contributors_90d = 26
+  commits_sample_truncated = true
   contributors_unavailable = false
 +++
 

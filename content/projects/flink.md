@@ -6,7 +6,7 @@ logo = "/images/logos/flink.webp"
 description = 'Stream processing framework'
 
 [health]
-  score = 90
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Stream processing framework'
 [links]
   github = "apache/flink"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 26458
-  forks = 14179
-  contributors = 284
-  commits_30d = 191
-  commits_90d = 512
-  bus_factor_people = 6
-  contributors_90d = 57
+  updated_at = "2026-11-15"
+  stars = 26473
+  forks = 14184
+  contributors = 285
+  commits_30d = 212
+  commits_90d = 542
+  bus_factor_people = 4
+  contributors_90d = 49
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

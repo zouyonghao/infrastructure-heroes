@@ -17,14 +17,14 @@ maintainers = ["Ryan Dahl"]
 [links]
   github = "denoland/deno"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 108914
-  forks = 6781
-  contributors = 430
+  updated_at = "2026-11-15"
+  stars = 108886
+  forks = 7445
+  contributors = 429
   commits_30d = 12
-  commits_90d = 166
+  commits_90d = 130
   bus_factor_people = 2
-  contributors_90d = 40
+  contributors_90d = 34
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

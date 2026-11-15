@@ -7,7 +7,7 @@ description = 'TypeScript-based web framework'
 maintainers = ["Misko Hevery", "John Papa"]
 
 [health]
-  score = 92
+  score = 100
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Misko Hevery", "John Papa"]
 [links]
   github = "angular/angular"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 101465
-  forks = 28927
-  contributors = 371
-  commits_30d = 501
-  commits_90d = 1137
-  bus_factor_people = 3
-  contributors_90d = 31
+  updated_at = "2026-11-15"
+  stars = 101501
+  forks = 28216
+  contributors = 372
+  commits_30d = 543
+  commits_90d = 1247
+  bus_factor_people = 5
+  contributors_90d = 32
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

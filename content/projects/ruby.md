@@ -17,14 +17,14 @@ maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 23801
-  forks = 5680
+  updated_at = "2026-11-15"
+  stars = 23813
+  forks = 5687
   contributors = 363
-  commits_30d = 872
-  commits_90d = 2770
+  commits_30d = 790
+  commits_90d = 2832
   bus_factor_people = 5
-  contributors_90d = 35
+  contributors_90d = 47
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

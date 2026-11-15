@@ -17,12 +17,12 @@ maintainers = ["Mitchell Hashimoto"]
 [links]
   github = "hashicorp/consul"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 30107
-  forks = 4632
+  updated_at = "2026-11-15"
+  stars = 30114
+  forks = 4634
   contributors = 350
-  commits_30d = 27
-  commits_90d = 80
+  commits_30d = 20
+  commits_90d = 83
   bus_factor_people = 5
   contributors_90d = 20
   commits_sample_truncated = false

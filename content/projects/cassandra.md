@@ -5,24 +5,24 @@ logo = "/images/logos/cassandra.svg"
 description = 'Distributed NoSQL database'
 
 [health]
-  score = 82
+  score = 74
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "apache/cassandra"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 10141
-  forks = 4069
+  updated_at = "2026-11-15"
+  stars = 10153
+  forks = 4067
   contributors = 270
-  commits_30d = 174
-  commits_90d = 423
-  bus_factor_people = 3
-  contributors_90d = 30
+  commits_30d = 197
+  commits_90d = 419
+  bus_factor_people = 2
+  contributors_90d = 27
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

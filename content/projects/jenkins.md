@@ -6,24 +6,24 @@ logo = "/images/logos/jenkins.svg"
 description = 'Open source automation server'
 
 [health]
-  score = 77
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "high"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "jenkinsci/jenkins"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 26739
-  forks = 9818
+  updated_at = "2026-11-15"
+  stars = 26772
+  forks = 9828
   contributors = 295
-  commits_30d = 107
-  commits_90d = 295
-  bus_factor_people = 1
-  contributors_90d = 31
+  commits_30d = 112
+  commits_90d = 324
+  bus_factor_people = 2
+  contributors_90d = 32
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

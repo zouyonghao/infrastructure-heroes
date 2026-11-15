@@ -17,14 +17,14 @@ maintainers = ["Rob Pike", "Ken Thompson"]
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 139780
-  forks = 20997
-  contributors = 378
-  commits_30d = 466
-  commits_90d = 1342
-  bus_factor_people = 7
-  contributors_90d = 57
+  updated_at = "2026-11-15"
+  stars = 139914
+  forks = 20281
+  contributors = 377
+  commits_30d = 568
+  commits_90d = 1451
+  bus_factor_people = 5
+  contributors_90d = 50
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

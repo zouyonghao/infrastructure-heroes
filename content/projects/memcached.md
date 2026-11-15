@@ -6,7 +6,7 @@ logo = "/images/logos/memcached.svg"
 description = 'Distributed memory caching system'
 
 [health]
-  score = 16
+  score = 11
   funding = "unknown"
   maintenance = "inactive"
   contributors = "critical"
@@ -16,9 +16,9 @@ description = 'Distributed memory caching system'
 [links]
   github = "memcached/memcached"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 14303
-  forks = 3345
+  updated_at = "2026-11-15"
+  stars = 14304
+  forks = 3346
   contributors = 199
   commits_30d = 0
   commits_90d = 0

@@ -6,24 +6,24 @@ logo = "/images/logos/certbot.svg"
 description = "ACME client for Let's Encrypt"
 
 [health]
-  score = 80
+  score = 75
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "high"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "certbot/certbot"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 33312
-  forks = 3506
+  updated_at = "2026-11-15"
+  stars = 33334
+  forks = 3511
   contributors = 383
-  commits_30d = 15
-  commits_90d = 31
-  bus_factor_people = 2
-  contributors_90d = 10
+  commits_30d = 24
+  commits_90d = 37
+  bus_factor_people = 1
+  contributors_90d = 11
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

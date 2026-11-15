@@ -17,14 +17,14 @@ maintainers = ["Ryan Dahl", "Matteo Collina"]
 [links]
   github = "nodejs/node"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 123407
-  forks = 38749
-  contributors = 417
-  commits_30d = 417
-  commits_90d = 1622
-  bus_factor_people = 7
-  contributors_90d = 57
+  updated_at = "2026-11-15"
+  stars = 123736
+  forks = 38077
+  contributors = 418
+  commits_30d = 412
+  commits_90d = 1609
+  bus_factor_people = 8
+  contributors_90d = 66
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

@@ -16,14 +16,14 @@ description = 'Package manager for macOS and Linux'
 [links]
   github = "Homebrew/brew"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 50360
-  forks = 11437
+  updated_at = "2026-11-15"
+  stars = 50337
+  forks = 11424
   contributors = 375
-  commits_30d = 600
-  commits_90d = 1932
+  commits_30d = 662
+  commits_90d = 1985
   bus_factor_people = 2
-  contributors_90d = 17
+  contributors_90d = 16
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

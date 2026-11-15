@@ -6,7 +6,7 @@ logo = "/images/logos/ceph.svg"
 description = 'Distributed storage system'
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Distributed storage system'
 [links]
   github = "ceph/ceph"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 17208
-  forks = 6560
+  updated_at = "2026-11-15"
+  stars = 17225
+  forks = 6568
   contributors = 288
-  commits_30d = 1199
-  commits_90d = 3502
-  bus_factor_people = 4
-  contributors_90d = 44
+  commits_30d = 1213
+  commits_90d = 3640
+  bus_factor_people = 7
+  contributors_90d = 41
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

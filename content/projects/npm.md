@@ -16,14 +16,14 @@ description = 'JavaScript package manager'
 [links]
   github = "npm/cli"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 10247
-  forks = 4957
+  updated_at = "2026-11-15"
+  stars = 10255
+  forks = 4983
   contributors = 418
-  commits_30d = 29
-  commits_90d = 51
+  commits_30d = 27
+  commits_90d = 55
   bus_factor_people = 2
-  contributors_90d = 17
+  contributors_90d = 18
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

@@ -6,7 +6,7 @@ logo = "/images/logos/vitess.webp"
 description = 'Database clustering for MySQL'
 
 [health]
-  score = 92
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Database clustering for MySQL'
 [links]
   github = "vitessio/vitess"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 21408
-  forks = 2441
+  updated_at = "2026-11-15"
+  stars = 21419
+  forks = 2444
   contributors = 330
-  commits_30d = 136
-  commits_90d = 330
+  commits_30d = 121
+  commits_90d = 342
   bus_factor_people = 3
-  contributors_90d = 28
+  contributors_90d = 30
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

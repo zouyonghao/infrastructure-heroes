@@ -17,14 +17,14 @@ maintainers = ["Igor Sysoev"]
 [links]
   github = "nginx/nginx"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 32075
-  forks = 8390
+  updated_at = "2026-11-15"
+  stars = 32122
+  forks = 8396
   contributors = 119
-  commits_30d = 42
-  commits_90d = 109
+  commits_30d = 32
+  commits_90d = 100
   bus_factor_people = 3
-  contributors_90d = 26
+  contributors_90d = 24
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

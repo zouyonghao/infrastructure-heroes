@@ -6,7 +6,7 @@ logo = "/images/logos/postgresql.svg"
 description = "The world's most advanced open source relational database"
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,13 +16,13 @@ description = "The world's most advanced open source relational database"
 [links]
   github = "postgres/postgres"
 [metrics]
-  updated_at = "2026-11-08"
-  stars = 22736
-  forks = 6095
+  updated_at = "2026-11-15"
+  stars = 22832
+  forks = 6116
   contributors = 42
-  commits_30d = 285
-  commits_90d = 901
-  bus_factor_people = 4
+  commits_30d = 359
+  commits_90d = 953
+  bus_factor_people = 6
   contributors_90d = 25
   commits_sample_truncated = true
   contributors_unavailable = false
