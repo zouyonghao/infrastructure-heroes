@@ -6,7 +6,7 @@ logo = "/images/logos/tidb.svg"
 description = 'Distributed NewSQL database'
 
 [health]
-  score = 98
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -16,14 +16,14 @@ description = 'Distributed NewSQL database'
 [links]
   github = "pingcap/tidb"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 40735
-  forks = 6293
+  updated_at = "2026-11-22"
+  stars = 40761
+  forks = 6304
   contributors = 392
-  commits_30d = 217
-  commits_90d = 479
-  bus_factor_people = 5
-  contributors_90d = 42
+  commits_30d = 243
+  commits_90d = 517
+  bus_factor_people = 4
+  contributors_90d = 43
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

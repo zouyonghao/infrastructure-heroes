@@ -6,7 +6,7 @@ logo = "/images/logos/actions-runner.svg"
 description = 'Self-hosted runner for GitHub Actions'
 
 [health]
-  score = 63
+  score = 61
   funding = "unknown"
   maintenance = "active"
   contributors = "declining"
@@ -16,14 +16,14 @@ description = 'Self-hosted runner for GitHub Actions'
 [links]
   github = "actions/runner"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 6399
-  forks = 1493
+  updated_at = "2026-11-22"
+  stars = 6411
+  forks = 1507
   contributors = 168
-  commits_30d = 31
-  commits_90d = 96
+  commits_30d = 33
+  commits_90d = 102
   bus_factor_people = 1
-  contributors_90d = 8
+  contributors_90d = 7
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

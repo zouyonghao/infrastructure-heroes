@@ -16,9 +16,9 @@ description = 'Distributed memory caching system'
 [links]
   github = "memcached/memcached"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 14304
-  forks = 3346
+  updated_at = "2026-11-22"
+  stars = 14309
+  forks = 3351
   contributors = 199
   commits_30d = 0
   commits_90d = 0

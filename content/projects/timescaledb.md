@@ -6,24 +6,24 @@ logo = "/images/logos/timescaledb.svg"
 description = 'PostgreSQL for time-series data'
 
 [health]
-  score = 92
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "timescale/timescaledb"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 23860
-  forks = 1187
-  contributors = 122
-  commits_30d = 95
-  commits_90d = 289
-  bus_factor_people = 3
-  contributors_90d = 21
+  updated_at = "2026-11-22"
+  stars = 23887
+  forks = 1192
+  contributors = 123
+  commits_30d = 138
+  commits_90d = 337
+  bus_factor_people = 2
+  contributors_90d = 19
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

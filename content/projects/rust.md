@@ -17,14 +17,14 @@ maintainers = ["Steve Klabnik", "Yehuda Katz", "Graydon Hoare"]
 [links]
   github = "rust-lang/rust"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 121942
-  forks = 16678
-  contributors = 442
-  commits_30d = 2962
-  commits_90d = 9697
-  bus_factor_people = 4
-  contributors_90d = 47
+  updated_at = "2026-11-22"
+  stars = 122322
+  forks = 16658
+  contributors = 441
+  commits_30d = 3180
+  commits_90d = 9687
+  bus_factor_people = 3
+  contributors_90d = 48
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

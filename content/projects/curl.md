@@ -7,24 +7,24 @@ description = 'Command line tool and library for transferring data with URLs'
 maintainers = ["Daniel Stenberg"]
 
 [health]
-  score = 82
+  score = 90
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "curl/curl"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 43518
-  forks = 7503
-  contributors = 410
-  commits_30d = 352
-  commits_90d = 1011
-  bus_factor_people = 2
-  contributors_90d = 41
+  updated_at = "2026-11-22"
+  stars = 43664
+  forks = 7506
+  contributors = 411
+  commits_30d = 339
+  commits_90d = 1072
+  bus_factor_people = 3
+  contributors_90d = 33
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

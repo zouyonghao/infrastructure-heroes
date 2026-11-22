@@ -16,9 +16,9 @@ description = 'Distributed SQL database'
 [links]
   github = "cockroachdb/cockroach"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 32619
-  forks = 4238
+  updated_at = "2026-11-22"
+  stars = 32638
+  forks = 4176
   contributors = 306
   commits_30d = 0
   commits_90d = 11

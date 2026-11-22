@@ -96,11 +96,11 @@ Methodology v1.0 combined funding, maintenance, contributor, and commit-concentr
 
 ## 📈 Health Trends
 
-_Last collection: 2026-11-15_
+_Last collection: 2026-11-22_
 
 Projects collected: 108. Projects without an overall rating: 0.
 
-43 snapshots recorded from 2026-02-08 to 2026-11-15.
+44 snapshots recorded from 2026-02-08 to 2026-11-22.
 
 Charts use methodology v2.1. Earlier scoring versions remain archived and are not mixed into the current trend.
 

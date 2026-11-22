@@ -7,7 +7,7 @@ description = 'Secure runtime for JavaScript/TypeScript'
 maintainers = ["Ryan Dahl"]
 
 [health]
-  score = 78
+  score = 76
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Ryan Dahl"]
 [links]
   github = "denoland/deno"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 108886
-  forks = 7445
-  contributors = 429
-  commits_30d = 12
-  commits_90d = 130
+  updated_at = "2026-11-22"
+  stars = 109050
+  forks = 6593
+  contributors = 430
+  commits_30d = 7
+  commits_90d = 110
   bus_factor_people = 2
-  contributors_90d = 34
+  contributors_90d = 33
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

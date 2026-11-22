@@ -17,9 +17,9 @@ maintainers = ["Armin Ronacher"]
 [links]
   github = "pallets/flask"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 75133
-  forks = 17341
+  updated_at = "2026-11-22"
+  stars = 75294
+  forks = 17282
   contributors = 398
   commits_30d = 4
   commits_90d = 10

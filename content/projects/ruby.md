@@ -7,24 +7,24 @@ description = 'Dynamic programming language'
 maintainers = ["Aaron Patterson", "Yukihiro Matsumoto"]
 
 [health]
-  score = 100
+  score = 84
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "low"
+  bus_factor = "medium"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "ruby/ruby"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 23813
-  forks = 5687
-  contributors = 363
-  commits_30d = 790
-  commits_90d = 2832
-  bus_factor_people = 5
-  contributors_90d = 47
+  updated_at = "2026-11-22"
+  stars = 23856
+  forks = 5694
+  contributors = 362
+  commits_30d = 1011
+  commits_90d = 2997
+  bus_factor_people = 2
+  contributors_90d = 26
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

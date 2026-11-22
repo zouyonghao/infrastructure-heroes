@@ -17,14 +17,14 @@ maintainers = ["Salvatore Sanfilippo"]
 [links]
   github = "redis/redis"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 77524
-  forks = 25062
+  updated_at = "2026-11-22"
+  stars = 77630
+  forks = 24987
   contributors = 380
-  commits_30d = 101
-  commits_90d = 204
+  commits_30d = 86
+  commits_90d = 201
   bus_factor_people = 9
-  contributors_90d = 58
+  contributors_90d = 55
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

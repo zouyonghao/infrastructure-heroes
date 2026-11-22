@@ -17,14 +17,14 @@ maintainers = ["Rich Harris"]
 [links]
   github = "sveltejs/svelte"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 88752
-  forks = 6056
+  updated_at = "2026-11-22"
+  stars = 89841
+  forks = 6131
   contributors = 413
-  commits_30d = 30
-  commits_90d = 181
-  bus_factor_people = 6
-  contributors_90d = 75
+  commits_30d = 43
+  commits_90d = 155
+  bus_factor_people = 5
+  contributors_90d = 45
   commits_sample_truncated = false
   contributors_unavailable = false
 +++

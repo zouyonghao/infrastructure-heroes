@@ -6,24 +6,24 @@ logo = "/images/logos/apache-httpd.svg"
 description = 'Most widely used web server software'
 
 [health]
-  score = 74
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
-  bus_factor = "medium"
+  bus_factor = "low"
   methodology_version = "2.1"
   assessment = "automated"
 [links]
   github = "apache/httpd"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 4054
-  forks = 1340
-  contributors = 65
-  commits_30d = 222
-  commits_90d = 466
-  bus_factor_people = 2
-  contributors_90d = 20
+  updated_at = "2026-11-22"
+  stars = 4057
+  forks = 1343
+  contributors = 67
+  commits_30d = 261
+  commits_90d = 528
+  bus_factor_people = 3
+  contributors_90d = 21
   commits_sample_truncated = true
   contributors_unavailable = false
 +++

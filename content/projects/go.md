@@ -7,7 +7,7 @@ description = 'Programming language by Google'
 maintainers = ["Rob Pike", "Ken Thompson"]
 
 [health]
-  score = 90
+  score = 82
   funding = "unknown"
   maintenance = "active"
   contributors = "healthy"
@@ -17,14 +17,14 @@ maintainers = ["Rob Pike", "Ken Thompson"]
 [links]
   github = "golang/go"
 [metrics]
-  updated_at = "2026-11-15"
-  stars = 139914
-  forks = 20281
-  contributors = 377
-  commits_30d = 568
-  commits_90d = 1451
-  bus_factor_people = 5
-  contributors_90d = 50
+  updated_at = "2026-11-22"
+  stars = 140104
+  forks = 20184
+  contributors = 378
+  commits_30d = 787
+  commits_90d = 1636
+  bus_factor_people = 3
+  contributors_90d = 43
   commits_sample_truncated = true
   contributors_unavailable = false
 +++
